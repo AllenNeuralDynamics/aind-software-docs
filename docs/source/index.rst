@@ -5,7 +5,7 @@ Scientific Computing at AIND
 This mission for AIND Scientific Computing is to accelerate rigorous scientific discovery for the AIND team and our community by creating a best-in-class open, reproducible, and scalable platform for scientific data, analysis, and sharing. 
 
 AIND Use Cases
-==============
+--------------
 
 On the left sidebar you'll find individual pages with details about how to write metadata, upload data to Code Ocean, process data, analyze data, and general best-practices for coding.
 
@@ -33,7 +33,7 @@ Project proposals that lead to larger development efforts can require more detai
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :hidden:
    :caption: AIND Use Cases:
 
