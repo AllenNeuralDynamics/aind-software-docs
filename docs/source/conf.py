@@ -1,4 +1,5 @@
 """Configuration file for the Sphinx documentation builder."""
+
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
@@ -31,6 +32,7 @@ extensions = [
     "sphinx.ext.doctest",
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
+    "myst_parser",
 ]
 templates_path = ["_templates"]
 exclude_patterns = []

@@ -27,7 +27,8 @@ dev = [
     'interrogate',
     'isort',
     'Sphinx',
-    'furo'
+    'furo',
+    'myst-parser',
 ]
 
 [tool.setuptools.packages.find]
