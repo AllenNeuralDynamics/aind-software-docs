@@ -52,3 +52,4 @@ Project proposals that lead to larger development efforts can require more detai
    onboarding
    core_services
    outreach
+   help
