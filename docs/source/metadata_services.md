@@ -1,4 +1,4 @@
-## Metadata Services 
+# Metadata Services 
 
 This page briefly outlines the options for writing metadata and the services provided by AIND scientific computing for generating some metadata files. 
 
