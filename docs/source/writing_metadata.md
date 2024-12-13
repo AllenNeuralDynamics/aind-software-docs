@@ -21,11 +21,16 @@ Every data asset has a unique `session.json` or `acquisition.json` file that spe
 
 The `processing.json` file keeps a record of the data processing and analysis steps applied to the original data asset. 
 
-
 ### Quality Control
 
-Generating the `quality_control.json` file allows you to take advantage of the QC Portal, a SCICOMP maintained tool for querying and annotating data quality during processing and analysis.
+Generating the `quality_control.json` file allows you to take advantage of the [QC Portal](https://qc.allenneuraldynamics.org/qc_portal_app), a SCICOMP maintained tool for querying and annotating data quality during processing and analysis.
 
 The `quality_control.json` file should be generated or appended to at three times in a data asset's life: (1: Raw) immediately after data acquisition, (2: Processing) during processing when quality control metrics are computed, and (3: Analysis) during data analysis if further quality control is needed, for example for multi-asset quality metrics.
 
 Detailed documentation for the QC metadata is found in the [aind-data-schema QC docs](https://aind-data-schema.readthedocs.io/en/latest/quality_control.html), while a walkthrough for AIND users can be found in the [QC portal docs](https://github.com/AllenNeuralDynamics/aind-qc-portal?tab=readme-ov-file#qc-portal)
+
+## Valid vs Invalid Metadata
+
+The metadata _schema_ defines the fields and types of data in each field that are expected for the different metadata files. We currently allow users to upload _invalid_ metadata because we are prioritizing data collection over perfect metadata, for now. In the future, the value of data is going to be measured not just by its quality but by its usefulness--and metadata is what makes your data re-usable.
+
+You can check whether the metadata for an existing data asset is _valid_ using the [Metadata Portal](https://metadata-portal.allenneuraldynamics.org/). Each error thrown by the validator represents one field in your metadata that is either missing, has the wrong type of data, or is corrupt in some way. We are invested in complete and valid metadata -- reach out to scientific computing for help improving your metadata collection and back-filling metadata that is missing!
