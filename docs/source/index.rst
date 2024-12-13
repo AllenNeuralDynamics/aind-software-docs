@@ -4,15 +4,25 @@ Scientific Computing at AIND
 
 This mission for AIND Scientific Computing is to accelerate rigorous scientific discovery for the AIND team and our community by creating a best-in-class open, reproducible, and scalable platform for scientific data, analysis, and sharing. 
 
-AIND Use Cases
---------------
+I want to...
+------------
 
-On the left sidebar you'll find individual pages with details about how to write metadata, upload data to Code Ocean, process data, analyze data, and general best-practices for coding.
+`Propose a project <proposals.html>`_ with scientific computing support.
 
-Accounts
---------
+`Create metadata <writing_metadata.html>`_ for my data assets.
 
-How to request access to:
+`Upload data <data_upload.html>`_ to Code Ocean.
+
+`Work on pipelines <data_processing.html>`_ on Code Ocean.
+
+`Do data analysis <writing_metadata.html>`_ on Code Ocean.
+
+`Learn about coding best-practices <coding.html>`_.
+
+I need an account...
+--------------------
+
+Follow these links to request access to:
 
 - `Code Ocean <https://app.smartsheet.com/b/form/547ea100949646979f978fab97075523>`_
 - `Hortacloud <https://app.smartsheet.com/b/form/590de81306714959be7a7499b361fc04>`_
@@ -20,23 +30,12 @@ How to request access to:
 - `GitHub Copilot <https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items>`_ - via ServiceNow
 - `VAST /allen/aind/scratch and /allen/aind/stage <https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items>`_ - via ServiceNow
 
-Project proposals
------------------
-
-Looking for dedicated support from the Scientific Computing Team? Fill out a `project proposal template <https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EUBH5IZOEjRMuOfrIN94buwBIuXXVYJUC8eYa51uc13kSQ?e=LEj4Xh>`_ and send to David for review. 
-
-Project proposals that lead to larger development efforts can require more detailed `specifications <https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EdZsBLHjlmtDnNMX8bOihEEBhX0_MygaT3S39m-W8sD_dg?e=Gf9D8V>`_.
-
-- `Data Platform <https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EaGHDoC6JDtJn5pfGNdiybYBxacWNbjUhPIENE1LOkJImQ?e=hA15XK>`_
-- `Computational Workflows <https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EZl4l2ncFJ1KidheraD4AsIBfmLtqAxq5gy25B5sWKXmdw?e=fALDIZ>`_
-- `Data Ingest Service <https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EffwuqxXV-5LrCDOD6JQe5EBDzCcOr9QxcYp6UtZsVYdUg?e=egcDJX>`_
-
-
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: AIND Use Cases:
 
+   proposals
    writing_metadata
    data_upload
    data_processing
