@@ -9,13 +9,13 @@ Some metadata files can be automatically generated using the [aind transfer serv
 
 | Metadata File       | Description                                                                                                   | aind-data-schema | metadata entry | data transfer |
 |----------------------|---------------------------------------------------------------------------------------------------------------|------------------|----------------|---------------|
-| Data description     | Administrative information about a data asset      | -[x]              | -[x]            | -[x]           |
-| Subject              | Information about animal subject    | -[x]              | -[x]            | -[x]           |
-| Procedures           | Surgical procedures performed on a live subject or procedures performed on extracted tissue                  | -[x]              | -[x]            | -[x]*          |
-| Rig/Instrument       | Hardware/software used for a data asset. rig.json for physiology and behavior data, instrument.json for light sheet or confocal imaging | -[x]              | -[x]            |               |
-| Session/Acquisition  | Hardware/software information specific to the data collection. session.json for physiology and behavior data, acquisition.json for light sheet imaging | -[x]              | -[x]            |               |
-| Processing           | Information about data processing steps applied to the data asset                                            | -[x]              | -[x]            | -[x]**         |
-| Quality Control      | Assessment of the quality of raw, processed, and analyzed data assets                                        | -[x]              | -[x]            |               |
+| Data description     | Administrative information about a data asset      | [x]              | [x]            | [x]           |
+| Subject              | Information about animal subject    | [x]              | [x]            | [x]           |
+| Procedures           | Surgical procedures performed on a live subject or procedures performed on extracted tissue                  | [x]              | [x]            | [x]*          |
+| Rig/Instrument       | Hardware/software used for a data asset. rig.json for physiology and behavior data, instrument.json for light sheet or confocal imaging | [x]              | [x]            |               |
+| Session/Acquisition  | Hardware/software information specific to the data collection. session.json for physiology and behavior data, acquisition.json for light sheet imaging | [x]              | [x]            |               |
+| Processing           | Information about data processing steps applied to the data asset                                            | [x]              | [x]            | [x]**         |
+| Quality Control      | Assessment of the quality of raw, processed, and analyzed data assets                                        | [x]              | [x]            |               |
 
 *captures most surgeries, injections and perfusions performed by the Neurosurgery and Behavior and Lab Animal Services teams at AIND 
 
