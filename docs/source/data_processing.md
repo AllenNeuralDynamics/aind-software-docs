@@ -1,4 +1,3 @@
 # Data Processing in Code Ocean
 
-Most initial data processing is expected to be done by the automated pipelines.
-
+This section is focused on the automated data processing pipelines that were developed to accelerate initial processing of data from individual modalities immediately after upload to Code Ocean. If you're writing your own capsules, head over to [Data Analysis](data_analysis)

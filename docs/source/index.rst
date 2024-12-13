@@ -33,7 +33,7 @@ Follow these links to request access to:
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: AIND Use Cases:
+   :caption: AIND Use Cases
 
    proposals
    writing_metadata
@@ -45,7 +45,7 @@ Follow these links to request access to:
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: SCICOMP:
+   :caption: SCICOMP Resources
 
    about
    onboarding
