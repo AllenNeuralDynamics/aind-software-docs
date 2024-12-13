@@ -19,6 +19,8 @@ I want to...
 
 `Learn about coding best-practices <coding.html>`_.
 
+`Something else... <help.html>`_.
+
 I need an account...
 --------------------
 
