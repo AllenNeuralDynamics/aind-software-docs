@@ -52,6 +52,6 @@ Follow these links to request access to:
    about
    onboarding
    core_services
-   metadata_serivces
+   metadata_services
    outreach
    help
