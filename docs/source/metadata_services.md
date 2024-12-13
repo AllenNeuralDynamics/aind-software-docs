@@ -2,9 +2,9 @@
 
 This page briefly outlines the options for writing metadata and the services provided by AIND scientific computing for generating some metadata files. 
 
-You can write metadata yourself using the [aind-data-schema](https://github.com/AllenNeuralDynamics/aind-data-schema) library (requires python) or use the [AIND metadata entry](https://metadata-entry.allenneuraldynamics.org/) (no coding).  
+You can write metadata yourself using the [aind-data-schema](https://github.com/AllenNeuralDynamics/aind-data-schema) library (requires python) or use the [AIND metadata entry app](https://metadata-entry.allenneuraldynamics.org/) (no coding).  
 
-Some metadata files can be automatically generated using the [aind transfer service](http://aind-data-transfer-service/) or the [aind metadata service app](http://aind-metadata-service/). 
+Some metadata files can be automatically generated using the [aind transfer service](http://aind-data-transfer-service/) or the [aind metadata service](http://aind-metadata-service/). 
 
 
 | Metadata File       | Description                                                                                                   | aind-data-schema | metadata entry | data transfer |
