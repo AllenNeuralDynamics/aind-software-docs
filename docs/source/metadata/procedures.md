@@ -2,7 +2,7 @@
 
 The `procedures.json` file provides a record of the procedures performed on the subject or tissue. 
 
-The data transfer service generates a `procedures.json` file by referencing information from the internal Neurosurgery and Behavior and Lab Animal Services databases via the [metadata service] (http://aind-metadata-service/). Any additional procedure information needs to be documented manually. 
+The data transfer service generates a `procedures.json` file by referencing information from the internal Neurosurgery and Behavior and Lab Animal Services databases via the [metadata service](http://aind-metadata-service/). Any additional procedure information needs to be documented manually. 
 
 ## Subject vs Specimen 
 
