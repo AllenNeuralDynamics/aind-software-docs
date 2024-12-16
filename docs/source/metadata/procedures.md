@@ -9,7 +9,6 @@ The data transfer service generates a `procedures.json` file by referencing info
 Subject refers to the animal while specimen refers to extracted tissue. 
 
 `subject procedures` surgical or behavioral procedures performed to a live subject  
-
 `specimen procedures` procedures performed on extracted tissue after perfusion  
 
 `subject_id` ID of the animal  
