@@ -1,6 +1,6 @@
 # Data Conventions 
 
-# Primary Data Conventions
+### Primary Data Conventions
 
 All data acquired in a single acquisition session is stored together. This group needs a simple, readable, and uniue name that facilitates casual browsing. The data assets should be named according to the conventions outlined below. 
 
@@ -19,7 +19,7 @@ A few points:
 - Acquisition date and time are in the local time zone  
 - Time zone is documented in metadata  
 
-## Primary Data Assets Organization
+#### Primary Data Assets Organization
 
 Primary data assets are organized as follows:
 
@@ -43,7 +43,7 @@ Primary data assets are organized as follows:
 
 Platform abbreviation and modality terms come from controlled vocabularies in `aind-data-schema-models`.
 
-### Example: Simultaneous Electrophysiology with Optotagging and Fiber Photometry
+##### Example: Simultaneous Electrophysiology with Optotagging and Fiber Photometry
 
 - **EFIP_655568_2022-04-26_11-48-09**
     - `<metadata JSON files>`  
@@ -63,7 +63,7 @@ Platform abbreviation and modality terms come from controlled vocabularies in `a
         - `face_camera.mp4`  
         - `body_camera.mp4`  
 
-### Example: Lightsheet Microscopy Data Acquired on the ExaSPIM Platform
+##### Example: Lightsheet Microscopy Data Acquired on the ExaSPIM Platform
 
 - **exaSPIM_655568_2022-04-26_11-48-09**  
     - `<metadata JSON files>`  
@@ -90,7 +90,7 @@ Processed outputs are usually the result of a multi-stage pipeline, so often `<p
 
 Overly long names are difficult to read, so do not daisy-chain. The goal is to keep names as simple as possible while being readable, not to encode all metadata or the entire provenance chain. If various stages of processing are being performed manually over extended periods of time, anchor each derived asset on the primary data asset.
 
-## Processed Result Folder Organization
+### Processed Result Folder Organization
 
 Processed result folders are organized as follows:
 
@@ -108,7 +108,7 @@ Processed result folders are organized as follows:
   - `<process-label-n>`  
     - `<list of files>`  
 
-# File Name Guidelines
+### File Name Guidelines
 
 When naming files:
 
