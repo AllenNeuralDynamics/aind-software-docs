@@ -73,7 +73,7 @@ Platform abbreviation and modality terms come from controlled vocabularies in `a
         - **MIP**  
             - `<list of e.g., tiff files>`  
 
-# Derived Data Conventions
+### Derived Data Conventions
 
 Anything computed in a single run should be logically grouped in a folder. The folder should be named:
 
