@@ -50,7 +50,6 @@ Follow these links to request access to:
    :caption: SCICOMP Resources
 
    about
-   onboarding
    core_services
    metadata_services
    outreach
