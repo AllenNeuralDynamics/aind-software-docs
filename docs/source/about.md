@@ -31,3 +31,8 @@ This mission for AIND Scientific Computing is to accelerate rigorous scientific 
 - Jonathan Wong - Software Engineer
 - Micah Woodard – Optical Engineer (close friend from Molecular Anatomy)
 - Jon Young - Data Infrastructure Engineer
+
+## Historical Links
+
+[Cloud Migration FAQ](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EYBhTUME-FdJuNTt_OqRes4Be9WDWBo9nV9EmlfOZ5D3IA?e=dhd3Fe)
+[Cloud Computing in GCP](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/ES-0EM58ivdBnhHPwZ83RuYB6ANrIFtZnBXb62tHvnVqeg?e=yuibWz)
