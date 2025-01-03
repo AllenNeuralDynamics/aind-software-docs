@@ -1,5 +1,7 @@
 # Rig / Instrument
 
+[Documentation for `rig.json`](https://aind-data-schema.readthedocs.io/en/latest/rig.html)
+
 The `rig.json` or `instrument.json` describe the collection of hardware and software used to collect a data asset.  
 
 The rig/instrument file encapsulates several devices (hardware/software components) and assemblies (collections of devices that serve a common function, such as a camera and lens). These files should describe the static state of the rig and can be used for multiple data assets. For most users, the rig file only changes when a device is replaced or updated. 
