@@ -1,21 +1,21 @@
 # Procedures
 
+[Documentation for `procedures.json`](https://aind-data-schema.readthedocs.io/en/latest/procedures.html)
+
 The `procedures.json` file provides a record of the procedures performed on the subject or tissue. 
 
 The data transfer service generates a `procedures.json` file by referencing information from the internal Neurosurgery and Behavior and Lab Animal Services databases via the [metadata service](http://aind-metadata-service/). Any additional procedure information needs to be documented manually. 
 
-## Subject vs Specimen 
+You can find your `protocol_id` DOI for a published protocol either in the 
+`AIND protocols.io workspace <https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics>`_ or this list of `AIND published protocols <https://app.smartsheet.com/sheets/3XQgWWrXW3mh46xmXCw5Q9GfqQmmP4xwF9Cjfqg1?view=grid>`_.
 
-Subject refers to the animal while specimen refers to extracted tissue. 
+## How do I create a procedure file?
 
-`subject procedures` surgical or behavioral procedures performed on a live subject  
-`specimen procedures` procedures performed on extracted tissue after perfusion  
+You can create a procedure file using our `metadata entry web application <https://metadata-entry.allenneuraldynamics.org>`_. You can also use 
+the Allen-internal `metadata service <http://aind-metadata-service/>`_, which automatically pulls subject 
+procedure information from our Neurosurgery and Behavior database and Lab Animal Services database, capturing most surgeries, injections
+and perfusions.
 
-`subject_id` ID of the animal  
-`specimen_id` tissue ID (if brain tissue is sectioned, each section will have a unique ID)
-
-## IACUC Protocol vs Protocol ID 
-
-`iacuc_protocol` all experimental work with animals must follow an IACUC (Institute Animal Care Use Committee) protocol 
-
-`protocol_id` doi for a published protocol, found in either the [AIND protocols.io workspace](https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics) or this list of [AIND published protocols](https://app.smartsheet.com/sheets/3XQgWWrXW3mh46xmXCw5Q9GfqQmmP4xwF9Cjfqg1?view=grid) 
+As our SLIMS system continues to develop, this service will be able to pull more procedure information from SLIMS,
+but presently any additional surgeries must be documented manually. Note that this service is automatically used to pull procedure metadata
+any time data is uploaded with the `data transfer service <http://aind-data-transfer-service>`_.
