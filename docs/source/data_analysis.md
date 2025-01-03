@@ -4,15 +4,37 @@
 
 We've set up a package `aind-data-access-api` for easy access to DocDB. This is a public API, you don't need credentials to query your metadata.
 
-Below is an example script showing how a typical project might query for a single data asset using the `data_description.project_name`, `subject.subject_id`, `session.session_type`, and `session.session_start_time` to find a specific data asset:
+Below is an example Python script showing how a typical project might query for data assets using the `data_description.project_name`, `subject.subject_id`, and `session.session_type`:
 
 ```
-[todo]
+from aind_data_access_api.document_db import MetadataDbClient
+
+API_GATEWAY_HOST = "api.allenneuraldynamics.org"
+DATABASE = "metadata_index"
+COLLECTION = "data_assets"
+
+docdb_api_client = MetadataDbClient(
+   host=API_GATEWAY_HOST,
+   database=DATABASE,
+   collection=COLLECTION,
+)
+
+filter = {
+    "data_description.project_name": "Behavior Platform",
+    "subject.subject_id": "744899",
+    "session.session_type": "Uncoupled Baiting",
+}
+response = docdb_api_client.retrieve_docdb_records(
+   filter_query=filter,
+)
+print(response)
 ```
 
 For more details, dig into the [DocDB API documentation](https://aind-data-access-api.readthedocs.io/en/latest/)
 
 ## Running an Analysis
+
+More details on the *analysis architecture* will come soon.
 
 ## Creating Derived Assets
 
