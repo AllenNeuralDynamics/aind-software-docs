@@ -1,6 +1,6 @@
 # Data Description
 
-(Documentation for `data_description.json`)[https://aind-data-schema.readthedocs.io/en/latest/data_description.html]
+[Documentation for `data_description.json`](https://aind-data-schema.readthedocs.io/en/latest/data_description.html)
 
 The aind data transfer service generates a `data_description.json` file for each data asset uploaded to the cloud based on the `project_name` provided by the user and information pulled from internal resources.
 
