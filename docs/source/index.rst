@@ -52,5 +52,4 @@ Follow these links to request access to:
    about
    core_services
    metadata_services
-   outreach
    help
