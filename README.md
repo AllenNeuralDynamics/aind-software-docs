@@ -1,7 +1,10 @@
 # scicomp-docs
 
+## Contributing
 
-### Documentation
+[todo]
+
+## Development
 To generate the rst files source files for documentation, run
 ```bash
 sphinx-apidoc -o docs/source/ src
