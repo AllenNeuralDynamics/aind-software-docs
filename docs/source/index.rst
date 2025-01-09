@@ -1,5 +1,5 @@
 
-Scientific Computing at AIND 
+Software Engineering at AIND 
 ===========================================
 
 This mission for AIND Scientific Computing is to accelerate rigorous scientific discovery for the AIND team and our community by creating a best-in-class open, reproducible, and scalable platform for scientific data, analysis, and sharing. 
@@ -47,9 +47,10 @@ Follow these links to request access to:
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: SCICOMP Resources
+   :caption: Resources
 
    about
+   docs
    core_services
    metadata_services
    help
