@@ -2,8 +2,6 @@
 Software Engineering at AIND 
 ===========================================
 
-This mission for AIND Scientific Computing is to accelerate rigorous scientific discovery for the AIND team and our community by creating a best-in-class open, reproducible, and scalable platform for scientific data, analysis, and sharing. 
-
 I want to...
 ------------
 
