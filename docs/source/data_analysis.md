@@ -41,9 +41,18 @@ More details on the *analysis architecture* will come soon.
 After your analysis is complete, you need to package your data into a new data asset and ensure that it gets picked up by the indexer. There are a few steps to this:
 
 1. Copy all metadata files from the input data asset to your `results/` folder
-2. Upgrade the existing `data_description.json` to its derived format, using the [`DerivedDataDescription.from_data_description`](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/c1ae7aa6052080fdf4b6de07cdad32210eea12b5/src/aind_data_schema/core/data_description.py#L196) function.
-3. Name your asset using the [_derived data conventions_](https://aind-data-schema.readthedocs.io/en/latest/data_organization.html#derived-data-conventions).
-4. Tag your asset with the `derived` tag.
+2. Upgrade the existing `data_description.json` to its derived format, using the [`DerivedDataDescription.from_data_description`](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/c1ae7aa6052080fdf4b6de07cdad32210eea12b5/src/aind_data_schema/core/data_description.py#L196) function. Make sure to pass the `process_name` field.
+
+```
+import json
+from aind_data_schema.core.data_description import DataDescription, DerivedDataDescription
+
+dd = DataDescription.model_validate_json(json.load("data_description.json"))
+dd_derived = DerivedDataDescription.from_data_description(dd, process_name="your-process")
+```
+
+3. Use the new `data_description.name` field as your data asset name
+4. Tag your data asset with the `derived` tag.
 5. Publish the data asset.
 
 All of these steps can be automated with code, but you can also do them manually after running a capsule for testing.
