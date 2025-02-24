@@ -12,6 +12,7 @@ This mission for AIND Scientific Computing is to accelerate rigorous scientific 
 - Dan Birman – Software Engineer
 - Alessio Buccino - Data Engineer (consultant)
 - Tom Chartrand - Scientist
+- Ajar Duishembieva - Software Engineer Intern
 - David Feng – Director, Scientific Computing
 - Johannes Friedrich – Scientist
 - Anna Grim – Scientific Data Engineer (close friend from Molecular Anatomy)
@@ -22,7 +23,6 @@ This mission for AIND Scientific Computing is to accelerate rigorous scientific 
 - Arielle Leon – Software Engineer
 - Helen Lin - Software Engineer
 - Sean McCulloch – Software Engineer
-- Mae Moninghoff - Data Analyst
 - Clark Roll – Software Engineer
 - Sharmishtaa Seshamani (Sharmi) - Scientist, Computer Vision
 - Caleb Shibu – Software Engineer
