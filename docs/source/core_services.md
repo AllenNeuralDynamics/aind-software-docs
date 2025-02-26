@@ -36,6 +36,12 @@ Index jobs for AIND metadata in AWS DocumentDB and S3
 
 [readthedoc](https://aind-data-asset-indexer.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-data-asset-indexer)
 
+**aind-qc-portal**
+
+Browser application for viewing and annotating AIND QC metadata and metrics
+
+[link](https://qc.allenneuraldynamics.org/qc_portal_app) | [repo](https://github.com/AllenNeuralDynamics/aind-qc-portal)
+
 **aind-library-template**
 
 A basic template for a library code base
