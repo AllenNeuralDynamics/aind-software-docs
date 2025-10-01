@@ -50,6 +50,6 @@ A basic template for a library code base
 
 **aind-co-pipeline-monitor-capsule**
 
-Capsule to start a pipeline, wait for it to finish, and optionally capture the results
+Capsule to start a Code Ocean pipeline, wait for it to finish, and optionally capture the results
 
 [repo](https://github.com/AllenNeuralDynamics/aind-co-pipeline-monitor-capsule)
