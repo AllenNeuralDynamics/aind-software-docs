@@ -2,22 +2,32 @@
 Software Engineering at AIND 
 ===========================================
 
+
 I want to...
 ------------
 
-`Propose a project <proposals.html>`_ with scientific computing support.
+`Acquire and upload data <data_upload.html>`_ to the Cloud.
 
 `Create metadata <writing_metadata.html>`_ for my data assets.
 
-`Upload data <data_upload.html>`_ to Code Ocean.
+`Run pipelines <data_processing.html>`_ in the Cloud (Code Ocean).
 
-`Work on pipelines <data_processing.html>`_ on Code Ocean.
+`Do data analysis <writing_metadata.html>`_ in the Cloud (Code Ocean).
 
-`Do data analysis <writing_metadata.html>`_ on Code Ocean.
 
-`Learn about coding best-practices <coding.html>`_.
+I am a *developer* and I want to...
+--------------------
 
-`Something else... <help.html>`_.
+`Develop new pipelines <>`_ [todo].
+
+
+I need to make changes to how our software tools work...
+-----------------------
+
+`Open an issue <https://github.com/AllenNeuralDynamics/aind-scientific-computing/>` with scientific computing.
+
+`Propose a project <proposals.html>`_ with scientific computing support.
+
 
 I need an account...
 --------------------

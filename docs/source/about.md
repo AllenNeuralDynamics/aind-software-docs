@@ -4,34 +4,6 @@ The mission of the Allen Institute for Neural Dynamics (AIND) is to answer funda
 
 This mission for AIND Scientific Computing is to accelerate rigorous scientific discovery for the AIND team and our community by creating a best-in-class open, reproducible, and scalable platform for scientific data, analysis, and sharing. 
 
-## Members (alphabetical)
-
-- Cameron Arshadi - Data Analyst (close friend from Molecular Anatomy)
-- Ahad Bawany – Software Engineer
-- Yosef Bedaso - DevOps Engineer
-- Dan Birman – Software Engineer
-- Alessio Buccino - Data Engineer (consultant)
-- Tom Chartrand - Scientist
-- Ajar Duishembieva - Software Engineer Intern
-- David Feng – Director, Scientific Computing
-- Johannes Friedrich – Scientist
-- Anna Grim – Scientific Data Engineer (close friend from Molecular Anatomy)
-- Mekhla Kapoor - Software Engineer
-- Sreya Kumar - Postbaccalaureate Research Assistant
-- Camilo Laiton - Data Engineer
-- Suyee Lee – Application Scientist
-- Arielle Leon – Software Engineer
-- Helen Lin - Software Engineer
-- Sean McCulloch – Software Engineer
-- Clark Roll – Software Engineer
-- Sharmishtaa Seshamani (Sharmi) - Scientist, Computer Vision
-- Caleb Shibu – Software Engineer
-- Arjun Sridhar – Software Engineer
-- Saskia de Vries – Associate Director, Data and Outreach
-- Jonathan Wong - Software Engineer
-- Micah Woodard – Optical Engineer (close friend from Molecular Anatomy)
-- Jon Young - Data Infrastructure Engineer
-
 ## Historical Links
 
 [Cloud Migration FAQ](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EYBhTUME-FdJuNTt_OqRes4Be9WDWBo9nV9EmlfOZ5D3IA?e=dhd3Fe)
