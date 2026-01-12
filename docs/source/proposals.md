@@ -1,6 +1,6 @@
-# Project Proposals
+# Project proposals
 
-Looking for dedicated support from the Scientific Computing Team? Fill out a [project proposal template](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EUBH5IZOEjRMuOfrIN94buwBIuXXVYJUC8eYa51uc13kSQ?e=LEj4Xh) and send to David for review.
+Looking for dedicated support from the Scientific Computing Team? Fill out a [project proposal template](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EUBH5IZOEjRMuOfrIN94buwBIuXXVYJUC8eYa51uc13kSQ?e=LEj4Xh) and send to David Feng for review.
 
 ## Examples
 
