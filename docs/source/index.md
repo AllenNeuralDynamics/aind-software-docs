@@ -10,6 +10,8 @@
 
 [Propose a project](proposals.md) with scientific computing support.
 
+[Publish and share](share.md) my data with external users.
+
 ## I need to report an...
 
 [Issue with scientific computing software](https://github.com/AllenNeuralDynamics/aind-scientific-computing/).
@@ -24,6 +26,10 @@ Follow these links to request access to:
 - [GitHub Copilot](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items) - via ServiceNow
 - [VAST /allen/aind/scratch and /allen/aind/stage](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items) - via ServiceNow
 
+## I want to learn about...
+
+[Data governance](phil)
+
 ```{toctree}
 :maxdepth: 2
 :hidden:
@@ -32,6 +38,7 @@ Follow these links to request access to:
 acquire_upload
 explore_analyze
 proposals
+share
 
 ```
 
@@ -40,6 +47,16 @@ proposals
 :hidden:
 :caption: Resources
 
+docs
 core_services
+
+```
+
+```{toctree}
+:maxdepth: 1
+:hidden:
+:caption: Philosophy
+
+philosophy
 
 ```

@@ -8,6 +8,8 @@
 
 [Upload my data assets](acquire_upload/upload.md) to the Cloud.
 
+[Process my data assets](acquire_upload/processing.md) using our per-modality standard pipelines.
+
 ```{toctree}
 :hidden:
 
