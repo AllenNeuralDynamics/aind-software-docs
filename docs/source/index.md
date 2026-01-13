@@ -6,7 +6,7 @@
 
 [Acquire and upload data](acquire_upload.md) to the Cloud.
 
-[Explore and analyze](explore_analyze.md) my data assets.
+[Explore, QC, and analyze](explore_analyze.md) my data assets.
 
 [Propose a project](proposals.md) with scientific computing support.
 
