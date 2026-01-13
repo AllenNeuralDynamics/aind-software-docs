@@ -2,6 +2,12 @@
 
 Before running an acquisition, you are responsible for ensuring that your **project metadata**, **instrument**, and **procedures** are valid and accessible through the metadata-service.
 
+You are ready to generate data when:
+
+- Your project metadata is accessible by project name
+- Your `instrument.json` is ready to be copied to each data asset OR has been uploaded to the metadata-service
+- Your `procedures.json` is ready to be copied to each data asset OR all your procedures were performed by NSB
+
 ## Project name
 
 Your *project* and *subproject* (if applicable) as well as funding information and investigators need to be accurate.
@@ -207,6 +213,14 @@ Keep track of your `instrument_id` you will need to provide this value when you 
 ## Procedures
 
 [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) metadata should be prepared in advance and uploaded to the metadata-service.
+
+Our goal with procedures metadata is to capture the date, time, and parameters of a published [Protocol](https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics/publications) on our protocols.io page. You only need to track the extent to which your procedure varies from the standard protocol.
+
+### Custom procedures
+
+Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Note that the `data-transfer-service` will **NOT** merge your procedures with any stored in NSB, you must pull the NSB procedures and manually merge them ahead of time.
+
+### NSB procedures
 
 Standardized procedures that are performed by NSB (link?) are uploaded and accessible through the metadata-service. You can see the available procedures for a mouse by passing its subject_id here:
 
