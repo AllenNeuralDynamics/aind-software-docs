@@ -16,4 +16,5 @@
 acquire_upload/prepare_before_acquisition
 acquire_upload/on_rig
 acquire_upload/upload
+acquire_upload/processing
 ```
