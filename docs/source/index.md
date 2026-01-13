@@ -40,4 +40,6 @@ proposals
 :hidden:
 :caption: Resources
 
+core_services
+
 ```
