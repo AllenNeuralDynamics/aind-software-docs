@@ -15,7 +15,7 @@ Scientific computing is currently re-organizing pipelines to be per-modality, ra
 | Fiber photometry | `fib` | [aind-fiber-photometry-harp-pipeline](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-harp-pipeline) |
 | Fluorescence micro-optical sectioning tomography | `fMOST` |  |
 | Intracellular electrophysiology | `icephys` |  |
-| Intrinsic signal imaging | `ISI` |  |
+| Intrinsic signal imaging | `ISI` | [isi_segmentation](https://github.com/AllenNeuralDynamics/isi_segmentation) |
 | Multiplexed analysis of projections by sequencing | `MAPseq` |  |
 | Multiplexed error-robust fluorescence in situ hybridization | `merfish` |  |
 | Magnetic resonance imaging | `MRI` |  |
@@ -27,13 +27,13 @@ Scientific computing is currently re-organizing pipelines to be per-modality, ra
 
 ## Behavior pipelines
 
-| Modality | Modalities | Pipeline repository |
+| Behavior | Modalities | Pipeline repository |
 |---|---|---|
 | Patch foraging behavior | `behavior`, `behavior-videos` | [aind-vr-foraging-pipeline](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline) |
+| Camstim/Sync Behavior | `behavior`, `behavior-videos` | [aind-behavior-camstim-pipeline](https://github.com/AllenNeuralDynamics/aind-behavior-camstim-pipeline) |
 
 ## Per-project pipelines
 
-| Modality | Modalities | Pipeline repository |
+| Project name | Modalities | Pipeline repository |
 |---|---|---|
-| Camstim/Sync Behavior | `behavior`, `behavior-videos`, `pophys`, `ephys` | [aind-behavior-camstim-pipeline](https://github.com/AllenNeuralDynamics/aind-behavior-camstim-pipeline) |
-| Dynamic foraging behavior| `behavior`, `behavior-videos`, `fib` | [aind-dynamic-foraging-pipeline](https://github.com/AllenNeuralDynamics/aind-dynamic-foraging-pipeline) |
+| Dynamic foraging | `behavior`, `behavior-videos`, `fib` | [aind-dynamic-foraging-pipeline](https://github.com/AllenNeuralDynamics/aind-dynamic-foraging-pipeline) |
