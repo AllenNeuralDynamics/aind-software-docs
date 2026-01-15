@@ -58,10 +58,9 @@ All primary data assets have the following naming convention:
 
 A few points: 
 
-- <acquisition-datetime>: yyyymmddTtz, at start of acquisition,. 
-- Acquisition datetime is essential for uniqueness.  
-- Acquisition datetime is in the local time zone. 
-- Time-zone is documented in metadata files 
+- Format <acquisition-start-datetime>: yyyymmdd_HH-MM-SS
+- This should be the start of acquisition, in the local time zone.
+- The local time-zone is documented in metadata files
 - All tokens (e.g. <subject-id>) must not contain underscores or illegal filename characters. Subject ID is not strictly necessary – only the timestamp is essential. However, it is part of the current naming convention because it helps people visually browse for data.
 
 Primary data assets are organized as follows: 
@@ -96,13 +95,13 @@ Example for simultaneous electrophysiology with optotagging and FIP:
 📦655568_2022-04-26_11-48-09
  ┣ 📜<metadata JSON files>
  ┣ 📂FIB
- ┃ ┣ 📜L415_2022-04-26T11_48_09.csv
- ┃ ┣ 📜L470_2022-04-26T11_48_09.csv
- ┃ ┣ 📜L560_2022-04-26T11_48_09.3024512-07_00
- ┃ ┣ 📜Raw2022-04-26T11_48_09.csv
- ┃ ┣ 📜TTL_2022-04-26T11_48_08.1780864-07_00
- ┃ ┣ 📜TTL_TS2022-04-26T11_48_08.csv
- ┃ ┗ 📜TimeStamp_2022-04-26T11_48_08.csv
+ ┃ ┣ 📜L415_2022-04-26_11-48-09.csv
+ ┃ ┣ 📜L470_2022-04-26_11-48-09.csv
+ ┃ ┣ 📜L560_2022-04-26_11-48-09.3024512
+ ┃ ┣ 📜Raw2022-04-26_11-48-09.csv
+ ┃ ┣ 📜TTL_2022-04-26_11-48-08.1780864
+ ┃ ┣ 📜TTL_TS2022-04-26_11-48-08.csv
+ ┃ ┗ 📜TimeStamp_2022-04-26_11-48-08.csv
  ┣ 📂ecephys
  ┃ ┣ 📜220426114809_655568.opto.csv
  ┃ ┗ 📂Record Node 104
@@ -167,10 +166,9 @@ When naming files, we should:
 - use terms from vocabularies defined in aind-data-schema, e.g. 
   - modalities, institutions 
   - behavior video file names 
-- use "yyyy-mm-dd" and "hh-mm-ss" in local time zone for dates and times 
-- separate tokens with underscores, and not include underscores in tokens, e.g. 
+- use "yyyy-mm-dd" and "HH-MM-SS" in local time zone for dates and times 
+- separate tokens with underscores, and do not include underscores in tokens, e.g. 
   - Do this: EFIP_655568_2022-04-26_11-48-09 
-  - Not this: EFIP-655568-2022_04_26-11_48_09 
 - Do not include illegal filename characters in tokens
 
 ## Human-in-the-loop Processing Pipelines
