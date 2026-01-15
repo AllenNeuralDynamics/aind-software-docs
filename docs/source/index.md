@@ -8,9 +8,9 @@
 
 [Explore, QC, and analyze](explore_analyze.md) my data assets.
 
-[Propose a project](proposals.md) with scientific computing support.
+[Propose a project](proposals.md) with software engineering support.
 
-[Publish and share](share.md) my data with external users.
+[Package](share.md) data for publications and workshops.
 
 ## I need to report an...
 
