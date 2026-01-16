@@ -2,6 +2,21 @@
 
 Scientific computing is currently re-organizing pipelines to be per-modality, rather than per-project.
 
+## Pipeline requirements
+
+### Data
+
+[todo]
+
+### Metadata
+
+All processing pipelines that create derived assets will upgrade the [data_description](https://aind-data-schema.readthedocs.io/en/latest/data_description.html) to a derived data description (changing the name and data_level). Processing also creates additional processing metadata as well as quality_control metadata.
+
+Any files that are not modified should simply be copied to the derived asset unchanged.
+How to upgrade a data_description
+
+Use the [`DataDescription.from_data_description()`](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/e172cb06a63b722eaeaaf8933d0a17cbedf3feea/src/aind_data_schema/core/data_description.py#L334) function to create derived data_description objects. Pass the process name as a parameter. If more source data assets were used than just the one being passed into the function then pass the optional source_data parameter as well with the names of those data assets.
+
 ## Per-modality physiology pipelines
 
 | Modality | Modalities | Pipeline repository |
