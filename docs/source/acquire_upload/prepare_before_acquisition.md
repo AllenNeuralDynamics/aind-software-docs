@@ -1,6 +1,6 @@
 # Prepare metadata
 
-Before running an acquisition, you are responsible for ensuring that your **project metadata**, **instrument**, and **procedures** are valid and accessible through the metadata-service.
+Before running an acquisition, you are responsible for ensuring that your **project metadata**, **instrument**, and **procedures** are valid and accessible through the [metadata-service](http://aind-metadata-service/docs).
 
 You are ready to generate data when:
 
