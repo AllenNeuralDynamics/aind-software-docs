@@ -6,9 +6,9 @@
 
 [Find data asset(s)](explore_analyze/data_portal.md).
 
-[Analyze my data]() in the cloud.
+[Analyze my data](explore_analyze/code_ocean.md#analysis-on-code-ocean) in the cloud.
 
-[Automated my analysis]() using the Analysis Framework.
+[Automate my analysis](explore_analyze/code_ocean.md#analysis-framework) using the Analysis Framework.
 
 ```{toctree}
 :hidden:
@@ -16,5 +16,4 @@
 explore_analyze/quality_control
 explore_analyze/data_portal
 explore_analyze/code_ocean
-explore_analyze/analysis_framework
 ```
