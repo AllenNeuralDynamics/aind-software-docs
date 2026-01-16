@@ -10,7 +10,7 @@
 
 [Propose a project](proposals.md) with software engineering support.
 
-[Package](share.md) data for publications and workshops.
+[Package data](package_data.md) for publications and workshops.
 
 ## I need to report an...
 
@@ -38,7 +38,7 @@ Follow these links to request access to:
 acquire_upload
 explore_analyze
 proposals
-share
+package_data
 
 ```
 
