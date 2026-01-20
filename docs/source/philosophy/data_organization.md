@@ -1,4 +1,4 @@
-# Data organization
+# Data organization (policy)
 
 This document describes how data and metadata should be organized before it is copied into cloud storage. It covers core concepts, file names, directory structures, and metadata conventions. 
 
