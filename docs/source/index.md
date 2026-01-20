@@ -58,5 +58,7 @@ core_services
 :caption: Philosophy
 
 philosophy
+data_organization
+data_governance
 
 ```

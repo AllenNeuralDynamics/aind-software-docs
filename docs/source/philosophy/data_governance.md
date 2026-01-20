@@ -40,7 +40,23 @@ AIND’s high-performance on-premise storage system (VAST) is sized to be a ~2-w
 
 The VAST system has two partitions: 
 
-1. Stage (1600TB): an access-controlled buffer for raw data compression and upload. No individual user accounts will have write-access to this partition – only service accounts on acquisition workstations. The stage partition has daily snapshots that expire after 3 days. \\allen\aind\stage (windows) /allen/aind/stage (linux) 
-2. Scratch (200TB): an uncontrolled space for all AIND team members to use. This share can be read and modified by any account. Data stored here is considered transient, not intended for public sharing, and subject to requests for deletion. Recommended scratch share organization is to have top level directories for each AIND group (ephys, ophys, etc), then subfolders for individual users. The scratch partition has daily snapshots that expire after 2 weeks. \\allen\aind\scratch (windows) /allen/aind/stage (linux) 
+1. Stage (1600TB): an access-controlled buffer for raw data compression and upload. No individual user accounts will have write-access to this partition – only service accounts on acquisition workstations. The stage partition has daily snapshots that expire after 3 days. `\\allen\aind\stage` (windows) `/allen/aind/stage` (linux) 
+2. Scratch (200TB): an uncontrolled space for all AIND team members to use. This share can be read and modified by any account. Data stored here is considered transient, not intended for public sharing, and subject to requests for deletion. Recommended scratch share organization is to have top level directories for each AIND group (ephys, ophys, etc), then subfolders for individual users. The scratch partition has daily snapshots that expire after 2 weeks. `\\allen\aind\scratch` (windows) `/allen/aind/stage` (linux) 
 
 Open a ServiceNow ticket to restore data from a snapshot.
+
+##     Raw data can only be uploaded to cloud using the Data Transfer Service. 
+
+When manually uploading data to cloud buckets, it is easy to make mistakes that can affect others’ data. The data transfer service is designed to automatically organize data and metadata consistently and prevent accidentally overwriting data.  
+
+Cloud storage is organized as follows: 
+
+    aind-private-data: a read-only private S3 bucket organized by session 
+
+    aind-open-data: a read-only public S3 bucket organized by session 
+
+    aind-scratch-data: a private S3 bucket that is writable by all AIND staff  
+
+Because it is easy to delete large amounts of data on accident, very few AIND users have the ability to modify or delete data in aind-open-data and aind-private-data. If errors are detected in data in those buckets, contact Scientific Computing. Mitigate errors by testing upload jobs on aind-scratch-data. 
+
+aind-open-data and aind-private-data are organized according to [Data Organization Conventions](<data_organization>). These conventions enable us to have consistently organized data that can be shared rapidly and openly. The Data Transfer Service organizes data according to these conventions as it uploads data. 
