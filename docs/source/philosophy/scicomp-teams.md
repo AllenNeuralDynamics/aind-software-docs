@@ -1,10 +1,79 @@
 # Scientific Computing at AIND
 
+## Core principles
 
-# Data Infrastructure
+All of the teams in Scientific Computing adhere to a set of core principles about our software.
 
-# Data & Outreach
+### Code Review 
 
-# Physiology and Behavior
+At least one other software developer needs to approve a pull request in order for it to be merged. Please be courteous when providing feedback. The team lead can resolve any conflicts. 
 
-# Image Processing
+### Style
+
+We use `black`, `flake8`, and `interrogate` to enforce [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format.
+
+### Versioning
+
+We use [semver](https://semver.org/) major.minor.patch versions, these are automatically incremented when you use the `aind-library-template`. Note that for major versions you need to put the exact string "BREAKING CHANGE" in the commit *comment* (not the title).
+
+You should set patch version floor `>=1.0.0` and major version ceiling `<2` for each internal dependency that you use. This is good practice for all dependencies.
+
+## Data Infrastructure
+
+Data Infrastructure maintains the core services in AIND. Some of the major ones include:
+
+**aind-data-transfer-service**
+
+FastAPI service to run data compression and transfer jobs on the HPC
+
+[link](http://aind-data-transfer-service/) | [readthedoc](https://aind-data-transfer-service.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-data-transfer-service)
+
+**aind-metadata-service**
+
+REST service to retrieve metadata from AIND databases 
+
+[link](http://aind-metadata-service/) | [readthedoc](http://aind-metadata-service/docs) | [repo](https://github.com/AllenNeuralDynamics/aind-metadata-service)
+
+**aind-data-access-api**
+
+Library to interface with AIND databases
+
+[tutorial](https://codeocean.allenneuraldynamics.org/capsule/9613367/tree/v1) | [readthedoc](https://aind-data-access-api.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-data-access-api)
+
+**aind-data-asset-indexer**
+
+Index jobs for AIND metadata in AWS DocumentDB and S3 
+
+[readthedoc](https://aind-data-asset-indexer.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-data-asset-indexer)
+
+
+## Data & Outreach
+
+The Data & Outreach team maintains the data schema and associated downstream tools and is responsible for coordinating workshops and other outreach events.
+
+**aind-data-schema**
+
+Metadata schema for neuroscience
+
+[readthedoc](https://aind-data-schema.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-data-schema) | [registries repo](https://github.com/AllenNeuralDynamics/aind-data-schema-models/)
+
+**aind-metadata-mapper**
+
+Repository to help gather and map metadata from different sources 
+
+[readthedoc](https://aind-metadata-mapper.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-metadata-mapper)
+
+## Physiology and Behavior
+
+[todo]
+
+## Computer Vision
+
+[todo]
+
+## Resources for SWEs
+
+For research software engineers, [Good Research Code](https://goodresearch.dev/) is a good primer.
+
+[Data structure fundamentals](https://www.crackingthecodinginterview.com/)
+
