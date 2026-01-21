@@ -274,6 +274,8 @@ utils.save_instrument(instrument_object)
 
 Note that future fetches of the instrument will be done using the instrument_id in the JSON. Make sure this is correct!
 
+Also note that only the most recent saved instrument will be pulled automatically by the data transfer service. If you make a mistake when posting an instrument, you can simply post again and this latter instrument will be fetched automatically. 
+
 ### I want to get an instrument from the database
 
 If you want to fetch an instrument JSON file from the database, you can do the following:
@@ -288,6 +290,8 @@ instrument_data = utils.get_instrument(INSTRUMENT_ID)
 with open(OUTPUT_PATH, 'w') as f:
     json.dump(instrument_data, f, indent=2)
 ```
+
+Note that this will fetch the most recent instrument matching the specified ID. There is currently no functionality for pulling older versions of instrument JSON files from the database, though they are maintained. If you need access to an older version of an instrument metadata file from the database, please reach out to someone in Scientific Computing for assistance.
 
 ### I need to edit an existing instrument JSON file
 
@@ -306,7 +310,6 @@ print("Validation successful!")
 If validation fails, Pydantic will provide an error message indicating what needs to be fixed.
 
 Assuming the instrument validates, you can follow instructions above for ensuring that the new instrument is included with future data acquisitions.
-
 
 ## Procedures
 
