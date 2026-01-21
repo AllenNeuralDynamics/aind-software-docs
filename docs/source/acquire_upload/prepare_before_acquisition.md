@@ -241,6 +241,24 @@ The following sections describe use cases for saving, fetching, editing and crea
 
 Instrument JSON files should always be created by Python scripts that import and apply Pydantic models from the [`aind-data-schema`](https://github.com/AllenNeuralDynamics/aind-data-schema) library, as opposed to directly writing JSON files. This will leverage Pydantic's built-in validation functions and ensures that the resulting JSON follows the schema. All metadata files are passed through a validator during upload, so if you edit the JSON manually, you risk having the resulting file fail validation, which will block your upload job. There are multiple examples of Python scripts for generating instrument JSON files in the [data schema examples folder](https://github.com/AllenNeuralDynamics/aind-data-schema/tree/dev/examples)
 
+### I need to edit an existing instrument JSON file
+
+In some cases, you may need to update an existing instrument JSON file due to hardware changes (e.g., replacing a camera or probe with the same model but different serial number). While we generally recommend generating and updating instrument files using Python scripts, simple field updates can be made by directly editing the JSON file. However, you must validate the file after editing to ensure it still conforms to the schema.
+
+To validate an instrument JSON file:
+
+```python
+from aind_data_schema.core.instrument import Instrument
+
+with open('instrument.json', 'r') as f:
+    instrument = Instrument.model_validate_json(f.read())
+print("Validation successful!")
+```
+
+If validation fails, Pydantic will provide an error message indicating what needs to be fixed.
+
+Assuming the instrument validates, you can follow instructions above for ensuring that the new instrument is included with future data acquisitions.
+
 ### I'm ready to upload my instrument JSON file to the database
 
 If you want to follow the second option above (i.e. storing your instrument metadata file in scicomp managed database for automatic fetching during data upload), you can follow these steps to post your instrument json file to the database:
@@ -292,24 +310,6 @@ with open(OUTPUT_PATH, 'w') as f:
 ```
 
 Note that this will fetch the most recent instrument matching the specified ID. There is currently no functionality for pulling older versions of instrument JSON files from the database, though they are maintained. If you need access to an older version of an instrument metadata file from the database, please reach out to someone in Scientific Computing for assistance.
-
-### I need to edit an existing instrument JSON file
-
-In some cases, you may need to update an existing instrument JSON file due to hardware changes (e.g., replacing a camera or probe with the same model but different serial number). While we generally recommend generating and updating instrument files using Python scripts, simple field updates can be made by directly editing the JSON file. However, you must validate the file after editing to ensure it still conforms to the schema.
-
-To validate an instrument JSON file:
-
-```python
-from aind_data_schema.core.instrument import Instrument
-
-with open('instrument.json', 'r') as f:
-    instrument = Instrument.model_validate_json(f.read())
-print("Validation successful!")
-```
-
-If validation fails, Pydantic will provide an error message indicating what needs to be fixed.
-
-Assuming the instrument validates, you can follow instructions above for ensuring that the new instrument is included with future data acquisitions.
 
 ## Procedures
 
