@@ -200,15 +200,97 @@ The investigators endpoint will be used during data upload to populate your data
 
 ## Instrument
 
-[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance and uploaded to the metadata-service.
+[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance. The resulting `instrument.json` file should describe the full collection of devices present in the physical instrument used to collect data. 
 
-Keep track of your `instrument_id` you will need to provide this value when you upload your data asset later.
+In cases where data is acquired simultaneously with two or more distinct instruments (e.g. a behavior instrument and a physiology instrument), multiple instrument metadata files can be provided with the namining convention `instrument_{modality}.json` and the individual instrument files will be joined into a single `instrument.json` by the data transfer service as part of the "gather metadata job" during data upload. See [here](NEED LINK!) for an overview of rules to keep in mind for merging of multiple JSON files. 
+
+Users have two options for providing instrument metadata files (whether that's a single `instrument.json` or multiple `instrument_{modality}.json` files):
+1) Files can be provided at upload time in the data folder. In this case, it is up to users to ensure that the instrument file(s) are in the data folder when upload is triggered. Users are free to set this up however they choose. Two patterns than have been used are:
+
+      * A static instrument metadata file is saved somewhere on the data acquisition machine and is copied into the data folder prior to upload
+
+      * A script is run that dynamically generates an instrument metadata file before upload. 
+
+2) A static version of the instrument metadata is uploaded to a database in advance. See details below. In this case, users must specify the instrument_id as part of the job parameters in the upload job (MORE DETAIL NEEDED!). The data transfer service will then pull the instrument metadata from the database during upload. 
+
+## Instrument maintanence responsibility
+
+It's ultimately the responsiblity of the scientist collecting data to ensure that the instrument metadata is correct. In cases where an engineer builds a new instrument or performs maintanence on an existing instrument, that engineer should take responsibility for creating/updating the instrument metadata as appropriate.
+
+## How to
+
+The following sections describe use cases for saving, fetching, editing and creating instrument metadata files
 
 ### I want to write an instrument.json
 
-### I'm ready to upload my instrument.json
+Instrument JSON files should always be created by Python scripts that import and apply Pydantic models from the [`aind-data-schema`](https://github.com/AllenNeuralDynamics/aind-data-schema) library, as opposed to directly writing JSON files. This will leverage Pydantic's built-in validation functions and ensures that the resulting JSON follows the schema. All metadata files are passed through a validator during upload, so if you edit the JSON manually, you risk having the resulting file fail validation, which will block your upload job. There are multiple examples of Python scripts for generating instrument JSON files in the [data schema examples folder](https://github.com/AllenNeuralDynamics/aind-data-schema/tree/dev/examples)
 
-[TODO]
+### I'm ready to upload my instrument JSON file to the database
+
+If you want to follow the second option above (i.e. storing your instrument metadata file in scicomp managed database for automatic fetching during data upload), you can follow these steps to post your instrument json file to the database:
+
+1) Generate and validate your instrument JSON file locally. 
+2) Post to the database as follows
+
+note that users must currently have the "release-v1.0.0" branch of the metadata mapper installed. Follow these steps to do so:
+```bash
+git checkout https://github.com/AllenNeuralDynamics/aind-metadata-mapper.git
+cd aind-metadata-mapper
+git checkout release-v1.0.0
+conda create -n instrument_uploader # or whatever you want your env to be called
+conda activate instrument_uploader
+pip install -e .
+```
+
+Then run the following in python
+
+```python
+from aind_metadata_mapper import utils
+from aind_data_schema.core.instrument import Instrument
+
+# Load the JSON as an Instrument object
+with open(instrument_path, 'r') as f:
+    instrument_object = Instrument.model_validate_json(f.read())
+
+# save the instrument to the database. 
+utils.save_instrument(instrument_object)
+```
+
+Note that future fetches of the instrument will be done using the instrument_id in the JSON. Make sure this is correct!
+
+### I want to get an instrument from the database
+
+If you want to fetch an instrument JSON file from the database, you can do the following:
+
+```python
+from aind_metadata_mapper import utils
+
+# fetch the instrument, where `INSTRUMENT_ID` is a string containing the instrument ID
+instrument_data = utils.get_instrument(INSTRUMENT_ID)
+
+# Optionally save to disk, where OUTPUT_PATH is a string defining a valid filepath
+with open(OUTPUT_PATH, 'w') as f:
+    json.dump(instrument_data, f, indent=2)
+```
+
+### I need to edit an existing instrument JSON file
+
+In some cases, you may need to update an existing instrument JSON file due to hardware changes (e.g., replacing a camera or probe with the same model but different serial number). While we generally recommend generating and updating instrument files using Python scripts, simple field updates can be made by directly editing the JSON file. However, you must validate the file after editing to ensure it still conforms to the schema.
+
+To validate an instrument JSON file:
+
+```python
+from aind_data_schema.core.instrument import Instrument
+
+with open('instrument.json', 'r') as f:
+    instrument = Instrument.model_validate_json(f.read())
+print("Validation successful!")
+```
+
+If validation fails, Pydantic will provide an error message indicating what needs to be fixed.
+
+Assuming the instrument validates, you can follow instructions above for ensuring that the new instrument is included with future data acquisitions.
+
 
 ## Procedures
 
