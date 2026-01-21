@@ -211,7 +211,23 @@ Users have two options for providing instrument metadata files (whether that's a
 
       * A script is run that dynamically generates an instrument metadata file before upload. 
 
-2) A static version of the instrument metadata is uploaded to a database in advance. See details below. In this case, users must specify the instrument_id as part of the job parameters in the upload job (MORE DETAIL NEEDED!). The data transfer service will then pull the instrument metadata from the database during upload. 
+2) A static version of the instrument metadata is uploaded to a database in advance. See details below. In this case, users must specify the instrument_id as part of the job parameters in the `gather_preliminary_metadata` job type settings as follows
+
+   ```
+   {
+      "skip_task": false,
+      "job_settings": {
+         "instrument_settings": {
+            "instrument_id": INSTRUMENT_ID # a string containing a valid instrument ID
+         }
+      },
+      ...
+   }
+   ```
+   
+   The data transfer service will then pull the instrument metadata from the database during upload. 
+
+Note that it is possible to combine these methods. For example, a user could pass the instrument JSON for the behavior instrument in the data directory (named something like `instrument_behavior.json`) and also specify a physiology rig by instrument ID in the `gather_preliminary_metadata` job type settings. The two instrument files would be merged by the data transfer service.
 
 ## Instrument maintanence responsibility
 
