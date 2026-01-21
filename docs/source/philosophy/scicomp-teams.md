@@ -20,7 +20,9 @@ You should set patch version floor `>=1.0.0` and major version ceiling `<2` for 
 
 ## Data Infrastructure
 
-Data Infrastructure maintains the core services in AIND. Some of the major ones include:
+Data Infrastructure maintains the core services in AIND.
+
+Some of the major core services:
 
 **aind-data-transfer-service**
 
