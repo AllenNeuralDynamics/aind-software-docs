@@ -14,7 +14,7 @@
 
 ## I need to report an...
 
-[Issue with scientific computing software](https://github.com/AllenNeuralDynamics/aind-scientific-computing/).
+[Issue with scientific computing software](https://github.com/AllenNeuralDynamics/aind-scientific-computing/issues).
 
 ## I need an account...
 
