@@ -16,6 +16,8 @@
 
 [Issue with scientific computing software](https://github.com/AllenNeuralDynamics/aind-scientific-computing/issues).
 
+[Issue with SIPE instrumentation](https://apps.powerapps.com/play/e/9084dabc-d707-e1bf-8113-685be25cac15/a/cb338490-e23d-48e6-9e6d-e600b8d17dd4?tenantId=32669cd6-737f-4b39-8bdd-d6951120d3fc&hidenavbar=true&skipmetadata=true).
+
 ## I need an account...
 
 Follow these links to request access to:
@@ -28,7 +30,7 @@ Follow these links to request access to:
 
 ## I want to learn about...
 
-[Data governance](philosophy.md)
+[Data science in general](philosophy.md) at AIND.
 
 ```{toctree}
 :maxdepth: 2

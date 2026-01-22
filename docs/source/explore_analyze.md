@@ -10,10 +10,13 @@
 
 [Automate my analysis](explore_analyze/code_ocean.md#analysis-framework) using the Analysis Framework.
 
+[Explore tools](explore_analyze/tools.md) for annotation and data exploration.
+
 ```{toctree}
 :hidden:
 
 explore_analyze/quality_control
 explore_analyze/data_portal
 explore_analyze/code_ocean
+explore_analyze/tools
 ```
