@@ -4,7 +4,9 @@
 
 [Prepare my metadata](acquire_upload/prepare_before_acquisition.md) before acquisition.
 
-[Run my acquisition](acquire_upload/on_rig.md) on a rig.
+[Calibrate and test](acquire_upload/calibration.md) an instrument.
+
+[Run my acquisition](acquire_upload/on_rig.md) on an instrument.
 
 [Upload my data assets](acquire_upload/upload.md) to the Cloud.
 
@@ -15,6 +17,7 @@
 
 acquire_upload/prepare_before_acquisition
 acquire_upload/on_rig
+acquire_upload/calibration
 acquire_upload/upload
 acquire_upload/processing
 ```
