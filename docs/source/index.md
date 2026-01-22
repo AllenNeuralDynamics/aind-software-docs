@@ -28,7 +28,7 @@ Follow these links to request access to:
 
 ## I want to learn about...
 
-[Data governance](phil)
+[Data governance](philosophy.md)
 
 ```{toctree}
 :maxdepth: 2
