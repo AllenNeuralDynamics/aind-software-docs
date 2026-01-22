@@ -1,4 +1,4 @@
-# On rig
+# During acquisition
 
 During data acquisition you are responsible for running version-controlled acquisition software and ensuring your data files for each modality are organized according to standardized conventions.
 
