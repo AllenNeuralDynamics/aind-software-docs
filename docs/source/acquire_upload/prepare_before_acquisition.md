@@ -202,9 +202,10 @@ The investigators endpoint will be used during data upload to populate your data
 
 [Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance. The resulting `instrument.json` file should describe the full collection of devices present in the physical instrument used to collect data. 
 
-In cases where data is acquired simultaneously with two or more distinct instruments (e.g. a behavior instrument and a physiology instrument), multiple instrument metadata files can be provided with the namining convention `instrument_{modality}.json` and the individual instrument files will be joined into a single `instrument.json` by the data transfer service as part of the "gather metadata job" during data upload. See [metadata merging rules](upload.md#metadata-merging-rules) for an overview of rules to keep in mind for merging of multiple JSON files. 
+Multiple `instrument.json` files can be provided when two separate instruments are used simultaneously to acquire a data asset. See [metadata merging rules](upload.md#metadata-merging-rules) for information about how metadata files are merged during data upload.
 
-Users have two options for providing instrument metadata files (whether that's a single `instrument.json` or multiple `instrument_{modality}.json` files):
+Users have two options for providing instrument metadata files:
+
 1) Files can be provided at upload time in the data folder. In this case, it is up to users to ensure that the instrument file(s) are in the data folder when upload is triggered. Users are free to set this up however they choose. Two patterns than have been used are:
 
       * A static instrument metadata file is saved somewhere on the data acquisition machine and is copied into the data folder prior to upload
