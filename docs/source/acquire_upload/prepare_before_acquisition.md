@@ -297,12 +297,6 @@ Subject metadata is populated by lab animal services (LAS) without your involvem
 </script>
 ```
 
-### Calibration objects
-
-When collecting a *complete data asset* on an instrument using a "calibration object" instead of a subject, you should set `subject_id = "calibration"` in all metadata files. Please also use the [CalibrationObject](https://aind-data-schema.readthedocs.io/en/latest/components/subjects.html#calibrationobject) in the `Subject.subject_details` to track information about the physical object used during calibration.
-
-Note that this is only for situations where you are acquiring a full data asset, for example when testing processing pipelines with fake calibration data. When calibrating individual devices you should include [Calibration](https://aind-data-schema.readthedocs.io/en/latest/components/measurements.html#calibration) metadata in your `instrument.json` or `acquisition.json` (depending on when the data was acquired).
-
 ## Instrument
 
 [Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance and uploaded to the metadata-service.
