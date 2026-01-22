@@ -230,9 +230,9 @@ Users have two options for providing instrument metadata files:
 
 Note that it is possible to combine these methods. For example, a user could pass the instrument JSON for the behavior instrument in the data directory (named something like `instrument_behavior.json`) and also specify a physiology rig by instrument ID in the `gather_preliminary_metadata` job type settings. The two instrument files would be merged by the data transfer service.
 
-## Instrument maintanence responsibility
+### Maintenance responsibility
 
-It's ultimately the responsiblity of the scientist collecting data to ensure that the instrument metadata is correct. In cases where an engineer builds a new instrument or performs maintanence on an existing instrument, that engineer should take responsibility for creating/updating the instrument metadata as appropriate.
+While it is ultimately the responsibility of the scientist collecting data to ensure that all metadata is correct, it is the responsibility of the person who modifies an instrument to update instrument metadata to reflect the changes they made.
 
 ## How to
 
