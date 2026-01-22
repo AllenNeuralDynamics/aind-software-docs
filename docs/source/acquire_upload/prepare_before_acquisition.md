@@ -246,7 +246,7 @@ The following sections describe use cases for saving, fetching, editing and crea
 
 #### I want to write an instrument.json
 
-Instrument JSON files should always be created by Python scripts that import and apply Pydantic models from the [`aind-data-schema`](https://github.com/AllenNeuralDynamics/aind-data-schema) library, as opposed to directly writing JSON files. This will leverage Pydantic's built-in validation functions and ensures that the resulting JSON follows the schema. All metadata files are passed through a validator during upload, so if you edit the JSON manually, you risk having the resulting file fail validation, which will block your upload job. There are multiple examples of Python scripts for generating instrument JSON files in the [data schema examples folder](https://github.com/AllenNeuralDynamics/aind-data-schema/tree/dev/examples)
+Instrument JSON files should be created by a Python script using models from the [`aind-data-schema`](https://github.com/AllenNeuralDynamics/aind-data-schema) library to ensure the output file is valid according to the schema (as opposed to directly writing JSON). There are multiple examples of Python scripts for generating instrument JSON files in the [data schema examples folder](https://github.com/AllenNeuralDynamics/aind-data-schema/tree/dev/examples)
 
 #### I need to edit an existing instrument JSON file
 
