@@ -202,6 +202,12 @@ The investigators endpoint will be used during data upload to populate your data
 
 [Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance. The resulting `instrument.json` file should describe the full collection of devices present in the physical instrument used to collect data. 
 
+### ID
+
+The `instrument_id` for AIND should be the SIPE ID for a rig. If an instrument is not tracked by SIPE, any string will be accepted.
+
+### Other details
+
 Multiple `instrument.json` files can be provided when two separate instruments are used simultaneously to acquire a data asset. See [metadata merging rules](upload.md#metadata-merging-rules) for information about how metadata files are merged during data upload.
 
 Users have two options for providing instrument metadata files:
@@ -212,7 +218,7 @@ Users have two options for providing instrument metadata files:
 
       * A script is run that dynamically generates an instrument metadata file before upload. 
 
-2) A static version of the instrument metadata is uploaded to a database in advance. See details below. In this case, users must specify the instrument_id as part of the job parameters in the `gather_preliminary_metadata` job type settings as follows
+2) A static version of the instrument metadata is uploaded to a database in advance. See details below. In this case, users must specify the `instrument_id` as part of the job parameters in the `gather_preliminary_metadata` job type settings as follows
 
    ```
    {
@@ -234,15 +240,15 @@ Note that it is possible to combine these methods. For example, a user could pas
 
 While it is ultimately the responsibility of the scientist collecting data to ensure that all metadata is correct, it is the responsibility of the person who modifies an instrument to update instrument metadata to reflect the changes they made.
 
-## How to
+### How to
 
 The following sections describe use cases for saving, fetching, editing and creating instrument metadata files
 
-### I want to write an instrument.json
+#### I want to write an instrument.json
 
 Instrument JSON files should always be created by Python scripts that import and apply Pydantic models from the [`aind-data-schema`](https://github.com/AllenNeuralDynamics/aind-data-schema) library, as opposed to directly writing JSON files. This will leverage Pydantic's built-in validation functions and ensures that the resulting JSON follows the schema. All metadata files are passed through a validator during upload, so if you edit the JSON manually, you risk having the resulting file fail validation, which will block your upload job. There are multiple examples of Python scripts for generating instrument JSON files in the [data schema examples folder](https://github.com/AllenNeuralDynamics/aind-data-schema/tree/dev/examples)
 
-### I need to edit an existing instrument JSON file
+#### I need to edit an existing instrument JSON file
 
 In some cases, you may need to update an existing instrument JSON file due to hardware changes (e.g., replacing a camera or probe with the same model but different serial number). While we generally recommend generating and updating instrument files using Python scripts, simple field updates can be made by directly editing the JSON file. However, you must validate the file after editing to ensure it still conforms to the schema.
 
@@ -260,7 +266,7 @@ If validation fails, Pydantic will provide an error message indicating what need
 
 Assuming the instrument validates, you can follow instructions above for ensuring that the new instrument is included with future data acquisitions.
 
-### I'm ready to upload my instrument JSON file to the database
+#### I'm ready to upload my instrument JSON file to the database
 
 If you want to follow the second option above (i.e. storing your instrument metadata file in scicomp managed database for automatic fetching during data upload), you can follow these steps to post your instrument json file to the database:
 
@@ -295,7 +301,7 @@ Note that future fetches of the instrument will be done using the instrument_id 
 
 Also note that only the most recent saved instrument will be pulled automatically by the data transfer service. If you make a mistake when posting an instrument, you can simply post again and this latter instrument will be fetched automatically. 
 
-### I want to get an instrument from the database
+#### I want to get an instrument from the database
 
 If you want to fetch an instrument JSON file from the database, you can do the following:
 
