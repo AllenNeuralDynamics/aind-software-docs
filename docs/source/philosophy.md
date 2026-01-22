@@ -10,6 +10,7 @@ I want to learn about...
 :hidden:
 
 philosophy/data_organization.md
+philosophy/data_governance.md
 philosophy/scicomp-teams.md
 
 ```
