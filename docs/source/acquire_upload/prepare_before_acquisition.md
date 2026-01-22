@@ -200,7 +200,7 @@ The investigators endpoint will be used during data upload to populate your data
 
 ## Instrument
 
-[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance. The resulting `instrument.json` file should describe the full collection of devices present in the physical instrument used to collect data. 
+[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance of data acquisition.
 
 ### ID
 
@@ -208,11 +208,15 @@ The `instrument_id` for AIND should be the SIPE ID for a rig. If an instrument i
 
 ### Other details
 
+#### Multiple instruments
+
 Multiple `instrument.json` files can be provided when two separate instruments are used simultaneously to acquire a data asset. See [metadata merging rules](upload.md#metadata-merging-rules) for information about how metadata files are merged during data upload.
+
+#### Upload options
 
 Users have two options for providing instrument metadata files:
 
-1) Files can be provided at upload time in the data folder. In this case, it is up to users to ensure that the instrument file(s) are in the data folder when upload is triggered. Users are free to set this up however they choose. Two patterns than have been used are:
+1) Files can be provided at upload time in the data folder. In this case, it is up to users to ensure that the instrument file(s) are in the data folder when upload is triggered. Users are free to set this up however they choose. Two patterns that have been used are:
 
       * A static instrument metadata file is saved somewhere on the data acquisition machine and is copied into the data folder prior to upload
 
