@@ -1,6 +1,6 @@
 # Prepare metadata
 
-Before running an acquisition, you are responsible for ensuring that your **project metadata**, **instrument**, and **procedures** are valid and accessible through the [metadata-service](http://aind-metadata-service/docs).
+Before running an acquisition, you are responsible for ensuring that your **project metadata**, **instrument**, and **procedures** are valid and accessible through the [metadata-service](https://aind-metadata-service/docs).
 
 You are ready to generate data when:
 
@@ -12,7 +12,7 @@ You are ready to generate data when:
 
 Your *project* and *subproject* (if applicable) as well as funding information and investigators need to be accurate.
 
-You can find a list of project names and combined "<project_name> - <subproject_name>" names at this [metadata-service endpoint](http://aind-metadata-service/api/v2/project_names). These are the only allowable project names available at this time.
+You can find a list of project names and combined "<project_name> - <subproject_name>" names at this [metadata-service endpoint](https://aind-metadata-service/api/v2/project_names). These are the only allowable project names available at this time.
 
 If you need a new project name, it needs to be added to the [project metadata smartsheet](https://app.smartsheet.com/b/login?dlp=%2Fsheets%2FR4GfCrXvHPJ5MjhjRvjgGRMJQxvwQg92wgcX5GP1).
 
@@ -37,7 +37,7 @@ The funding endpoint will be used during data upload to populate your data descr
   const resultDiv = document.getElementById('fundingResult');
 
   // Try to fetch project names - will fail if not on VPN
-  fetch('http://aind-metadata-service/api/v2/project_names')
+  fetch('https://aind-metadata-service/api/v2/project_names')
     .then(response => {
       if (!response.ok) throw new Error('Service not accessible');
       return response.json();
@@ -82,7 +82,7 @@ The funding endpoint will be used during data upload to populate your data descr
     resultDiv.style.border = '1px solid #0066cc';
     resultDiv.innerHTML = '<strong>Loading...</strong>';
 
-    fetch('http://aind-metadata-service/api/v2/funding/' + encodeURIComponent(projectName))
+    fetch('https://aind-metadata-service/api/v2/funding/' + encodeURIComponent(projectName))
       .then(response => {
         if (!response.ok) {
           throw new Error('HTTP error! status: ' + response.status);
@@ -128,7 +128,7 @@ The investigators endpoint will be used during data upload to populate your data
   const resultDiv = document.getElementById('investigatorResult');
 
   // Try to fetch project names - will fail if not on VPN
-  fetch('http://aind-metadata-service/api/v2/project_names')
+  fetch('https://aind-metadata-service/api/v2/project_names')
     .then(response => {
       if (!response.ok) throw new Error('Service not accessible');
       return response.json();
@@ -173,7 +173,7 @@ The investigators endpoint will be used during data upload to populate your data
     resultDiv.style.border = '1px solid #0066cc';
     resultDiv.innerHTML = '<strong>Loading...</strong>';
 
-    fetch('http://aind-metadata-service/api/v2/investigators/' + encodeURIComponent(projectName))
+    fetch('https://aind-metadata-service/api/v2/investigators/' + encodeURIComponent(projectName))
       .then(response => {
         if (!response.ok) {
           throw new Error('HTTP error! status: ' + response.status);
@@ -197,6 +197,109 @@ The investigators endpoint will be used during data upload to populate your data
 })();
 </script>
 ```
+
+## Subject
+
+Subject metadata is populated by lab animal services (LAS) without your involvement. You can fetch subject metadata from the metadata-service to verify that the subject information is accurate:
+
+```{raw} html
+<div style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+  <label for="subjectIdInputMetadata" style="font-weight: bold; display: block; margin-bottom: 10px;">Enter a subject ID to fetch subject metadata from the metadata-service:</label>
+  <input type="text" id="subjectIdInputMetadata" placeholder="e.g., 804670" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+  <button id="submitBtnSubject" style="padding: 8px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Get Subject Info</button>
+  <div id="subjectResult" style="margin-top: 15px; padding: 10px; border-radius: 4px; display: none;"></div>
+</div>
+
+<script type="text/javascript">
+(function() {
+  const subjectInput = document.getElementById('subjectIdInputMetadata');
+  const submitBtn = document.getElementById('submitBtnSubject');
+  const resultDiv = document.getElementById('subjectResult');
+
+  // Try to fetch project names to check if service is accessible
+  fetch('https://aind-metadata-service/api/v2/project_names')
+    .then(response => {
+      if (!response.ok) throw new Error('Service not accessible');
+      return response.json();
+    })
+    .then(data => {
+      // Service is accessible, widget is ready
+    })
+    .catch(error => {
+      subjectInput.disabled = true;
+      subjectInput.placeholder = 'Service unavailable';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.5';
+      submitBtn.style.cursor = 'not-allowed';
+      resultDiv.style.display = 'block';
+      resultDiv.style.backgroundColor = '#fff3cd';
+      resultDiv.style.border = '1px solid #ffc107';
+      resultDiv.innerHTML = '<strong>Please access the docs on the Allen Institute network to preview metadata</strong>';
+      console.error('Metadata service not accessible:', error);
+    });
+
+  // Handle submit button click
+  document.getElementById('submitBtnSubject').addEventListener('click', function() {
+    const subjectId = document.getElementById('subjectIdInputMetadata').value.trim();
+    const resultDiv = document.getElementById('subjectResult');
+    
+    if (!subjectId) {
+      resultDiv.style.display = 'block';
+      resultDiv.style.backgroundColor = '#fff3cd';
+      resultDiv.style.border = '1px solid #ffc107';
+      resultDiv.innerHTML = '<strong>Please enter a subject ID.</strong>';
+      return;
+    }
+
+    // Validate that subject ID is an integer
+    if (!/^\d+$/.test(subjectId)) {
+      resultDiv.style.display = 'block';
+      resultDiv.style.backgroundColor = '#f8d7da';
+      resultDiv.style.border = '1px solid #dc3545';
+      resultDiv.innerHTML = '<strong>Error:</strong> Subject ID must be an integer (numbers only).';
+      return;
+    }
+
+    resultDiv.style.display = 'block';
+    resultDiv.style.backgroundColor = '#e7f3ff';
+    resultDiv.style.border = '1px solid #0066cc';
+    resultDiv.innerHTML = '<strong>Loading subject information...</strong>';
+
+    fetch('https://aind-metadata-service/api/v2/subject/' + encodeURIComponent(subjectId))
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('HTTP error! status: ' + response.status);
+        }
+        return response.json();
+      })
+      .then(response => {
+        const data = response.data || response;
+        resultDiv.style.backgroundColor = '#d4edda';
+        resultDiv.style.border = '1px solid #28a745';
+        resultDiv.innerHTML = '<strong>Subject Information:</strong><pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' + 
+                              JSON.stringify(data, null, 2) + '</pre>';
+      })
+      .catch(error => {
+        resultDiv.style.backgroundColor = '#f8d7da';
+        resultDiv.style.border = '1px solid #dc3545';
+        resultDiv.innerHTML = '<strong>Error:</strong> ' + error.message;
+        console.error('Error fetching subject info:', error);
+      });
+  });
+  
+  // Allow Enter key to submit
+  document.getElementById('subjectIdInputMetadata').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      document.getElementById('submitBtnSubject').click();
+    }
+  });
+})();
+</script>
+```
+
+### Calibration objects
+
+When collecting calibration data on an instrument you should set `subject_id = "calibration"`. Please also use the [CalibrationObject](https://aind-data-schema.readthedocs.io/en/latest/components/subjects.html#calibrationobject) in the `Subject.subject_details` to track information about the physical object used during calibration.
 
 ## Instrument
 
@@ -239,7 +342,7 @@ Standardized procedures that are performed by NSB (link?) are uploaded and acces
   const resultDiv = document.getElementById('proceduresResult');
 
   // Try to fetch project names to check if service is accessible
-  fetch('http://aind-metadata-service/api/v2/project_names')
+  fetch('https://aind-metadata-service/api/v2/project_names')
     .then(response => {
       if (!response.ok) throw new Error('Service not accessible');
       return response.json();
@@ -278,7 +381,7 @@ Standardized procedures that are performed by NSB (link?) are uploaded and acces
     resultDiv.style.border = '1px solid #0066cc';
     resultDiv.innerHTML = '<strong>Loading procedures...</strong><br><em>This may take 30 seconds or more, please wait...</em>';
 
-    fetch('http://aind-metadata-service/api/v2/procedures/' + encodeURIComponent(subjectId))
+    fetch('https://aind-metadata-service/api/v2/procedures/' + encodeURIComponent(subjectId))
       .then(response => {
         if (!response.ok) {
           throw new Error('HTTP error! status: ' + response.status);
