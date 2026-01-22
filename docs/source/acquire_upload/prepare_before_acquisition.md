@@ -248,32 +248,13 @@ The following sections describe use cases for saving, fetching, editing and crea
 
 Instrument JSON files should be created by a Python script using models from the [`aind-data-schema`](https://github.com/AllenNeuralDynamics/aind-data-schema) library to ensure the output file is valid according to the schema (as opposed to directly writing JSON). There are multiple examples of Python scripts for generating instrument JSON files in the [data schema examples folder](https://github.com/AllenNeuralDynamics/aind-data-schema/tree/dev/examples)
 
-#### I need to edit an existing instrument JSON file
-
-In some cases, you may need to update an existing instrument JSON file due to hardware changes (e.g., replacing a camera or probe with the same model but different serial number). While we generally recommend generating and updating instrument files using Python scripts, simple field updates can be made by directly editing the JSON file. However, you must validate the file after editing to ensure it still conforms to the schema.
-
-To validate an instrument JSON file:
-
-```python
-from aind_data_schema.core.instrument import Instrument
-
-with open('instrument.json', 'r') as f:
-    instrument = Instrument.model_validate_json(f.read())
-print("Validation successful!")
-```
-
-If validation fails, Pydantic will provide an error message indicating what needs to be fixed.
-
-Assuming the instrument validates, you can follow instructions above for ensuring that the new instrument is included with future data acquisitions.
+We recommend that basic maintenance changes, e.g. replacing a device with an identical one but with a different serial number, be done by modifying the Python script and updating the `Instrument.modification_date`.
 
 #### I'm ready to upload my instrument JSON file to the database
 
-If you want to follow the second option above (i.e. storing your instrument metadata file in scicomp managed database for automatic fetching during data upload), you can follow these steps to post your instrument json file to the database:
+If you want to store your Instrument metadata file in the Scientific Computing managed database, you can follow these steps to post your instrument json file to the database:
 
-1) Generate and validate your instrument JSON file locally. 
-2) Post to the database as follows
-
-note that users must currently have the "release-v1.0.0" branch of the metadata mapper installed. Follow these steps to do so:
+Note that you must currently have the `release-v1.0.0` branch of `aind-metadata-mapper` installed:
 ```bash
 git checkout https://github.com/AllenNeuralDynamics/aind-metadata-mapper.git
 cd aind-metadata-mapper
@@ -297,26 +278,18 @@ with open(instrument_path, 'r') as f:
 utils.save_instrument(instrument_object)
 ```
 
-Note that future fetches of the instrument will be done using the instrument_id in the JSON. Make sure this is correct!
-
-Also note that only the most recent saved instrument will be pulled automatically by the data transfer service. If you make a mistake when posting an instrument, you can simply post again and this latter instrument will be fetched automatically. 
-
 #### I want to get an instrument from the database
 
-If you want to fetch an instrument JSON file from the database, you can do the following:
+During data upload you can automatically have your `instrument.json` fetched by the GatherMetadataJob. If you need to see the file you uploaded locally, you can fetch the most recent `instrument.json` sorted by `Instrument.modification_date`. 
 
 ```python
 from aind_metadata_mapper import utils
 
 # fetch the instrument, where `INSTRUMENT_ID` is a string containing the instrument ID
 instrument_data = utils.get_instrument(INSTRUMENT_ID)
-
-# Optionally save to disk, where OUTPUT_PATH is a string defining a valid filepath
-with open(OUTPUT_PATH, 'w') as f:
-    json.dump(instrument_data, f, indent=2)
 ```
 
-Note that this will fetch the most recent instrument matching the specified ID. There is currently no functionality for pulling older versions of instrument JSON files from the database, though they are maintained. If you need access to an older version of an instrument metadata file from the database, please reach out to someone in Scientific Computing for assistance.
+If you need access to an older version of an instrument metadata file from the database, please reach out to someone in Scientific Computing for assistance.
 
 ## Procedures
 
