@@ -14,7 +14,7 @@ Your *project* and *subproject* (if applicable) as well as funding information a
 
 You can find a list of project names and combined "<project_name> - <subproject_name>" names at this [metadata-service endpoint](https://aind-metadata-service/api/v2/project_names). These are the only allowable project names available at this time.
 
-If you need a new project name, please request that it be added with the [project name and funding intake form](https://app.smartsheet.com/b/form/a307ccdf63f94e7a9203cd1bb9fd420e).
+If you need a new project name, please request that it be added with the [project name and funding intake form](https://app.smartsheet.com/b/form/9f366857582b4db98d1fe41ef724a613).
 
 ### Funding
 
