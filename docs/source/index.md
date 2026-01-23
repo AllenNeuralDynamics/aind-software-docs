@@ -12,6 +12,8 @@
 
 [Package data](package_data.md) for publications and workshops.
 
+[Develop](develop.md) new packages and tools.
+
 ## I need to report an...
 
 [Issue with scientific computing software](https://github.com/AllenNeuralDynamics/aind-scientific-computing/issues).
@@ -41,6 +43,7 @@ acquire_upload
 explore_analyze
 proposals
 package_data
+develop
 
 ```
 
