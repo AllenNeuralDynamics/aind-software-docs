@@ -284,6 +284,8 @@ with open(instrument_path, 'r') as f:
 utils.save_instrument(instrument_object)
 ```
 
+The "modification_date" field will be automatically updated to the current date when the instrument file is uploaded. There is currently a check on uniqueness by date, so uploading more than one instrument.json per day (for example, if you make a mistake and try to upload a second time) will result in an error. If you do need to upload a second time in day, you'll need to overwrite the previous instrument by passing the `replace=True` arguement to the `utils.save_instrument()` function.
+
 #### I want to get an instrument from the database
 
 During data upload you can automatically have your `instrument.json` fetched by the GatherMetadataJob. If you need to see the file you uploaded locally, you can fetch the most recent `instrument.json` sorted by `Instrument.modification_date`. 
