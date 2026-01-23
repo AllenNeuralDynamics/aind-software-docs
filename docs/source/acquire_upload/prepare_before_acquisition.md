@@ -220,7 +220,7 @@ Users have two options for providing instrument metadata files:
 
       * A static instrument metadata file is saved somewhere on the data acquisition machine and is copied into the data folder prior to upload
 
-      * A script is run that dynamically generates an instrument metadata file before upload. 
+      * A script is run that dynamically generates an instrument metadata file before upload.
 
 2) A static version of the instrument metadata is uploaded to a database in advance. See details below. In this case, users must specify the `instrument_id` as part of the job parameters in the `gather_preliminary_metadata` job type settings as follows
 
@@ -239,6 +239,8 @@ Users have two options for providing instrument metadata files:
    The data transfer service will then pull the instrument metadata from the database during upload. 
 
 Note that it is possible to combine these methods. For example, a user could pass the instrument JSON for the behavior instrument in the data directory (named something like `instrument_behavior.json`) and also specify a physiology rig by instrument ID in the `gather_preliminary_metadata` job type settings. The two instrument files would be merged by the data transfer service.
+
+Also note that we currently require all devices in the database to have a unique `instrument_id`. It is therefore not possible to store two distinct modality specific instrument.json files that share an `instrument_id` in the database.
 
 ### Maintenance responsibility
 
