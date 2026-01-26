@@ -204,7 +204,7 @@ The investigators endpoint will be used during data upload to populate your data
 
 ### ID
 
-The `instrument_id` for AIND should be the SIPE ID for a rig. If an instrument is not tracked by SIPE, any string will be accepted.
+The `instrument_id` for AIND should be the SIPE ID for an instrument. If an instrument is not tracked by SIPE, any string will be accepted.
 
 ### Other details
 
