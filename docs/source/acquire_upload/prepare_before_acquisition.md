@@ -299,15 +299,104 @@ Subject metadata is populated by lab animal services (LAS) without your involvem
 
 ## Instrument
 
-[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance and uploaded to the metadata-service.
+[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance of data acquisition.
 
-Keep track of your `instrument_id` you will need to provide this value when you upload your data asset later.
+### ID
 
-### I want to write an instrument.json
+The `instrument_id` for AIND should be the SIPE ID for an instrument. If an instrument is not tracked by SIPE, any string will be accepted.
 
-### I'm ready to upload my instrument.json
+### Other details
 
-[TODO]
+#### Multiple instruments
+
+Multiple `instrument.json` files can be provided when two separate instruments are used simultaneously to acquire a data asset. See [metadata merging rules](upload.md#metadata-merging-rules) for information about how metadata files are merged during data upload.
+
+#### Upload options
+
+Users have two options for providing instrument metadata files:
+
+1) Files can be provided at upload time in the data folder. In this case, it is up to users to ensure that the instrument file(s) are in the data folder when upload is triggered. Users are free to set this up however they choose. Two patterns that have been used are:
+
+      * A static instrument metadata file is saved somewhere on the data acquisition machine and is copied into the data folder prior to upload
+
+      * A script is run that dynamically generates an instrument metadata file before upload.
+
+2) A static version of the instrument metadata is uploaded to a database in advance. See details below. In this case, users must specify the `instrument_id` as part of the job parameters in the `gather_preliminary_metadata` job type settings as follows
+
+   ```
+   {
+      "skip_task": false,
+      "job_settings": {
+         "instrument_settings": {
+            "instrument_id": INSTRUMENT_ID # a string containing a valid instrument ID
+         }
+      },
+      ...
+   }
+   ```
+   
+   The data transfer service will then pull the instrument metadata from the database during upload. 
+
+Note that it is possible to combine these methods. For example, a user could pass the instrument JSON for the behavior instrument in the data directory (named something like `instrument_behavior.json`) and also specify a physiology rig by instrument ID in the `gather_preliminary_metadata` job type settings. The two instrument files would be merged by the data transfer service. See [metadata merging rules](upload.md#metadata-merging-rules).
+
+Also note that we currently require all devices in the database to have a unique `instrument_id`. It is therefore not possible to store two distinct modality specific instrument.json files that share an `instrument_id` in the database.
+
+### Maintenance responsibility
+
+While it is ultimately the responsibility of the scientist collecting data to ensure that all metadata is correct, it is the responsibility of the person who modifies an instrument to update instrument metadata to reflect the changes they made.
+
+### How to
+
+The following sections describe use cases for saving, fetching, editing and creating instrument metadata files
+
+#### I want to write an instrument.json
+
+Instrument JSON files should be created by a Python script using models from the [`aind-data-schema`](https://github.com/AllenNeuralDynamics/aind-data-schema) library to ensure the output file is valid according to the schema (as opposed to directly writing JSON). There are multiple examples of Python scripts for generating instrument JSON files in the [data schema examples folder](https://github.com/AllenNeuralDynamics/aind-data-schema/tree/dev/examples)
+
+We recommend that basic maintenance changes, e.g. replacing a device with an identical one but with a different serial number, be done by modifying the Python script and updating the `Instrument.modification_date`.
+
+#### I'm ready to upload my instrument JSON file to the database
+
+If you want to store your Instrument metadata file in the Scientific Computing managed database (only 2.0 schema instrument files are supported), you can follow these steps to post your instrument json file to the database:
+
+Note that you must currently have the `release-v1.0.0` branch of `aind-metadata-mapper` installed:
+```bash
+git checkout https://github.com/AllenNeuralDynamics/aind-metadata-mapper.git
+cd aind-metadata-mapper
+git checkout release-v1.0.0
+conda create -n instrument_uploader # or whatever you want your env to be called
+conda activate instrument_uploader
+pip install -e .
+```
+
+Then run the following in python
+
+```python
+from aind_metadata_mapper import utils
+from aind_data_schema.core.instrument import Instrument
+
+# Load the JSON as an Instrument object
+with open(instrument_path, 'r') as f:
+    instrument_object = Instrument.model_validate_json(f.read())
+
+# save the instrument to the database. 
+utils.save_instrument(instrument_object)
+```
+
+The "modification_date" field will be automatically updated to the current date when the instrument file is uploaded. There is currently a check on uniqueness by date, so uploading more than one instrument.json per day (for example, if you make a mistake and try to upload a second time) will result in an error. If you do need to upload a second time in day, you'll need to overwrite the previous instrument by passing the `replace=True` arguement to the `utils.save_instrument()` function.
+
+#### I want to get an instrument from the database
+
+During data upload you can automatically have your `instrument.json` fetched by the GatherMetadataJob. If you need to see the file you uploaded locally, you can fetch the most recent `instrument.json` sorted by `Instrument.modification_date`. 
+
+```python
+from aind_metadata_mapper import utils
+
+# fetch the instrument, where `INSTRUMENT_ID` is a string containing the instrument ID
+instrument_data = utils.get_instrument(INSTRUMENT_ID)
+```
+
+If you need access to an older version of an instrument metadata file from the database, please reach out to someone in Scientific Computing for assistance.
 
 ## Procedures
 
