@@ -171,6 +171,12 @@ When naming files, we should:
   - Do this: EFIP_655568_2022-04-26_11-48-09 
 - Do not include illegal filename characters in tokens
 
+## NWB file naming conventions
+
+NWB files are saved out as `Zarr` files according to the standard defined in [aind-file-standards](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/docs/file_formats/nwb.md). NWB files are saved as a processed output for each modality acquired during the acquisition session. Within the derived asset, NWB files should be named `<modality>.nwb.zarr` at the root level of the derived asset along with the core aind-data-schema metadata files.
+
+When NWB files are combined together, post QC validation, they will be saved as a new derived data asset with merged, core aind-data-schema metadata files. The NWB file will will be saved at the root directory of the derived asset along with the metadata and will be named `<primary-session-name>.nwb.zarr`.
+
 ## AIND Implementation
 
 ### On-premise systems should not be used for persistent, long-term data storage. 
