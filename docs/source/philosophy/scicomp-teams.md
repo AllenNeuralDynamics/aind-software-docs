@@ -65,9 +65,17 @@ Repository to help gather and map metadata from different sources
 
 [readthedoc](https://aind-metadata-mapper.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-metadata-mapper)
 
-## Physiology and Behavior
+### Outreach
 
-[todo]
+**SWDB Data Book**
+
+Data book for the SWDB course
+
+[SWDB data book](https://allenswdb.github.io/intro.html)
+
+## Physiology & Behavior
+
+The Physiology & Behavior team maintains the pipelines that process each modality of data asset that we acquire in AIND. Details can be found on the [processing](../acquire_upload/processing.md)
 
 ## Computer Vision
 
