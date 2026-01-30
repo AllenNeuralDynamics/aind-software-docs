@@ -54,14 +54,14 @@ All data acquired in a single acquisition session will be stored together. This 
 
 All primary data assets have the following naming convention: 
 
-“<subject-id>_<acquisition-start-datetime>” 
+`<subject-id>_<acquisition-start-datetime>`
 
 A few points: 
 
-- Format <acquisition-start-datetime>: yyyymmdd_HH-MM-SS
+- Format `<acquisition-start-datetime>: yyyymmdd_HH-MM-SS`
 - This should be the start of acquisition, in the local time zone.
 - The local time-zone is documented in metadata files
-- All tokens (e.g. <subject-id>) must not contain underscores or illegal filename characters. Subject ID is not strictly necessary – only the timestamp is essential. However, it is part of the current naming convention because it helps people visually browse for data.
+- All tokens (e.g. `<subject-id>`) must not contain underscores or illegal filename characters. Subject ID is not strictly necessary – only the timestamp is essential. However, it is part of the current naming convention because it helps people visually browse for data.
 
 Primary data assets are organized as follows: 
 
@@ -127,7 +127,7 @@ Example for exaSPIM data:
 
 Anything computed in a single run should be logically grouped in a folder. The folder should be named: 
 
-<primary-asset-name>_<process-label>_<process-date>_<process-time> 
+`<primary-asset-name>_<process-label>_<process-date>_<process-time>`
 
 Examples: 
 
