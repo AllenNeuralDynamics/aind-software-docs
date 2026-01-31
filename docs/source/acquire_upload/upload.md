@@ -1,10 +1,23 @@
 # Upload
 
-[todo]
+Uploading data is done by using the [aind-data-transfer-service](http://aind-data-transfer-service/) which handles running containerized tasks for data copying, compression, metadata gathering, and final upload to S3 and Code Ocean.
+
+## Job types and upload scripts
+
+In general, most users should interact with the transfer service by requesting data upload via [watchdog](https://github.com/AllenNeuralDynamics/aind-watchdog-service) (contact SIPE for setup) or through the data-transfer-service user interface. Users control what tasks are run on their data through job types and that parameters that they include in their upload scripts.
+
+For example, this [upload script](https://github.com/AllenNeuralDynamics/aind-data-transfer-service/blob/d1f84020862c3de340020b6cb45bef0fd5105515/docs/examples/aind_data_schema_v2.py) demonstrates how to setup the upload parameters for a standard ecephys data asset using the `"default"` job_type. You can view [all available job_type options](https://aind-data-transfer-service.corp.alleninstitute.org/job_params). Please reach out to the Data & Infrastructure team in Scientific Computing to develop custom job types for your data assets.
 
 ## GatherMetadataJob
 
-[todo]
+The [GatherMetadataJob](https://github.com/AllenNeuralDynamics/aind-metadata-mapper/tree/release-v1.0.0#usage) is the primary tool used to assemble and validate metadata during upload of data assets. The job handles construction of the `data_description`, `subject`, and `procedures` as well as merging and validating `instrument` and `acquisition` metadata. It also runs a full validation step on all available metadata files to ensure cross-compatibility.
+
+The main settings you should be concerned with are:
+
+- `instrument_settings.instrument_id`: this field triggers the job to pull an `instrument.json` file from the metadata-service (where you previously uploaded it).
+- `data_description_settings.tags/group/restrictions/data_summary`: each of these fields is meta-metadata about your project and should be accurately filled out, if possible. Please see the [DataDescription](https://aind-data-schema.readthedocs.io/en/latest/data_description.html#datadescription) documentation for details about each field.
+
+The settings for the GatherMetadataJob are typically set [inside of your upload script](https://github.com/AllenNeuralDynamics/aind-data-transfer-service/blob/d1f84020862c3de340020b6cb45bef0fd5105515/docs/examples/aind_data_schema_v2.py#L45-L50).
 
 ### Merge rules
 
