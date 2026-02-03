@@ -20,7 +20,7 @@ Each file must follow the naming pattern `<metadata_type>*.json` where `*` is an
 
 #### Contraints
 
-1. **Unique fields must match**: Certain identifier fields that should be unique across the dataset (like `subject_id` and `instrument_id`) **must have identical values** in all files being merged. If these fields conflict, the merge will fail and your upload job will be rejected.
+1. **Unique fields must match**: Certain identifier fields that should be unique across the dataset (like `subject_id`) **must have identical values** in all files being merged. If these fields conflict, the merge will fail and your upload job will be rejected. An important exception is the `instrument_id` field. If two or more instrument JSON files are joined, the merged instrument JSON file will have an `instrument_id` that is the string combination of the IDs of the unique instruments, 
 
 2. **No shared devices, with the exception of a single shared clock**: In general, two instruments can be merged **if and only if there are no shared devices** between them. Devices are identified by their `name` field. If the same device name appears in both instrument files, they should really be defined as a single instrument, not two separate ones.
 
