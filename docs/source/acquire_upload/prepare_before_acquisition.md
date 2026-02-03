@@ -309,7 +309,7 @@ The `instrument_id` for AIND should be the SIPE ID for an instrument. If an inst
 
 #### Multiple instruments
 
-Multiple `instrument.json` files can be provided when two separate instruments are used simultaneously to acquire a data asset. See [metadata merging rules](upload.md#metadata-merging-rules) for information about how metadata files are merged during data upload.
+Multiple `instrument.json` files can be provided when multiple separate instruments are used simultaneously to acquire a data asset. The combined instrument metadata stored with the associated data asset will have an `instrument_id` that is the combined names of the individual instruments, joined with the `'_'` character. See [metadata merging rules](upload.md#metadata-merging-rules) for information about how metadata files are merged during data upload.
 
 #### Upload options
 
@@ -339,7 +339,7 @@ Users have two options for providing instrument metadata files:
 
 Note that it is possible to combine these methods. For example, a user could pass the instrument JSON for the behavior instrument in the data directory (named something like `instrument_behavior.json`) and also specify a physiology rig by instrument ID in the `gather_preliminary_metadata` job type settings. The two instrument files would be merged by the data transfer service. See [metadata merging rules](upload.md#metadata-merging-rules).
 
-Also note that we currently require all devices in the database to have a unique `instrument_id`. It is therefore not possible to store two distinct modality specific instrument.json files that share an `instrument_id` in the database.
+Also note that we require all devices in the database to have a unique `instrument_id`. 
 
 ### Maintenance responsibility
 
