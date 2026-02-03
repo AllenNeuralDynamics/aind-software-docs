@@ -134,7 +134,7 @@ Examples:
 - ANM457202_2022-07-11_22-11-32_processed_2022-08-11_22-11-32 
 - 595262_2022-02-21_15-18-07_processed_2022-08-11_22-11-32 
 
-Processed outputs are usually the result of a multi-stage pipeline handling a single data modality. Utilize a modality-specific <process-label>. Other common process labels include: 
+Processed outputs are usually the result of a multi-stage pipeline handling a single data modality. Utilize a modality-specific `<process-label>`. Other common process labels include: 
 
 - “curation” - tags assigned to input data (e.g. merge/split/noise calls for ephys units) 
 - ... 
