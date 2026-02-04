@@ -75,11 +75,11 @@ Data book for the SWDB course
 
 ## Physiology & Behavior
 
-The Physiology & Behavior team maintains the pipelines that process each modality of data asset that we acquire in AIND. Details can be found on the [processing](../acquire_upload/processing.md)
+The Physiology & Behavior team maintains the pipelines that process each modality of data asset that we acquire in AIND. Details can be found on the [processing](../acquire_upload/processing.md) page.
 
 ## Image Processing
 
-The Image Processing team develops and maintains pipelines for processing lightsheet microscopy data across multiple imaging platforms.
+The Image Processing team develops and maintains pipelines for processing lightsheet microscopy data across multiple imaging platforms. For internal users see also this [overview doc](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/IQA4mzEcBLN3RLCbNiQuaXHfAdvWB-mPvTZGhF1yKQ4sm5I?e=zBTLXh).
 
 **Smartspim**
 
