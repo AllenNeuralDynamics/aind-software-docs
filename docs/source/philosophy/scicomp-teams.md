@@ -75,11 +75,31 @@ Data book for the SWDB course
 
 ## Physiology & Behavior
 
-The Physiology & Behavior team maintains the pipelines that process each modality of data asset that we acquire in AIND. Details can be found on the [processing](../acquire_upload/processing.md)
+The Physiology & Behavior team maintains the pipelines that process each modality of data asset that we acquire in AIND. Details can be found on the [processing](../acquire_upload/processing.md) page.
 
-## Computer Vision
+## Image Processing
 
-[todo]
+The Image Processing team develops and maintains pipelines for processing lightsheet microscopy data across multiple imaging platforms. For internal users see also this [overview doc](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/IQA4mzEcBLN3RLCbNiQuaXHfAdvWB-mPvTZGhF1yKQ4sm5I?e=zBTLXh).
+
+**Smartspim**
+
+[aind-smartspim-pipeline](https://github.com/AllenNeuralDynamics/aind-smartspim-pipeline)
+
+**Exaspim**
+
+[exaspim-flatfield-correction](https://github.com/AllenNeuralDynamics/exaspim-flatfield-correction) | [aind-exaspim-neuron-segmentation](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation) | [aind-exaspim-soma-detection](https://github.com/AllenNeuralDynamics/aind-exaspim-soma-detection) | [aind-exaspim-ccf-registration](https://github.com/AllenNeuralDynamics/aind-exaspim-ccf-registration) | [exaSPIM_register_swc_to_ccf](https://github.com/AllenNeuralDynamics/exaSPIM_register_swc_to_ccf)
+
+**Z1 (HCR and Proteomics)**
+
+[aind-z1-radial-correction](https://github.com/AllenNeuralDynamics/aind-z1-radial-correction) | [aind-z1-camera-alignment](https://github.com/AllenNeuralDynamics/aind-z1-camera-alignment) | [aind-z1-spot-detection](https://github.com/AllenNeuralDynamics/aind-z1-spot-detection) | [aind-hcr-r2r-registration](https://github.com/AllenNeuralDynamics/aind-hcr-r2r-registration) | [hcr-czitile-utils](https://github.com/AllenNeuralDynamics/hcr-czitile-utils) | [aind-hcr-data-transformation](https://github.com/AllenNeuralDynamics/aind-hcr-data-transformation) | [aind-proteomics-stitch](https://github.com/AllenNeuralDynamics/aind-proteomics-stitch)
+
+**Proteomics**
+
+[aind-proteomics-image-translator](https://github.com/AllenNeuralDynamics/aind-proteomics-image-translator)
+
+**General Lightsheet**
+
+[aind-lightsheet-mae](https://github.com/AllenNeuralDynamics/aind-lightsheet-mae)
 
 ## Resources for SWEs
 
