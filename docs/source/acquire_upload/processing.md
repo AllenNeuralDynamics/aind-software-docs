@@ -67,7 +67,8 @@ Metadata `.json` files that are not modified should be copied to the derived ass
 | Planar optical physiology | `pophys` | [aind-pophys-pipeline](https://github.com/AllenNeuralDynamics/aind-pophys-pipeline) |
 | Single cell RNA sequencing | `scRNAseq` |  |
 | Random access projection microscopy | `slap2` |  |
-| Selective plane illumination microscopy | `SPIM` |  |
+| Selective plane illumination microscopy (SmartSPIM) | `SPIM` | [aind-smartspim-pipeline](https://github.com/AllenNeuralDynamics/aind-smartspim-pipeline) |
+| Selective plane illumination microscopy (ExaSPIM) | `SPIM` | See [image processing](../philosophy/scicomp-teams.md#image-processing) |
 | Serial two-photon tomography | `STPT` |  |
 
 ## Behavior pipelines
