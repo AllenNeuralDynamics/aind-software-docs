@@ -1,29 +1,35 @@
 # Versioning pipelines
 
-## Introduction
+Users need to understand how to interact with computed results produced by data processing pipelines. If there are changes in the structure or interpretation of results because of a change to a processing pipeline, it must be easy for users to understand the nature of these changes and detect these changes reliably in code.
 
-We are introducing a custom versioning policy for Code Ocean (CO) built pipelines due to versioning limitations provided by CO. This will allow us to automatically pull pipeline version information using standard Python tools available to all users in order to store the version information into the `Processing` object defined in [`aind-data-schema`](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/dev/src/aind_data_schema/core/processing.py#L970).
+## Policies
 
-## Code Ocean limitations
+Core data processing pipelines MUST adopt [semantic versioning](https://semver.org/). 
+- Major version changes indicate that the structure or interpretation of the data has changed.
+- Minor version changes indicate new, backwards compatible features were added to the pipeline.
+- Patch version changes indicate bug fixes.
 
-While CO provides a mechanism to officially release and version a CO pipeline through their custom API, CO does not provide pipeline version information through environment variables that can be queried at runtime. Instead, CO provides a Python SDK to access the CO API where version information can be found through a current run's `ComputationID`. This creates a dependency on the CO ecosystem, requiring users to have CO accounts to retrieve version information programmatically.
+The pipeline's name and semantic version MUST be stored in aind-data-schema [Processing](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/dev/src/aind_data_schema/core/processing.py#L970) metadata at the top level of the results.
 
-Additionally, while CO pipelines are linked to GitHub repositories, they are versioned through a CO versioning system which tracks changes and releases on a separate Git instance. This prevents developers from syncing the CO version system with the remote versioning provided through GitHub.
+The pipeline's name and semantic version MUST be stored in the pipeline repository and easily accessible to pipeline code. We recommend a `.env` file containing `VERSION`, `NAME`, and `URL` variables. These environment variables can be pulled using standard tools such as `os` and added to the `aind-data-schema` `Processing` core object for proper documentation.
 
-## Versioning pipelines in Neural Dynamics
+The pipeline repository and the repositories of all individual capsules MUST be public on GitHub.
 
-Because Neural Dynamics is committed to building shareable tools not just for internal users but for external users as well, we needed a versioning approach that doesn't require outside users to run their pipelines on the CO platform to get valid pipeline information.
+To deploy a new release of a pipeline:
 
-To remove the dependency on a third-party API on a paid platform, we have chosen to version our pipelines using GitHub's release system. We have built automated tools for pipeline developers to incorporate the version information into pipeline environment variables for easy access to pipeline versioning information.
+- Pipelines and component capsules MUST update their semantic version appropriately.
+- Pipelines and component capsules MUST be synchronized with GitHub.
+- Pipelines and component capsules used in production MUST have a Code Ocean "internal release."
+- Pipelines MUST update their `CHANGELOG` indicating what has changed in the release.
 
-## How it works
+This process ensures production pipelines are not subject to accidental changes and versioning is always communicated consistently to users downstream. 
 
-Developers can create a pipeline from this template: [`aind-pipeline-template`](https://github.com/AllenNeuralDynamics/aind-pipeline-template). Once created, the pipeline uses a [workflow](https://github.com/AllenNeuralDynamics/.github/blob/main/.github/docs/Release%20Tag%20and%20Publish%20Pipeline.md) that will, on every pull request into main, bump the version using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). The version and GitHub repository of the pipeline created with this template are added to the pipeline's environment variables as `GITHUB_VERSION` and `GITHUB_URL`.
+## Code Ocean versioning
 
-These environment variables can be pulled using standard tools such as `os` and added to the `aind-data-schema` `Processing` core object for proper documentation.
+When a capsule or pipeline is internally released in Code Ocean, Code Ocean creates an immutable copy of the pipeliune and issues it a release version. This version is unrelated to the semantic version of the pipeline, but it is a necessary parameter for those triggering pipelines via the API (e.g. the AIND data transfer service).
 
-## For internal developers
+## Implementation
 
-While the GitHub-based versioning provides portable version information, internal developers must also follow CO's release process.
+Developers can create a pipeline from this template: [`aind-pipeline-template`](https://github.com/AllenNeuralDynamics/aind-pipeline-template). Once created, the pipeline uses a [workflow](https://github.com/AllenNeuralDynamics/.github/blob/main/.github/docs/Release%20Tag%20and%20Publish%20Pipeline.md) that will, on every pull request into main, bump the version using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). The version and GitHub repository of the pipeline created with this template are added to the pipeline's environment variables as `VERSION` and `URL` in the repostory's `.env` file. 
 
-It is still required practice to release your pipelines through the CO versioning system. CO release pipelines use a special hash that locks a pipeline to a released version which is immutable. When a developer sets up a job type through [`aind-data-transfer-service`](http://aind-data-transfer-service/) to trigger a pipeline for a production system, the released version should always be run to ensure that users' data is processing on a locked version of the pipeline. If you do not do this, you run the risk of running data on a mutable pipeline environment.
+The developer is still responsible for ensuring that the `VERSION` and `URL` values, as well as the `CHANGELOG` are correct and up-to-date in the repository.
