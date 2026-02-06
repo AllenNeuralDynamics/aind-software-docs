@@ -11,7 +11,7 @@ Core data processing pipelines MUST adopt [semantic versioning](https://semver.o
 
 The pipeline's name and semantic version MUST be stored in aind-data-schema [Processing](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/dev/src/aind_data_schema/core/processing.py#L970) metadata at the top level of the results.
 
-The pipeline's name and semantic version MUST be stored in the pipeline repository and easily accessible to pipeline code. We recommend a `.env` file containing `VERSION`, `NAME`, and `URL` variables. These environment variables can be pulled using standard tools such as `os` and added to the `aind-data-schema` `Processing` core object for proper documentation.
+The pipeline's name and semantic version MUST be stored in the pipeline repository and easily accessible to pipeline code. We recommend a `.env` file containing `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL` variables. These environment variables can be pulled using standard tools such as `os` and added to the `aind-data-schema` `Processing` core object for proper documentation.
 
 The pipeline repository and the repositories of all individual capsules MUST be public on GitHub.
 
@@ -26,10 +26,10 @@ This process ensures production pipelines are not subject to accidental changes 
 
 ## Code Ocean versioning
 
-When a capsule or pipeline is internally released in Code Ocean, Code Ocean creates an immutable copy of the pipeliune and issues it a release version. This version is unrelated to the semantic version of the pipeline, but it is a necessary parameter for those triggering pipelines via the API (e.g. the AIND data transfer service).
+When a capsule or pipeline is internally released in Code Ocean, Code Ocean creates an immutable copy of the pipeline and issues it a release version. This version is unrelated to the semantic version of the pipeline, but it is a necessary parameter for those triggering pipelines via the API (e.g. the AIND data transfer service).
 
 ## Implementation
 
-Developers can create a pipeline from this template: [`aind-pipeline-template`](https://github.com/AllenNeuralDynamics/aind-pipeline-template). Once created, the pipeline uses a [workflow](https://github.com/AllenNeuralDynamics/.github/blob/main/.github/docs/Release%20Tag%20and%20Publish%20Pipeline.md) that will, on every pull request into main, bump the version using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). The version and GitHub repository of the pipeline created with this template are added to the pipeline's environment variables as `VERSION` and `URL` in the repostory's `.env` file. 
+Developers can create a pipeline from this template: [`aind-pipeline-template`](https://github.com/AllenNeuralDynamics/aind-pipeline-template). Once created, the pipeline uses a [workflow](https://github.com/AllenNeuralDynamics/.github/blob/main/.github/docs/Release%20Tag%20and%20Publish%20Pipeline.md) that will, on every pull request into main, bump the version using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). The version and GitHub repository of the pipeline created with this template are added to the pipeline's environment variables as `PIPELINE_VERSION`, `PIPELINE_NAME` and `PIPELINE_URL` in the repostory's `nextflow.config` file. 
 
-The developer is still responsible for ensuring that the `VERSION` and `URL` values, as well as the `CHANGELOG` are correct and up-to-date in the repository.
+The developer is still responsible for ensuring that the `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL` values, as well as the `CHANGELOG` are correct and up-to-date in the repository.
