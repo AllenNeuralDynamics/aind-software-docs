@@ -11,7 +11,10 @@ Core data processing pipelines MUST adopt [semantic versioning](https://semver.o
 
 The pipeline's name and semantic version MUST be stored in aind-data-schema [Processing](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/dev/src/aind_data_schema/core/processing.py#L970) metadata at the top level of the results.
 
-The pipeline's name and semantic version MUST be stored in the pipeline repository and easily accessible to pipeline code. We recommend a `.env` file containing `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL` variables. These environment variables can be pulled using standard tools such as `os` and added to the `aind-data-schema` `Processing` core object for proper documentation.
+The pipeline's name and semantic version MUST be stored in the pipeline repository and easily accessible to pipeline code. We recommend a `.env` file containing `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL` variables. These environment variables can be pulled using standard tools such as `os` and added to the `aind-data-schema` `Processing` core object for proper documentation. Specifically, the following fields of the `Processing` object should be populated with these enironment variables:
+
+`Processing.pipeline_version=os.getenv("PIPELINE_VERSION", "No version reported.")`
+`Processing.pipeline_url=os.getenv("PIPELINE_URL", "No pipeline URL reported.")`
 
 The pipeline repository and the repositories of all individual capsules MUST be public on GitHub.
 
@@ -26,7 +29,7 @@ This process ensures production pipelines are not subject to accidental changes 
 
 ## Code Ocean versioning
 
-When a capsule or pipeline is internally released in Code Ocean, Code Ocean creates an immutable copy of the pipeline and issues it a release version. This version is unrelated to the semantic version of the pipeline, but it is a necessary parameter for those triggering pipelines via the API (e.g. the AIND data transfer service).
+When a capsule or pipeline is internally released in Code Ocean, Code Ocean creates an immutable copy of the pipeline and issues it a release version. This version, which is published as an `int` value, is unrelated to the semantic version of the pipeline, but it is a necessary parameter for those triggering pipelines via the API (e.g. the AIND data transfer service).
 
 ## Implementation
 
