@@ -37,7 +37,7 @@ Developers can create a pipeline from this template: [`aind-pipeline-template`](
 
 The developer is still responsible for ensuring that the `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL` values, as well as the `CHANGELOG` are correct and up-to-date in the repository.
 
-To address Git versions being out-of-sync with the Code Ocean version, a table is provided below that explains the relationship:
+To address Git versions being out-of-sync with the Code Ocean version, a table is provided below that explains the relationship. Version numbers are only illustrative and meant to demonstrate that Code Ocean pipeline version always increases as an integer while semantic versions increase according to update level.
 
 | Code Ocean Version | GitHub Version | Git Commit |
 |--------------------|----------------|------------|
@@ -51,3 +51,5 @@ Because some pipelines already have mature Code Ocean releases, there will be a 
 When querying the metadata database for `Processing.pipeline_version`, users and developers must account for both version formats. For example, to find all assets processed with this pipeline before version `0.2.0`, the query would need to match:
 - Semantic versions `< 0.2.0` (i.e., `0.1.0`, `0.1.1`)
 - Code Ocean versions from before semantic versioning was adopted (i.e., `18.0`)
+
+For pipelines that have adopted semantic versioning, users and developers will always be able to find a pipelines semantic version in the `nextflow.config`.
