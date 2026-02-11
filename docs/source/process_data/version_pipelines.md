@@ -36,3 +36,18 @@ When a capsule or pipeline is internally released in Code Ocean, Code Ocean crea
 Developers can create a pipeline from this template: [`aind-pipeline-template`](https://github.com/AllenNeuralDynamics/aind-pipeline-template). Once created, the pipeline uses a [workflow](https://github.com/AllenNeuralDynamics/.github/blob/main/.github/docs/Release%20Tag%20and%20Publish%20Pipeline.md) that will, on every pull request into main, bump the version using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). The version and GitHub repository of the pipeline created with this template are added to the pipeline's environment variables as `PIPELINE_VERSION`, `PIPELINE_NAME` and `PIPELINE_URL` in the repostory's `nextflow.config` file. 
 
 The developer is still responsible for ensuring that the `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL` values, as well as the `CHANGELOG` are correct and up-to-date in the repository.
+
+To address Git versions being out-of-sync with the Code Ocean version, a table is provided below that explains the relationship:
+
+| Code Ocean Version | GitHub Version | Git Commit |
+|--------------------|----------------|------------|
+| 18.0 | - | - |
+| 19.0 | 0.1.0 | feat: add release.yml file for semantic versioning |
+| 20.0 | 0.1.1 | fix: correct mislabeled metadata in processing |
+| 21.0 | 0.2.0 | feat: add two new QC plots |
+
+Because some pipelines already have mature Code Ocean releases, there will be a mismatch between Code Ocean versions and the semantic versions reported in the `Processing` object. Assets processed before semantic versioning was adopted will only have a Code Ocean version in their metadata (e.g., `18.0`). Assets processed after adoption will have a semantic version (e.g., `0.1.0`).
+
+When querying the metadata database for `Processing.pipeline_version`, users and developers must account for both version formats. For example, to find all assets processed with this pipeline before version `0.2.0`, the query would need to match:
+- Semantic versions `< 0.2.0` (i.e., `0.1.0`, `0.1.1`)
+- Code Ocean versions from before semantic versioning was adopted (i.e., `18.0`)
