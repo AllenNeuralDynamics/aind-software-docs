@@ -1,4 +1,4 @@
-# During acquisition
+# Acquire data
 
 During data acquisition you are responsible for running version-controlled acquisition software and ensuring your data files for each modality are organized according to standardized conventions.
 
@@ -8,7 +8,7 @@ Metadata generated during acquisition captures **what data** should appear in th
 
 ### Data organization conventions
 
-Raw data assets are required to be organized according to our [data organization conventions](../philosophy/data_organization.md).
+Raw data assets are required to be organized according to our [data organization conventions](../policies_practices/data_organization.md).
 
 #### Per-modality file standards
 
@@ -24,7 +24,7 @@ Rigs are responsible for generating the [acquisition.json](https://aind-data-sch
 
 If you can't generate your aind-data-schema formatted metadata on your rig, you can use what we call the “extractor/mapper” pattern. We refer to the code on the rig that extracts metadata from data files as the extractor. We prefer for you to maintain this code in [aind-metadata-extractor](https://github.com/AllenNeuralDynamics/aind-metadata-extractor/) but you can also maintain it yourself. The code that takes the extractor output and transforms it to aind-data-schema is called the mapper. Scientific computing will help develop the mapper as well as maintain it, you are responsible for your extractor. The key to the extractor/mapper pattern is the data contract that defines the extractor output. The data contract must be a pydantic model or JSON schema file and must live in the [aind_metadata_extractor.models](https://github.com/AllenNeuralDynamics/aind-metadata-extractor/tree/main/src/aind_metadata_extractor/models) module.
 
-On your rig you should output files that match the name of the corresponding mapper that will be run. So if your mapper is called fip you should write a `fip.json` file that validates against the fip extractor schema. The [GatherMetadataJob](upload.md#GatherMetadataJob) will automatically run your mapper. 
+On your rig you should output files that match the name of the corresponding mapper that will be run. So if your mapper is called fip you should write a `fip.json` file that validates against the fip extractor schema. The [GatherMetadataJob](upload_data.md#GatherMetadataJob) will automatically run your mapper. 
 
 #### Multiple independent rigs
 

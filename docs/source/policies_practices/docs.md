@@ -26,4 +26,4 @@ You can contribute updates and how-to guides for your tools directly to this rep
 
 ## Why
 
-Software engineer at AIND has grown to a scale where a central entry-point for users should make it far easier to find and learn about our tools. Across packages we are also taking a variety of approaches to documentation, iteratively moving toward a more standardized "feel" in our documentation will reduce the overhead for users who are only rarely interacting with documentation during their scientific work.
+Data and software at AIND has grown to a scale where a central entry-point for users should make it far easier to find and learn about our tools. Across packages we are also taking a variety of approaches to documentation; iteratively moving toward a more standardized "feel" in our documentation will reduce the overhead for users who are only rarely interacting with documentation during their scientific work.

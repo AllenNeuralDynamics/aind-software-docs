@@ -49,7 +49,7 @@ html_theme_options = {
     "dark_logo": "dark-logo.svg",
 }
 
-html_title = "Software Engineering"
+html_title = "Data and Software"
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
