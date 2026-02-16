@@ -6,8 +6,19 @@ Users need to understand how to interact with computed results produced by data 
 
 Core data processing pipelines MUST adopt [semantic versioning](https://semver.org/). 
 - Major version changes indicate that the structure or interpretation of the data has changed.
+
+    - Update to `aind-data-schema` that renames or restructures the metadata.
+    - Any default parameter changes.
+    - Changes to the output file structure.
+
 - Minor version changes indicate new, backwards compatible features were added to the pipeline.
-- Patch version changes indicate bug fixes.
+
+    - Add a new parameter to the input arguments.
+    - Add a new QC plot.
+
+- Patch version changes indicate backwards compatible bug fixes.
+
+    - Critical bug fixes that do not alter the data structure. 
 
 The pipeline's name and semantic version MUST be stored in aind-data-schema [Processing](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/dev/src/aind_data_schema/core/processing.py#L970) metadata at the top level of the results.
 
