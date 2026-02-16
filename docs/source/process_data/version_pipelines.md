@@ -9,7 +9,7 @@ Core data processing pipelines MUST adopt [semantic versioning](https://semver.o
 
     - Update to `aind-data-schema` that renames or restructures the metadata.
     - Any default parameter changes.
-    - Changes to the output file structure.
+    - Changes to the output file structure, even if fixing previously incorrect behavior.
 
 - Minor version changes indicate new, backwards compatible features were added to the pipeline.
 
