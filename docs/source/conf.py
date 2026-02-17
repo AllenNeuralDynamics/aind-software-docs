@@ -38,6 +38,14 @@ templates_path = ["_templates"]
 exclude_patterns = []
 jupyter_execute_notebooks = "off"
 
+# -- MyST configuration ------------------------------------------------------
+myst_enable_extensions = [
+    "colon_fence",
+    "deflist",
+    "fieldlist",
+]
+myst_heading_anchors = 3
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
@@ -49,7 +57,7 @@ html_theme_options = {
     "dark_logo": "dark-logo.svg",
 }
 
-html_title = "Software Engineering"
+html_title = "Data and Software"
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
