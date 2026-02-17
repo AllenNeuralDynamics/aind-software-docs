@@ -1,4 +1,4 @@
-# Data governance (policy)
+# Data governance
 
 Primary data are precious - especially manually generated data annotations and recordings of unique specimens. Such data must be treated with care and respect. This document describes how primary data should be handled to: 
 
@@ -22,7 +22,7 @@ We will migrate to lossy compression when feature extraction and evaluation algo
 
 This includes primary data on-premise and cloud storage as well as metadata in Sharepoint, Smartsheet, Power Platform, or other databases. Reviewers must be familiar with the data and capable of reviewing the code. Testing must be done in a safe environment on example data.   
 
-Best practice is to review scripts that can potentially modify data in a GitHub repository pull request that must be reviewed prior to use. See Scientific Computing’s [aind-data-migration-scripts](https://github.com/AllenNeuralDynamics/aind-data-migration-scripts) repository and the Code Review section here: Software Engineering Practices.docx. 
+Best practice is to review scripts that can potentially modify data in a GitHub repository pull request that must be reviewed prior to use. See Scientific Computing’s [aind-data-migration-scripts](https://github.com/AllenNeuralDynamics/aind-data-migration-scripts) repository and the Code Review section in [software practices](software_practices.md).
 
 To test scripts, create folders in a separate location with a copy of the data you would like to update and run your script there. Good practices include:
 
