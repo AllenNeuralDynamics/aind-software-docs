@@ -1,18 +1,16 @@
-# Software Engineering at AIND
+# Data and Software at AIND
 
 [![Software Overview](_static/aind-software-overview.png)](_static/aind-software-overview.pdf)
 
 ## I want to...
 
-[Acquire and upload data](acquire_upload.md) to the Cloud.
+[Acquire, upload & process](acquire_upload/index.md) data in the Cloud.
 
-[Explore, QC, and analyze](explore_analyze.md) my data assets.
+[Explore, QC & analyze](explore_analyze/index.md) my data assets.
 
-[Propose a project](proposals.md) with software engineering support.
+[Propose a project](aind/project_proposals.md) with data and software support.
 
-[Package data](package_data.md) for publications and workshops.
-
-[Develop](develop.md) new packages and tools.
+[Developer templates](policies_practices/developer_templates.md) for new packages and tools.
 
 ## I need to report an...
 
@@ -32,36 +30,55 @@ Follow these links to request access to:
 
 ## I want to learn about...
 
-[Data science in general](philosophy.md) at AIND.
+[Data organization](policies_practices/data_organization.md), [data governance](policies_practices/data_governance.md), and [software practices](policies_practices/software_practices.md) at AIND.
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :hidden:
-:caption: Use cases
+:caption: Acquire, upload & process
 
-acquire_upload
-explore_analyze
-proposals
-package_data
-develop
+acquire_upload/prepare_before_acquisition
+acquire_upload/acquire_data
+acquire_upload/calibration
+acquire_upload/upload_data
+acquire_upload/process_data
 
 ```
 
 ```{toctree}
 :maxdepth: 1
 :hidden:
-:caption: Resources
+:caption: Explore, QC & analyze
 
-docs
-core_services
+explore_analyze/quality_control
+explore_analyze/find_data
+explore_analyze/analyze_data
+explore_analyze/workshops
 
 ```
 
 ```{toctree}
 :maxdepth: 1
 :hidden:
-:caption: Philosophy
+:caption: Policies & practices
 
-philosophy
+policies_practices/data_organization.md
+policies_practices/data_governance.md
+
+policies_practices/software_practices.md
+policies_practices/pipeline_development.md
+policies_practices/docs
+policies_practices/developer_templates
+
+```
+
+```{toctree}
+:maxdepth: 1
+:hidden:
+:caption: AIND Resources
+
+aind/core_services
+aind/project_proposals.md
+aind/teams.md
 
 ```

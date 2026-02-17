@@ -1,4 +1,4 @@
-# Data organization (policy)
+# Data organization
 
 This document describes how data and metadata should be organized before it is copied into cloud storage. It covers core concepts, file names, directory structures, and metadata conventions. 
 
@@ -123,6 +123,7 @@ Example for exaSPIM data:
  ┃ ┃ ┗ 📜<list of e.g. tiff files>
 ```
 
+(derived-data-conventions)=
 ## Derived data conventions
 
 Anything computed in a single run should be logically grouped in a folder. The folder should be named: 
@@ -186,7 +187,7 @@ AIND’s high-performance on-premise storage system (VAST) is sized to be a ~2-w
 The VAST system has two partitions: 
 
 1. Stage (1600TB): an access-controlled buffer for raw data compression and upload. No individual user accounts will have write-access to this partition – only service accounts on acquisition workstations. The stage partition has daily snapshots that expire after 3 days. `\\allen\aind\stage` (windows) `/allen/aind/stage` (linux) 
-2. Scratch (200TB): an uncontrolled space for all AIND team members to use. This share can be read and modified by any account. Data stored here is considered transient, not intended for public sharing, and subject to requests for deletion. Recommended scratch share organization is to have top level directories for each AIND group (ephys, ophys, etc), then subfolders for individual users. The scratch partition has daily snapshots that expire after 2 weeks. `\\allen\aind\scratch` (windows) `/allen/aind/scratch` (linux) 
+2. Scratch (200TB): an uncontrolled space for all AIND team members to use. This share can be read and modified by any account. Data stored in this share is considered transient, not intended for public sharing, and subject to requests for deletion. Recommended scratch share organization is to have top level directories for each AIND group (ephys, ophys, etc), then subfolders for individual users. The scratch partition has daily snapshots that expire after 2 weeks. `\\allen\aind\scratch` (windows) `/allen/aind/scratch` (linux) 
 
 Open a ServiceNow ticket to restore data from a snapshot.
 

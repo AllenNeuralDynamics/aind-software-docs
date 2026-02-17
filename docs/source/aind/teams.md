@@ -1,22 +1,4 @@
-# Scientific Computing at AIND
-
-## Core principles
-
-All of the teams in Scientific Computing adhere to a set of core principles about our software.
-
-### Code Review 
-
-At least one other software developer needs to approve a pull request in order for it to be merged. Please be courteous when providing feedback. The team lead can resolve any conflicts. 
-
-### Style
-
-We use `black`, `flake8`, and `interrogate` to enforce [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format.
-
-### Versioning
-
-We use [semver](https://semver.org/) major.minor.patch versions, these are automatically incremented when you use the `aind-library-template`. Note that for major versions you need to put the exact string "BREAKING CHANGE" in the commit *comment* (not the title).
-
-You should set patch version floor `>=1.0.0` and major version ceiling `<2` for each internal dependency that you use. This is good practice for all dependencies.
+# Scientific Computing Teams
 
 ## Data Infrastructure
 
@@ -32,7 +14,7 @@ FastAPI service to run data compression and transfer jobs on the HPC
 
 **aind-metadata-service**
 
-REST service to retrieve metadata from AIND databases 
+REST service to retrieve metadata from AIND databases
 
 [link](http://aind-metadata-service/) | [readthedoc](http://aind-metadata-service/docs) | [repo](https://github.com/AllenNeuralDynamics/aind-metadata-service)
 
@@ -44,10 +26,9 @@ Library to interface with AIND databases
 
 **aind-data-asset-indexer**
 
-Index jobs for AIND metadata in AWS DocumentDB and S3 
+Index jobs for AIND metadata in AWS DocumentDB and S3
 
 [readthedoc](https://aind-data-asset-indexer.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-data-asset-indexer)
-
 
 ## Data & Outreach
 
@@ -61,7 +42,7 @@ Metadata schema for neuroscience
 
 **aind-metadata-mapper**
 
-Repository to help gather and map metadata from different sources 
+Repository to help gather and map metadata from different sources
 
 [readthedoc](https://aind-metadata-mapper.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-metadata-mapper)
 
@@ -75,7 +56,7 @@ Data book for the SWDB course
 
 ## Physiology & Behavior
 
-The Physiology & Behavior team maintains the pipelines that process each modality of data asset that we acquire in AIND. Details can be found on the [processing](../acquire_upload/processing.md) page.
+The Physiology & Behavior team maintains the pipelines that process each modality of data asset that we acquire in AIND. Details can be found in [Process data](../acquire_upload/process_data.md).
 
 ## Image Processing
 
