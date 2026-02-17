@@ -10,15 +10,13 @@ You are ready to generate data when:
 
 ## Project name
 
-Your *project* and *subproject* (if applicable) as well as funding information and investigators need to be accurate.
-
-You can find a list of project names and combined "<project_name> - <subproject_name>" names at this [metadata-service endpoint](https://aind-metadata-service/api/v2/project_names). These are the only allowable project names available at this time.
+Your *project* and *subproject* (if applicable) needs to be accurate. The full project name `<project_name> - <subproject_name>` is tied directly with the funding and investigator metadata. The list of project names can be viewed at the [metadata-service project_names/ endpoint](https://aind-metadata-service/api/v2/project_names). Projects that do not have metadata in the metadata-service must upload their own `data_description.json` -- reach out to Scientific Computing for help.
 
 If you need a new project name, please request that it be added with the [project name and funding intake form](https://app.smartsheet.com/b/form/9f366857582b4db98d1fe41ef724a613).
 
 ### Funding
 
-The funding endpoint will be used during data upload to populate your data description with funding information. Please check that your funding information is accurate in advance:
+The funding endpoint will be used during data upload to populate your data description with funding information. You can check that your `project_name` is linked to the correct funding through this tool. Note that changes must be made through the intake form, you cannot modify these fields manually.
 
 ```{raw} html
 <div style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
@@ -109,7 +107,7 @@ The funding endpoint will be used during data upload to populate your data descr
 
 ### Investigators
 
-The investigators endpoint will be used during data upload to populate your data description with investigator information. Please check that your investigator information is accurate in advance:
+The investigators endpoint will be used during data upload to populate your data description with investigator information. You can check that your `project_name` is linked to the correct list of investigators through this tool. Note that changes must be made through the intake form, you cannot modify these fields manually.
 
 ```{raw} html
 <div style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
