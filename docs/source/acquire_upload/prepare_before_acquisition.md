@@ -10,7 +10,7 @@ You are ready to generate data when:
 
 ## Project name
 
-Your *project* and *subproject* (if applicable) needs to be accurate. The full project name `<project_name> - <subproject_name>` is tied directly with the funding and investigator metadata. The list of allowed project names can be viewed at the [metadata-service project_names/ endpoint](https://aind-metadata-service/api/v2/project_names). These are the only allowable project names available at this time.
+Your *project* and *subproject* (if applicable) needs to be accurate. The full project name `<project_name> - <subproject_name>` is tied directly with the funding and investigator metadata. The list of project names can be viewed at the [metadata-service project_names/ endpoint](https://aind-metadata-service/api/v2/project_names). Projects that do not have metadata in the metadata-service must upload their own `data_description.json` -- reach out to Scientific Computing for help.
 
 If you need a new project name, please request that it be added with the [project name and funding intake form](https://app.smartsheet.com/b/form/9f366857582b4db98d1fe41ef724a613).
 
