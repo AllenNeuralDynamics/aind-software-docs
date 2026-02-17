@@ -1,4 +1,4 @@
-# Upload
+# Upload data
 
 Uploading data is done by using the [aind-data-transfer-service](http://aind-data-transfer-service/) ([docs](https://aind-data-transfer-service.readthedocs.io/en/latest/index.html)) which handles running containerized tasks for data copying, compression, metadata gathering, and final upload to S3 and Code Ocean.
 
