@@ -24,20 +24,7 @@ Rigs are responsible for generating the [acquisition.json](https://aind-data-sch
 
 If you can't generate your aind-data-schema formatted metadata on your rig, you can use what we call the “extractor/mapper” pattern. We refer to the code on the rig that extracts metadata from data files as the extractor. We prefer for you to maintain this code in [aind-metadata-extractor](https://github.com/AllenNeuralDynamics/aind-metadata-extractor/) but you can also maintain it yourself. The code that takes the extractor output and transforms it to aind-data-schema is called the mapper. Scientific computing will help develop the mapper as well as maintain it, you are responsible for your extractor. The key to the extractor/mapper pattern is the data contract that defines the extractor output. The data contract must be a pydantic model or JSON schema file and must live in the [aind_metadata_extractor.models](https://github.com/AllenNeuralDynamics/aind-metadata-extractor/tree/main/src/aind_metadata_extractor/models) module.
 
-On your rig you should output files that match the name of the corresponding mapper that will be run. So if your mapper is called fip you should write a `fip.json` file that validates against the fip extractor schema. The [GatherMetadataJob](upload_data.md#gathermetadatajob) will automatically run your mapper.
-
-#### Relationship between acquisition.json and instrument.json
-
-The acquisition and instrument metadata files are tightly coupled. The [instrument.json](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) describes the full set of devices in your instrument (each device has a `name` field). The [acquisition.json](https://aind-data-schema.readthedocs.io/en/latest/acquisition.html) describes what was active during a specific session.
-
-**Device name matching requirement**: Every device name listed in `acquisition.json` must exist in either the instrument or procedures metadata:
-
-- **DataStream.active_devices**: Each data stream lists the devices that were acquiring data. These names must match the `name` field of devices in `instrument.json` (or implanted devices in `procedures.json`).
-- **StimulusEpoch.active_devices**: Similarly, stimulus epoch device names must match instrument or procedure device names.
-- **Connections**: Any `source_device` or `target_device` in acquisition connections must reference devices defined in the instrument or procedures.
-- **instrument_id**: The `acquisition.instrument_id` must match `instrument.instrument_id`.
-
-Validation of this relationship occurs during the [GatherMetadataJob](upload_data.md#gathermetadatajob) when metadata is assembled for upload. See [Validation during upload](upload_data.md#validation-during-upload) for when validation runs, what happens when it fails, and how to fix issues.
+On your rig you should output files that match the name of the corresponding mapper that will be run. So if your mapper is called fip you should write a `fip.json` file that validates against the fip extractor schema. The [GatherMetadataJob](upload_data.md#gathermetadatajob) will automatically run your mapper. 
 
 #### Multiple independent rigs
 
