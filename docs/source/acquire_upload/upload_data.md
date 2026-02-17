@@ -19,6 +19,29 @@ The main settings you should be concerned with are:
 
 The settings for the GatherMetadataJob are typically set [inside of your upload script](https://github.com/AllenNeuralDynamics/aind-data-transfer-service/blob/d1f84020862c3de340020b6cb45bef0fd5105515/docs/examples/aind_data_schema_v2.py#L45-L50) or as part of the `job_type`.
 
+### Validation during upload
+
+The GatherMetadataJob validates the relationship between acquisition and instrument metadata when it assembles the full metadata object. This includes checking that:
+
+- All `active_devices` in acquisition data streams and stimulus epochs exist in the instrument (or procedures, for implanted devices)
+- All devices referenced in acquisition connections exist in the instrument or procedures
+- The `acquisition.instrument_id` matches the `instrument.instrument_id`
+
+**When validation runs**: Validation occurs during the metadata gathering step of the upload job. This runs as part of the aind-data-transfer-service workflow, typically when data is being prepared for transfer (whether from rig to VAST or VAST to S3, depending on your setup).
+
+**If validation fails**:
+
+- With `raise_if_invalid` enabled (strongly recommended): The GatherMetadataJob raises an exception. The upload job fails and no data is transferred. You will see the validation error in the job logs.
+- With `raise_if_invalid` disabled: The job may continue and create metadata with a validation bypass, but errors are logged. This can result in a data asset with invalid metadata that may cause problems downstream.
+
+**How to fix validation failures**:
+
+1. **Active devices not found**: Ensure every device name in `acquisition.json` (in `data_streams[].active_devices` and `stimulus_epochs[].active_devices`) exactly matches a device `name` in `instrument.json`. Device names are case-sensitive. If you use implanted devices, those must be defined in `procedures.json`.
+2. **instrument_id mismatch**: Set `acquisition.instrument_id` to match `instrument.instrument_id`. When merging multiple instruments, the acquisition should reference the merged instrument_id format (see [Merge rules](#merge-rules)).
+3. **Connection device not found**: Ensure `source_device` and `target_device` in each connection match device names in the instrument or procedures.
+
+You can test validation locally before upload using the `InstrumentAcquisitionCompatibility` class from `aind-data-schema`; see the [aind-data-schema validation docs](https://aind-data-schema.readthedocs.io/en/latest/validation.html) for details.
+
 ### Merge rules
 
 ### When can multiple files be merged?
@@ -33,7 +56,7 @@ Each file must follow the naming pattern `<metadata_type>*.json` where `*` is an
 
 #### Contraints
 
-1. **Unique fields must match**: Certain identifier fields that should be unique across the dataset (like `subject_id`) **must have identical values** in all files being merged. If these fields conflict, the merge will fail and your upload job will be rejected. An important exception is the `instrument_id` field. If two or more instrument JSON files are joined, the merged instrument JSON file will have an `instrument_id` that is the string combination of the IDs of the unique instruments, 
+1. **Unique fields must match**: Certain identifier fields that should be unique across the dataset (like `subject_id`) **must have identical values** in all files being merged. If these fields conflict, the merge will fail and your upload job will be rejected. An important exception is the `instrument_id` field. If two or more instrument JSON files are joined, the merged instrument JSON file will have an `instrument_id` that is the individual IDs joined with `_` in alphabetical order. Because `acquisition.instrument_id` must match the merged instrument, you must anticipate this format when generating acquisition metadata for multi-instrument sessions. For example, if you acquire across behavior instrument "FRG.10-A" and fiber photometry instrument "FIP-2", the merged instrument_id will be `FIP-2_FRG.10-A` (alphabetically sorted). Your acquisition files must use that value for `instrument_id`.
 
 2. **No shared devices, with the exception of a single shared clock**: In general, two instruments can be merged **if and only if there are no shared devices** between them. Devices are identified by their `name` field. If the same device name appears in both instrument files, they should really be defined as a single instrument, not two separate ones.
 
