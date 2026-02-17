@@ -400,13 +400,13 @@ If you need access to an older version of an instrument metadata file from the d
 
 ## Procedures
 
-[Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) metadata should be prepared in advance and uploaded to the metadata-service.
+[Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) metadata should be prepared in advance. Our goal with procedures metadata is to capture the date, time, and critical parameters of a published [Protocol](https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics/publications) on our protocols.io page.
 
-Our goal with procedures metadata is to capture the date, time, and parameters of a published [Protocol](https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics/publications) on our protocols.io page. You only need to track the extent to which your procedure varies from the standard protocol.
+Currently, only NSB procedures are automatically attached to data assets during upload while custom procedures require a `procedures.json` file to be uploaded with each data asset. With the roll out of Power Platform / Dataverse, all procedures will need to be uploaded to the metadata-service as they are performed.
 
 ### Custom procedures
 
-Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Note that the `data-transfer-service` will **NOT** merge your procedures with any stored in NSB, you must pull the NSB procedures and manually merge them ahead of time.
+Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Note that the `data-transfer-service` will **NOT** merge your procedures with any stored in NSB, you must pull the NSB procedures and manually merge them ahead of time, please reach out to Scientific Computing for help with this process.
 
 ### NSB procedures
 
