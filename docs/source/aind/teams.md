@@ -32,7 +32,8 @@ Index jobs for AIND metadata in AWS DocumentDB and S3
 
 ## Data & Outreach
 
-The Data & Outreach team maintains the data schema and associated downstream tools and is responsible for coordinating workshops and other outreach events.
+The Data & Outreach team is responsible for our open science. It
+maintains the data schema, the metadata chatbot, and associated downstream tools and organizes and hosts workshops and other outreach events.
 
 **aind-data-schema**
 
@@ -46,6 +47,12 @@ Repository to help gather and map metadata from different sources
 
 [readthedoc](https://aind-metadata-mapper.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-metadata-mapper)
 
+**aind-metadata_mcp**
+
+MCP for querying the metadata DocDB
+
+[repo](https://github.com/AllenNeuralDynamics/aind-metadata-mcp)
+
 ### Outreach
 
 **SWDB Data Book**
@@ -53,6 +60,12 @@ Repository to help gather and map metadata from different sources
 Data book for the SWDB course
 
 [SWDB data book](https://allenswdb.github.io/intro.html)
+
+**Public Collections**
+
+Workshop materials
+
+[Public collections](https://codeocean.allenneuraldynamics.org/collections/e409fea2-95bf-49c6-9725-0624aeb9e2a0?page=1&filter=all)
 
 ## Physiology & Behavior
 
