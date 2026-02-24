@@ -32,8 +32,7 @@ Index jobs for AIND metadata in AWS DocumentDB and S3
 
 ## Data & Outreach
 
-The Data & Outreach team is responsible for our open science. It
-maintains the data schema, the metadata chatbot, and associated downstream tools and organizes and hosts workshops and other outreach events.
+The Data & Outreach team is responsible for our open science. It maintains the data schema, the metadata chatbot, and associated downstream tools and organizes and hosts workshops and other outreach events.
 
 **aind-data-schema**
 
