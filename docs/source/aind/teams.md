@@ -60,7 +60,11 @@ The Physiology & Behavior team maintains the pipelines that process each modalit
 
 ## Image Processing
 
-The Image Processing team develops and maintains pipelines for processing lightsheet microscopy data across multiple imaging platforms. For internal users see also this [overview doc](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/IQA4mzEcBLN3RLCbNiQuaXHfAdvWB-mPvTZGhF1yKQ4sm5I?e=zBTLXh).
+The Image Processing team develops and maintains pipelines for processing lightsheet microscopy data across multiple imaging platforms and video pose tracking. For internal users see also this [overview doc](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/IQA4mzEcBLN3RLCbNiQuaXHfAdvWB-mPvTZGhF1yKQ4sm5I?e=zBTLXh).
+
+**Behavior-Videos**
+
+[behavior-video-inference-pipeline](https://github.com/AllenNeuralDynamics/behavior-video-inference-pipeline)
 
 **Smartspim**
 
