@@ -16,7 +16,7 @@ All processing pipelines that create derived assets should upgrade the [data_des
 
 ##### How to upgrade a data_description
 
-Use the [`DataDescription.from_data_description()`](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/e172cb06a63b722eaeaaf8933d0a17cbedf3feea/src/aind_data_schema/core/data_description.py#L334) function to create derived data_description objects. Pass the process name as a parameter, often just `"processed"`. If more source data assets were used than just the one being passed into the function then pass the optional `source_data` parameter as well with the names of those data assets.
+Use the [`DataDescription.from_data_description()`](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/e172cb06a63b722eaeaaf8933d0a17cbedf3feea/src/aind_data_schema/core/data_description.py#L334) function to create derived data_description objects. Pass the process name as a parameter, often just `process_name="processed"`. If more source data assets were used than just the one being passed into the function then pass the optional `source_data` parameter as well with the names of those data assets.
 
 ```python
 from pathlib import Path
@@ -27,7 +27,7 @@ original_data_description = DataDescription.model_validate_json(
     Path("data_description.json").read_text()
 )
 
-# Create a derived data_description with upgrade
+# Upgrade to the new derived data_description
 derived_data_description = DataDescription.from_data_description(
     data_description=original_data_description,
     process_name="processed"
@@ -45,5 +45,4 @@ If processing was performed as part of a nextflow pipeline, that should be track
 
 #### Other metadata
 
-Metadata `.json` files that are not modified should be copied to the derived asset unchanged.
-
+Core metadata `.json` files that are not modified should be copied to the derived asset unchanged. If it's present, do not copy the `metadata.nd.json` file -- this file is synchronized by the indexer and should not be moved manually.
