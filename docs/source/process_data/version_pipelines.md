@@ -4,10 +4,8 @@ Users need to understand how to interact with computed results produced by data 
 
 ## Policies
 
-Core data processing pipelines MUST adopt [semantic versioning](https://semver.org/). 
-- Major version changes indicate that the structure or interpretation of the data has changed.
-- Minor version changes indicate new, backwards compatible features were added to the pipeline.
-- Patch version changes indicate bug fixes.
+Core data processing pipelines MUST adopt [semantic versioning](https://semver.org/). See [Major/minor/patch](#majorminorpatch) section below
+
 
 The pipeline's name and semantic version MUST be stored in aind-data-schema [Processing](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/dev/src/aind_data_schema/core/processing.py#L970) metadata at the top level of the results.
 
@@ -53,3 +51,23 @@ When querying the metadata database for `Processing.pipeline_version`, users and
 - Code Ocean versions from before semantic versioning was adopted (i.e., `18.0`)
 
 For pipelines that have adopted semantic versioning, users and developers will always be able to find a pipelines semantic version in the `nextflow.config`.
+
+## Major/minor/patch
+
+Standard semantic versioning alone does not fully capture the needs of data processing pipelines. In particular, conventional commit types such as `fix`, `refactor`, and `feat` can each be either breaking or non-breaking, and breaking changes can differ in kind: some change output content (a downstream process may produce wrong results), while others change output structure or processing fundamentals (a downstream process fails entirely).
+
+The table below maps conventional commit types to the appropriate version bump:
+
+| Commit type | Description | Version bump |
+|---|---|---|
+| `build` | Changes to build system or external dependencies (larger than a dependency bugfix patch) | minor |
+| `feat` | A new feature added to output without changing existing output | minor |
+| `refactor` | A code change that neither fixes a bug nor adds a feature | minor |
+| `perf` | A code change that improves performance with output unchanged | minor |
+| `fix` | A bug fix that resolves failures only | patch |
+| `ci` | Changes to CI configuration files and scripts | patch |
+| `docs` | Documentation only changes | patch |
+| `style` | Changes that do not affect the meaning of the code (white-space, formatting, etc.) | patch |
+| `test` | Adding missing tests or correcting existing tests | patch |
+| `feat[breaking]` or `refactor[breaking]` | Fundamentally changes the processing approach or output structure such that results before and after are not directly comparable | major |
+| `fix[breaking]` | A bug fix that resolves erroneous output (changing previously incorrect results) | minor — proactively reprocess affected data and highlight in changelog |
