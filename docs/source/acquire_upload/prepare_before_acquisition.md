@@ -299,14 +299,14 @@ Subject metadata is populated by lab animal services (LAS) without your involvem
 
 ## Instrument
 
-[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance of data acquisition. Instrument metadata should describe the full set of devices that are combined into the physical instrument that is used to collect an associated dataset, regardless of whether those devices are active on a given session. This makes it possible to specify an instrument.json as a stable collection of devices (just like a physical instrument in the lab) even if some of those devices are used only in a subset of experimental sessions. The actual list of active devices and their configurable settings should be specified separately in the acquisition.json.
+[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance of data acquisition. Instrument metadata should describe the full set of devices that are combined into the physical instrument that is used to collect an associated dataset, regardless of whether those devices are active on a given session. For a more complete definition of a physical instrument and the associated instrument.json file, see the aind-data-schema Instrument section.
 
 Examples of physical instruments that should have corresponding instrument.json files are:
 * Individual behavioral training boxes
 * Behavior recording devices that can be combined transiently with physiology rigs
 * Physiology rigs (e.g. ephys, fiber photometry, two-photon imaging, etc)
 
-In cases where a devices for multiple modalities are combined in a persistent manner (e.g. behavior equipment that is built into a physiology rig), that combination of devices should generally be tracked as a single instrument with a single corresponding instrument.json file.
+In cases where a devices are combined in a persistent manner (e.g. behavior equipment that is built into a physiology rig), that combination of devices should generally be tracked as a single instrument with a single corresponding instrument.json file.
 
 When collections of devices are combined transiently (e.g. a physiology system that is combined with a physiology system in a swappable manner), those collections of devices can be described by separate instrument.json files that are combined into a single instrument at the time of upload. See the "Multiple Instruments" section below for details.
 
