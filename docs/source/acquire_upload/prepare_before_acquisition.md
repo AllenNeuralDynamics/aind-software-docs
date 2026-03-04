@@ -359,7 +359,7 @@ If you want to store your Instrument metadata file in the Scientific Computing m
 
 Note that you must currently have the `release-v1.0.0` branch of `aind-metadata-mapper` installed:
 ```bash
-git checkout https://github.com/AllenNeuralDynamics/aind-metadata-mapper.git
+git clone https://github.com/AllenNeuralDynamics/aind-metadata-mapper.git
 cd aind-metadata-mapper
 git checkout release-v1.0.0
 conda create -n instrument_uploader # or whatever you want your env to be called
