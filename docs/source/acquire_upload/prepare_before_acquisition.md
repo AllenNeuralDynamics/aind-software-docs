@@ -355,14 +355,9 @@ We recommend that basic maintenance changes, e.g. replacing a device with an ide
 
 #### I'm ready to upload my instrument JSON file to the database
 
-If you want to store your Instrument metadata file in the Scientific Computing managed database (only 2.0 schema instrument files are supported), you can follow these steps to post your instrument json file to the database:
+If you want to store your Instrument metadata file in the Scientific Computing managed database (only 2.0 schema instrument files are supported) you can use the [aind-metadata-mapper](https://github.com/AllenNeuralDynamics/aind-metadata-mapper/#aind-metadata-mapper) package. Install it with `pip install aind-metadata-mapper`.
 
-Note that you must have `aind-metadata-mapper` installed:
-```bash
-pip install aind-metadata-mapper
-```
-
-Then run the following in python
+Then run the following upload code:
 
 ```python
 from aind_metadata_mapper import utils
