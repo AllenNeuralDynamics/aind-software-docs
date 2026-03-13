@@ -13,9 +13,9 @@ The pipeline's name and semantic version MUST be stored in aind-data-schema [Pro
 
 The pipeline's name and semantic version MUST be stored in the pipeline repository and easily accessible to pipeline code. We recommend a `.env` file containing `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL` variables. These environment variables can be pulled using standard tools such as `os` and added to the `aind-data-schema` `Processing` core object for proper documentation. Specifically, the following fields of the `Processing` object should be populated with these environment variables:
 
-`Processing.pipeline_version=os.getenv("PIPELINE_VERSION")`
-`Processing.pipeline_url=os.getenv("PIPELINE_URL")`
-`Processing.pipeline_name=os.getenv("PIPELINE_NAME")`
+`Processing.pipeline_version=os.getenv("PIPELINE_VERSION", "No pipeline version reported.")`
+`Processing.pipeline_url=os.getenv("PIPELINE_URL", "No pipeline URL reported.")`
+`Processing.pipeline_name=os.getenv("PIPELINE_NAME", "No pipeline name reported.")`
 
 > **Note:** [`aind-metadata-manager>=0.1.3`](https://github.com/AllenNeuralDynamics/aind-metadata-manager) enforces that all three pipeline fields are provided — either via CLI arguments or environment variables. If a value is missing, the pipeline will fail with a clear error message rather than falling back to a placeholder default.
 
