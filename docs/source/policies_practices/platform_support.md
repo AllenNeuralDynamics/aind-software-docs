@@ -25,7 +25,11 @@ Platforms are required to generate and annotate (i.e. mark as passing or failing
 
 ## Pipeline development
 
-This section describes requirements and conventions for developing processing pipelines in AIND.
+Pipelines are a standardized series of processing steps that take raw data from a single modality and typically produce an NWB file as output. Pipelines are organized in a Nextflow pipeline with individual Code Ocean capsules performing internal steps. Platforms should use established pipelines for processing.
+
+- Accept raw data from a single modality, organized according to [aind-file-standards](https://github.com/AllenNeuralDynamics/aind-file-standards) when applicable.
+- Produce an NWB file as output
+- Assess data quality and produce QC metrics and references
 
 ### Pipeline metadata
 
