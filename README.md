@@ -2,7 +2,7 @@
 
 ## Contributing
 
-Please read: https://docs.allenneuraldynamics.org/en/latest/index.html
+Please read: https://docs.allenneuraldynamics.org/en/latest/policies_practices/docs.html
 
 ## Development
 
