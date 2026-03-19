@@ -46,17 +46,21 @@ And then a second level to filter by passing QC for a few metrics:
 ```python
 # Query #2: Same restrictions but passing QC
 qc_metric_names = ["Running Velocity", "General Performance"]
-derived_assets = asset_basics[asset_basics["name"].isin(derived_asset_names)]
+derived_assets = asset_metadata[asset_metadata["name"].isin(derived_asset_names)]
 passing_qc_asset_names = []
-for _, row in derived_assets.iterrows():
-    qc_df = qc(subject_id=row["subject_id"], asset_names=row["name"])
-    passing = qc_df[
-        (qc_df["name"].isin(qc_metric_names)) &
-        (qc_df["modality"] == "behavior") &
-        (qc_df["status"] == "pass")
-    ]
-    if passing["name"].nunique() == len(qc_metric_names):
-        passing_qc_asset_names.append(row["name"])
+for subject_id, subject_assets in derived_assets.groupby("subject_id"):
+    qc_df = qc(subject_id=subject_id)
+    if qc_df.empty or "status" not in qc_df.columns:
+        continue
+    for _, row in subject_assets.iterrows():
+        passing = qc_df[
+            (qc_df["asset_name"] == row["name"]) &
+            (qc_df["name"].isin(qc_metric_names)) &
+            (qc_df["modality"] == "behavior") &
+            (qc_df["status"] == "Pass")
+        ]
+        if passing["name"].nunique() == len(qc_metric_names):
+            passing_qc_asset_names.append(row["name"])
 ```
 
 ### Full access to all metadata fields through the database 
