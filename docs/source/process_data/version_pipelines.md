@@ -60,7 +60,7 @@ The table below maps conventional commit types to the appropriate version bump:
 
 | Commit type | Description | Version bump |
 |---|---|---|
-| `build` | Changes to build system or external dependencies (larger than a dependency bugfix patch) | minor |
+| `build` | Changes to build system or external dependencies | minor |
 | `feat` | A new feature added to output without changing existing output | minor |
 | `refactor` | A code change that neither fixes a bug nor adds a feature | minor |
 | `perf` | A code change that improves performance with output unchanged | minor |
@@ -69,5 +69,7 @@ The table below maps conventional commit types to the appropriate version bump:
 | `docs` | Documentation only changes | patch |
 | `style` | Changes that do not affect the meaning of the code (white-space, formatting, etc.) | patch |
 | `test` | Adding missing tests or correcting existing tests | patch |
-| `feat[breaking]` or `refactor[breaking]` | Fundamentally changes the processing approach or output structure such that results before and after are not directly comparable | major |
-| `fix[breaking]` | A bug fix that resolves erroneous output (changing previously incorrect results) | minor — proactively reprocess affected data and highlight in changelog |
+| `fix!`  | Breaking change to something in the code | minor |
+| `feat!` | Breaking change and will change how it's highlighted in the changelog | minor|
+| `BREAKING` (footer) | Fundamental changes the processing approach or output structure such that results before and after are not directly comparable | major |
+
