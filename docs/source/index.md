@@ -66,7 +66,7 @@ policies_practices/data_organization.md
 policies_practices/data_governance.md
 
 policies_practices/software_practices.md
-policies_practices/pipeline_development.md
+policies_practices/platform_support.md
 policies_practices/docs
 policies_practices/developer_templates
 
