@@ -65,7 +65,7 @@ for subject_id, subject_assets in derived_assets.groupby("subject_id"):
 
 ### Full access to all metadata fields through the database 
 
-The `aind-data-access-api` package is used to read metadata records from DocDB. There is one record in DocDB for each data asset. There are two kinds of DocDB queries: filter queries are a flat dictionary which look for records that match certain field:value pairs, while aggregation pipelines can perform multiple steps. Use the `version="v1"` or `version="v2"` parameter to control whether you are accessing the V1 or V2 metadata; reach out to scientific computing if you aren't sure what 
+The `aind-data-access-api` package is used to read metadata records from DocDB. There is one record in DocDB for each data asset. There are two kinds of DocDB queries: filter queries are a flat dictionary which look for records that match certain field:value pairs, while aggregation pipelines can perform multiple steps. Use the `version="v1"` or `version="v2"` parameter to control whether you are accessing the V1 or V2 metadata; reach out to scientific computing if you aren't sure which metadata you should be using.
 
 A simple example to get all derived assets with behavior NWB files from the VR foraging project:
 
@@ -87,43 +87,7 @@ records = client.retrieve_docdb_records(
 )
 ```
 
-A more complex example where we filter for specific metrics that are passing quality control:
-
-```python
-from aind_data_access_api.document_db import MetadataDbClient
-
-client = MetadataDbClient(
-    host="api.allenneuraldynamics.org",
-    version="v1",
-)
-
-qc_metric_names = ["Running Velocity", "General Performance"]
-
-query = {
-    "data_description.project_name": "Cognitive flexibility in patch foraging",
-    "data_description.data_level": "derived",
-    "data_description.modalitities.abbreviation": "behavior",
-    "quality_control.metrics": {
-        "$elemMatch": {
-            "name": {"$in": qc_metric_names},
-            "$expr": {
-                "$eq": [
-                    {
-                        "$arrayElemAt": [
-                            "$status_history.status",
-                            -1
-                        ]
-                    },
-                    "PASS"
-                ]
-            }
-        }
-    }
-}
-records = client.retrieve_docdb_records(
-    filter_query=query
-)
-```
+More details about DocDB queries can be found in the [aind-data-access-api#querying-metadata documentation](https://aind-data-access-api.readthedocs.io/en/latest/ExamplesDocDBRestApi.html#querying-metadata)
 
 ## Dashboards
 
