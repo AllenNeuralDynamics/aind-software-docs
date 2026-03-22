@@ -1,6 +1,6 @@
 # Find data
 
-Each raw asset uploaded from a platform at AIND produces a group of derived assets, one per modality. You can find these assets easily by performing a query on our metadata database using your project name and other fields unique to your project. **All analyses at AIND should begin with a query that returns a group of data assets, filtered by passing quality control**.
+Raw assets uploaded from platforms at AIND are run through automated pipelines that produce derived assets. You can find these assets by performing a query on our metadata database using your project name and other fields unique to your experiment. **All analyses at AIND should begin with a query that returns a group of data assets, filtered by passing quality control**.
 
 Some fields that are commonly used to filter assets:
 
@@ -11,19 +11,28 @@ Some fields that are commonly used to filter assets:
 - `acquisition.acquisition_start_time`
 - `quality_control.status` and `quality_control.metrics.status_history`
 
-## Query DocDB
+You may also find it useful to tag your data with custom strings at the time of upload. These tags will make it easy to find cluster your data into different subsets.
 
-DocDB queries are dictionaries (key-value pairs) that return a set of data assets. Analysis pipelines are required to use a query as the first step in gathering data for analysis **and** to filter assets according to passing quality control criteria. We recommend using the MCP server to gain familiarity with the patterns used for creating queries. 
+- `acquisition.acquisition_type`: this is the primary string that should differentiate acquisitions within the same project
+- `data_description.tags`: this is a list of strings you can use to cluster assets by things that aren't well represented in the metadata.
 
-### AI (MCP Server)
+## Querying the metadata database
 
-The [`aind-metadata-mcp`](https://github.com/allenNeuralDynamics/aind-metadata-mcp) (for V1 metadata) and [`aind-data-mcp`](https://github.com/allenNeuralDynamics/aind-data-mcp) (for V2 metadata) make it easy to generate queries for your data assets without knowing the exact structure of the metadata. Install the MCP server by following the instructions for that package or by using the pre-built environment in Code Ocean (`code-server python extensions pack`). You can then ask an AI agent that has access to the MCP server tools to run test queries and write a Python script for your query. The resulting script will use a mixture of the cache query system or full access, depending on what fields you need access to.
+Our metadata is stored in a MongoDB database with one record for each data asset. MongoDB queries are dictionaries (key-value pairs) that return a set of records. These can be complicated to construct, which is why we've developed (1) AI tools and (2) cache tables to make it easier to quickly find data assets. We explain below in more detail in (3) how to fully leverage the MongoDB database, if you need it.
 
-### Fast queries through the cache
+Analysis workflows are required to use a query as the first step in gathering data for analysis **and** to filter assets according to passing quality control criteria. We recommend using the MCP server to gain familiarity with the patterns used for creating queries.
 
-Metadata queries to the database can be very slow. The [`zombie-squirrel`](https://github.com/AllenNeuralDynamics/zombie-squirrel/) package exposes a cache of some fields in the V2 metadata making them available with much lower latency. The metadata cache is updated at midnight, do not use it if you need immediate access to assets.
+### Option 1: MCP Server (AI)
 
-For example, here is a query to find the latest derived assets with behavior NWB files from the VR foraging project:
+The [`aind-metadata-mcp`](https://github.com/allenNeuralDynamics/aind-metadata-mcp) (for V1 metadata) and [`aind-data-mcp`](https://github.com/allenNeuralDynamics/aind-data-mcp) (for V2 metadata) make it easy to generate queries for your data assets without knowing the exact structure of the metadata.
+
+Install the MCP server by following the instructions for that package or by using the pre-built environment in Code Ocean (`code-server python extensions pack`). You can then ask an AI agent that has access to the MCP server tools to run test queries and write a Python script for your query. The resulting script will use a mixture of the cache query system or full access, depending on what fields you need access to.
+
+### Option 2: Metadata cache
+
+Some queries to the metadata database can be very slow. The [`zombie-squirrel`](https://github.com/AllenNeuralDynamics/zombie-squirrel/) package exposes a cache (updated nightly) of some fields in the V2 metadata making them instantly available. Please see the [zombie-squirrel README](https://github.com/AllenNeuralDynamics/zombie-squirrel/#scurry-fetch-data) for a complete list of tables that are available. We add new tables regularly, and we can support custom tables for individual projects. Please [reach out to scientific computing](https://github.com/AllenNeuralDynamics/aind-scientific-computing/issues) with requests.
+
+For example, here is a query that evaluates in a few hundred milliseconds to find the latest derived assets with behavior NWB files from the VR foraging project:
 
 ```python
 from zombie_squirrel import asset_basics, raw_to_derived, qc
@@ -65,7 +74,7 @@ for subject_id, subject_assets in derived_assets.groupby("subject_id"):
 
 ### Full access to all metadata fields through the database 
 
-The `aind-data-access-api` package is used to read metadata records from DocDB. There is one record in DocDB for each data asset. There are two kinds of DocDB queries: filter queries are a flat dictionary which look for records that match certain field:value pairs, while aggregation pipelines can perform multiple steps. Use the `version="v1"` or `version="v2"` parameter to control whether you are accessing the V1 or V2 metadata; reach out to scientific computing if you aren't sure which metadata you should be using.
+The `aind-data-access-api` package is used to read metadata records from DocDB. . There are two kinds of DocDB queries: filter queries are a flat dictionary which look for records that match certain field:value pairs, while aggregation pipelines can perform multiple steps. Use the `version="v1"` or `version="v2"` parameter to control whether you are accessing the V1 or V2 metadata; reach out to scientific computing if you aren't sure which metadata you should be using.
 
 A simple example to get all derived assets with behavior NWB files from the VR foraging project:
 
