@@ -47,7 +47,7 @@ raw_assets = asset_metadata[
 # Modalities is a comma-separated list, filter for "behavior"
 raw_assets = raw_assets[raw_assets["modalities"].str.contains("behavior")]
 # Get latest derived versions of these behavior raw assets
-derived_asset_names = raw_to_derived(raw_assets["name"].tolist(), latest=True)
+derived_asset_names = raw_to_derived(raw_assets["name"].tolist(), modality="behavior", latest=True)
 ```
 
 And then a second level to filter by passing QC for a few metrics:
@@ -74,7 +74,7 @@ for subject_id, subject_assets in derived_assets.groupby("subject_id"):
 
 ### Full access to all metadata fields through the database 
 
-The `aind-data-access-api` package is used to read metadata records from DocDB. . There are two kinds of DocDB queries: filter queries are a flat dictionary which look for records that match certain field:value pairs, while aggregation pipelines can perform multiple steps. Use the `version="v1"` or `version="v2"` parameter to control whether you are accessing the V1 or V2 metadata; reach out to scientific computing if you aren't sure which metadata you should be using.
+The `aind-data-access-api` package is used to read metadata records from DocDB. There are two kinds of DocDB queries: filter queries are a flat dictionary which look for records that match certain field:value pairs, while aggregation pipelines can perform multiple steps. Use the `version="v1"` or `version="v2"` parameter to control whether you are accessing the V1 or V2 metadata; reach out to scientific computing if you aren't sure which metadata you should be using.
 
 A simple example to get all derived assets with behavior NWB files from the VR foraging project:
 
