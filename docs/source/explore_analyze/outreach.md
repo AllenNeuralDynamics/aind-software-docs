@@ -1,13 +1,12 @@
 # Outreach Events & Resources
 
-This page highlights outreach events organized by our group, including workshops, hackathons, conference sessions, classroom activities. It also serves as a hub for associated learning materials such as code tutorials, repositories, and supporting resources.
+This page highlights outreach events organized by our group, including workshops, hackathons, conference sessions, and education activities. It also serves as a hub for associated learning materials such as code tutorials, repositories, and supporting resources.
 
 Our outreach efforts are designed to make Allen Institute for Neural Dynamics datasets, tools, and scientific workflows more accessible to the broader community. 
 
 You can also view previous and upcoming outreach events here: https://www.allenneuraldynamics.org/events. 
 
 ---
-
 ## Types of Outreach Events
 
 Our outreach efforts span several formats, including:
@@ -32,8 +31,6 @@ Our outreach efforts span several formats, including:
 
 This section highlights materials that may be useful beyond the original event they were created for.
 
-### Tutorials & Repositories
-
 - **Summer Workshop on the Dynamic Brain 2025 collection**  
   Code Ocean collection for a two-week summer training course, includes code tutorials for multiple projects and datasets.  
   [View collection](https://codeocean.allenneuraldynamics.org/collections/815cebfe-1829-4287-8e99-f1346b5d6ccb)
@@ -50,9 +47,9 @@ Workshops provide structured training experiences focused on datasets, tools, an
 ## Summer Workshop on the Dynamic Brain 2025
 
 **Date:** August 24 – September 7, 2025  
-**Audience:** Graduate students, researchers  
+**Audience:** graduate students, researchers  
 **Location:** Friday Harbor Laboratories, San Juan Island, WA, USA  
-**Highlighted projects/platforms:** Allen Institute large-scale neuroscience datasets  
+**Highlighted projects/platforms:** multiple Allen Institute large-scale neural datasets
 
 A two-week summer course focused on computational analysis of large-scale neuroscience datasets.
 
@@ -65,11 +62,12 @@ A two-week summer course focused on computational analysis of large-scale neuros
 ## Workshop at Western Washington University
 
 **Date:** October 30, 2025  
-**Audience:** Undergraduates, graduate students (neuroscience, biology, computer science)  
-**Location:** WWU, Bellingham, WA, USA  
-**Highlighted projects/platforms:** Molecular Anatomy, Exa-SPIM, Credit Assignment During Learning  
 
-This workshop included short talks on team science, an overview of Allen Institute for Neural Dynamics, and hands-on code tutorials using neuron reconstructions from the Exa-SPIM platform and neurophysiology and behavior data from the BCI project. 
+**Audience:** undergraduate students, graduate students (neuroscience, biology, computer science)  
+**Location:** WWU, Bellingham, WA, USA  
+**Highlighted projects/platforms:** Brain-wide Anatomy, Exa-SPIM, Credit Assignment During Learning  
+
+This workshop included short talks on team science, an overview of Allen Institute for Neural Dynamics, and hands-on code tutorials using neuron reconstructions from the Brain-wide Anatomy platform and neurophysiology and behavior data from the BCI project. 
 
 ### Resources
 - [Exa-SPIM tutorial capsule](https://codeocean.allenneuraldynamics.org/capsule/0685965/tree/v1)
@@ -80,11 +78,12 @@ This workshop included short talks on team science, an overview of Allen Institu
 ## Workshop at Okinawa Institute of Science and Technology
 
 **Date:** January 30, 2025  
-**Audience:** Researchers  
+**Audience:** researchers  
 **Location:** OIST, Okinawa, JP  
-**Highlighted projects/platforms:** Molecular Anatomy, AIND Community Portal  
+**Highlighted projects/platforms:** Brain-wide Anatomy, Electrophysiology
 
-A workshop sharing project updates and resources from the Molecular Anatomy project, with a particular focus on the morphology portal.
+This workshop focused on introducing and sharing resources from the Brain-wide Anatomy and Electrophysology platforms. 
+
 
 ---
 
@@ -95,7 +94,7 @@ Hackathons are collaborative coding events where participants work directly with
 ## University of Washington Neurohackathon (2026)
 
 **Date:** March 6–8, 2026  
-**Audience:** Undergraduates, graduate students, researchers  
+**Audience:** undergraduate students, graduate students, researchers  
 **Location:** UW, Seattle, WA, USA  
 **Highlighted projects/platforms:** Credit Assignment During Learning  
 
@@ -109,7 +108,7 @@ Our second year participating in the UW Neurohackathon, sharing updated data and
 ## University of Washington Neurohackathon (2025)
 
 **Date:** May 16–18, 2025  
-**Audience:** Undergraduates, graduate students, researchers  
+**Audience:** undergraduate students, graduate students, researchers  
 **Location:** UW, Seattle, WA, USA  
 **Highlighted projects/platforms:** Credit Assignment During Learning  
 
@@ -123,7 +122,7 @@ A hackathon organized by the Conect and Synaptech student clubs at UW, where par
 ## UW CNC–AIND Hackacollabathon: Credit Assignment During Learning
 
 **Date:** May 14, 2025  
-**Audience:** Graduate students, researchers  
+**Audience:** graduate students, researchers  
 **Location:** UW,Seattle, WA, USA  
 **Highlighted projects/platforms:** Credit Assignment During Learning  
 
@@ -137,9 +136,9 @@ A collaborative hackathon to share new data from the *Credit Assignment During L
 ## UW CNC–AIND Hackacollabathon: Mesoscale Connectivity
 
 **Date:** December 4, 2024  
-**Audience:** Undergraduates, graduate students, researchers  
+**Audience:** undergraduate students, graduate students, researchers  
 **Location:** UW, Seattle, WA, USA  
-**Highlighted projects/platforms:** Thalamus in the Middle, Molecular Anatomy  
+**Highlighted projects/platforms:** Thalamus in the Middle, Brain-wide Anatomy
 
 A collaborative hackathon to share new data from the *Thalamus in the Middle* project with researchers at UW and the Allen Institute.
 
@@ -155,9 +154,9 @@ Conference sessions and invited talks help introduce Allen Institute datasets, t
 ## Talk at Cosyne Tutorial Session
 
 **Date:** March 12, 2026  
-**Audience:** Researchers  
+**Audience:** researchers  
 **Location:** Cosyne, Lisbon, PT  
-**Highlighted projects/platforms:** Molecular Anatomy, Electrophysiology, AIND Community Portal, Dynamic Routing, Visual Behavior Neuropixels  
+**Highlighted projects/platforms:** Brain-wide Anatomy, Electrophysiology, AIND Community Portal, Dynamic Routing, Visual Behavior Neuropixels  
 
 A talk delivered during the Cosyne tutorial session highlighting datasets, tools, and resources from the Allen Institute for Neural Dynamics. 
 
@@ -166,9 +165,9 @@ A talk delivered during the Cosyne tutorial session highlighting datasets, tools
 ## Talk at the NeurIPS Data on the Brain & Mind Workshop 
 
 **Date:** December 7, 2025  
-**Audience:** Researchers (machine learning, AI, neuroscience)
+**Audience:** researchers (machine learning, AI, neuroscience)
 **Location:** NeurIPS 2025, San Diego, CA, USA  
-**Highlighted projects/platforms:** Visual Behavior Neuropixels
+**Highlighted projects/platforms:** Visual Behavior Neuropixels  
 
 A short talk during a workshop on AI applications for neuroscience and cognitive science data, highlighting a preprint and code tutorial from the Visual Behavior Neuropixels project.
 
@@ -185,7 +184,7 @@ Lectures and classroom activities support student learning by introducing Allen 
 ## Lecture at Undergraduate Course at University of Puget Sound
 
 **Date:** September 24, 2025  
-**Audience:** Undergraduates (neuroscience, computer science)  
+**Audience:** undergraduate students (neuroscience, computer science)  
 **Location:** UPS, Tacoma, WA, USA  
 **Highlighted projects/platforms:** Credit Assignment During Learning  
 
@@ -199,11 +198,11 @@ A lecture for an undergraduate class in which students developed quarter-long re
 ## Code Tutorial for High School Field Trip
 
 **Date:** February 13, 2026  
-**Audience:** High school students  
+**Audience:** high school students  
 **Location:** Allen Institute, Seattle, WA, USA  
-**Highlighted projects/platforms:** Thalamus in the Middle, Molecular Anatomy  
+**Highlighted projects/platforms:** Thalamus in the Middle, Brain-wide Anatomy  
 
-A code tutorial designed for a high school group visiting the Allen Institute, focused on introducing students to neural anatomy data and mapping connections between brain areas. 
+A code tutorial for high school group visiting the Allen Institute, focused on introducing neural anatomy data and mapping connections between brain areas. 
 
 ### Resources
 - [Code tutorial repository](https://github.com/leesuyee/mesoscale-connectivity-tutorial)
