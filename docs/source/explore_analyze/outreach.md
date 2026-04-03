@@ -1,8 +1,8 @@
 # Outreach Events & Resources
 
-This page highlights outreach events organized by our group, including workshops, hackathons, conference sessions, classroom activities, and public-facing educational events. It also serves as a hub for associated learning materials such as code tutorials, repositories, and supporting resources.
+This page highlights outreach events organized by our group, including workshops, hackathons, conference sessions, classroom activities. It also serves as a hub for associated learning materials such as code tutorials, repositories, and supporting resources.
 
-Our outreach efforts are designed to make Allen Institute for Neural Dynamics datasets, tools, and scientific workflows more accessible to reseachers, students, educators, and the broader community. 
+Our outreach efforts are designed to make Allen Institute for Neural Dynamics datasets, tools, and scientific workflows more accessible to the broader community. 
 
 You can also view previous and upcoming outreach events here: https://www.allenneuraldynamics.org/events. 
 
@@ -127,7 +127,7 @@ A hackathon organized by the Conect and Synaptech student clubs at UW, where par
 **Location:** UW,Seattle, WA, USA  
 **Highlighted projects/platforms:** Credit Assignment During Learning  
 
-A collaborative hackathon event designed to share new data from the *Credit Assignment During Learning* project with researchers at UW and the Allen Institute.
+A collaborative hackathon to share new data from the *Credit Assignment During Learning* project with researchers at UW and the Allen Institute.
 
 ### Resources
 - [BCI / Credit Assignment tutorial capsule](https://codeocean.allenneuraldynamics.org/capsule/6784496/tree/v1)
@@ -170,7 +170,7 @@ A talk delivered during the Cosyne tutorial session highlighting datasets, tools
 **Location:** NeurIPS 2025, San Diego, CA, USA  
 **Highlighted projects/platforms:** Visual Behavior Neuropixels
 
-A short talk during a workshop on AI applications for neuroscience and cognitive science data, highlighting a preprint and code tutorial from the *Visual Behavior Neuropixels* project.
+A short talk during a workshop on AI applications for neuroscience and cognitive science data, highlighting a preprint and code tutorial from the Visual Behavior Neuropixels project.
 
 ### Resources
 - [Workshop website](https://data-brain-mind.github.io/)
@@ -189,7 +189,7 @@ Lectures and classroom activities support student learning by introducing Allen 
 **Location:** UPS, Tacoma, WA, USA  
 **Highlighted projects/platforms:** Credit Assignment During Learning  
 
-This course session supported an undergraduate class in which students developed quarter-long research projects using Allen Institute datasets.
+A lecture for an undergraduate class in which students developed quarter-long research projects using Allen Institute datasets.
 
 ### Resources
 - [Code tutorial repository](https://github.com/AllenNeuralDynamics/ups_nrsc490_tutorial/tree/main)
@@ -203,7 +203,7 @@ This course session supported an undergraduate class in which students developed
 **Location:** Allen Institute, Seattle, WA, USA  
 **Highlighted projects/platforms:** Thalamus in the Middle, Molecular Anatomy  
 
-A code tutorial designed for a high school field trip to the Allen Institute, introducing students to anatomy data and mapping connections between brain areas. 
+A code tutorial designed for a high school group visiting the Allen Institute, focused on introducing students to neural anatomy data and mapping connections between brain areas. 
 
 ### Resources
 - [Code tutorial repository](https://github.com/leesuyee/mesoscale-connectivity-tutorial)
