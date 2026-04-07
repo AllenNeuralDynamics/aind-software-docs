@@ -18,15 +18,6 @@ Our outreach efforts span several formats, including:
 
 ---
 
-## Jump to Section
-
-- [Featured Resources](#featured-resources)
-- [Workshops](#workshops)
-- [Hackathons](#hackathons)
-- [Conference Sessions & Talks](#conference-sessions--talks)
-- [Lectures & Classroom Outreach](#lectures--classroom-outreach)
----
-
 ## Featured Resources
 
 This section highlights materials that may be useful beyond the original event they were created for.
@@ -36,13 +27,13 @@ This section highlights materials that may be useful beyond the original event t
   [View collection](https://codeocean.allenneuraldynamics.org/collections/815cebfe-1829-4287-8e99-f1346b5d6ccb)
 
 - **Credit Assignment During Learning tutorial**  
-  Code Ocean capsule with several code tutorials for the BCI data used in multiple hackathons and workshops.  
+  Code Ocean capsule with code tutorials to access the BCI neurophysiology and behavior dataset.  
   [View capsule](https://codeocean.allenneuraldynamics.org/capsule/0692322/tree/v3) 
 ---
 
 # Workshops
 
-Workshops provide structured training experiences focused on datasets, tools, and computational approaches used across Allen Institute for Neural Dynamics projects.
+Workshops provide structured training experiences focused on datasets, tools, and computational approaches used across the Allen Institute for Neural Dynamics. 
 
 ## Summer Workshop on the Dynamic Brain 2025
 
@@ -211,7 +202,4 @@ A code tutorial for high school group visiting the Allen Institute, focused on i
 
 ## Have questions? Interested in using our materials? 
 
-Contact us:  
-
-Saskia de Vries (saskiad@alleninstitute.org)  
-Su-Yee Lee (suyee.lee@alleninstitute.org) 
+Contact the Data & Outreach team. 
