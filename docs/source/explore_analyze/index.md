@@ -16,7 +16,7 @@ orphan: true
 
 [Explore custom tools](analyze_data.md#custom-tools) for annotation and data exploration.
 
-[Find outreach](outreach.md).
+[Find outreach events](outreach.md).
 
 ```{toctree}
 :hidden:
