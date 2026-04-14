@@ -23,7 +23,7 @@ Package management should be handled by [uv](https://docs.astral.sh/uv/).
 
 We use [ruff](https://docs.astral.sh/ruff/) to enforce [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Use `ruff check` and `ruff check --fix`. Line lengths should have a maximum of **100** characters.
 
-Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions. Only external-facing packages should be published to [pypi](https://pypi.org/), internal packages should be installed from github releases. Use the following prefixes to trigger version updates automatically after merges to main:
+Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions. Only external-facing packages should be published to [pypi](https://pypi.org/), internal packages should be installed from github releases. Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) to trigger version updates automatically after merges to main:
 
 | Prefix | Commit message | Update |
 | `<any>:` | | patch |
@@ -37,7 +37,7 @@ GitHub automation should use the AIND [reusable workflows](https://github.com/Al
 #### Recommended
 
 - Functions to be annotated with [type hints](https://peps.python.org/pep-0484/).
-- Functions should not exceed a complexity of 10 paths (ruff default).
+- Functions should not exceed a complexity of 10 paths.
 - Functions should [return early](https://medium.com/swlh/return-early-pattern-3d18a41bba8) / [fail fast](https://en.wikipedia.org/wiki/Fail-fast_system).
 - Code should be capable of being analyzed by static analysis tools.
 - Modules (<1000 lines), classes, and functions (<100 lines) should be manageable size.
