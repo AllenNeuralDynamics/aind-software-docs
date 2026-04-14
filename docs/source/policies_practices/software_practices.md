@@ -15,22 +15,24 @@ These standards are maintained by the [aind-library-template](https://github.com
 | Code Ocean pipeline | ... |
 | Analysis capsule | ... |
 
-Individual projects that deviate from these standards **must do so by modifying the pyproject.toml**.
+The decision to deviate from these style standards must be made in consultation with an entire team and be manager-approved. Deviations must be implemented by modifying the `pyproject.toml`. 
 
 #### Standard
 
 Package management should be handled by [uv](https://docs.astral.sh/uv/).
 
-We use [ruff](https://docs.astral.sh/ruff/) to enforce [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Use `ruff check` and `ruff check --fix`. Line lengths should have a maximum of **100** characters, or more.
+We use [ruff](https://docs.astral.sh/ruff/) to enforce [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Use `ruff check` and `ruff check --fix`. Line lengths should have a maximum of **100** characters.
 
 Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions. Only external-facing packages should be published to [pypi](https://pypi.org/), internal packages should be installed from github releases. Use the following prefixes to trigger version updates automatically after merges to main:
 
-| Prefix | Update |
-| `<any>:` | patch |
-| `feat:` | minor |
-| `BREAKING CHANGE` | major |
+| Prefix | Commit message | Update |
+| `<any>:` | | patch |
+| `feat:` | | minor |
+| `feat!:` or `fix!:` | Include `BREAKING CHANGE` and details | major |
 
-Unit tests should use [pytest](https://docs.pytest.org/en/stable/). Coverage should be at 100%. The decision to lower test coverage below 100% must be made in consultation with an entire team and be manager-approved. Tests should be run before merging pull requests into `main` and `dev`.
+Unit tests should use [pytest](https://docs.pytest.org/en/stable/). Coverage should be at 100%. Tests should be run before merging pull requests into `main` and `dev`.
+
+GitHub automation should use the AIND [reusable workflows](https://github.com/AllenNeuralDynamics/.github/tree/main/.github/workflows).
 
 #### Recommended
 
