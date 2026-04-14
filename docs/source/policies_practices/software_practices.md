@@ -21,7 +21,9 @@ The decision to deviate from these style standards must be made in consultation 
 
 Package management should be handled by [uv](https://docs.astral.sh/uv/).
 
-We use [ruff](https://docs.astral.sh/ruff/) to enforce [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Use `ruff check` and `ruff check --fix`. Line lengths should have a maximum of **100** characters.
+We use [ruff](https://docs.astral.sh/ruff/) to enforce [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Line lengths should have a maximum of **100** characters.
+
+Use `ruff check` and `ruff check --fix` to run ruff. [ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit) can be used to run ruff automatically via pre-commit hooks.
 
 Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions. Only external-facing packages should be published to [pypi](https://pypi.org/), internal packages should be installed from github releases. Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) to trigger version updates automatically after merges to main:
 
