@@ -41,7 +41,7 @@ Unit tests should use [pytest](https://docs.pytest.org/en/stable/). Coverage sho
 - Modules (<1000 lines), classes, and functions (<100 lines) should be manageable size.
 - Internal packages should use the naming pattern `<modality>-<process>` wherever possible.
 - Packages should not be prefixed with our namespace (i.e. do not put `aind-` as a prefix).
-- Internal dependencies should use *both* a version floor and ceiling `>=1.0.0,<2`. 
+- Internal dependencies should be pinned `==1.0.0` or use *both* a version floor and ceiling `>=1.0.0,<2`. 
 - Unit tests should cleanup test files or write to temporary folders. Do not version auto-generated code or data in repositories.
 
 ### Code Review 
