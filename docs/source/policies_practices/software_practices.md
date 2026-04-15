@@ -78,7 +78,7 @@ The source code for the Google guide has been archived, but the content is still
 The sections below describe practices that supplement the above guide:
 
 - Every change to the codebase needs to be code reviewed, regardless of seniority.
-- At least one other software developer needs to approve a PR in order for it to be merged.
+- At least one other (human) software developer needs to approve a PR in order for it to be merged.
 - Be courteous and respectful when providing and receiving feedback. Code review is a process to foster collaboration and improve code quality, and feedback is not personal.
 
 #### As an author
