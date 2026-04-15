@@ -45,7 +45,7 @@ GitHub automation should use the AIND [reusable workflows](https://github.com/Al
 
 - `main` branch is reserved for production-ready code (deployed to a production environment or release).
 - `dev` branch is the default branch for development and feature integration. It should be in a stable and deployable state (e.g., for integration tests) and contains code not yet released to production.
-- Feature branches are used for developing new features, bug fixes, or other code changes. They should be merged back into `dev` once work is complete and reviewed.
+- Feature branches are used for developing new features, bug fixes, or other code changes. They should be Squash and Merged back into `dev` once work is complete and reviewed.
 - `main` and `dev` branches must be protected and require at least 1 review approval before merging.
 - TBD: character limit, whether to require category prefixes or not
 
@@ -89,7 +89,7 @@ The sections below describe practices that supplement the above guide:
   - For PRs into `dev`, the PR title **must** follow conventional commit format since it becomes the commit message after Squash and Merge.
 - Use the PR description or comments to provide context or ask for in-depth review for various code aspects.
 - Close the loop quickly. Follow up with your reviewer if you haven't heard back in 1 day.
-- You are responsible for all decisions in your code. You should be able to explain and justify all lines of code in your PR. This is especially important when using AI tools for code generation. Please see our guidelines for AI Usage for more details.
+- You are responsible for all decisions in your code. You should be able to explain and justify all lines of code in your PR. This is especially important when using AI tools for code generation. Please see our AI Usage guidelines for more details.
 
 #### As a reviewer
 
@@ -97,10 +97,6 @@ The sections below describe practices that supplement the above guide:
 - Verify the code meets our standards and addresses the linked issue with the correct scope.
 - Verify the code has been tested.
 - Ensure author/reviewer consensus on the version bump the PR mandates (e.g., `BREAKING CHANGE` has been marked appropriately via conventional commits in the PR title).
-
-#### Merging Pull Requests
-
-Once approved, PRs to `dev` branches should be merged using Squash and Merge to maintain a clean commit history.
 
 ## Resources for SWEs
 
