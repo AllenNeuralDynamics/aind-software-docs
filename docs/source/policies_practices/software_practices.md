@@ -25,7 +25,7 @@ We use [ruff](https://docs.astral.sh/ruff/) to enforce [PEP 8](https://peps.pyth
 
 Use `ruff check` and `ruff check --fix` to run ruff. [ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit) can be used to run ruff automatically via pre-commit hooks.
 
-Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions. Only external-facing packages should be published to [pypi](https://pypi.org/), internal packages should be installed from github releases. Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) to trigger version updates automatically after merges to main:
+Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions. Packages that have general use externally should be published to [pypi](https://pypi.org/), packages that are primarily for internal use should be installed from github releases. Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) to determine semantic versioning for packages manually or via automated GitHub actions on protected branches, for example:
 
 | Prefix | Commit message | Update |
 | `<any>:` | | patch |
