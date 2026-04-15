@@ -90,6 +90,7 @@ The sections below describe practices that supplement the above guide:
   - For PRs into `dev`, the PR title **must** follow conventional commit format since it becomes the commit message after Squash and Merge.
 - Use the PR description or comments to provide context or ask for in-depth review for various code aspects.
 - Close the loop quickly. Follow up with your reviewer if you haven't heard back in 1 day.
+- You are responsible for all decisions in your code. You should be able to explain and justify all lines of code in your PR. This is especially important when using AI tools for code generation. Please see our guidelines for AI Usage for more details.
 
 #### As a reviewer
 
