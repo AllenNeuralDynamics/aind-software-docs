@@ -113,8 +113,7 @@ The following applies to code written or co-written by AI Tools
 
 - Code must still meet the coding standards specified above.
 - Code must leverage or integrate with existing infrastructure and solutions to problems rather than sidestep or wholesale replace them.
-- As the tool user, you must understand the code generated before submitting a PR. Do not offload this understanding to your reviewer.
-- Be prepared to defend every line of code within a PR. It is not sufficient to yield understanding of the software generated to expedite end-to-end performance.
+- Be prepared to defend every line of code you write or generate when submitting a PR. Do not offload this understanding to your reviewer.
 - You are still responsible for maintaining this code.
 - Code in a pull request must be reviewed by a human before it can be merged to _dev_ or _main_ branches. PRs cannot be merged by approvals solely given by AI Tools.
 
@@ -132,7 +131,7 @@ The following is a loose collection of software design patterns.
 This list is not exhaustive.
 It is intended as a starting point to approaching new problems by first investigating what patterns may be relevant. 
 
-* Object Oriented Design
+* Object Oriented Design Patterns
   * Creational: object instantiation
     * [Factory](https://refactoring.guru/design-patterns/factory-method)
     * [Singleton](https://refactoring.guru/design-patterns/singleton)
@@ -145,6 +144,7 @@ It is intended as a starting point to approaching new problems by first investig
   * Behavioral: object interactions
     * [Observer](https://refactoring.guru/design-patterns/observer)
     * Ask for forgiveness instead of permission [EAFP](https://docs.python.org/3/glossary.html#term-EAFP) over [LBYL](https://docs.python.org/3/glossary.html#term-LBYL)
+  * [SOLID Principles](https://www.geeksforgeeks.org/system-design/what-is-low-level-design-or-lld-learn-system-design/) and original paper ([PDF](https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf))
 * Communication Patterns
   * [Adapter](https://refactoring.guru/design-patterns/adapter)
   * Request-Reply
@@ -155,6 +155,8 @@ It is intended as a starting point to approaching new problems by first investig
 ### Resources
 * Refactoring Guru's [Catalog of Design Patterns](https://refactoring.guru/design-patterns/catalog)
 * [Thread-Safe](https://en.wikipedia.org/wiki/Thread_safety#Implementation_approaches) Design Patterns
+* [ZMQ the Guide](https://zguide.zeromq.org/)
+* Geeks for Geek's intro to [Low Level Design](https://www.geeksforgeeks.org/system-design/what-is-low-level-design-or-lld-learn-system-design/)
 
 ## Resources for SWEs
 
