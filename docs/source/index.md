@@ -8,6 +8,8 @@
 
 [Explore, QC & analyze](explore_analyze/index.md) my data assets.
 
+[Publish](policies_practices/publication_standards.md) data and software tools
+
 [Propose a project](aind/project_proposals.md) with data and software support.
 
 [Developer templates](policies_practices/developer_templates.md) for new packages and tools.
