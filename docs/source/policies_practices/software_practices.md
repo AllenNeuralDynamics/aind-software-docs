@@ -131,12 +131,13 @@ Design patterns are expressive; they communicate intent to other contributors re
 The following is a loose collection of software design patterns
 * Object Oriented Design
   * Creational: object instantiation
-    * Factory
-    * Singleton
+    * [Factory](https://refactoring.guru/design-patterns/factory-method)
+    * [Singleton](https://refactoring.guru/design-patterns/singleton)
     * Dependency Injection (aka: passing in objects to other objects as parameters)
   * Structural: object internal and external composition
     * [Acyclic Dependency Principle](https://en.wikipedia.org/wiki/Acyclic_dependencies_principle)
     * [Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+    * [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
     * [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
   * Behavioral: object interactions
     * [Observer](https://refactoring.guru/design-patterns/observer)
@@ -150,7 +151,7 @@ The following is a loose collection of software design patterns
 
 ### Resources
 * Refactoring Guru's [Catalog of Design Patterns](https://refactoring.guru/design-patterns/catalog)
-* 
+* [Thread-Safe](https://en.wikipedia.org/wiki/Thread_safety#Implementation_approaches) Design Patterns
 
 ## Resources for SWEs
 
