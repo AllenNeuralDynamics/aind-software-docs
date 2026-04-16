@@ -133,12 +133,14 @@ The following is a loose collection of software design patterns
   * Creational: object instantiation
     * Factory
     * Singleton
+    * Dependency Injection (aka: passing in objects to other objects as parameters)
   * Structural: object internal and external composition
+    * [Acyclic Dependency Principle](https://en.wikipedia.org/wiki/Acyclic_dependencies_principle)
     * [Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
     * [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
   * Behavioral: object interactions
-    * Observer
-    * 
+    * [Observer](https://refactoring.guru/design-patterns/observer)
+    * Ask for forgiveness instead of permission [EAFP](https://docs.python.org/3/glossary.html#term-EAFP) over [LBYL](https://docs.python.org/3/glossary.html#term-LBYL)
 * Communication Patterns
   * [Adapter](https://refactoring.guru/design-patterns/adapter)
   * Request-Reply
