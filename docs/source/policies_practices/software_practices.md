@@ -103,7 +103,7 @@ The sections below describe practices that supplement the above guide:
 > [!NOTE]
 > This guide collectively refers to large language models and AI agents as _AI Tools_.
 
-As an emerging technology, AI.
+As an emerging technology, AI Tools have accelerated the creation of written code.
 Because of the speed of technology development, always defer first to the [Institute Policies](https://alleninstitute.sharepoint.com/sites/InstitutePolicies/SitePages/Third-Party-Generative-Artificial-Intelligence-Guidelines.aspx) and [approved tools and services](https://alleninstitute.sharepoint.com/sites/InstitutePolicies/SitePages/Third-Party-Generative-AI-Approved-&-Disapproved-List.aspx) list before relying on guidelines specified in this guide.
 
 
