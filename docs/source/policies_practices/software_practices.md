@@ -113,6 +113,7 @@ Because of the speed of technology development, always defer first to the [Insti
 #### Expectations
 
 - Code written or co-written by AI Tools must still meet the coding standards specified above.
+- As the tool user, you must understand the code generated before submitting a PR. Do not offload this understanding to your reviewer.
 - Be prepared to defend every line of code within a PR. It is not sufficient to yield understanding of the software generated to expedite end-to-end performance.
 
 
