@@ -7,7 +7,6 @@ Looking for dedicated support
     - [Data Platform](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EaGHDoC6JDtJn5pfGNdiybYBxacWNbjUhPIENE1LOkJImQ?e=hA15XK)
     - [Computational Workflows](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EZl4l2ncFJ1KidheraD4AsIBfmLtqAxq5gy25B5sWKXmdw?e=fALDIZ)
     - [Data Ingest Service](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EffwuqxXV-5LrCDOD6JQe5EBDzCcOr9QxcYp6UtZsVYdUg?e=egcDJX)
-  - Project proposals that lead to larger development efforts can require more detailed [specifications](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EdZsBLHjlmtDnNMX8bOihEEBhX0_MygaT3S39m-W8sD_dg?e=Gf9D8V).
 - from the **Scientific Instrumentation and Process Engineering** (SIPE) team?
   - Make a copy and fill out the [project one-pager template](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/IQC8DFSZQqPyQagvYEjDxl41AbBRH5LadMf82MXNKNghjKc?e=mfgiC8) and send to Serol Turkyilmaz for review.
   - Examples
