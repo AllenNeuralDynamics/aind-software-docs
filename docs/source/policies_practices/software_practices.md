@@ -109,7 +109,7 @@ Because of the speed of technology development, always defer to the [Institute P
 
 #### Expectations for Production Code
 
-The following applie for code written or co-written by AI Tools
+The following applies to code written or co-written by AI Tools
 
 - Code must still meet the coding standards specified above.
 - Code must leverage or integrate with existing infrastructure and solutions to problems rather than sidestep or wholesale replace them.
