@@ -128,7 +128,10 @@ They describe a way to structure and organize code.
 Design patterns are expressive; they communicate intent to other contributors reading and writing code.
 (This is in contrast to "[spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code).")
 
-The following is a loose collection of software design patterns
+The following is a loose collection of software design patterns.
+This list is not exhaustive.
+It is intended as a starting point to approaching new problems by first investigating what patterns may be relevant. 
+
 * Object Oriented Design
   * Creational: object instantiation
     * [Factory](https://refactoring.guru/design-patterns/factory-method)
