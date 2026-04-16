@@ -118,6 +118,37 @@ The following applies to code written or co-written by AI Tools
 - You are still responsible for maintaining this code.
 - Code in a pull request must be reviewed by a human before it can be merged to _dev_ or _main_ branches. PRs cannot be merged by approvals solely given by AI Tools.
 
+## Software Design Patterns
+
+In writing software, many recurring problems exist that cannot be solved through library encapsulation because of the problem's nuances.
+In such cases, however, they can frequently be solved by leveraging one or more existing _Design Patterns_.
+
+Design Patterns are vetted approaches to solving recurring, related problems.
+They describe a way to structure and organize code.
+Design patterns are expressive; they communicate intent to other contributors reading and writing code.
+(This is in contrast to "[spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code).")
+
+The following is a loose collection of software design patterns
+* Object Oriented Design
+  * Creational: object instantiation
+    * Factory
+    * Singleton
+  * Structural: object internal and external composition
+    * [Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+    * [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
+  * Behavioral: object interactions
+    * Observer
+    * 
+* Communication Patterns
+  * [Adapter](https://refactoring.guru/design-patterns/adapter)
+  * Request-Reply
+  * Publish-Subscribe
+* Database interactions
+  * CRUD
+
+### Resources
+* Refactoring Guru's [Catalog of Design Patterns](https://refactoring.guru/design-patterns/catalog)
+* 
 
 ## Resources for SWEs
 
