@@ -98,6 +98,66 @@ The sections below describe practices that supplement the above guide:
 - Verify the code has been tested.
 - Ensure author/reviewer consensus on the version bump the PR mandates (e.g., `BREAKING CHANGE` has been marked appropriately via conventional commits in the PR title).
 
+### AI Generated Code
+
+> [!NOTE]
+> This guide collectively refers to large language models and AI agents as _AI Tools_.
+
+As an emerging technology, AI Tools have accelerated the creation of written code.
+Because of the speed of technology development, always defer to the [Institute Policies](https://alleninstitute.sharepoint.com/sites/InstitutePolicies/SitePages/Third-Party-Generative-Artificial-Intelligence-Guidelines.aspx) and [approved tools and services](https://alleninstitute.sharepoint.com/sites/InstitutePolicies/SitePages/Third-Party-Generative-AI-Approved-&-Disapproved-List.aspx) list first before relying on guidelines specified in this guide.
+
+
+#### Expectations for Production Code
+
+The following applies to code written or co-written by AI Tools
+
+- Code must still meet the coding standards specified above.
+- Code must leverage or integrate with existing infrastructure and solutions to problems rather than sidestep or wholesale replace them.
+- Be prepared to defend every line of code you write or generate when submitting a PR. Do not offload this understanding to your reviewer.
+- You are still responsible for maintaining this code.
+- Code in a pull request must be reviewed by a human before it can be merged to _dev_ or _main_ branches. PRs cannot be merged by approvals solely given by AI Tools.
+
+## Software Design Patterns
+
+In writing software, many recurring problems exist that cannot be solved through library encapsulation because of the problem's nuances.
+In such cases, however, they can frequently be solved by leveraging one or more existing _Design Patterns_.
+
+Design Patterns are vetted approaches to solving recurring, related problems.
+They describe a way to structure and organize code.
+Design patterns are expressive; they communicate intent to other contributors reading and writing code.
+(This is in contrast to "[spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code).")
+
+The following is a loose collection of software design patterns.
+This list is not exhaustive.
+It is intended as a starting point to approaching new problems by first investigating what patterns may be relevant. 
+
+* Object Oriented Design Patterns
+  * Creational: object instantiation
+    * [Factory](https://refactoring.guru/design-patterns/factory-method)
+    * [Singleton](https://refactoring.guru/design-patterns/singleton)
+    * Dependency Injection (aka: passing in objects to other objects as parameters)
+  * Structural: object internal and external composition
+    * [Acyclic Dependency Principle](https://en.wikipedia.org/wiki/Acyclic_dependencies_principle)
+    * [Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+    * [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+    * [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
+  * Behavioral: object interactions
+    * [Observer](https://refactoring.guru/design-patterns/observer)
+    * Ask for forgiveness instead of permission [EAFP](https://docs.python.org/3/glossary.html#term-EAFP) over [LBYL](https://docs.python.org/3/glossary.html#term-LBYL)
+  * [SOLID Principles](https://www.geeksforgeeks.org/system-design/what-is-low-level-design-or-lld-learn-system-design/) and original paper ([PDF](https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf))
+* Communication Patterns
+  * [Adapter](https://refactoring.guru/design-patterns/adapter)
+  * Request-Reply
+  * Publish-Subscribe
+* Database interactions
+  * CRUD
+
+### Resources
+* Refactoring Guru's [Catalog of Design Patterns](https://refactoring.guru/design-patterns/catalog)
+* [Thread-Safe](https://en.wikipedia.org/wiki/Thread_safety#Implementation_approaches) Design Patterns
+* [ZMQ the Guide](https://zguide.zeromq.org/)
+* Geeks for Geek's intro to [Low Level Design](https://www.geeksforgeeks.org/system-design/what-is-low-level-design-or-lld-learn-system-design/)
+
 ## Resources for SWEs
 
 For research software engineers, [Good Research Code](https://goodresearch.dev/) is a good primer.
