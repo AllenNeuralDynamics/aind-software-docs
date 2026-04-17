@@ -126,7 +126,7 @@ The sections below describe practices that supplement the above guide:
 - At least one other (human) software developer needs to approve a PR in order for it to be merged.
 - Be courteous and respectful when providing and receiving feedback. Code review is a process to foster collaboration and improve code quality, and feedback is not personal.
 
-See also [other Code Review resources](rse_resources.md/#other-code-review-resources)
+See also [other Code Review resources](rse_resources.md#other-code-review-resources)
 
 #### As an author
 
