@@ -44,6 +44,7 @@ These standards are maintained through the use of template repositories. Use the
 - Unit tests should cleanup test files or write to temporary folders. Do not version auto-generated code or data in repositories.
 - TBD: structured logging using aind-standard format
 - CodeOcean capsules should be thin wrappers to CodeOcean agnostic python packages where possible.
+- CodeOcean capsules should log their full environment. ex (pip list > /results/pip_list.txt)
 
 ### Security
 
