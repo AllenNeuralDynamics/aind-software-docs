@@ -47,6 +47,11 @@ GitHub automation should use the AIND [reusable workflows](https://github.com/Al
 
 - CodeOcean capsules should be thin wrappers to CodeOcean agnostic python packages where possible. CodeOcean capsule repositories should be treated as “wrappers” that import/install libraries and run versioned code.
 
+### Security
+
+- Environment files should not be committed
+- Do not hardcode or otherwise expose secrets, tokens, or other credentials in unencrypted code
+
 ### Versioning
 
 - Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions.
@@ -85,7 +90,7 @@ The template repositories include a support badge in their README.md indicating 
 
 ### Documentation
 
-Packages should use [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html)
+Packages should use [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html). Source code for the documents should be in a root level docs/ folder and examples should be in an examples/ folder.
 
 ## Internal Operations
 
