@@ -64,11 +64,11 @@ explore_analyze/workshops
 :hidden:
 :caption: Policies & practices
 
-policies_practices/data_organization.md
-policies_practices/data_governance.md
-
-policies_practices/software_practices.md
-policies_practices/platform_support.md
+policies_practices/data_organization
+policies_practices/data_governance
+policies_practices/publication_standards
+policies_practices/software_practices
+policies_practices/platform_support
 policies_practices/docs
 policies_practices/developer_templates
 
