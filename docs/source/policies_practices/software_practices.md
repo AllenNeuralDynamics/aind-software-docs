@@ -18,19 +18,19 @@ These standards are maintained through the use of template repositories. Use the
 
 ### Standards & Tools
 
-Package management should be handled by [uv](https://docs.astral.sh/uv/).
+- Package management should be handled by [uv](https://docs.astral.sh/uv/).
+- All software must adhere to [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Line lengths should have a maximum of **100** characters.
+- We use [ruff](https://docs.astral.sh/ruff/) to enforce these standards. We modify the default settings of ruff in the following ways:
+  - We explicitly [override ruff's default line length via pyproject.toml](https://docs.astral.sh/ruff/settings/#__tabbed_13_1)
+  - Functions to be annotated with [type hints](https://peps.python.org/pep-0484/).
 
-All software must adhere to [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Line lengths should have a maximum of **100** characters.
+- Use `ruff check` and `ruff check --fix` to run ruff. [ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit) can be used to run ruff automatically via pre-commit hooks. 
 
-We use [ruff](https://docs.astral.sh/ruff/) to enforce these standards. We modify the default settings of ruff in the following ways:
- - We explicitly [override ruff's default line length via pyproject.toml](https://docs.astral.sh/ruff/settings/#__tabbed_13_1)
- - Functions to be annotated with [type hints](https://peps.python.org/pep-0484/).
+- Unit tests should use [pytest](https://docs.pytest.org/en/stable/). Coverage should be at 100%. Tests should be run before merging pull requests into `main` and `dev`.
 
-Use `ruff check` and `ruff check --fix` to run ruff. [ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit) can be used to run ruff automatically via pre-commit hooks. 
+- GitHub automation should use the AIND [reusable workflows](https://github.com/AllenNeuralDynamics/.github/tree/main/.github/workflows).
 
-Unit tests should use [pytest](https://docs.pytest.org/en/stable/). Coverage should be at 100%. Tests should be run before merging pull requests into `main` and `dev`.
-
-GitHub automation should use the AIND [reusable workflows](https://github.com/AllenNeuralDynamics/.github/tree/main/.github/workflows).
+- Packages should use [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html). Source code for the documents should be in a root level docs/ folder and examples should be in an examples/ folder.
 
 #### Recommended
 
@@ -42,17 +42,24 @@ GitHub automation should use the AIND [reusable workflows](https://github.com/Al
 - Packages should not be prefixed with our namespace (i.e. do not put `aind-` as a prefix).
 - Internal dependencies should be pinned `==1.0.0` or use *both* a version floor and ceiling `>=1.0.0,<2`. 
 - Unit tests should cleanup test files or write to temporary folders. Do not version auto-generated code or data in repositories.
-
-#### Code Ocean Standards
-
-- CodeOcean capsules should be thin wrappers to CodeOcean agnostic python packages where possible. CodeOcean capsule repositories should be treated as “wrappers” that import/install libraries and run versioned code.
+- TBD: structured logging using aind-standard format
+- CodeOcean capsules should be thin wrappers to CodeOcean agnostic python packages where possible.
 
 ### Security
 
-- Environment files should not be committed
+- Environment files (.env) should not be committed
 - Do not hardcode or otherwise expose secrets, tokens, or other credentials in unencrypted code
+- Access Tokens must never be Permanent. We recommend no longer than 6 months.
 
-### Versioning
+### Branch Management
+
+- `main` branch is reserved for production-ready code (deployed to a production environment or release).
+- `dev` branch is the default branch for development and feature integration. It should be in a stable and deployable state (e.g., for integration tests) and contains code not yet released to production.
+- Feature branches are used for developing new features, bug fixes, or other code changes. They should be Squash and Merged back into `dev` once work is complete and reviewed.
+- `main` and `dev` branches must be protected and require at least 1 review approval before merging.
+- TBD: character limit in branch names, whether to require category prefixes or not
+
+### Semantic Versioning
 
 - Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions.
 - Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) to determine semantic versioning for packages manually or via automated GitHub actions on protected branches, for example: 
@@ -62,14 +69,6 @@ GitHub automation should use the AIND [reusable workflows](https://github.com/Al
 | `<any>:` | | patch |
 | `feat:` | | minor |
 | `feat!:` or `fix!:` | Include `BREAKING CHANGE` and details | major |
-
-### Branch Management
-
-- `main` branch is reserved for production-ready code (deployed to a production environment or release).
-- `dev` branch is the default branch for development and feature integration. It should be in a stable and deployable state (e.g., for integration tests) and contains code not yet released to production.
-- Feature branches are used for developing new features, bug fixes, or other code changes. They should be Squash and Merged back into `dev` once work is complete and reviewed.
-- `main` and `dev` branches must be protected and require at least 1 review approval before merging.
-- TBD: character limit in branch names, whether to require category prefixes or not
 
 ### Releases
 Packages should use [Github Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) as their primary method of releasing. Packages that have general use externally should be published to [pypi](https://pypi.org/), Packages that are primarily for internal use should be installed directly via github releases.
@@ -82,15 +81,16 @@ uv add git+https://github.com/AllenNeuralDynamics/aind-data-schema.git@v2.6.0
 
 ### Level of Support
 
-The template repositories include a support badge in their README.md indicating the current level of support from Neural Dynamics resources. These must be kept accurate. Support badges must be one of the following: 
+The template repositories include a support badge in their README.md indicating the current level of support from Neural Dynamics resources. These must be kept accurate and reflect the indended level of support, unrelated to responsiveness. Support badges must be one of the following: 
 
-- ![support](https://img.shields.io/badge/support-supported-brightgreen)
-- ![support](https://img.shields.io/badge/support-unsupported-red) 
-
-
-### Documentation
-
-Packages should use [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html). Source code for the documents should be in a root level docs/ folder and examples should be in an examples/ folder.
+![support](https://img.shields.io/badge/support-supported-brightgreen) 
+```html
+![support](https://img.shields.io/badge/support-supported-brightgreen) 
+```
+![support](https://img.shields.io/badge/support-unsupported-red)
+```html
+![support](https://img.shields.io/badge/support-unsupported-red)
+```
 
 ## Internal Operations
 
@@ -121,6 +121,7 @@ The source code for the Google guide has been archived, but the content is still
 
 The sections below describe practices that supplement the above guide:
 
+- PRs should always be linked with an issue that is part of a Milestone.
 - Every change to the codebase needs to be code reviewed, regardless of seniority.
 - At least one other (human) software developer needs to approve a PR in order for it to be merged.
 - Be courteous and respectful when providing and receiving feedback. Code review is a process to foster collaboration and improve code quality, and feedback is not personal.
@@ -128,11 +129,10 @@ The sections below describe practices that supplement the above guide:
 #### As an author
 
 - Keep PRs small (~500 lines of code or fewer) and focused.
-- Link the PR to the relevant GitHub issue(s). If an issue crosses multiple repositories, attach subissues to the main issue and link the PR to the relevant subissue.
 - Ensure code addresses the linked GitHub issue(s) and has been tested.
 - Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to indicate the type of change.
   - For PRs into `dev`, the PR title **must** follow conventional commit format since it becomes the commit message after Squash and Merge.
-- Use the PR description or comments to provide context or ask for in-depth review for various code aspects.
+- Use the PR description or comments to provide context or ask for in-depth review for various code aspects. For people who only need visibility, tag in comments rather than adding as a reviewer.
 - Close the loop quickly. Follow up with your reviewer if you haven't heard back in 1 day.
 - You are responsible for all aspects of the code modifications. You should be able to explain and justify all lines of code in your PR. This is especially important when using AI tools for code generation. Please see our AI Usage guidelines for more details.
 
