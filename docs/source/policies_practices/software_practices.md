@@ -82,11 +82,16 @@ The template repositories include a support badge in their README.md indicating 
 - ![support](https://img.shields.io/badge/support-supported-brightgreen)
 - ![support](https://img.shields.io/badge/support-unsupported-red) 
 
+
+### Documentation
+
+Packages should use [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html)
+
 ## Internal Operations
 
 ### Repository Permissions
 
-All repositories should be created within the AllenNeuralDynamics github organization. When creating a new repository, ensure that the appropiate Github Team is added to the repository. All repositories must add at least one Github Team. [svc-aindscicomp](https://github.com/svc-aindscicomp) must be added for certain automated actions. 
+All repositories should be created within the AllenNeuralDynamics github organization. When creating a new repository, ensure that the appropiate Github Team is added to the repository. All repositories must add at least one Github Team. Teams should be added as Maintainer.
 
 Github Teams:
 - [Scientific Computing](https://github.com/orgs/AllenNeuralDynamics/teams/scientific-computing)
