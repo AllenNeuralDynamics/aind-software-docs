@@ -4,7 +4,7 @@
 
 Scientists and engineers are expected to adhere to a set of core principles about our software.
 
-The decision to deviate from these standards must be made on a per-package basis in consultation with an entire team and be manager-approved. Deviations must be implemented by modifying the `pyproject.toml` and/or relevant github actions. 
+The decision to deviate from these standards must be made on a per-package basis in consultation with an entire team and be manager-approved. Deviations must be implemented by modifying the `pyproject.toml` and/or relevant GitHub Actions. 
 
 ### Templates
 
@@ -41,10 +41,10 @@ These standards are maintained through the use of template repositories. Use the
 - Internal packages should use the naming pattern `<modality>-<process>` wherever possible.
 - Packages should not be prefixed with our namespace (i.e. do not put `aind-` as a prefix).
 - Internal dependencies should be pinned `==1.0.0` or use *both* a version floor and ceiling `>=1.0.0,<2`. 
-- Unit tests should cleanup test files or write to temporary folders. Do not version auto-generated code or data in repositories.
-- TBD: structured logging using aind-standard format
-- CodeOcean capsules should be thin wrappers to CodeOcean agnostic python packages where possible.
-- CodeOcean capsules should log their full environment. ex (pip list > /results/pip_list.txt)
+- Unit tests should clean up test files or write to temporary folders. Do not version auto-generated code or data in repositories.
+- TBD: Services should use structured logging using AIND standard format.
+- Code Ocean capsules should be thin wrappers to Code Ocean-agnostic Python packages where possible.
+- Code Ocean capsules should log their full environment. e.g., `pip list > /results/pip_list.txt`
 
 ### Security
 
@@ -72,7 +72,7 @@ These standards are maintained through the use of template repositories. Use the
 | `feat!:` or `fix!:` | Include `BREAKING CHANGE` and details | major |
 
 ### Releases
-Packages should use [Github Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) as their primary method of releasing. Packages that have general use externally should be published to [pypi](https://pypi.org/), Packages that are primarily for internal use should be installed directly via github releases.
+Packages should use [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) as their primary method of releasing. Packages that have general use externally should be published to [PyPI](https://pypi.org/). Packages that are primarily for internal use should be installed directly via GitHub Releases.
 
 ```bash
 uv add git+https://github.com/AllenNeuralDynamics/aind-data-schema.git@v2.6.0
@@ -82,7 +82,7 @@ uv add git+https://github.com/AllenNeuralDynamics/aind-data-schema.git@v2.6.0
 
 ### Level of Support
 
-The template repositories include a support badge in their README.md indicating the current level of support from Neural Dynamics resources. These must be kept accurate and reflect the indended level of support, unrelated to responsiveness. Support badges must be one of the following: 
+The template repositories include a support badge in their README.md indicating the current level of support from Neural Dynamics resources. These must be kept accurate and reflect the intended level of support, unrelated to responsiveness. Support badges must be one of the following: 
 
 ![support](https://img.shields.io/badge/support-supported-brightgreen) 
 ```html
@@ -97,9 +97,9 @@ The template repositories include a support badge in their README.md indicating 
 
 ### Repository Permissions
 
-All repositories should be created within the AllenNeuralDynamics github organization. When creating a new repository, ensure that the appropiate Github Team is added to the repository. All repositories must add at least one Github Team. Teams should be added as Maintainer.
+All repositories should be created within the AllenNeuralDynamics GitHub organization. When creating a new repository, ensure that the appropriate GitHub Team is added to the repository. All repositories must add at least one GitHub Team. Teams should be added as Maintainer.
 
-Github Teams:
+GitHub Teams:
 - [Scientific Computing](https://github.com/orgs/AllenNeuralDynamics/teams/scientific-computing)
   - [Data Infrastructure](https://github.com/orgs/AllenNeuralDynamics/teams/data-infrastructure)
   - [Physio & Behavior Data](https://github.com/orgs/AllenNeuralDynamics/teams/physio-and-behavior-data)
@@ -157,7 +157,7 @@ Because of the speed of technology development, always defer to the [Institute P
 
 #### Expectations for Production Code
 
-The following applies to code written or co-written by AI Tools
+The following applies to code written or co-written by AI Tools:
 
 - Code must still meet the coding standards specified above.
 - Code must leverage or integrate with existing infrastructure and solutions to problems rather than sidestep/replace/duplicate them.
