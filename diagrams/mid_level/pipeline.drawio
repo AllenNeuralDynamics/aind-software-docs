@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
   <diagram name="Page-1" id="sFRQg8DsYWtTgyk0IFq0">
-    <mxGraphModel dx="3858" dy="2498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3170" dy="1665" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -103,7 +103,7 @@
           <mxGeometry height="140" width="160" x="2091.1" y="760" as="geometry" />
         </mxCell>
         <mxCell id="1bfIlqTVMWuJ7_OfFRsV-85" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
-          <mxGeometry height="400" width="250" x="2046.1" y="540" as="geometry" />
+          <mxGeometry height="400" width="250" x="2046.1" y="536" as="geometry" />
         </mxCell>
         <mxCell id="1bfIlqTVMWuJ7_OfFRsV-49" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;METADATA COLLECTION&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Executes run_capsule.py: Invokes run entypoint executing merge of metadata, copy metadata from raw source and&amp;nbsp; &amp;nbsp;writing the derived data_description and package metadata into NWB file&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="380" width="470" x="1220" y="580" as="geometry" />
@@ -169,7 +169,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="1bfIlqTVMWuJ7_OfFRsV-92" connectable="0" parent="1" style="group;fillColor=#fff2cc;strokeColor=#d6b656;" value="" vertex="1">
-          <mxGeometry height="580" width="260" x="-580" y="40" as="geometry" />
+          <mxGeometry height="580" width="260" x="-720" y="110" as="geometry" />
         </mxCell>
         <mxCell id="1bfIlqTVMWuJ7_OfFRsV-19" parent="1bfIlqTVMWuJ7_OfFRsV-92" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="580" width="260" as="geometry" />
