@@ -164,3 +164,7 @@ The following applies to code written or co-written by AI Tools
 - Be prepared to justify every line of code you write or generate when submitting a PR. Do not offload this understanding solely to your reviewer.
 - You are still responsible for maintaining this code.
 - Code in a pull request must be reviewed by a human before it can be merged to _dev_ or _main_ branches. PRs cannot be merged by approvals solely given by AI Tools.
+
+## Resources
+
+Additional resources can be found at [Software Engineer Resources](rse_resources.md).

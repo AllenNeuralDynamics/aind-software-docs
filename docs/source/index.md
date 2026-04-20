@@ -80,5 +80,6 @@ policies_practices/developer_templates
 aind/core_services
 aind/project_proposals.md
 aind/teams.md
+policies_practices/rse_resources
 
 ```
