@@ -30,7 +30,7 @@ These standards are maintained through the use of template repositories. Use the
 
 - GitHub automation should use the AIND [reusable workflows](https://github.com/AllenNeuralDynamics/.github/tree/main/.github/workflows).
 
-- Packages should use [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html). Source code for the documents should be in a root level docs/ folder and examples should be in an examples/ folder.
+- Project documentation should be generated using [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html). Source code for the documentation should be in a root level docs/ folder and examples should be in an examples/ folder.
 
 #### Recommended
 
