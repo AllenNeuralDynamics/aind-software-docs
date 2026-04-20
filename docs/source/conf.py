@@ -55,6 +55,11 @@ html_favicon = "_static/favicon.ico"
 html_theme_options = {
     "light_logo": "light-logo.svg",
     "dark_logo": "dark-logo.svg",
+    "top_of_page_buttons": ["view", "edit"],
+    "source_edit_link": "https://github.com/AllenNeuralDynamics/aind-software-docs/edit/main/docs/source/{filename}",
+    "source_repository": "https://github.com/AllenNeuralDynamics/aind-software-docs",
+    "source_branch": "main",
+    "source_directory": "docs/source/",
 }
 
 html_title = "Data and Software"
