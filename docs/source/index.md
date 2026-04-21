@@ -10,7 +10,7 @@
 
 [Propose a project](aind/project_proposals.md) with data and software support.
 
-[Developer templates](policies_practices/developer_templates.md) for new packages and tools.
+[Developer templates](policies_practices/software_practices.md#templates) for new packages and tools.
 
 ## I need to report an...
 
@@ -80,5 +80,6 @@ policies_practices/developer_templates
 aind/core_services
 aind/project_proposals.md
 aind/teams.md
+policies_practices/rse_resources
 
 ```
