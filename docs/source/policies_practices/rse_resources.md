@@ -32,8 +32,8 @@ It is intended as a starting point to approaching new problems by first investig
   * [SOLID Principles](https://www.geeksforgeeks.org/system-design/what-is-low-level-design-or-lld-learn-system-design/) and original paper ([PDF](https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf))
 * Communication Patterns
   * [Adapter](https://refactoring.guru/design-patterns/adapter)
-  * Request-Reply
-  * Publish-Subscribe
+  * [Request-Reply](https://zguide.zeromq.org/docs/chapter4/)
+  * [Publish-Subscribe](https://zguide.zeromq.org/docs/chapter2/#The-Dynamic-Discovery-Problem)
 * Database interactions
   * CRUD
 
@@ -41,7 +41,6 @@ It is intended as a starting point to approaching new problems by first investig
 
 * Refactoring Guru's [Catalog of Design Patterns](https://refactoring.guru/design-patterns/catalog)
 * [Thread-Safe](https://en.wikipedia.org/wiki/Thread_safety#Implementation_approaches) Design Patterns
-* [ZMQ the Guide](https://zguide.zeromq.org/)
 * Geeks for Geek's intro to [Low Level Design](https://www.geeksforgeeks.org/system-design/what-is-low-level-design-or-lld-learn-system-design/)
 
 ### Other Code Review resources
