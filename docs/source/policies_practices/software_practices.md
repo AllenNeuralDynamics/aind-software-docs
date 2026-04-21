@@ -151,8 +151,12 @@ See also [other Code Review resources](rse_resources.md#other-code-review-resour
 
 ### AI Generated Code
 
-> [!NOTE]
-> This guide collectively refers to large language models and AI agents as _AI Tools_.
+```{raw} html
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This guide collectively refers to large language models and AI agents as <em>AI Tools</em>.</p>
+</div>
+```
 
 As an emerging technology, AI Tools have accelerated the creation of written code.
 Because of the speed of technology development, always defer to the [Institute Policies](https://alleninstitute.sharepoint.com/sites/InstitutePolicies/SitePages/Third-Party-Generative-Artificial-Intelligence-Guidelines.aspx) and [approved tools and services](https://alleninstitute.sharepoint.com/sites/InstitutePolicies/SitePages/Third-Party-Generative-AI-Approved-%26-Disapproved-List.aspx) list first before relying on guidelines specified in this guide.
