@@ -1,6 +1,8 @@
 
 # Best practices for working in Code Ocean
 
+If you are new to Code Ocean you may find the 101 series in the [training resources](https://alleninstitute.sharepoint.com/sites/AWS/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x012000A09B1ADCA192D64C99E1504DAB6FBD2F&id=%2Fsites%2FAWS%2FShared%20Documents%2FGeneral%2FTraining) helpful as an initial starting point.
+
 ## General guidance
 
 ### Capsules vs Libraries
@@ -20,6 +22,9 @@
 - By placing code in GitHub libraries, it's easier for code to be
   adopted by internal and external users for new purposes.
 
+
+### Collaboration and GitHub
+
 - Capsules are git repositories. They can be easily synchronized with
   GitHub if created with the "Clone from Git" option. Recommended
   workflow:
@@ -32,22 +37,17 @@
     Note that this will require github credentials to be added in your
     CO account settings.
 
-  - Now, your "commit changes" button in Code Ocean becomes a "sync"
-    button.
-
-### Collaboration
-
+  - After running "commit changes" in the capsule, you will see a "sync"
+    button to sync your changes to (and others' changes from) github.
+    
 - When developing code, collaboration is best done on GitHub, not within
-  Code Ocean. Individual contributors might have capsules where they
-  develop code, but changes should be merged into a shared repository on
-  GitHub.
+  Code Ocean. 
 
-- External users can run capsules in the public [Open Science
-  Library](https://codeocean.com/explore?page=1&filter=all) with 10
-  hours of free compute time. This can be used as a quick demonstration
-  of code. If they want to develop their own analyses, they can use the
-  github library to do further development outside of code ocean or pay
-  for their own compute time on code ocean.
+  - Individual contributors can work from their own capsules cloned from
+    a shared github repository, and collaborate by syncing their own branches to github.
+  - Alternatively, contributors can use completely different capsules that both
+    depend on a single shared library stored on github, actively sharing changes there.
+
 
 ### Library Development
 
@@ -62,49 +62,39 @@ developed.
   update on a future build by deleting the pinned version to move to the
   latest again (as with other environment builder packages).
 
-- With this approach, the library source code will be installed (in
-  "editable" mode) in the /src folder, which you can access (and edit)
-  from VScode, but not from Jupyter. Be sure to sync your changes back
-  to github if you edit though (they will be erased when the capsule
-  rebuilds)!
+- To edit the library from within Code Ocean: the above method produces an "editable"
+  installation with source code in `/src`. You can access (and edit) this
+  by "Add folder to workspace" in code-server/VS Code (not possible in JupyterLab). 
+  Be **very careful** to sync your changes back to github when you edit -- 
+  *they will be erased when the capsule is rebuilt*!
 
-- To run examples or tests from a library repository within Code Ocean,
-  you can also create a capsule cloning the repo directly. You will need
-  to configure an appropriate environment after creating the capsule (if
-  you own the repo you may want to save this by committing the
-  dockerfile). After launching a workstation, install the library in
-  place via pip install -e .
+- Alternative approaches to developing a library:
+  - If you primarily develop the code in a single capsule but want to make it
+    available to other users and capsules:
 
-- When transitioning work in a single capsule into a library, you can
-  create submodules within the /code/ folder and make them installable
-  by other users via github -- just create a pyproject.toml in the root
-  of the capsule that points to the code location (and sets appropriate
-  dependencies).
+    As long as the capsule is synced to github, you can make it installable as a library by simply
+    creating a pyproject.toml in the root of the capsule. Follow the typical capsule layout
+    with library modules in a subfolder of `code`, and point to that location from the pyproject.toml
+    (along with setting appropriate dependencies etc).
 
-### Customization and Personalization
+  - If library code doesn't need to be actively tested on cloud data:
+   
+    Develop the library locally, sync changes to github, then update any capsules
+    that rely on it: either reset the version and rebuild, or reinstall within a running
+    workstation (`pip install -e git+https://github.com/<organization>/<package>.git#egg=<package>`)
+    and don't forget to also update the environment on the next rebuild.
 
-If you want to customize your workflow (e.g. user settings for themes,
-font color, etc), then you can use the postInstall script to pull
-configuration files from a github repo.
+  - If you just want to briefly test and edit an existing library with cloud data:
+    
+    You can create a new capsule cloning the library's github repo directly. You will need
+    to configure an appropriate environment after creating the capsule (if
+    you own the repo you may want to save this by committing the
+    dockerfile). After launching a workstation, install the library in
+    place via `pip install -e .`
 
-```bash
-git clone <url-of-config-files>
-# move files to relevant locations
-```
+## Tips for Cloud Workstations
 
-- This won't work for VSCode/code-server settings, as those are stored
-  inside the capsule filesystem (not available during the Docker build)
-  -- on the plus side, setting changes here *are* persistent across
-  rebuilds.
-
-- Customizations of this nature are specific to code development, and
-  shouldn't be included when sharing capsules with others. Before
-  sharing the capsule, remove the customizations from the postInstall
-  file.
-
-## Tips for ...
-
-### JupyterLab
+### JupyterLab 
 
 - In a JupyterLab workstation, you can pop out notebook figures by right
   clicking and selecting "Create New View for Output." They won't be
@@ -119,99 +109,91 @@ git clone <url-of-config-files>
 
   - `get_ipython().run_line_magic('matplotlib', 'inline')`
 
-### Code-server (VS Code fork)
+### VS Code (code-server)
 
-- To use a more recent version of code-server than the CO default,
-  install it directly in your postInstall. Example code:
-  <https://gist.github.com/tmchartrand/5dfa687698cae6b349f86628de36f559>
+- Processes running in code-server will be terminated when the connection is closed,
+  unlike in JupyterLab. Keep your tab open and avoid resetting your network connection
+  (this can happen from connecting to a dock with wired ethernet, or switching routers).
 
-- Leave your tab open if you have a process running Python, processes
-  running in Visual Studio will be terminated when the tab is closed,
-  unlike in JupyterLab.
+- For best results, use a more recent version of code-server than the CO default:
+  either by using a "code-server extensions pack" base image or editing your postInstall
+  following [this example](https://github.com/tmchartrand/code-server-base-image/blob/master/environment/install_vscode)
 
-#### Essential code-server settings
+- The code-server extensions pack environment has recommended settings preconfigured
+  (as [machine settings](https://github.com/tmchartrand/code-server-base-image/blob/master/environment/files/vscode_machine_settings.json)). If not using this environment you may want to copy these
+  manually, or at least *be sure to change the following essential settings*:
 
-- "Git: Use Integrated Ask Pass": False
+  - "Git: Use Integrated Ask Pass": False
 
-  - If your GitHub credentials are attached to your Code Ocean account,
-    this will let code-server use those credentials rather than
-    prompting you to log in to github for every git operation!
+      If your GitHub credentials are attached to your Code Ocean account,
+      this will let code-server use those credentials rather than
+      prompting you to log in to github for every git operation!
 
-- "Python: Language server": Jedi
+  - "Python: Language server": "Jedi"
 
-  - On certain versions of code-server, language server features like
-    autocompletion and hints will not work in Jupyter notebooks with the
-    default "Auto" setting.
+      On certain versions of code-server, language server features like
+      autocompletion and hints will not work in Jupyter notebooks with the
+      default "Auto" setting. Alternatively, install the "basedpyright" extension, and set the
+      language server to "None"
 
-  - Alternatively, install the "basedpyright" extension, and set the
-    language server to "None"
+### Customization and Personalization
 
-### Pipelines
+User-configured settings (e.g. themes, font color, etc) will generally
+be saved when the workstation is on hold, but not when it is shut down and rebuilt.
+If you want to customize your workstation more permanently, you can use the postInstall script to pull
+configuration files from a github repo.
 
-#### Template
+```bash
+git clone <url-of-config-files>
+# move files to relevant locations, typically within /root
+```
 
-Use the
-[aind-pipeline-template](https://github.com/allenNeuralDynamics/aind-pipeline-template)
-template repository to create a new pipeline. This will take care of
-basic things like setting up a license.
+- *This won't work for VSCode/code-server settings*, as those are stored
+  inside the capsule filesystem (not available during the Docker build)
+  -- on the plus side, setting changes here *are* persistent across
+  rebuilds.
 
-#### Tagging
+- Customizations of this nature are specific to code development, and
+  shouldn't be included when sharing capsules with others. Before
+  sharing the capsule, remove the customizations from the postInstall
+  file.
 
-Tag your pipeline runs so we can monitor their cost and execution.
-Create a nextflow.config file in your pipeline folder (same folder as
-the main.nf script) and put the following in it:
+## Tips for Pipelines
+
+### Resource labels
+
+Any pipeline with active usage beyond initial testing needs a unique label 
+so we can monitor cost and execution. Create a nextflow.config file in the `pipeline` folder 
+(same folder as the main.nf script) and put the following in it:
 
 `process.resourceLabels = ['allen-batch-pipeline': 'YOUR-TAG-GOES-HERE']`
 
-Then replace YOUR-TAG-GOES-HERE with something appropriate and
-relatively unique for your pipeline.
+With the tag replaced by a short, unique, descriptive name for your pipeline.
 
-#### Resource Allocation
+### Template repository
 
-Do not request 512 GB of RAM. As of Code Ocean 2.19.4 (deployed April
-2024), there is a bug that causes jobs to hang if you request that much
-RAM. You can safely request up to 480GB of RAM.
+Production-level pipelines should be based on the
+[aind-pipeline-template](https://github.com/allenNeuralDynamics/aind-pipeline-template)
+template repository. This includes a license, recommended nextflow config,
+and automated versioning and release.
 
-### Environment Building
+## Tips for building capsule environments
 
-- If your environment build fails and you want to see the full build log
-  (not the truncated log file linked by the "Run failed: See logs" red
-  button that initially pops up), exit out of the "Run failed" window by
-  clicking "< Back to Timeline" at the top. Then, in the "Environment
-  Build Failed" event on your timeline, click on the blue "Build"
-  hyperlink to open the full build log:
-  ![](media/image1.png){width="2.146890857392826in"
-  height="0.9835761154855643in"}
+- If your environment build fails, find the issue by opening the build log
+  (from the error message or the capsule timeline) and searching for errors, 
+  typically towards the end of the log.
 
-- If your environment is failing to build, you can debug locally in a
-  conda environment, export the environment dependencies as a env.yml,
-  and copy-paste this file into the conda option under your capsule
-  environment tab. Much faster feedback loop then debugging through the
-  code ocean UI.
+- When debugging a tricky build, you may consider making a few duplicates of the capsule
+  so that you can test different variations simultaneously.
 
-- If your environment builds but immediately terminates when starting
-  Jupyter notebook, it's possible that JupyterLab is not installed
-  correctly. Code Ocean may attempt to automatically install/update
-  JupyterLab. If it picks JupyterLab > 4.0, you will be missing the
-  notebook executable. You can fix this by:
-
-  - If JupyterLab has been added to your conda package list, remove it
-
-  - Add the "notebook" package to your conda package list.
-
-### Improving file I/O performance
-
-Data access in cloud workstations differs from local workflows. To
-fine-tune performance of your code, you will need to understand the
-various filesystems you have available to you and how they interact with
-different kinds of data assets. The following are available to you in a
-cloud environment:pi
-
-`<more to come>`
+- To improve very slow builds, consider:
+  - conda packages: make sure to use an environment with the mamba package manager instead of
+    the older conda (both the "conda" and "mamba" entries will install via mamba).
+  - pip packages: check the build log for extensive "backtracking" where pip tries many versions
+    of a package sequentially in an attempt to resolve dependency conflicts. Pin the versions of
+    these dependencies to eliminate this.
 
 ## How do I...?
-
-*Ask your question here and someone will answer it*
 
 ### Install the GitHub Copilot extension in VSCode? 
 
@@ -224,38 +206,36 @@ official marketplace:
 (Note that Pylance is one extension that cannot be installed at all,
 even using this workaround)
 
-By default, extensions are not saved across rebuilds and this will need
-to be done on every build (can be added to postInstall).
+### Avoid reinstalling VSCode extensions every time I rebuild?
 
-**Every time I rebuild the environment and then run a jupyter notebook
-in VS Code it asks me to re-install the notebook extension in VS code.
-How can I save these VS code extension installations?**
-
-You can add custom extensions/packages to your VSCode environment in the
-[post-install
-script](https://gist.github.com/rhngla/81c7e5a7fa0b29de79b1d1bb2db12885).
+By default, extensions are not saved across rebuilds. You can, however, [configure
+the postInstall script](https://gist.github.com/tmchartrand/5dfa687698cae6b349f86628de36f559) 
+to either install a list of extensions *or* move the extensions
+directory inside the capsule filesystem so manually installed extensions will persist
+(both options are not possible together).
  
-Add model or simulation results as a data asset?
+### Add model or simulation results as a data asset?
 
 Save your model or simulation results as a data asset as you would any
 other files produced during a capsule run. Output your files to the
-"/results" folder and capture them by clicking on the run caret/chevron
-in your capsule history and choosing "capture as data asset".
+"/results" folder and capture them by hovering over the result entry under
+the run in your capsule timeline, then selecting "capture as data asset"
+from the menu (⋮).
 
 ### Make my Streamlit app running in Code Ocean externally accessible?
 
 Currently this is not possible.
 
-Can we keep variables in memory while shutting down cloud workstations?
+### Keep variables in memory while shutting down cloud workstations?
 
 Instance RAM state is not preserved when instances are paused. By
-default, instances should remain live for 60min before automatically
+default, instances should remain live for 180 min before automatically
 pausing. As a workaround, use a disk cache (on /scratch) to save results
-for any slower-running functions -- this can be as simple as adding a
+for any slower-running functions -- in Python this can be as simple as adding a
 decorator from the built-in joblib.
 (<https://joblib.readthedocs.io/en/latest/memory.html>)
 
-### Download a data-asset to a local machine?
+### Download a data asset to a local machine?
 
 Generally, we should minimize how much data we are downloading from Code
 Ocean. This is particularly true of larger data (GBs) that require long,
@@ -270,23 +250,20 @@ easily interruptible download times. That said:
 - You can run a cloud workstation, save the data-asset as a file in the
   "results" folder, and then download the dataset.
 
-- S3fs is a python package for making AWS S3 bucket data look like files
+- s3fs is a python package for making AWS S3 bucket data look like files
   and folders.
 
 ### Generate interactive figures outside of a jupyter notebook?
 
-Aside from Streamlit and Shiny applications, this is not possible at the
-moment. Interactive figures that open in new windows (e.g. the "agg" or
-"qt" backends for matplotlib) require access to desktop applications
-installed on your local machine. Browser apps like Code Ocean do not
-have an easy/secure way to ask applications to open outside of their
-tab. For this reason, in-browser widgets like JupyterWidgets are the
+Interactive figures that open in new windows (e.g. the "agg" or
+"qt" backends for matplotlib) are not useable within the browser. 
+For this reason, in-browser widgets like JupyterWidgets are the
 preferred way to open interactive figures.
 
 Python users: Code Ocean also is able to open streamlit applications
 defined within a capsule. R users: the same is true for Shiny apps.
 
-Update: Other web apps (in addition to streamlit/shiny) can likely be
+Other web apps (in addition to streamlit/shiny) can be
 viewed by running in a vscode/code-server workstation and using the
 built-in port-forwarding, which generates a link to access the web app
 process in a new tab.
@@ -304,12 +281,13 @@ clone of this new github repo.
 
 <https://docs.codeocean.com/user-guide/git-provider-integration-guide/setting-up-the-integration>
 
-As shown in the docs, make sure to use a github **classic token**, not a
-fine-grained token. If you are accessing internal repositories, be sure
-to configure SSO for the token and authorize it to access the relevant
+As shown in the docs, make sure to use a github **classic token** 
+(<https://github.com/settings/tokens>), not a fine-grained token. 
+If you are accessing internal repositories, you will also need
+to select "Configure SSO" for the token and authorize it to access the relevant
 organization.
 
-### Start an AWS instance through Code Ocean and then SSH to it, avoiding the GUI?
+### Start a workstation through Code Ocean and then SSH to it?
 
 This is technically possible but not supported now. Compute instances
 are in a private network that is not open to public SSH access. This is
@@ -319,8 +297,9 @@ here](https://github.com/AllenNeuralDynamics/aind-code-ocean-info/issues/60)).
 
 ### Request a new base image?
 
-Base images can come from any public docker image registry. Ask @David
-Feng directly or post on the Code Ocean Teams channel and tag David.
+Base images can come from any public docker image registry, but must be created by an admin.
+Make a request by posting on the Code Ocean Teams channel or opening a github issue 
+on the [SciComp requests board](https://github.com/AllenNeuralDynamics/aind-scientific-computing/issues).
 
 (reduce-screen-real-estate)=
 ### Reduce the screen real-estate used by Code Ocean (full-screen mode)?
@@ -328,15 +307,6 @@ Feng directly or post on the Code Ocean Teams channel and tag David.
 In Mac, press ^ + cmd + F, or see below. In Windows, press F11.
 
 ![Full screen command screenshot](image.png)
-
-(avoid-pipeline-api-permission-denied)=
-### Avoid pipeline API "permission denied errors" despite being able to run capsules?
-
-This problem can arise if two or more users collaboratively build a
-pipeline together, and at least one capsule does not have sufficient AWS
-credential secrets attached. This will show as a bypassable warning when
-running the pipeline manually with "Reproducible Run", but will not run
-via API. Attach AWS secrets to all capsules and the issue is resolved.
 
 (create-nextflow-config)=
 ### Create a nextflow.config file to configure process execution?
@@ -370,3 +340,20 @@ it will retry.
 Configuration white paper is found
 [here](https://www.nextflow.io/docs/latest/config.html#configuration-file)
 to see what other configurations are available.
+
+## Bugs and other gotchas
+
+### Jupyter notebook workstation fails to launch
+- If you're trying to run Jupyter **notebook** and it fails to launch, you may
+  be running an environment that has a recent version of JupyterLab (>4.0) without the
+  notebook executable. You can fix this by:
+  - If JupyterLab has been added to your conda package list, remove it
+  - Add the "notebook" package to your conda package list.
+
+### Pipeline API "permission denied" errors despite being able to run capsules
+
+This problem can arise if two or more users collaboratively build a
+pipeline together, and at least one capsule does not have sufficient AWS
+credential secrets attached. This will show as a bypassable warning when
+running the pipeline manually with "Reproducible Run", but will not run
+via API. Attach AWS secrets to all capsules and the issue is resolved.
