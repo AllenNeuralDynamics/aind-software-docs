@@ -13,9 +13,6 @@
         <mxCell id="n7t6iHGY39Q7M7lF7VUF-5" parent="1" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" value="" vertex="1">
           <mxGeometry height="20" width="20.83" x="340" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="n7t6iHGY39Q7M7lF7VUF-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="AWS Parameter Store" vertex="1">
-          <mxGeometry height="80" width="80" x="340" y="20" as="geometry" />
-        </mxCell>
         <mxCell id="n7t6iHGY39Q7M7lF7VUF-64" parent="1" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=ns" value="" vertex="1">
           <mxGeometry height="48" width="50" x="325.42" y="340" as="geometry" />
         </mxCell>
