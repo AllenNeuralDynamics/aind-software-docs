@@ -2,7 +2,7 @@
 
 ## Core principles
 
-Scientists and engineers are expected to adhere to a set of core principles about our software.
+Software engineers and scientists contributing to Scientific Computing/SIPE production projects are expected to adhere to a set of core principles about our software.
 
 The decision to deviate from these standards must be made on a per-package basis in consultation with an entire team and be manager-approved. Deviations must be implemented by modifying the `pyproject.toml` and/or relevant GitHub Actions. 
 
@@ -41,7 +41,7 @@ These standards are maintained through the use of template repositories. Use the
 - Internal packages should use the naming pattern `<modality>-<process>` wherever possible.
 - Packages should not be prefixed with our namespace (i.e. do not put `aind-` as a prefix).
 - Internal dependencies should be pinned `==1.0.0` or use *both* a version floor and ceiling `>=1.0.0,<2`. 
-- Unit tests should clean up test files or write to temporary folders. Do not version auto-generated code or data in repositories.
+- Unit tests should clean up test files or write to temporary folders. Do not store large auto-generated files for unit tests in the repositories.
 - TBD: Services should use structured logging using AIND standard format.
 - TBD: pyproject.toml to be updated with individual authors?
 - Software packages should be agnostic of the runtime infrastructure where possible. When not possible, use thin wrappers to the Python package, e.g. Code Ocean capsules should be thin wrappers to Python packages.
