@@ -8,9 +8,5 @@ Looking for dedicated support
     - [Computational Workflows](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EZl4l2ncFJ1KidheraD4AsIBfmLtqAxq5gy25B5sWKXmdw?e=fALDIZ)
     - [Data Ingest Service](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/EffwuqxXV-5LrCDOD6JQe5EBDzCcOr9QxcYp6UtZsVYdUg?e=egcDJX)
 - from the **Scientific Instrumentation and Process Engineering** (SIPE) team?
-  - Make a copy and fill out the [project one-pager template](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/IQC8DFSZQqPyQagvYEjDxl41AbBRH5LadMf82MXNKNghjKc?e=mfgiC8) and send to Serol Turkyilmaz for review.
-  - Examples
-    - [Hydrogel Imaging Sample Prep Automation](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/IQAi58BE7kRURahPrudS1w32ASghyI7cKlYwBbqJQJ5XzKo?e=YlazRB)
-    - [Harp Firmware Deployment App](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/Ed3c02X0XT9GhWtr3d3fWcEBw-D9ytEBekEL53hYrg6-QQ?e=HOmuKd)
-    - [BarSeq](https://alleninstitute.sharepoint.com/:w:/s/Instrumentation/Ee79C8s4U_hJtK8-ngXqKbABBR_7BKsrvQ76754i6wP55Q?e=bSgnj4)
+  - Start by filling out a [SIPE request](https://apps.powerapps.com/play/e/9084dabc-d707-e1bf-8113-685be25cac15/a/cb338490-e23d-48e6-9e6d-e600b8d17dd4?tenantId=32669cd6-737f-4b39-8bdd-d6951120d3fc&hidenavbar=true&skipmetadata=true).
 
