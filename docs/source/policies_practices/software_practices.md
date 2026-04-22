@@ -18,19 +18,19 @@ These standards are maintained through the use of template repositories. Use the
 
 ### Standards & Tools
 
-- Package management should be handled by [uv](https://docs.astral.sh/uv/).
-- All software must adhere to [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Line lengths should have a maximum of **100** characters.
+- Package management must be handled by [uv](https://docs.astral.sh/uv/).
+- All software must adhere to [PEP 8](https://peps.python.org/pep-0008/) standards with [docstrings](https://peps.python.org/pep-0257/) in [NUMPY](https://numpydoc.readthedocs.io/en/latest/format.html) format. Line lengths must have a maximum of **100** characters.
 - We use [ruff](https://docs.astral.sh/ruff/) to enforce these standards. We modify the default settings of ruff in the following ways:
   - We explicitly [override ruff's default line length via pyproject.toml](https://docs.astral.sh/ruff/settings/#__tabbed_13_1)
   - Function parameters and return types to be annotated with [type hints](https://peps.python.org/pep-0484/).
 
 - Use `ruff check` and `ruff check --fix` to run ruff. [ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit) can be used to run ruff automatically via pre-commit hooks. 
 
-- Unit tests should use [pytest](https://docs.pytest.org/en/stable/). Coverage should be at 100%. Tests should be run before merging pull requests into `main` and `dev`.
+- Unit tests must use [pytest](https://docs.pytest.org/en/stable/). Coverage must be at 100%. Tests must be run before merging pull requests into `main` and `dev`.
 
-- GitHub automation should use the AIND [reusable workflows](https://github.com/AllenNeuralDynamics/.github/tree/main/.github/workflows).
+- GitHub automation must use the AIND [reusable workflows](https://github.com/AllenNeuralDynamics/.github/tree/main/.github/workflows).
 
-- Project documentation should be generated using [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html). Source code for the documentation should be in a root level `docs/` folder and examples should be in an `examples/` folder.
+- Project documentation must be generated using [MkDocs](https://www.mkdocs.org/) with [mkdocstrings](https://mkdocstrings.github.io/) hosted through [Read the Docs](https://docs.readthedocs.com/platform/stable/index.html). Source code for the documentation must be in a root level `docs/` folder and examples must be in an `examples/` folder.
 
 #### Recommendations
 
@@ -49,21 +49,21 @@ These standards are maintained through the use of template repositories. Use the
 
 ### Security
 
-- Environment files (.env) should not be committed
+- Environment files (.env) must not be committed
 - Do not hardcode or otherwise expose secrets, tokens, or other credentials in unencrypted code
 - Access Tokens must never be Permanent. We recommend no longer than 6 months.
 
 ### Branch Management
 
 - `main` branch is reserved for production-ready code (deployed to a production environment or release).
-- `dev` branch is the default branch for development and feature integration. It should be in a stable and deployable state (e.g., for integration tests) and contains code not yet released to production.
-- Feature branches are used for developing new features, bug fixes, or other code changes. They should be Squash and Merged back into `dev` once work is complete and reviewed.
+- `dev` branch is the default branch for development and feature integration. It must be in a stable and deployable state (e.g., for integration tests) and contains code not yet released to production.
+- Feature branches are used for developing new features, bug fixes, or other code changes. They must be Squash and Merged back into `dev` once work is complete and reviewed.
 - `main` and `dev` branches must be protected and require at least 1 (human) review approval before merging.
 - TBD: character limit in branch names, whether to require category prefixes or not
 
 ### Semantic Versioning
 
-- Releases should follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions.
+- Releases must follow [semantic versioning](https://semver.org/) with `major.minor.patch` versions.
 - Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) to determine semantic versioning for packages manually or via automated GitHub actions on protected branches, for example: 
 
 | Prefix | Commit message | Update |
@@ -73,7 +73,8 @@ These standards are maintained through the use of template repositories. Use the
 | `feat!:` or `fix!:` | Include `BREAKING CHANGE` and details | major |
 
 ### Releases
-Packages should use [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) as their primary method of releasing. Packages that have general use externally should be published to [PyPI](https://pypi.org/). Packages that are primarily for internal use should be installed directly via GitHub Releases.
+
+Packages must use [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) as their primary method of releasing. Packages that have general use externally should be published to [PyPI](https://pypi.org/). Packages that are primarily for internal use should be installed directly via GitHub Releases.
 
 ```bash
 uv add git+https://github.com/AllenNeuralDynamics/aind-data-schema.git@v2.6.0
@@ -98,7 +99,7 @@ The template repositories include a support badge in their README.md indicating 
 
 ### Repository Permissions
 
-All repositories should be created within the [AllenNeuralDynamics](https://github.com/AllenNeuralDynamics) GitHub organization. When creating a new repository, ensure that the appropriate GitHub Team is added to the repository. All repositories must add at least one GitHub Team. Teams should be added as Maintainer.
+All repositories must be created within the [AllenNeuralDynamics](https://github.com/AllenNeuralDynamics) GitHub organization. When creating a new repository, ensure that the appropriate GitHub Team is added to the repository. All repositories must add at least one GitHub Team. Teams should be added as Maintainer.
 
 GitHub Teams:
 - [Scientific Computing](https://github.com/orgs/AllenNeuralDynamics/teams/scientific-computing)
@@ -138,13 +139,13 @@ See also [other Code Review resources](rse_resources.md#other-code-review-resour
   - For PRs into `dev`, the PR title **must** follow conventional commit format since it becomes the commit message after Squash and Merge.
 - Use the PR description or comments to provide context or ask for in-depth review for various code aspects. For people who only need visibility, tag in comments rather than adding as a reviewer.
 - Close the loop quickly. Follow up with your reviewer if you haven't heard back in 1 day.
-- You are responsible for all aspects of the code modifications. You should be able to explain and justify all lines of code in your PR. This is especially important when using AI tools for code generation. Please see our [AI Generated Code](#ai-generated-code) guidelines for more details.
+- You are responsible for all aspects of the code modifications. You must be able to explain and justify all lines of code in your PR. This is especially important when using AI tools for code generation. Please see our [AI Generated Code](#ai-generated-code) guidelines for more details.
 
 #### As a reviewer
 
-- Review within 1 day unless otherwise communicated with the author. Code reviews should be treated as a normal part of a developer's day, and developers are expected to check for open PRs daily:
-   - This [view from GitHub](https://github.com/pulls/review-requested) shows all PRs awaiting review.
-   - Alternatively, utilize email notifications or your team's tracking board.
+- Review within 1 day unless otherwise communicated with the author. Code reviews are a normal part of a developer's day, and developers are expected to check for open PRs daily:
+  - This [view from GitHub](https://github.com/pulls/review-requested) shows all PRs awaiting review.
+  - Alternatively, utilize email notifications or your team's tracking board.
 - Verify the code meets our standards and addresses the linked issue with the correct scope.
 - Verify the code has been tested.
 - Ensure author/reviewer consensus on the version bump the PR mandates (e.g., `BREAKING CHANGE` has been marked appropriately via conventional commits in the PR title).
