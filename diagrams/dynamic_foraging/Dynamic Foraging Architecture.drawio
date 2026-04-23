@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36">
   <diagram name="Dynamic Foraging Architecture" id="RBKaU2eyE16h1CZr_K0K">
-    <mxGraphModel dx="1786" dy="989" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="2414" dy="1197" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="AM58ZQb32r9U8hyrfCp2-0" />
         <mxCell id="AM58ZQb32r9U8hyrfCp2-1" parent="AM58ZQb32r9U8hyrfCp2-0" />
@@ -165,7 +165,7 @@
         <mxCell id="AM58ZQb32r9U8hyrfCp2-47" parent="AM58ZQb32r9U8hyrfCp2-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=29;" value="..." vertex="1">
           <mxGeometry height="50" width="50" x="1618" y="391.5" as="geometry" />
         </mxCell>
-        <mxCell id="AM58ZQb32r9U8hyrfCp2-48" parent="AM58ZQb32r9U8hyrfCp2-1" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;div&gt;Streamlit&lt;/div&gt;" vertex="1">
+        <mxCell id="AM58ZQb32r9U8hyrfCp2-48" parent="AM58ZQb32r9U8hyrfCp2-1" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;div&gt;Curriculum Viewer&lt;/div&gt;" vertex="1">
           <mxGeometry height="38.5" width="215" x="1468" y="291" as="geometry" />
         </mxCell>
         <mxCell id="AM58ZQb32r9U8hyrfCp2-49" edge="1" parent="AM58ZQb32r9U8hyrfCp2-1" source="AM58ZQb32r9U8hyrfCp2-17" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" target="AM58ZQb32r9U8hyrfCp2-71" value="">
