@@ -1,9 +1,10 @@
 (analyze-data)=
 # Analyze data
 
-If you are new to Code Ocean you may find the 101 series in the [training resources](https://alleninstitute.sharepoint.com/sites/AWS/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x012000A09B1ADCA192D64C99E1504DAB6FBD2F&id=%2Fsites%2FAWS%2FShared%20Documents%2FGeneral%2FTraining) helpful as an initial starting point.
+## Code Ocean capsules
 
-## Capsules
+Most analysis happens in individual capsules on the Code Ocean platform. 
+We have documented [best practices and tips](co_best_practices.md) for working in that context.
 
 (analysis-framework)=
 ## Analysis framework
