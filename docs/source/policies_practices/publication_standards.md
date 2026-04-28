@@ -63,7 +63,7 @@ consider separating code within a capsule that has very different dependencies o
 - For manual steps, save outputs as derived assets that downstream steps can use as input for a reproducible run, and document in readme, metadata and paper methods.
 - For long-running steps, note approximate runtime in documentation; for very long steps, save outputs as derived assets also.
 - Separate reusable components of the code into functions in python modules.
-- Code in multiple capsules should be moved to shared libraries.
+- Code used by multiple capsules should be moved to shared libraries.
 
 ### Generating figures
 
