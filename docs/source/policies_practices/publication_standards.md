@@ -32,6 +32,60 @@ This checklist is intended to make the code publication standards set out in the
 
 [^*]: This is a temporary solution that we hope to simplify/automate as part of the capsule release process.
 
+### Use this checklist on github
+This form will let you open an issue on your capsule's repo with the checklist pre-filled, if you want to track tasks or coordinate with a reviewer using github.
+
+<p>
+<input type="text" id="userInput" placeholder="Github repository url">
+<!-- Button to trigger the link generation -->
+<button onclick="generateLink()">Generate Link</button>
+<a id="resultLink" href="#" target="_blank"></a>
+</p>
+
+<script>
+function generateLink() {
+    // Get the value from the input field
+    const value = document.getElementById('userInput').value;
+    const linkElement = document.getElementById('resultLink');
+
+    const checklist = `
+### Capsules and repositories
+- [ ] Capsules (or pipelines) for all processing steps, from raw data to figures [^tools]
+[^tools]: Tools that already have, or are progressing towards, a separate public release may be left out.
+- [ ] Working copy of capsule shared internally and linked to a public github repository within AIND or AIBS github organization
+- [ ] Released version of capsule added to manuscript collection (requires author and description in capsule metadata, sync to github, and reproducible run).
+- [ ] Reproducible run script generates all outputs[^nb] (if manual steps are unavoidable, include step-by-step instructions and automate as much as possible).
+[^nb]: This can trigger execution of notebooks (e.g. using nbconvert), as long as they run top to bottom with no interaction required.
+- [ ] Figure outputs saved to results folder, with filenames indicating the corresponding figure number (and subpanel letter if possible).
+- [ ] Code consolidated in code folder, with unused code removed or clearly documented.
+- [ ] Explicitly specified (pinned) versions for all direct imports and other critical dependencies[^env]
+[^env]: Versions must be recorded in the Environment Builder, dockerfile, or other files linked during docker build (postinstall, requirements.txt etc)
+
+### Data
+- [ ] All AIND data stored as external data assets (aind-open-data), with complete metadata 
+- [ ] All *intermediate results* stored as external data assets (aind-open-data), with processing metadata added.
+- [ ] All data from external sources documented and downloadable with clear instructions from a stable data repository, or mirrored in aind-open-data.
+- [ ] If many individual assets are used, create combined data assets to organize them by data modality or type
+- [ ] All data assets (combined if needed) added to public collection -- *intermediate results* should be included on a case-by-case basis.
+
+### Readme and other docs
+- [ ] Includes links to manuscript, github repo, and release capsule (add the latter before making a second release).[^*]
+- [ ] Briefly describes all experimental data types and other inputs.
+- [ ] Briefly describes all non-figure outputs (intermediate results).
+- [ ] Briefly explains key analysis steps (reference relevant code by file or function names).
+- [ ] LICENSE file at top level of repo (MIT license).`;
+
+    // Check if value is empty
+    if (value) {
+        // Create the full URL (example using Google search)
+        const fullUrl = value + "/issues/new?title=Publication-standards&body=" + encodeURIComponent(checklist);
+        
+        // Update the link's href and display text
+        linkElement.href = fullUrl;
+        linkElement.innerText = "Open github issue";
+    }
+}
+</script>
 
 ## Code review
 
