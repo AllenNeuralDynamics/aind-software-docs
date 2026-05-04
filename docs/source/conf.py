@@ -71,3 +71,6 @@ html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = False
+
+# make the raw markdown file available in the output directory so it can be linked to
+html_extra_path = ["policies_practices/standards_checklist.md"]
