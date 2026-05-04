@@ -44,6 +44,7 @@ myst_enable_extensions = [
     "deflist",
     "fieldlist",
     "tasklist",
+    "attrs_block",
 ]
 myst_heading_anchors = 3
 
