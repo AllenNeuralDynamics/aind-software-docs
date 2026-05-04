@@ -1,39 +1,13 @@
 # Publication standards for Code Ocean
 
-This checklist is intended to make the code publication standards set out in the Open Science Policy document clearer and more usable in the context of code hosted on Code Ocean. The review process documents how we will help each other meet these standards. The best practices below go beyond the minimum standards to further promote reuse and reproducibility, and should be preferred when possible.
+This <project:#standards-checklist> is intended to make the code publication standards set out in the Open Science Policy document clearer and more usable in the context of code hosted on Code Ocean. The <project:#code-review-process> documents how we will help each other meet these standards. The <project:#additional-best-practices> below go beyond the minimum standards to further promote reuse and reproducibility, and should be preferred when possible.
 
 ## Standards checklist
 
-### Capsules and repositories
-- [ ] Capsules (or pipelines) for all processing steps, from raw data to figures [^tools]
-[^tools]: Tools that already have, or are progressing towards, a separate public release may be left out.
-- [ ] Working copy of capsule shared internally and linked to a public github repository within AIND or AIBS github organization
-- [ ] Released version of capsule added to manuscript collection (requires author and description in capsule metadata, sync to github, and reproducible run).
-- [ ] Reproducible run script generates all outputs[^nb] (if manual steps are unavoidable, include step-by-step instructions and automate as much as possible).
-[^nb]: This can trigger execution of notebooks (e.g. using nbconvert), as long as they run top to bottom with no interaction required.
-- [ ] Figure outputs saved to `results` folder, with filenames indicating the corresponding figure number (and subpanel letter if possible).
-- [ ] Code consolidated in `code` folder, with unused code removed or clearly documented.
-- [ ] Explicitly specified (pinned) versions for all direct imports and other critical dependencies[^env]
-[^env]: Versions must be recorded in the Environment Builder, dockerfile, or other files linked during docker build (postinstall, requirements.txt etc)
+```{admonition} Use this checklist on github
+:class: hint
 
-### Data
-- [ ] All AIND data stored as external data assets (aind-open-data), with complete metadata 
-- [ ] All *intermediate results* stored as external data assets (aind-open-data), with processing metadata added.
-- [ ] All data from external sources documented and downloadable with clear instructions from a stable data repository, or mirrored in aind-open-data.
-- [ ] If many individual assets are used, create combined data assets to organize them by data modality or type
-- [ ] All data assets (combined if needed) added to public collection -- *intermediate results* should be included on a case-by-case basis.
-
-### Readme and other docs
-- [ ] Includes links to manuscript, github repo, and release capsule (add the latter before making a second release).[^*]
-- [ ] Briefly describes all experimental data types and other inputs.
-- [ ] Briefly describes all non-figure outputs (intermediate results).
-- [ ] Briefly explains key analysis steps (reference relevant code by file or function names).
-- [ ] LICENSE file at top level of repo (MIT license).
-
-[^*]: This is a temporary solution that we hope to simplify/automate as part of the capsule release process.
-
-### Use this checklist on github
-This form will let you open an issue on your capsule's repo with the checklist pre-filled, if you want to track tasks or coordinate with a reviewer using github.
+This link generator will let you open an issue on your capsule's github repository with the checklist pre-filled. You can use this to track tasks or coordinate with a reviewer.
 
 <p>
 <input type="text" id="userInput" placeholder="Github repository url">
@@ -87,7 +61,37 @@ function generateLink() {
 }
 </script>
 
-## Code review
+```
+
+### Capsules and repositories
+- [ ] Capsules (or pipelines) for all processing steps, from raw data to figures [^tools]
+[^tools]: Tools that already have, or are progressing towards, a separate public release may be left out.
+- [ ] Working copy of capsule shared internally and linked to a public github repository within AIND or AIBS github organization
+- [ ] Released version of capsule added to manuscript collection (requires author and description in capsule metadata, sync to github, and reproducible run).
+- [ ] Reproducible run script generates all outputs[^nb] (if manual steps are unavoidable, include step-by-step instructions and automate as much as possible).
+[^nb]: This can trigger execution of notebooks (e.g. using nbconvert), as long as they run top to bottom with no interaction required.
+- [ ] Figure outputs saved to `results` folder, with filenames indicating the corresponding figure number (and subpanel letter if possible).
+- [ ] Code consolidated in `code` folder, with unused code removed or clearly documented.
+- [ ] Explicitly specified (pinned) versions for all direct imports and other critical dependencies[^env]
+[^env]: Versions must be recorded in the Environment Builder, dockerfile, or other files linked during docker build (postinstall, requirements.txt etc)
+
+### Data
+- [ ] All AIND data stored as external data assets (aind-open-data), with complete metadata 
+- [ ] All {term}`intermediate result`s stored as external data assets (aind-open-data), with processing metadata added.
+- [ ] All data from external sources documented and downloadable with clear instructions from a stable data repository, or mirrored in aind-open-data.
+- [ ] If many individual assets are used, create combined data assets to organize them by data modality or type
+- [ ] All data assets (combined if needed) added to public collection -- *intermediate results* should be included on a case-by-case basis.
+
+### Readme and other docs
+- [ ] Includes links to manuscript, github repo, and release capsule (add the latter before making a second release).[^*]
+- [ ] Briefly describes all experimental data types and other inputs.
+- [ ] Briefly describes all non-figure outputs (intermediate results).
+- [ ] Briefly explains key analysis steps (reference relevant code by file or function names).
+- [ ] LICENSE file at top level of repo (MIT license).
+
+[^*]: This is a temporary solution that we hope to simplify/automate as part of the capsule release process.
+
+## Code review process
 
 - Reviewer will adopt the perspective of an external user, and check that code meets these standards and is reproducible and reusable (able to identify and adjust key parameters, not necessarily understand each line).
 - Reviewer must be a scientist who has not contributed to the capsule, but may be a manuscript author or someone otherwise knowledgeable about the general approach. A SciComp team member may be looped in for advise and oversight as necessary.
