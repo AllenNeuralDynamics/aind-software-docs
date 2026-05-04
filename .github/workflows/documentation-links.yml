@@ -6,7 +6,7 @@ on:
     types:
       - opened
     # Execute this action only on PRs that touch
-    # documentation files.
+    # documentation files
     # paths:
     #   - "docs/**"
 
