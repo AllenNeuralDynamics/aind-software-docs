@@ -32,11 +32,19 @@ extensions = [
     "sphinx.ext.doctest",
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
+    "sphinx_tippy",
     "myst_parser",
 ]
 templates_path = ["_templates"]
 exclude_patterns = []
 jupyter_execute_notebooks = "off"
+
+# tippy
+tippy_enable_wikitips = False
+# Skip all except those starting with "#id" (footnote) or "../glossary"
+tippy_skip_urls = [
+    "^(?!#id|../glossary|glossary).*$",
+]
 
 # -- MyST configuration ------------------------------------------------------
 myst_enable_extensions = [
