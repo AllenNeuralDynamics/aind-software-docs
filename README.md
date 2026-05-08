@@ -1,5 +1,7 @@
 # aind-software-docs
 
+[Data and Software documentation for AIND](https://docs.allenneuraldynamics.org/en/latest/)
+
 ## Contributing
 
 Please read: https://docs.allenneuraldynamics.org/en/latest/policies_practices/docs.html
