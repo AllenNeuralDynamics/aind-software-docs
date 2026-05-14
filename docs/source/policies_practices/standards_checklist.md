@@ -12,7 +12,7 @@
 
 ### Data
 - [ ] All AIND data stored as external data assets (aind-open-data), with complete metadata 
-- [ ] All {term}`intermediate result`s stored as external data assets (aind-open-data), with processing metadata added.
+- [ ] All {term}`intermediate result`s stored as external data assets (aind-open-data), with processing metadata added ([Tutorial](../explore_analyze/create_processing_metadata.md)).
 - [ ] All data from external sources documented and downloadable with clear instructions from a stable data repository, or mirrored in aind-open-data.
 - [ ] If many individual assets are used, create combined data assets to organize them by data modality or type
 - [ ] All data assets (combined if needed) added to public collection -- *intermediate results* should be included on a case-by-case basis.
