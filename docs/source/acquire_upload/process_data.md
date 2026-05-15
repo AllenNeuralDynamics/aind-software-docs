@@ -38,4 +38,4 @@ Pipeline development requirements are documented in [Pipeline development](../po
 
 | Project name | Modalities | Pipeline repository |
 |---|---|---|
-| Dynamic foraging | `behavior`, `behavior-videos`, `fib` | [aind-dynamic-foraging-pipeline](https://github.com/AllenNeuralDynamics/aind-dynamic-foraging-pipeline) |
+| Dynamic foraging | `behavior`, `behavior-videos`, `fib` | [github](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-pipeline), [code ocean](https://codeocean.allenneuraldynamics.org/capsule/5712553/tree) |
