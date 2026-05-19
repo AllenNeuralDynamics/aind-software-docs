@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36">
+  <diagram name="Overview" id="0rG7LOSmax6ssovm0o7B">
+    <mxGraphModel dx="1781" dy="1753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="SpeKbif7ejOxNLxw_tv2-0" />
+        <mxCell id="SpeKbif7ejOxNLxw_tv2-1" parent="SpeKbif7ejOxNLxw_tv2-0" />
+        <mxCell id="g4FiytadgzHE6LpxqoTA-10" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;dashed=1;" value="&lt;b&gt;Lab Management (Power Platform)&lt;br&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="140" width="220" x="220" y="-675" as="geometry" />
+        </mxCell>
+        <mxCell id="pGpL98z0K4RyB47vs40O-23" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;dashed=1;verticalAlign=top;fontStyle=1" value="Biodata Regsitry (AWS VPC)" vertex="1">
+          <mxGeometry height="430" width="420" x="590" y="-720" as="geometry" />
+        </mxCell>
+        <mxCell id="pGpL98z0K4RyB47vs40O-25" parent="SpeKbif7ejOxNLxw_tv2-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Scheduled ETL Process" vertex="1">
+          <mxGeometry height="80" width="80" x="480" y="-645" as="geometry" />
+        </mxCell>
+        <mxCell id="pGpL98z0K4RyB47vs40O-26" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="g4FiytadgzHE6LpxqoTA-10" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="pGpL98z0K4RyB47vs40O-25" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="640" y="-410" as="sourcePoint" />
+            <mxPoint x="690" y="-460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pGpL98z0K4RyB47vs40O-27" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="pGpL98z0K4RyB47vs40O-25" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="pGpL98z0K4RyB47vs40O-28" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="640" y="-410" as="sourcePoint" />
+            <mxPoint x="690" y="-460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-1" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="pGpL98z0K4RyB47vs40O-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="QYcNIrPKLCBgRpnS5Z5b-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-11" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="pGpL98z0K4RyB47vs40O-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="pGpL98z0K4RyB47vs40O-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pGpL98z0K4RyB47vs40O-28" parent="SpeKbif7ejOxNLxw_tv2-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="Aurora" vertex="1">
+          <mxGeometry height="80" width="80" x="620" y="-645" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-9" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="pGpL98z0K4RyB47vs40O-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="pGpL98z0K4RyB47vs40O-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pGpL98z0K4RyB47vs40O-29" parent="SpeKbif7ejOxNLxw_tv2-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="DocumentDB" vertex="1">
+          <mxGeometry height="80" width="80" x="860" y="-680" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-10" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="pGpL98z0K4RyB47vs40O-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="pGpL98z0K4RyB47vs40O-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pGpL98z0K4RyB47vs40O-30" parent="SpeKbif7ejOxNLxw_tv2-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="OpenSearch" vertex="1">
+          <mxGeometry height="80" width="80" x="860" y="-580" as="geometry" />
+        </mxCell>
+        <mxCell id="pGpL98z0K4RyB47vs40O-31" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="API Gateway" vertex="1">
+          <mxGeometry height="80" width="80" x="760" y="-380" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-3" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="QYcNIrPKLCBgRpnS5Z5b-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="pGpL98z0K4RyB47vs40O-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-0" parent="SpeKbif7ejOxNLxw_tv2-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Real-time ETL" vertex="1">
+          <mxGeometry height="80" width="80" x="730" y="-645" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-2" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="QYcNIrPKLCBgRpnS5Z5b-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="pGpL98z0K4RyB47vs40O-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-8" connectable="0" parent="SpeKbif7ejOxNLxw_tv2-1" style="group" value="" vertex="1">
+          <mxGeometry height="90" width="220" x="690" y="-240" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-7" parent="QYcNIrPKLCBgRpnS5Z5b-8" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="90" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-5" parent="QYcNIrPKLCBgRpnS5Z5b-8" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.user" value="Read-only User" vertex="1">
+          <mxGeometry height="50" width="47" x="26.5" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-6" parent="QYcNIrPKLCBgRpnS5Z5b-8" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.user_permissions;fillColor=#0078D7;" value="Authorized User" vertex="1">
+          <mxGeometry height="50" width="47" x="136.5" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-13" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="QYcNIrPKLCBgRpnS5Z5b-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="pGpL98z0K4RyB47vs40O-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-14" parent="SpeKbif7ejOxNLxw_tv2-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;An ETL process wil sync changes in the Lab Management database to aind‑data‑schema compliant registry in AWS. Users in external labs can also registry aind‑data‑schema metadata information into the Biodata registry.&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;For optimal search capability, a real-time ETL process will sync tables to DocumentDB and OpenSearch. Copies of the metadata will also be attached as json file to the data assets in S3.&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="270" x="220" y="-490" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-16" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="QYcNIrPKLCBgRpnS5Z5b-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="pGpL98z0K4RyB47vs40O-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-15" parent="SpeKbif7ejOxNLxw_tv2-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="S3 (json files)" vertex="1">
+          <mxGeometry height="80" width="80" x="860" y="-480" as="geometry" />
+        </mxCell>
+        <mxCell id="QYcNIrPKLCBgRpnS5Z5b-17" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="QYcNIrPKLCBgRpnS5Z5b-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="QYcNIrPKLCBgRpnS5Z5b-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
