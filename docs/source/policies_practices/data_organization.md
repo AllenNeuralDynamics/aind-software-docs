@@ -58,7 +58,7 @@ All primary data assets have the following naming convention:
 
 A few points: 
 
-- Format `<acquisition-start-datetime>: yyyymmdd_HH-MM-SS`
+- Format `<acquisition-start-datetime>: YYYY-MM-DD_hh-mm-ss`
 - This should be the start of acquisition, in the local time zone.
 - The local time-zone is documented in metadata files
 - All tokens (e.g. `<subject-id>`) must not contain underscores or illegal filename characters. Subject ID is not strictly necessary – only the timestamp is essential. However, it is part of the current naming convention because it helps people visually browse for data.
