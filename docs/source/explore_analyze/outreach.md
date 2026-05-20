@@ -138,7 +138,7 @@ A collaborative hackathon to share new data from the *Thalamus in the Middle* pr
 
 ---
 
-### Conference Sessions & Talks
+## Conference Sessions & Talks
 
 Conference sessions and invited talks help introduce Allen Institute datasets, tools, and scientific resources to broader technical and research communities.
 
