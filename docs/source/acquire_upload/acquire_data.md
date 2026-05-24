@@ -50,7 +50,9 @@ Some tasks are being run on a standardized platform using Bonsai and Harp for da
 
 ## Calibration
 
-Use `subject_id="calibration"` to mark data assets as test assets. If your job_type runs `aind-metadata-mapper>=1.3.0` you can provide details about your [CalibrationObject](https://aind-data-schema.readthedocs.io/en/latest/components/subjects.html#calibrationobject) directly in the uploading settings. 
+Use `subject_id="calibration"` to mark data assets as test assets. Note that test assets should be immediately (or as soon as feasible) marked as archived on Code Ocean. Archived assets are deleted when unused for 30 days.
+
+If your job_type runs `aind-metadata-mapper>=1.3.0` you can provide details about your [CalibrationObject](https://aind-data-schema.readthedocs.io/en/latest/components/subjects.html#calibrationobject) directly in the uploading settings. 
 
 ```{code-block} python
 from aind_data_schema.components.subjects import CalibrationObject
