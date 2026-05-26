@@ -58,7 +58,7 @@ dd = ds.DataDescription(
         institution=ds.Organization.UPENN,
         data_level=ds.DataLevel.DERIVED,
         investigators=[ds.Person(name="Yongsoo Kim")],
-        project_name="DevCCF",
+        project_name="external data",
         modalities=[ds.Modality.MRI, ds.Modality.SPIM],
         license=ds.License.CC_BY_40,
         funding_source=[
@@ -70,7 +70,7 @@ dd = ds.DataDescription(
     )
 ```
 - Typically all published external data will be *derived* not *raw* data.
-- For `project_name` a shortened version of a related manuscript title can be used.
+- For `project_name`, use "external data" unless data collection is linked to a specific AIND project (for instance a shared grant)
 - Use the date the data was posted, or a related publication date if that is not available.
 - Funding information should be included for sources documented in the manuscript or data repository.
 - Document the specific data source in the `data_summary` (URL or API call) and the date accessed.
