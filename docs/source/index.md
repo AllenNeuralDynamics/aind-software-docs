@@ -32,7 +32,7 @@ Follow these links to request access to:
 
 ## I want to learn about...
 
-[Data organization](policies_practices/data_organization.md), [data governance](policies_practices/data_governance.md), and [software practices](policies_practices/software_practices.md) at AIND.
+[Data organization](policies_practices/data_organization.md), [data governance](policies_practices/data_governance.md), [software practices](policies_practices/software_practices.md), or [visualize how our software and systems interact](aind/diagrams.md).
 
 ```{toctree}
 :maxdepth: 1

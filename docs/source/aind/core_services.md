@@ -1,5 +1,7 @@
 # Core Services
 
+The interactions between many of these services are illustrated in the [AIND software diagrams](aind/diagrams.md).
+
 **aind-data-transfer-service**
 
 FastAPI service to run data compression and transfer jobs on the HPC
