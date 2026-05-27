@@ -26,10 +26,8 @@ external data assets using `aind-scratch-data` may be a solution - discuss with 
 If scientist-derived data contributes to published results, 
 it must be transferred to the open data bucket with complete metadata prior to publication
 ([publication standards](../policies_practices/publication_standards.md)).
-This metadata is added by running a script to save metadata json files alongside the data, 
-either immediately after the data is created, or when sharing with others or preparing for publication.
 
-In other words the following steps must be executed by publication, either all at once or iteratively as the data is created and shared:
+This consists of the following steps:
 
 - 1.  copy or create the data into a capsule folder
 - 2.  add metadata files (more detail below)
@@ -39,41 +37,6 @@ In other words the following steps must be executed by publication, either all a
 Steps 1-3 can be scripted end-to-end within a Code Ocean capsule copied from the [metadata template capsule](https://codeocean.com/capsule/1234567/tree), 
 or scripts to add metadata can be added to an existing analysis capsule based on the snippets below.
 
-## Metadata for non-AIND data
-
-When loading data from external sources for analysis, we typically want to make a stable copy as a data asset.[^3]
-[^3]: Exceptions may be stable cloud-native repositories like DANDI where data can be queried and processed directly in the cloud.
-To make this a publication-ready data asset, 
-we need to add data description metadata documenting its source and other key details.
-
-```python
-from datetime import datetime
-import aind_data_schema.core.data_description as ds
-
-creation_time = datetime(2024,4,21)
-name = ds.build_data_name("KimLab-DevCCF-v1", creation_time)
-dd = ds.DataDescription(
-        name=name,
-        creation_time=creation_time,
-        institution=ds.Organization.UPENN,
-        data_level=ds.DataLevel.DERIVED,
-        investigators=[ds.Person(name="Yongsoo Kim")],
-        project_name="external data",
-        modalities=[ds.Modality.MRI, ds.Modality.SPIM],
-        license=ds.License.CC_BY_40,
-        funding_source=[
-            ds.Funding(funder=ds.Organization.NIMH, grant_number="RF1MH12460501"),
-            ds.Funding(funder=ds.Organization.NINDS, grant_number="R01NS108407"),
-            ds.Funding(funder=ds.Organization.NIMH, grant_number="R01MH116176"),
-        ],
-        data_summary="Downloaded from https://pennstateoffice365-my.sharepoint.com/:f:/g/personal/yuk17_psu_edu/EmCllFDonwtLvDD0xgWd7QYBuzVVvnSv4oKpUy7F9bx75Q?e=RxAmJa on 2025-03-01"
-    )
-```
-- Typically all published external data will be *derived* not *raw* data.
-- For `project_name`, use "external data" unless data collection is linked to a specific AIND project (for instance a shared grant)
-- Use the date the data was posted, or a related publication date if that is not available.
-- Funding information should be included for sources documented in the manuscript or data repository.
-- Document the specific data source in the `data_summary` (URL or API call) and the date accessed.
 
 ## Metadata for intermediate results
 
@@ -95,7 +58,7 @@ code_details = ps.Code(
     name="Capsule or Pipeline name"
     url="https://github.com/abcd",
     version="1.0",
-    # commit_hash="",
+    # commit_hash="89abcdef0123456789abcdef0123456789abcdef01",
     parameters={"size": 7},
     input_data=[
         ps.DataAsset(name="data-asset-name"), 
@@ -205,9 +168,9 @@ new_md.instrument.write_standard_file(output_path)
 new_md.acquisition.write_standard_file(output_path)
 ```
 
-If the same investigators and project team are responsible for the processing as the input data, 
+If the processing is part of the same project as the input data, 
 the base metadata can also be inherited for the data description using the `DataDescription.from_data_description()` function, 
-which also updates the data level, name, and creation time.
+which updates the data level, name, and creation time.
 
 ```python
 my_dd = ds.DataDescription.from_data_description(
@@ -235,3 +198,39 @@ new_md.processing.write_standard_file(output_path)
 # new_md.subject.write_standard_file(output_path)
 # new_md.procedures.write_standard_file(output_path)
 ```
+
+## Metadata for non-AIND data
+
+When loading data from external sources for analysis, we typically want to make a stable copy as a data asset.[^3]
+[^3]: Exceptions may be stable cloud-native repositories like DANDI where data can be queried and processed directly in the cloud.
+To make this a publication-ready data asset, 
+we need to add data description metadata documenting its source and other key details.
+
+```python
+from datetime import datetime
+import aind_data_schema.core.data_description as ds
+
+creation_time = datetime(2024,4,21)
+name = ds.build_data_name("KimLab-DevCCF-v1", creation_time)
+dd = ds.DataDescription(
+        name=name,
+        creation_time=creation_time,
+        institution=ds.Organization.UPENN,
+        data_level=ds.DataLevel.DERIVED,
+        investigators=[ds.Person(name="Yongsoo Kim")],
+        project_name="external data",
+        modalities=[ds.Modality.MRI, ds.Modality.SPIM],
+        license=ds.License.CC_BY_40,
+        funding_source=[
+            ds.Funding(funder=ds.Organization.NIMH, grant_number="RF1MH12460501"),
+            ds.Funding(funder=ds.Organization.NINDS, grant_number="R01NS108407"),
+            ds.Funding(funder=ds.Organization.NIMH, grant_number="R01MH116176"),
+        ],
+        data_summary="Downloaded from https://pennstateoffice365-my.sharepoint.com/:f:/g/personal/yuk17_psu_edu/EmCllFDonwtLvDD0xgWd7QYBuzVVvnSv4oKpUy7F9bx75Q?e=RxAmJa on 2025-03-01"
+    )
+```
+- Typically all published external data will be *derived* not *raw* data.
+- For `project_name`, use "external data" unless data collection is linked to a specific AIND project (for instance a shared grant)
+- For `creation_time`, use the date the data was posted, or a related publication date if that is not available.
+- Funding information should be included for sources documented in the manuscript or data repository.
+- Document the specific data source in the `data_summary` (URL or API call) and the date accessed.
