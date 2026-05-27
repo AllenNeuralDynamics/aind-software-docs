@@ -8,7 +8,7 @@
           <mxGeometry height="140" width="275" x="467.5" y="-170" as="geometry" />
         </mxCell>
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-6" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;dashed=1;verticalAlign=top;" value="&lt;b&gt;Local Data Center&lt;br&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="175" width="275" x="475" y="-515" as="geometry" />
+          <mxGeometry height="175" width="275" x="475" y="-513.99" as="geometry" />
         </mxCell>
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-13" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="UL96ZQgQ9Tx9a3Nr9wBj-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.473;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="UL96ZQgQ9Tx9a3Nr9wBj-9">
           <mxGeometry relative="1" as="geometry" />
@@ -22,17 +22,17 @@
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-2" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="UL96ZQgQ9Tx9a3Nr9wBj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UL96ZQgQ9Tx9a3Nr9wBj-0">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-1" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="allen‑metadata‑service" vertex="1">
+        <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-1" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="biodata‑service" vertex="1">
           <mxGeometry height="80" width="200" x="225" y="-680" as="geometry" />
         </mxCell>
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-5" connectable="0" parent="SpeKbif7ejOxNLxw_tv2-1" style="group" value="" vertex="1">
-          <mxGeometry height="80" width="80" x="100" y="-467.5" as="geometry" />
+          <mxGeometry height="110" width="110" x="80" y="-480" as="geometry" />
         </mxCell>
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-4" parent="UL96ZQgQ9Tx9a3Nr9wBj-5" style="whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
-          <mxGeometry height="80" width="80" as="geometry" />
+          <mxGeometry height="107.02702702702705" width="107.02702702702705" as="geometry" />
         </mxCell>
-        <mxCell id="pGpL98z0K4RyB47vs40O-37" parent="UL96ZQgQ9Tx9a3Nr9wBj-5" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.user_permissions;fillColor=#0078D7;" value="" vertex="1">
-          <mxGeometry height="50" width="47" x="17" y="15" as="geometry" />
+        <mxCell id="XjCrOu-fNeJbmDTpR4Ur-6" parent="UL96ZQgQ9Tx9a3Nr9wBj-5" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.user_permissions;fillColor=#0078D7;" value="&lt;div&gt;Authorized&amp;nbsp;&lt;/div&gt;&lt;div&gt;User/App&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="47" x="31.5" y="20" as="geometry" />
         </mxCell>
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-17" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="UL96ZQgQ9Tx9a3Nr9wBj-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="UL96ZQgQ9Tx9a3Nr9wBj-10">
           <mxGeometry relative="1" as="geometry" />
@@ -46,16 +46,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-9" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="biodata‑transfer-service" vertex="1">
+        <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-9" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="allen-data‑transfer-service" vertex="1">
           <mxGeometry height="80" width="195" x="507.5" y="-290" as="geometry" />
         </mxCell>
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-11" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="UL96ZQgQ9Tx9a3Nr9wBj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UL96ZQgQ9Tx9a3Nr9wBj-1">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-12" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="UL96ZQgQ9Tx9a3Nr9wBj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UL96ZQgQ9Tx9a3Nr9wBj-6">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="470" y="-427" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-15" parent="SpeKbif7ejOxNLxw_tv2-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="Aurora" vertex="1">
           <mxGeometry height="80" width="80" x="560" y="-670" as="geometry" />
@@ -63,11 +58,26 @@
         <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-16" parent="SpeKbif7ejOxNLxw_tv2-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="S3" vertex="1">
           <mxGeometry height="80" width="80" x="565" y="-140" as="geometry" />
         </mxCell>
-        <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-18" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="UL96ZQgQ9Tx9a3Nr9wBj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UL96ZQgQ9Tx9a3Nr9wBj-9">
+        <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-19" parent="SpeKbif7ejOxNLxw_tv2-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontSize=14;" value="&lt;div&gt;To initiate an upload, an Authorized User or Watchdog Service will need to:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Register their acquisition and instrument to the Biodata Registry via the metadata service API.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Move their data asset to VAST&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. Register the data asset to the Biodata Registry.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;4. Send a compress and upload request to allen-data‑transfer-service. The transfer service will need the Acquisition ID, desired S3 bucket, and a job_type per modality.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;The transfer service will:&lt;/div&gt;&lt;div&gt;- Check file structure&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Compress the data&lt;/div&gt;&lt;div&gt;- Add processing metadata to the Biodata Registry&lt;/div&gt;&lt;div&gt;- Upload the data to S3&lt;/div&gt;&lt;div&gt;- Update Biodata Registry Data Asset with the S3 location&lt;/div&gt;&lt;div&gt;- Trigger Code Ocean pipelines &lt;/div&gt;" vertex="1">
+          <mxGeometry height="630" width="260" x="900" y="-720" as="geometry" />
+        </mxCell>
+        <mxCell id="XjCrOu-fNeJbmDTpR4Ur-1" parent="SpeKbif7ejOxNLxw_tv2-1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#0057D2;strokeColor=none;gradientDirection=east;fillColor=#2395FF;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" value="1" vertex="1">
+          <mxGeometry height="30" width="30" x="150" y="-560" as="geometry" />
+        </mxCell>
+        <mxCell id="XjCrOu-fNeJbmDTpR4Ur-2" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="UL96ZQgQ9Tx9a3Nr9wBj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UL96ZQgQ9Tx9a3Nr9wBj-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UL96ZQgQ9Tx9a3Nr9wBj-19" parent="SpeKbif7ejOxNLxw_tv2-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontSize=14;" value="&lt;div&gt;To initiate an upload, an Authorized User will need to:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Register their acquisition and instrument to the Biodata Registry via the metadata service API.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Move their data asset to VAST&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. Register the data asset to the Biodata Registry.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;4. Send a compress and upload request to biodata‑transfer-service. The transfer service will need the Acquisition ID, desired S3 bucket, and a job_type per modality.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;The transfer service will compress the data, add processing metadata to the Biodata Registry, upload the data to S3, update Biodata Registry Data Asset with the S3 location, and then trigger Code Ocean pipelines. &lt;/div&gt;" vertex="1">
-          <mxGeometry height="630" width="260" x="900" y="-720" as="geometry" />
+        <mxCell id="XjCrOu-fNeJbmDTpR4Ur-3" parent="SpeKbif7ejOxNLxw_tv2-1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#0057D2;strokeColor=none;gradientDirection=east;fillColor=#2395FF;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" value="2" vertex="1">
+          <mxGeometry height="30" width="30" x="310" y="-467.5" as="geometry" />
+        </mxCell>
+        <mxCell id="XjCrOu-fNeJbmDTpR4Ur-4" parent="SpeKbif7ejOxNLxw_tv2-1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#0057D2;strokeColor=none;gradientDirection=east;fillColor=#2395FF;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" value="3" vertex="1">
+          <mxGeometry height="30" width="30" x="290" y="-290" as="geometry" />
+        </mxCell>
+        <mxCell id="XjCrOu-fNeJbmDTpR4Ur-5" parent="SpeKbif7ejOxNLxw_tv2-1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#0057D2;strokeColor=none;gradientDirection=east;fillColor=#2395FF;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" value="4" vertex="1">
+          <mxGeometry height="30" width="30" x="790" y="-240" as="geometry" />
+        </mxCell>
+        <mxCell id="XjCrOu-fNeJbmDTpR4Ur-7" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="UL96ZQgQ9Tx9a3Nr9wBj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UL96ZQgQ9Tx9a3Nr9wBj-6">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

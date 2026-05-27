@@ -31,8 +31,8 @@
         <mxCell id="pGpL98z0K4RyB47vs40O-19" parent="pGpL98z0K4RyB47vs40O-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Others Misc." vertex="1">
           <mxGeometry height="30" width="140" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="8dIkek1foNe3HMmIUXin-4" parent="SpeKbif7ejOxNLxw_tv2-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontSize=14;" value="&lt;div&gt;&lt;b&gt;Dataverse&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Users in the lab can retrieve information about mice and procedures from this database using allen-metadata-service. An API client in Python will be made available.&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;The tables in Platform are not necessarily biodata-schema compliance.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="220" width="280" x="70" y="110" as="geometry" />
+        <mxCell id="8dIkek1foNe3HMmIUXin-4" parent="SpeKbif7ejOxNLxw_tv2-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontSize=14;" value="&lt;div&gt;&lt;b&gt;Dataverse (Restricted to institute)&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Users in the lab can retrieve information about mice and procedures from this database using allen-metadata-service. An API client in Python will be made available.&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;The tables in Platform are not necessarily aind-data-schema compliance.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Example users are Lab technicians and the surgical team.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="280" x="20" y="70" as="geometry" />
         </mxCell>
         <mxCell id="8dIkek1foNe3HMmIUXin-5" parent="SpeKbif7ejOxNLxw_tv2-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="Dataverse" vertex="1">
           <mxGeometry height="80" width="80" x="155" y="-305" as="geometry" />
@@ -56,11 +56,11 @@
         <mxCell id="NNWn0GaiYbIRpi_h3Rv3-18" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="8dIkek1foNe3HMmIUXin-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="NNWn0GaiYbIRpi_h3Rv3-0">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8dIkek1foNe3HMmIUXin-9" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="allen-metadata-service" vertex="1">
-          <mxGeometry height="80" width="160" x="540" y="110" as="geometry" />
+        <mxCell id="8dIkek1foNe3HMmIUXin-9" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="biodata-service" vertex="1">
+          <mxGeometry height="80" width="160" x="680" y="105" as="geometry" />
         </mxCell>
         <mxCell id="8dIkek1foNe3HMmIUXin-19" connectable="0" parent="SpeKbif7ejOxNLxw_tv2-1" style="group" value="" vertex="1">
-          <mxGeometry height="90" width="200" x="520" y="260" as="geometry" />
+          <mxGeometry height="90" width="200" x="660" y="255" as="geometry" />
         </mxCell>
         <mxCell id="8dIkek1foNe3HMmIUXin-15" parent="8dIkek1foNe3HMmIUXin-19" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="90" width="200" as="geometry" />
@@ -71,7 +71,7 @@
         <mxCell id="8dIkek1foNe3HMmIUXin-14" parent="8dIkek1foNe3HMmIUXin-19" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.user_permissions;fillColor=#0078D7;" value="Authorized User" vertex="1">
           <mxGeometry height="50" width="47" x="126.5" y="10" as="geometry" />
         </mxCell>
-        <mxCell id="NNWn0GaiYbIRpi_h3Rv3-0" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;dashed=1;verticalAlign=top;" value="&lt;b&gt;Biodata Registry (AWS VPC)&lt;/b&gt;" vertex="1">
+        <mxCell id="NNWn0GaiYbIRpi_h3Rv3-0" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;dashed=1;verticalAlign=top;" value="&lt;b&gt;Biodata Registry (AWS VPC, aind-data-schema compliant)&lt;/b&gt;" vertex="1">
           <mxGeometry height="390" width="490" x="670" y="-360" as="geometry" />
         </mxCell>
         <mxCell id="NNWn0GaiYbIRpi_h3Rv3-1" parent="SpeKbif7ejOxNLxw_tv2-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="Aurora" vertex="1">
@@ -122,14 +122,32 @@
         <mxCell id="NNWn0GaiYbIRpi_h3Rv3-13" parent="SpeKbif7ejOxNLxw_tv2-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;Scheduled&lt;/div&gt;&lt;div&gt;ETL&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="80" x="570" y="-205" as="geometry" />
         </mxCell>
-        <mxCell id="NNWn0GaiYbIRpi_h3Rv3-17" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="8dIkek1foNe3HMmIUXin-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="g4FiytadgzHE6LpxqoTA-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="NNWn0GaiYbIRpi_h3Rv3-19" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="8dIkek1foNe3HMmIUXin-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="8dIkek1foNe3HMmIUXin-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNWn0GaiYbIRpi_h3Rv3-20" parent="SpeKbif7ejOxNLxw_tv2-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontSize=14;" value="&lt;div&gt;&lt;b&gt;Biodata Registry&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;An ETL process will parse the data from Dataverse to aind-data-schema compliant metadata and store it in the Biodata registry.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;A user can fetch, update, and instruments via the allen-metadata-service.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;A user can upload acquisition or extracted acquisition metadata. The service will combine and transform the extracted acquisition files into a biodata-schema compliant file before adding it to the registry. &lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="270" width="280" x="775" y="90" as="geometry" />
+        <mxCell id="NNWn0GaiYbIRpi_h3Rv3-20" parent="SpeKbif7ejOxNLxw_tv2-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontSize=14;" value="&lt;div&gt;&lt;b&gt;Biodata Registry (Global)&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;An ETL process will parse the data from Dataverse to aind-data-schema compliant metadata and store it in the Biodata registry.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;A user can fetch, update, and instruments via the allen-metadata-service.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;A user can upload acquisition or extracted acquisition metadata. The service will combine and transform the extracted acquisition files into a biodata-schema compliant file before adding it to the registry. &lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Example users include scientists and data analysts around the world.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="290" width="280" x="910" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TZZ-q6qVBz4xrK9BKbXU-6" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="TZZ-q6qVBz4xrK9BKbXU-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="g4FiytadgzHE6LpxqoTA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TZZ-q6qVBz4xrK9BKbXU-0" parent="SpeKbif7ejOxNLxw_tv2-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="allen-power-platform-service" vertex="1">
+          <mxGeometry height="80" width="160" x="360" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="TZZ-q6qVBz4xrK9BKbXU-1" connectable="0" parent="SpeKbif7ejOxNLxw_tv2-1" style="group" value="" vertex="1">
+          <mxGeometry height="90" width="200" x="340" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="TZZ-q6qVBz4xrK9BKbXU-2" parent="TZZ-q6qVBz4xrK9BKbXU-1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="90" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="TZZ-q6qVBz4xrK9BKbXU-3" parent="TZZ-q6qVBz4xrK9BKbXU-1" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.user" value="Read-only User" vertex="1">
+          <mxGeometry height="50" width="47" x="21.5" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="TZZ-q6qVBz4xrK9BKbXU-4" parent="TZZ-q6qVBz4xrK9BKbXU-1" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.user_permissions;fillColor=#0078D7;" value="Authorized User" vertex="1">
+          <mxGeometry height="50" width="47" x="126.5" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="TZZ-q6qVBz4xrK9BKbXU-5" edge="1" parent="SpeKbif7ejOxNLxw_tv2-1" source="TZZ-q6qVBz4xrK9BKbXU-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="TZZ-q6qVBz4xrK9BKbXU-0">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
