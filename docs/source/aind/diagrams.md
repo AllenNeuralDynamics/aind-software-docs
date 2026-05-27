@@ -8,3 +8,4 @@ This page contains diagrams illustrating the interactions between AIND software 
 
 ![High-level data flow](../diagrams/high_level/general_data_flow.drawio.svg)
 
+![AIND Software Overview](../_static/aind-software-overview.png)
