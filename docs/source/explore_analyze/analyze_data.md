@@ -3,7 +3,7 @@
 
 ## Code Ocean capsules
 
-Most analysis happens in individual capsules on the Code Ocean platform. 
+Most analysis happens in individual capsules on the [Code Ocean](https://codeocean.allenneuraldynamics.org/) platform. 
 We have documented [best practices and tips](co_best_practices.md) for working in that context.
 
 (analysis-framework)=
