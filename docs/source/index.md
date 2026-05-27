@@ -68,10 +68,10 @@ explore_analyze/outreach
 policies_practices/data_organization
 policies_practices/data_governance
 policies_practices/publication_standards
-policies_practices/software_practices
 policies_practices/platform_support
+policies_practices/version_pipelines
+policies_practices/software_practices
 policies_practices/docs
-policies_practices/developer_templates
 
 ```
 
