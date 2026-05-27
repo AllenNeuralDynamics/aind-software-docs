@@ -25,6 +25,7 @@ dev = [
     'furo',
     'myst-parser',
     'sphinx-tippy',
+    'sphinx-copybutton',
 ]
 
 [tool.setuptools.packages.find]
