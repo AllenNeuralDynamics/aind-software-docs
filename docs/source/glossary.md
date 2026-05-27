@@ -10,7 +10,7 @@ A typical example is an intermediate analysis result saved as input for downstre
 primary data
 : the least processed permanent data asset from a given data acquisition - 
 in most cases this is the raw data asset, but in some cases the raw data is deleted
-and a minimally-processed derived data is preserved as primary data.
+and a minimally-processed (compression or format conversion only) derived data is preserved as primary data.
 (In many cases "raw data" is used as a synonym for "primary data", 
 even when the data is not strictly raw.)
 
@@ -38,7 +38,7 @@ not intended for direct access).
 
 {.glossary}
 external data asset
-: a Code Ocean data asset linking to data on AWS s3 or other cloud storage.
+: a Code Ocean data asset linking to data on AWS s3 (public or private buckets) or other cloud storage.
 [CO docs](https://docs.codeocean.com/user-guide/data-assets-guide/types-of-data-assets#external-data-a-remote-link)
 
 {.glossary}
