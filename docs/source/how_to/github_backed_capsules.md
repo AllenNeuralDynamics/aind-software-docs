@@ -16,7 +16,7 @@ Rather than creating a GitHub repo from scratch, you should start from the [aind
 
 <img src="../_static/capsule_template_screenshot.png" width="600" />
 
-2. Under **Owner**, select **AllenNeuralDynamics**. Give the repo a name and set visibility to **Internal** or **Public**.
+2. Under **Owner**, select **AllenNeuralDynamics**. Give the repo a name and set visibility.
 3. Click **Create repository**.
 4. Copy the HTTPS clone URL from the green **Code** button (e.g., `https://github.com/AllenNeuralDynamics/REPO_NAME.git`).
 5. Go to [https://codeocean.allenneuraldynamics.org/dashboard](https://codeocean.allenneuraldynamics.org/dashboard), click **New Capsule**, and select **Clone From Git**.
