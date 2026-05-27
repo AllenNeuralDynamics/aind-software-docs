@@ -158,6 +158,22 @@ git clone <url-of-config-files>
   sharing the capsule, remove the customizations from the postInstall
   file.
 
+## Tips for building capsule environments
+
+- If your environment build fails, find the issue by opening the build log
+  (from the error message or the capsule timeline) and searching for errors, 
+  typically towards the end of the log.
+
+- When debugging a tricky build, you may consider making a few duplicates of the capsule
+  so that you can test different variations simultaneously.
+
+- To improve very slow builds, consider:
+  - conda packages: make sure to use an environment with the mamba package manager instead of
+    the older conda (both the "conda" and "mamba" entries will install via mamba).
+  - pip packages: check the build log for extensive "backtracking" where pip tries many versions
+    of a package sequentially in an attempt to resolve dependency conflicts. Pin the versions of
+    these dependencies to eliminate this.
+    
 ## Tips for Pipelines
 
 ### Resource labels
@@ -177,21 +193,6 @@ Production-level pipelines should be based on the
 template repository. This includes a license, recommended nextflow config,
 and automated versioning and release.
 
-## Tips for building capsule environments
-
-- If your environment build fails, find the issue by opening the build log
-  (from the error message or the capsule timeline) and searching for errors, 
-  typically towards the end of the log.
-
-- When debugging a tricky build, you may consider making a few duplicates of the capsule
-  so that you can test different variations simultaneously.
-
-- To improve very slow builds, consider:
-  - conda packages: make sure to use an environment with the mamba package manager instead of
-    the older conda (both the "conda" and "mamba" entries will install via mamba).
-  - pip packages: check the build log for extensive "backtracking" where pip tries many versions
-    of a package sequentially in an attempt to resolve dependency conflicts. Pin the versions of
-    these dependencies to eliminate this.
 
 ## How do I...?
 
@@ -214,23 +215,17 @@ to either install a list of extensions *or* move the extensions
 directory inside the capsule filesystem so manually installed extensions will persist
 (both options are not possible together).
  
-### Add model or simulation results as a data asset?
-
-Save your model or simulation results as a data asset as you would any
-other files produced during a capsule run. Output your files to the
-"/results" folder and capture them by hovering over the result entry under
-the run in your capsule timeline, then selecting "capture as data asset"
-from the menu (⋮).
 
 ### Make my Streamlit app running in Code Ocean externally accessible?
 
-Currently this is not possible.
+Currently this is not possible. Consider trying the free hosting services provided by Streamlit or Huggingface,
+or requesting SciComp support for deploying your app on AWS.
 
 ### Keep variables in memory while shutting down cloud workstations?
 
 Instance RAM state is not preserved when instances are paused. By
 default, instances should remain live for 180 min before automatically
-pausing. As a workaround, use a disk cache (on /scratch) to save results
+pausing. As a workaround, use a disk cache (on `/scratch`) to save results
 for any slower-running functions -- in Python this can be as simple as adding a
 decorator from the built-in joblib.
 (<https://joblib.readthedocs.io/en/latest/memory.html>)
@@ -270,7 +265,9 @@ process in a new tab.
 
 ### Transition an existing capsule without a github link to a new github-backed capsule?
 
-Follow the steps for cloning a capsule to generate a Code Ocean git URL
+[Detailed walkthrough here](../how_to/github_backed_capsules.md)
+
+In brief: follow the steps for cloning a capsule to generate a Code Ocean git URL
 ([https://docs.codeocean.com/user-guide/compute-capsule-basics/version-control/clone-via-git](https://docs.codeocean.com/user-guide/compute-capsule-basics/version-control/clone-via-git...)
 ), then use this URL to import a new repository into github
 (<https://github.com/new/import> using your CO account email and API
@@ -301,14 +298,12 @@ Base images can come from any public docker image registry, but must be created 
 Make a request by posting on the Code Ocean Teams channel or opening a github issue 
 on the [SciComp requests board](https://github.com/AllenNeuralDynamics/aind-scientific-computing/issues).
 
-(reduce-screen-real-estate)=
 ### Reduce the screen real-estate used by Code Ocean (full-screen mode)?
 
 In Mac, press ^ + cmd + F, or see below. In Windows, press F11.
 
 ![Full screen command screenshot](image.png)
 
-(create-nextflow-config)=
 ### Create a nextflow.config file to configure process execution?
 
 Add a nextflow.config file to the pipeline directory. The process scope
@@ -343,6 +338,8 @@ to see what other configurations are available.
 
 ## Bugs and other gotchas
 
+This list will be updated periodically, with recent issues added at the top of the list and resolved issues removed.
+
 ### Jupyter notebook workstation fails to launch
 - If you're trying to run Jupyter **notebook** and it fails to launch, you may
   be running an environment that has a recent version of JupyterLab (>4.0) without the
@@ -357,3 +354,27 @@ pipeline together, and at least one capsule does not have sufficient AWS
 credential secrets attached. This will show as a bypassable warning when
 running the pipeline manually with "Reproducible Run", but will not run
 via API. Attach AWS secrets to all capsules and the issue is resolved.
+
+### Environment build fails with `"/git-askpass": not found`
+
+You may see an error like this when running a reproducible run or rebuilding your capsule environment:
+
+```
+ERROR: failed to calculate checksum of ref ...: "/git-askpass": not found
+```
+
+**Why this happens:** Code Ocean switched its build system to Docker BuildKit, which builds images differently from classic Docker. As part of that migration, the credential helper file that Code Ocean injects into the Docker build context was renamed from `git-askpass` to `git-ask-pass`. The rename was intentional: BuildKit's layer caching would have continued reusing broken cached layers containing the old filename, so the rename forced those layers to be invalidated and rebuilt. Capsules whose Dockerfiles still reference the old name will fail until updated.
+
+**Fix:** Open your capsule's `environment/Dockerfile` and change:
+
+```dockerfile
+COPY git-askpass /
+```
+
+to:
+
+```dockerfile
+COPY git-ask-pass /
+```
+
+If your capsule has no dependencies on internal GitHub repositories, you can instead simply remove the `COPY git-askpass /` line (and the `ARG GIT_ASKPASS` / `ARG GIT_ACCESS_TOKEN` lines above it) entirely.

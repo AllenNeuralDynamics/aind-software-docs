@@ -1,7 +1,7 @@
 ### Capsules and repositories
 - [ ] Capsules (or pipelines) for all processing steps, from raw data to figures [^3]
 [^3]: Tools that already have, or are progressing towards, a separate public release may be left out.
-- [ ] Working copy of capsule shared internally and linked to a public github repository within AIND or AIBS github organization
+- [ ] Working copy of capsule shared internally and [linked to a public github repository](../how_to/github_backed_capsules.md) within AIND or AIBS github organization
 - [ ] Released version of capsule added to manuscript collection (requires author and description in capsule metadata, sync to github, and reproducible run).
 - [ ] Reproducible run script generates all outputs[^4] (if manual steps are unavoidable, include step-by-step instructions and automate as much as possible).
 [^4]: This can trigger execution of notebooks (e.g. using nbconvert), as long as they run top to bottom with no interaction required.
