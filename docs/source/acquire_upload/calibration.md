@@ -16,7 +16,7 @@ Note that test assets that are not intended to be kept long-term should be immed
 
 ### Manual calibration metadata
 
-If the processing pipeline that will run on your test data asset requires certain fields in the subject or procedures metadata to be set you need to create an actual `subject.json` and `procedures.json` and upload these alongside your data asset.
+If the processing pipeline that will run on your test data asset **requires certain fields in the subject or procedures metadata to be set** you need to create an actual `subject.json` and `procedures.json` and upload these alongside your data asset.
 
 ```{code-block} python
 from aind_data_schema.core.subject import Subject
@@ -43,7 +43,7 @@ procedures.write_standard_file()
 
 ### Automated calibration metadata
 
-If the processing pipeline that will run on your data asset does not read the subject and/or procedures metadata you can follow the instructions below to create empty subject and procedures files.
+If the processing pipeline that will run on your data asset **does not read the subject and/or procedures metadata** you can follow the instructions below to create empty subject and procedures files.
 
 Note that this automation is only available if your job_type runs `aind-metadata-mapper>=1.3.0`. Please include as much detail as possible about your [CalibrationObject](https://aind-data-schema.readthedocs.io/en/latest/components/subjects.html#calibrationobject) in the upload settings.
 
