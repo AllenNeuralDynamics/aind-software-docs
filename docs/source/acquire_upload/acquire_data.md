@@ -48,4 +48,3 @@ Some tasks are being run on a standardized platform using Bonsai and Harp for da
 |------|-----------|
 | VrForaging | https://github.com/AllenNeuralDynamics/Aind.Behavior.VrForaging |
 | IsoForce | https://github.com/AllenNeuralDynamics/Aind.Behavior.IsoForce |
-
