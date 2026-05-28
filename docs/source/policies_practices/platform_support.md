@@ -15,6 +15,9 @@ All platforms and pipelines must follow the [Data organization conventions](data
 
 ## Platform requirements
 
+- Platform data assets should include valid aind-data-schema core files (minimum: data_description, subject, procedures, instrument, and acquisition).
+- The `data_description.tags` field must include a unique string that *will not ever change* for each platform. We recommend using `platform:<platform-name>` to make it easy to find this string.
+
 ### Logging
 
 Platforms should log all events to the [Loki server](https://github.com/AllenNeuralDynamics/aind-log-utils) maintained by SIPE. Events should be discrete information, warnings, and errors that need to be made visible to users in a dashboard. Logging of continuous metrics should be done in a log service that is specific to each tool and made visible in a dashboard attached to the tool.
