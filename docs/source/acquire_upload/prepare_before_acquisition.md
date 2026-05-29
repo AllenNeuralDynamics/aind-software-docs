@@ -397,7 +397,7 @@ Currently, only NSB procedures are automatically attached to data assets during 
 
 ### Custom procedures
 
-Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Note that the `data-transfer-service` will **NOT** merge your procedures with any stored in NSB, you must pull the NSB procedures and manually merge them ahead of time, please reach out to Scientific Computing for help with this process.
+Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Please only provide metadata for procedures that are not stored by NSB.
 
 ### NSB procedures
 
