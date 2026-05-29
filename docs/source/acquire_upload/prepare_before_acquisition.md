@@ -84,7 +84,7 @@ The funding endpoint will be used during data upload to populate your data descr
     fetch('https://aind-metadata-service/api/v2/funding/' + encodeURIComponent(projectName))
       .then(response => {
         if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
         return response.json();
       })
@@ -175,7 +175,7 @@ The investigators endpoint will be used during data upload to populate your data
     fetch('https://aind-metadata-service/api/v2/investigators/' + encodeURIComponent(projectName))
       .then(response => {
         if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
         return response.json();
       })
@@ -267,7 +267,7 @@ Subject metadata is populated by lab animal services (LAS) without your involvem
     fetch('https://aind-metadata-service/api/v2/subject/' + encodeURIComponent(subjectId))
       .then(response => {
         if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
         return response.json();
       })
@@ -458,7 +458,7 @@ Standardized procedures that are performed by NSB (link?) are uploaded and acces
     fetch('https://aind-metadata-service/api/v2/procedures/' + encodeURIComponent(subjectId))
       .then(response => {
         if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
         return response.json();
       })
