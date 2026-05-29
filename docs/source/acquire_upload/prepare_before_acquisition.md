@@ -21,7 +21,7 @@ The funding endpoint will be used during data upload to populate your data descr
 
 ```{raw} html
 <div style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
-  <label for="projectSelect" style="font-weight: bold; display: block; margin-bottom: 10px;">Select a project fetch funding information from the metadata-service:</label>
+  <label for="projectSelect" style="font-weight: bold; display: block; margin-bottom: 10px;">Select a project to fetch funding information from the metadata-service:</label>
   <select id="projectSelect" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
     <option value="">-- Loading projects... --</option>
   </select>
