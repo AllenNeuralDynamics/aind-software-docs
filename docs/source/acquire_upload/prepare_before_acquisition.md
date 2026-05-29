@@ -21,7 +21,7 @@ The funding endpoint will be used during data upload to populate your data descr
 
 ```{raw} html
 <div style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
-  <label for="projectSelect" style="font-weight: bold; display: block; margin-bottom: 10px;">Select a project fetch funding information from the metadata-service:</label>
+  <label for="projectSelect" style="font-weight: bold; display: block; margin-bottom: 10px;">Select a project to fetch funding information from the metadata-service:</label>
   <select id="projectSelect" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
     <option value="">-- Loading projects... --</option>
   </select>
@@ -84,7 +84,7 @@ The funding endpoint will be used during data upload to populate your data descr
     fetch('https://aind-metadata-service/api/v2/funding/' + encodeURIComponent(projectName))
       .then(response => {
         if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
         return response.json();
       })
@@ -175,7 +175,7 @@ The investigators endpoint will be used during data upload to populate your data
     fetch('https://aind-metadata-service/api/v2/investigators/' + encodeURIComponent(projectName))
       .then(response => {
         if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
         return response.json();
       })
@@ -266,17 +266,19 @@ Subject metadata is populated by lab animal services (LAS) without your involvem
 
     fetch('https://aind-metadata-service/api/v2/subject/' + encodeURIComponent(subjectId))
       .then(response => {
-        if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+        if (!response.ok && response.status !== 400) {
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
-        return response.json();
+        return response.json().then(data => ({ data, status: response.status }));
       })
-      .then(response => {
-        const data = response.data || response;
-        resultDiv.style.backgroundColor = '#d4edda';
-        resultDiv.style.border = '1px solid #28a745';
-        resultDiv.innerHTML = '<strong>Subject Information:</strong><pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' + 
-                              JSON.stringify(data, null, 2) + '</pre>';
+      .then(({ data, status }) => {
+        const subject = data.data || data;
+        const isInvalid = status === 400;
+        resultDiv.style.backgroundColor = isInvalid ? '#fff3cd' : '#d4edda';
+        resultDiv.style.border = isInvalid ? '1px solid #ffc107' : '1px solid #28a745';
+        resultDiv.innerHTML = (isInvalid ? '<strong>Warning: subject data failed schema validation:</strong>' : '<strong>Subject Information:</strong>') +
+                              '<pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' +
+                              JSON.stringify(subject, null, 2) + '</pre>';
       })
       .catch(error => {
         resultDiv.style.backgroundColor = '#f8d7da';
@@ -395,7 +397,7 @@ Currently, only NSB procedures are automatically attached to data assets during 
 
 ### Custom procedures
 
-Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Note that the `data-transfer-service` will **NOT** merge your procedures with any stored in NSB, you must pull the NSB procedures and manually merge them ahead of time, please reach out to Scientific Computing for help with this process.
+Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Please only provide metadata for procedures that are not stored by NSB.
 
 ### NSB procedures
 
@@ -457,17 +459,19 @@ Standardized procedures that are performed by NSB (link?) are uploaded and acces
 
     fetch('https://aind-metadata-service/api/v2/procedures/' + encodeURIComponent(subjectId))
       .then(response => {
-        if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+        if (!response.ok && response.status !== 400) {
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
-        return response.json();
+        return response.json().then(data => ({ data, status: response.status }));
       })
-      .then(response => {
-        const data = response.data || response;
-        resultDiv.style.backgroundColor = '#d4edda';
-        resultDiv.style.border = '1px solid #28a745';
-        resultDiv.innerHTML = '<strong>Procedures Information:</strong><pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' + 
-                              JSON.stringify(data, null, 2) + '</pre>';
+      .then(({ data, status }) => {
+        const procedures = data.data || data;
+        const isInvalid = status === 400;
+        resultDiv.style.backgroundColor = isInvalid ? '#fff3cd' : '#d4edda';
+        resultDiv.style.border = isInvalid ? '1px solid #ffc107' : '1px solid #28a745';
+        resultDiv.innerHTML = (isInvalid ? '<strong>Warning: procedures data failed schema validation:</strong>' : '<strong>Procedures Information:</strong>') +
+                              '<pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' +
+                              JSON.stringify(procedures, null, 2) + '</pre>';
       })
       .catch(error => {
         resultDiv.style.backgroundColor = '#f8d7da';
