@@ -266,17 +266,19 @@ Subject metadata is populated by lab animal services (LAS) without your involvem
 
     fetch('https://aind-metadata-service/api/v2/subject/' + encodeURIComponent(subjectId))
       .then(response => {
-        if (!response.ok) {
+        if (!response.ok && response.status !== 400) {
           return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
-        return response.json();
+        return response.json().then(data => ({ data, status: response.status }));
       })
-      .then(response => {
-        const data = response.data || response;
-        resultDiv.style.backgroundColor = '#d4edda';
-        resultDiv.style.border = '1px solid #28a745';
-        resultDiv.innerHTML = '<strong>Subject Information:</strong><pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' + 
-                              JSON.stringify(data, null, 2) + '</pre>';
+      .then(({ data, status }) => {
+        const subject = data.data || data;
+        const isInvalid = status === 400;
+        resultDiv.style.backgroundColor = isInvalid ? '#fff3cd' : '#d4edda';
+        resultDiv.style.border = isInvalid ? '1px solid #ffc107' : '1px solid #28a745';
+        resultDiv.innerHTML = (isInvalid ? '<strong>Warning: subject data failed schema validation:</strong>' : '<strong>Subject Information:</strong>') +
+                              '<pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' +
+                              JSON.stringify(subject, null, 2) + '</pre>';
       })
       .catch(error => {
         resultDiv.style.backgroundColor = '#f8d7da';
@@ -457,17 +459,19 @@ Standardized procedures that are performed by NSB (link?) are uploaded and acces
 
     fetch('https://aind-metadata-service/api/v2/procedures/' + encodeURIComponent(subjectId))
       .then(response => {
-        if (!response.ok) {
+        if (!response.ok && response.status !== 400) {
           return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
-        return response.json();
+        return response.json().then(data => ({ data, status: response.status }));
       })
-      .then(response => {
-        const data = response.data || response;
-        resultDiv.style.backgroundColor = '#d4edda';
-        resultDiv.style.border = '1px solid #28a745';
-        resultDiv.innerHTML = '<strong>Procedures Information:</strong><pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' + 
-                              JSON.stringify(data, null, 2) + '</pre>';
+      .then(({ data, status }) => {
+        const procedures = data.data || data;
+        const isInvalid = status === 400;
+        resultDiv.style.backgroundColor = isInvalid ? '#fff3cd' : '#d4edda';
+        resultDiv.style.border = isInvalid ? '1px solid #ffc107' : '1px solid #28a745';
+        resultDiv.innerHTML = (isInvalid ? '<strong>Warning: procedures data failed schema validation:</strong>' : '<strong>Procedures Information:</strong>') +
+                              '<pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' +
+                              JSON.stringify(procedures, null, 2) + '</pre>';
       })
       .catch(error => {
         resultDiv.style.backgroundColor = '#f8d7da';
