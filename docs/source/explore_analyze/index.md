@@ -10,7 +10,7 @@ The Data Portal exposes a range of views tailored to different slices of the dat
 
 - The [**Assets**](https://data.allenneuraldynamics.org/assets) view is your entry point into all data assets acquired in Neural Dynamics.
 - [**Subject**](https://data.allenneuraldynamics.org/subject) views let you explore the history of an experimental subject from birth through surgical procedures, data acquisitions, perfusion, etc. Clicking into individual events pulls up the detailed metadata about that event as well as interactive viewers.
-- [**Project**](https://data.allenneuraldynamics.org/project) views show you the assets associated with each `project_name`. Projects that are tracking curriculum metadata can easily view the status of all mice from this dashboard.
+- [**Project**](https://data.allenneuraldynamics.org/project) views show data acquisitions for each subject within a project, and can be used to identify the modality or behavior curriculum stage for each acquisition.
 
 There are also Platform dashboards for each of the major platforms in Neural Dynamics:
 
