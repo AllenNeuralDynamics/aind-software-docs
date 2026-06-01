@@ -15,7 +15,7 @@ The Data Portal exposes a range of views tailored to different slices of the dat
 There are also Platform dashboards for each of the major platforms in Neural Dynamics:
 
 | Platform | Dashboard | Internal Site |
-| -- | -- |
+| -- | -- | -- |
 | SmartSPIM | [Dashboard](https://data.allenneuraldynamics.org/smartspim) | [Internal Site](https://alleninstitute.sharepoint.com/sites/NeuralDynamics/SitePages/SmartSPIM-Platform.aspx) |
 | Fiber Photometry | [Dashboard](https://data.allenneuraldynamics.org/fiber_photometry) | [Internal site](https://alleninstitute.sharepoint.com/sites/NeuralDynamics/SitePages/Fiber-Photometry-Platform.aspx) |
 | Dynamic Foraging | [Dashboard](https://data.allenneuraldynamics.org/dynamic_foraging)| |
