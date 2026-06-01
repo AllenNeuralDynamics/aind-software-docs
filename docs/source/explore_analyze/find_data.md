@@ -1,6 +1,23 @@
 # Find data
 
-Raw assets uploaded from platforms at AIND are run through automated pipelines that produce derived assets. You can find these assets by performing a query on our metadata database using your project name and other fields unique to your experiment. **All analyses at AIND should begin with a query that returns a group of data assets, filtered by passing quality control**.
+Raw assets uploaded from platforms at AIND are run through automated pipelines that produce derived assets. You can explore these assets through the [Data Portal](https://data.allenneuraldynamics.org/assets).
+
+The Data Portal exposes a range of views tailored to different slices of the data:
+
+- The [**Assets**](https://data.allenneuraldynamics.org/assets) view is your entry point into all data assets acquired in Neural Dynamics.
+- [**Subject**](https://data.allenneuraldynamics.org/subject) views let you explore the history of an experimental subject from birth through surgical procedures, data acquisitions, perfusion, etc. Clicking into individual events pulls up the detailed metadata about that event as well as interactive viewers.
+- [**Project**](https://data.allenneuraldynamics.org/project) views show you the assets associated with each `project_name`. Projects that are tracking curriculum metadata can easily view the status of all mice from this dashboard.
+
+There are also Platform dashboards for each of the major platforms in Neural Dynamics:
+
+| Platform | Dashboard | Internal Site |
+| -- | -- |
+| SmartSPIM | [Dashboard](https://data.allenneuraldynamics.org/smartspim) | [Internal Site](https://alleninstitute.sharepoint.com/sites/NeuralDynamics/SitePages/SmartSPIM-Platform.aspx) |
+| Fiber Photometry | [Dashboard](https://data.allenneuraldynamics.org/fiber_photometry) | [Internal site](https://alleninstitute.sharepoint.com/sites/NeuralDynamics/SitePages/Fiber-Photometry-Platform.aspx) |
+| Dynamic Foraging | [Dashboard](https://data.allenneuraldynamics.org/dynamic_foraging)| |
+| VR Foraging | [Dashboard](https://data.allenneuraldynamics.org/vr_foraging) | |
+
+Analysis scripts should find assets using queries on our metadata database using your project name and other fields unique to your experiment. **All analyses at AIND should begin with a query that returns a group of data assets, filtered by passing quality control**.
 
 Some fields that are commonly used to filter assets:
 
@@ -9,11 +26,11 @@ Some fields that are commonly used to filter assets:
 - `data_description.modalities.abbreviation`
 - `subject.subject_id`
 - `acquisition.acquisition_start_time`
-- `quality_control.status` and `quality_control.metrics.status_history`
-
-You may also find it useful to tag your data with custom strings at the time of upload. These tags will make it easy to find cluster your data into different subsets.
-
 - `acquisition.acquisition_type`: this is the primary string that should differentiate acquisitions within the same project
+- `quality_control.status`
+
+You may also find it useful to tag your data with custom strings at the time of upload. These tags will make it easy to cluster your data into different subsets.
+
 - `data_description.tags`: this is a list of strings you can use to cluster assets by things that aren't well represented in the metadata.
 
 ## Querying the metadata database
