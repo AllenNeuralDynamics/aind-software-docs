@@ -8,4 +8,8 @@ Please see the documentation on [QualityControl](https://aind-data-schema.readth
 
 ## QC Portal
 
+![QC diagram](../diagrams/mid_level/QC.drawio.svg)
+
+The QC Portal is a web app that allows users to explore the quality control metadata for data assets and, in edit mode, modify the value and state of metrics to annotate assets as passing or failing QC.
+
 Please see the [QC Portal](https://github.com/AllenNeuralDynamics/aind-qc-portal?tab=readme-ov-file) documentation for more information.
