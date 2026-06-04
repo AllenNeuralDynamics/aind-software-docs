@@ -1,6 +1,6 @@
 # Find data
 
-Raw assets uploaded from platforms at AIND are run through automated pipelines that produce derived assets. You can find these assets by performing a query on our metadata database using your project name and other fields unique to your experiment. **All analyses at AIND should begin with a query that returns a group of data assets, filtered by passing quality control**.
+Analysis scripts should find assets using queries on our metadata database using your project name and other fields unique to your experiment. **All analyses at AIND should begin with a query that returns a group of data assets, filtered by passing quality control**.
 
 Some fields that are commonly used to filter assets:
 
@@ -9,11 +9,11 @@ Some fields that are commonly used to filter assets:
 - `data_description.modalities.abbreviation`
 - `subject.subject_id`
 - `acquisition.acquisition_start_time`
-- `quality_control.status` and `quality_control.metrics.status_history`
-
-You may also find it useful to tag your data with custom strings at the time of upload. These tags will make it easy to find cluster your data into different subsets.
-
 - `acquisition.acquisition_type`: this is the primary string that should differentiate acquisitions within the same project
+- `quality_control.status`
+
+You may also find it useful to tag your data with custom strings at the time of upload. These tags will make it easy to cluster your data into different subsets.
+
 - `data_description.tags`: this is a list of strings you can use to cluster assets by things that aren't well represented in the metadata.
 
 ## Querying the metadata database
