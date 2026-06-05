@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
   <diagram name="Page-1" id="ZbUC0mq6oG2G2aLqwKDg">
-    <mxGraphModel dx="5648" dy="3331" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1636" dy="1696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,10 +25,10 @@
         <mxCell id="IqP3mytsdpiyg8Wad38a-6" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folder;fillColor=#6666FF;" value="NWB File" vertex="1">
           <mxGeometry height="60" width="70" x="1305.31" y="-437" as="geometry" />
         </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-8" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;" value="a/ND schematized metadata" vertex="1">
+        <mxCell id="IqP3mytsdpiyg8Wad38a-8" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;" value="aind-data-schema metadata" vertex="1">
           <mxGeometry height="70" width="51.16" x="1317.23" y="-253" as="geometry" />
         </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;a/ND schematized metadata includes :&lt;/font&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;procedures.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;subject.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;data_description.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;processing.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;data_description.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;acquisition.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;instrument.json&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="IqP3mytsdpiyg8Wad38a-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;aind-data-schema metadata:&lt;/font&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;procedures.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;subject.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;data_description.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;processing.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;data_description.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;acquisition.json&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;instrument.json&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="280" width="440" x="-440" y="-690" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-15" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" value="Raw Data" vertex="1">
@@ -202,7 +202,7 @@
         <mxCell id="IqP3mytsdpiyg8Wad38a-76" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folder;fillColor=#6666FF;" value="NWB File" vertex="1">
           <mxGeometry height="140" width="200" x="1690" y="-200" as="geometry" />
         </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-77" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;" value="a/ND schematized metadata" vertex="1">
+        <mxCell id="IqP3mytsdpiyg8Wad38a-77" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;" value="aind-data-schema metadata" vertex="1">
           <mxGeometry height="140" width="102.31" x="1743" y="140" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-78" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folder;fillColor=#67AB9F;" value="Plots and metrics" vertex="1">
@@ -211,7 +211,7 @@
         <mxCell id="IqP3mytsdpiyg8Wad38a-79" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folder;fillColor=#6666FF;" value="NWB File" vertex="1">
           <mxGeometry height="60" width="70" x="1310.31" y="-37" as="geometry" />
         </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-80" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;" value="a/ND schematized metadata" vertex="1">
+        <mxCell id="IqP3mytsdpiyg8Wad38a-80" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;" value="aind-data-schema metadata" vertex="1">
           <mxGeometry height="70" width="51.16" x="1322.23" y="147" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-81" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folder;fillColor=#67AB9F;" value="Plots and metrics" vertex="1">
@@ -220,7 +220,7 @@
         <mxCell id="IqP3mytsdpiyg8Wad38a-82" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folder;fillColor=#6666FF;" value="NWB File" vertex="1">
           <mxGeometry height="60" width="70" x="1312.81" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-83" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;" value="a/ND schematized metadata" vertex="1">
+        <mxCell id="IqP3mytsdpiyg8Wad38a-83" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;" value="aind-data-schema metadata" vertex="1">
           <mxGeometry height="70" width="51.16" x="1324.15" y="600" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-84" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folder;fillColor=#67AB9F;" value="Plots and metrics" vertex="1">
@@ -288,7 +288,7 @@
             <mxPoint x="1600" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-11" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;strokeColor=#0000CC;" value="a/ND schematized metadata" vertex="1">
+        <mxCell id="IqP3mytsdpiyg8Wad38a-11" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;strokeColor=#0000CC;" value="aind-data-schema metadata" vertex="1">
           <mxGeometry height="140" width="102.31" x="148" y="-2" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-114" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" value="Raw Data" vertex="1">
@@ -313,7 +313,7 @@
           <mxGeometry height="30" width="21.93" x="-71.93000000000006" y="880" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-121" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;strokeColor=#0000CC;" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;a/ND schematized metadata&lt;/font&gt;" vertex="1">
-          <mxGeometry height="44" width="32.16" x="30" y="933" as="geometry" />
+          <mxGeometry height="47" width="34.35" x="30" y="933" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-122" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=5;dashed=1;" value="" vertex="1">
           <mxGeometry height="113" width="160" x="-120" y="-94" as="geometry" />
