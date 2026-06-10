@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
   <diagram name="Page-1" id="ZbUC0mq6oG2G2aLqwKDg">
-    <mxGraphModel dx="3994" dy="3484" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1775" dy="1801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -209,32 +209,14 @@
         <mxCell id="IqP3mytsdpiyg8Wad38a-121" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;strokeColor=#0000CC;" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;aind-data-schema metadata&lt;/font&gt;" vertex="1">
           <mxGeometry height="47" width="34.35" x="-25.93" y="1083" as="geometry" />
         </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-122" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=5;dashed=1;" value="" vertex="1">
-          <mxGeometry height="113" width="160" x="-120" y="-94" as="geometry" />
-        </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-102" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" value="modality1" vertex="1">
           <mxGeometry height="60" width="80" x="-110" y="-80" as="geometry" />
-        </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-107" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;strokeColor=#0000CC;" value="metadata" vertex="1">
-          <mxGeometry height="70" width="51.16" x="-20" y="-80" as="geometry" />
-        </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-123" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=5;dashed=1;" value="" vertex="1">
-          <mxGeometry height="113" width="160" x="-120" y="37" as="geometry" />
-        </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-124" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=5;dashed=1;" value="" vertex="1">
-          <mxGeometry height="113" width="160" x="-120" y="167" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-103" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" value="modality2&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; background-color: rgb(236, 236, 236);&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22html%3D1%3BverticalLabelPosition%3Dbottom%3Balign%3Dcenter%3BlabelBackgroundColor%3D%23ffffff%3BverticalAlign%3Dtop%3BstrokeWidth%3D2%3BstrokeColor%3D%230080F0%3Bshadow%3D0%3Bdashed%3D0%3Bshape%3Dmxgraph.ios7.icons.folder%3B%22%20value%3D%22modality1%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%22130%22%20width%3D%22200%22%20x%3D%22-550%22%20y%3D%22-100%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" vertex="1">
           <mxGeometry height="53" width="80" x="-110" y="48.5" as="geometry" />
         </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-106" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;strokeColor=#0000CC;" value="metadata" vertex="1">
-          <mxGeometry height="70" width="51.16" x="-20" y="45" as="geometry" />
-        </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-104" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" value="modality3" vertex="1">
           <mxGeometry height="55.25" width="80" x="-110" y="186.37" as="geometry" />
-        </mxCell>
-        <mxCell id="IqP3mytsdpiyg8Wad38a-105" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;fillColor=#0000CC;strokeColor=#0000CC;" value="metadata" vertex="1">
-          <mxGeometry height="70" width="51.16" x="-20" y="179" as="geometry" />
         </mxCell>
         <mxCell id="IqP3mytsdpiyg8Wad38a-34" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folder;fillColor=#6666FF;" value="NWB File" vertex="1">
           <mxGeometry height="120" width="150" x="520" y="1048" as="geometry" />
