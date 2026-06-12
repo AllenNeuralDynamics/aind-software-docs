@@ -10,19 +10,18 @@ You are ready to generate data when:
 
 ## Project name
 
-Your *project* and *subproject* (if applicable) as well as funding information and investigators need to be accurate.
-
-You can find a list of project names and combined "<project_name> - <subproject_name>" names at this [metadata-service endpoint](https://aind-metadata-service/api/v2/project_names). These are the only allowable project names available at this time.
+Your *project* and *subproject* (if applicable) needs to be accurate. The full project name `<project_name> - <subproject_name>` is tied directly with the funding and investigator metadata. The list of project names can be viewed at the [metadata-service project_names/ endpoint](https://aind-metadata-service/api/v2/project_names).
+Projects that are not listed in the metadata-service must provide their own `data_description.json` at upload, including funding and investigator fields. Reach out to Scientific Computing for help.
 
 If you need a new project name, please request that it be added with the [project name and funding intake form](https://app.smartsheet.com/b/form/9f366857582b4db98d1fe41ef724a613).
 
 ### Funding
 
-The funding endpoint will be used during data upload to populate your data description with funding information. Please check that your funding information is accurate in advance:
+The funding endpoint will be used during data upload to populate your data description with funding information. You can check that your `project_name` is linked to the correct funding through this tool. Note that changes must be made through the intake form, you cannot modify these fields manually.
 
 ```{raw} html
 <div style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
-  <label for="projectSelect" style="font-weight: bold; display: block; margin-bottom: 10px;">Select a project fetch funding information from the metadata-service:</label>
+  <label for="projectSelect" style="font-weight: bold; display: block; margin-bottom: 10px;">Select a project to fetch funding information from the metadata-service:</label>
   <select id="projectSelect" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
     <option value="">-- Loading projects... --</option>
   </select>
@@ -85,7 +84,7 @@ The funding endpoint will be used during data upload to populate your data descr
     fetch('https://aind-metadata-service/api/v2/funding/' + encodeURIComponent(projectName))
       .then(response => {
         if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
         return response.json();
       })
@@ -109,7 +108,7 @@ The funding endpoint will be used during data upload to populate your data descr
 
 ### Investigators
 
-The investigators endpoint will be used during data upload to populate your data description with investigator information. Please check that your investigator information is accurate in advance:
+The investigators endpoint will be used during data upload to populate your data description with investigator information. You can check that your `project_name` is linked to the correct list of investigators through this tool. Note that changes must be made through the intake form, you cannot modify these fields manually.
 
 ```{raw} html
 <div style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
@@ -176,7 +175,7 @@ The investigators endpoint will be used during data upload to populate your data
     fetch('https://aind-metadata-service/api/v2/investigators/' + encodeURIComponent(projectName))
       .then(response => {
         if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
         return response.json();
       })
@@ -267,17 +266,19 @@ Subject metadata is populated by lab animal services (LAS) without your involvem
 
     fetch('https://aind-metadata-service/api/v2/subject/' + encodeURIComponent(subjectId))
       .then(response => {
-        if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+        if (!response.ok && response.status !== 400) {
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
-        return response.json();
+        return response.json().then(data => ({ data, status: response.status }));
       })
-      .then(response => {
-        const data = response.data || response;
-        resultDiv.style.backgroundColor = '#d4edda';
-        resultDiv.style.border = '1px solid #28a745';
-        resultDiv.innerHTML = '<strong>Subject Information:</strong><pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' + 
-                              JSON.stringify(data, null, 2) + '</pre>';
+      .then(({ data, status }) => {
+        const subject = data.data || data;
+        const isInvalid = status === 400;
+        resultDiv.style.backgroundColor = isInvalid ? '#fff3cd' : '#d4edda';
+        resultDiv.style.border = isInvalid ? '1px solid #ffc107' : '1px solid #28a745';
+        resultDiv.innerHTML = (isInvalid ? '<strong>Warning: subject data failed schema validation:</strong>' : '<strong>Subject Information:</strong>') +
+                              '<pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' +
+                              JSON.stringify(subject, null, 2) + '</pre>';
       })
       .catch(error => {
         resultDiv.style.backgroundColor = '#f8d7da';
@@ -374,19 +375,9 @@ We recommend that basic maintenance changes, e.g. replacing a device with an ide
 
 #### I'm ready to upload my instrument JSON file to the database
 
-If you want to store your Instrument metadata file in the Scientific Computing managed database (only 2.0 schema instrument files are supported), you can follow these steps to post your instrument json file to the database:
+If you want to store your Instrument metadata file in the Scientific Computing managed database (only 2.0 schema instrument files are supported) you can use the [aind-metadata-mapper](https://github.com/AllenNeuralDynamics/aind-metadata-mapper/#aind-metadata-mapper) package. Install it with `pip install aind-metadata-mapper`.
 
-Note that you must currently have the `release-v1.0.0` branch of `aind-metadata-mapper` installed:
-```bash
-git checkout https://github.com/AllenNeuralDynamics/aind-metadata-mapper.git
-cd aind-metadata-mapper
-git checkout release-v1.0.0
-conda create -n instrument_uploader # or whatever you want your env to be called
-conda activate instrument_uploader
-pip install -e .
-```
-
-Then run the following in python
+Then run the following upload code:
 
 ```python
 from aind_metadata_mapper import utils
@@ -417,13 +408,13 @@ If you need access to an older version of an instrument metadata file from the d
 
 ## Procedures
 
-[Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) metadata should be prepared in advance and uploaded to the metadata-service.
+[Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) metadata should be prepared in advance. Our goal with procedures metadata is to capture the date, time, and critical parameters of a published [Protocol](https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics/publications) on our protocols.io page.
 
-Our goal with procedures metadata is to capture the date, time, and parameters of a published [Protocol](https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics/publications) on our protocols.io page. You only need to track the extent to which your procedure varies from the standard protocol.
+Currently, only NSB procedures are automatically attached to data assets during upload while custom procedures require a `procedures.json` file to be uploaded with each data asset. With the roll out of Power Platform / Dataverse, all procedures will need to be uploaded to the metadata-service as they are performed.
 
 ### Custom procedures
 
-Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Note that the `data-transfer-service` will **NOT** merge your procedures with any stored in NSB, you must pull the NSB procedures and manually merge them ahead of time.
+Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Please only provide metadata for procedures that are not stored by NSB.
 
 ### NSB procedures
 
@@ -485,17 +476,19 @@ Standardized procedures that are performed by NSB (link?) are uploaded and acces
 
     fetch('https://aind-metadata-service/api/v2/procedures/' + encodeURIComponent(subjectId))
       .then(response => {
-        if (!response.ok) {
-          throw new Error('HTTP error! status: ' + response.status);
+        if (!response.ok && response.status !== 400) {
+          return response.text().then(text => { throw new Error(text || 'HTTP error! status: ' + response.status); });
         }
-        return response.json();
+        return response.json().then(data => ({ data, status: response.status }));
       })
-      .then(response => {
-        const data = response.data || response;
-        resultDiv.style.backgroundColor = '#d4edda';
-        resultDiv.style.border = '1px solid #28a745';
-        resultDiv.innerHTML = '<strong>Procedures Information:</strong><pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' + 
-                              JSON.stringify(data, null, 2) + '</pre>';
+      .then(({ data, status }) => {
+        const procedures = data.data || data;
+        const isInvalid = status === 400;
+        resultDiv.style.backgroundColor = isInvalid ? '#fff3cd' : '#d4edda';
+        resultDiv.style.border = isInvalid ? '1px solid #ffc107' : '1px solid #28a745';
+        resultDiv.innerHTML = (isInvalid ? '<strong>Warning: procedures data failed schema validation:</strong>' : '<strong>Procedures Information:</strong>') +
+                              '<pre style="margin-top: 10px; white-space: pre-wrap; word-wrap: break-word;">' +
+                              JSON.stringify(procedures, null, 2) + '</pre>';
       })
       .catch(error => {
         resultDiv.style.backgroundColor = '#f8d7da';

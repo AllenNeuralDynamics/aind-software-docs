@@ -8,9 +8,11 @@
 
 [Explore, QC & analyze](explore_analyze/index.md) my data assets.
 
+[Publish](policies_practices/publication_standards.md) data and software tools
+
 [Propose a project](aind/project_proposals.md) with data and software support.
 
-[Developer templates](policies_practices/developer_templates.md) for new packages and tools.
+[Developer templates](policies_practices/software_practices.md#templates) for new packages and tools.
 
 ## I need to report an...
 
@@ -30,10 +32,10 @@ Follow these links to request access to:
 
 ## I want to learn about...
 
-[Data organization](policies_practices/data_organization.md), [data governance](policies_practices/data_governance.md), and [software practices](policies_practices/software_practices.md) at AIND.
+[Data organization](policies_practices/data_organization.md), [data governance](policies_practices/data_governance.md), [software practices](policies_practices/software_practices.md), or [visualize how our software and systems interact](aind/diagrams.md).
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 2
 :hidden:
 :caption: Acquire, upload & process
 
@@ -46,39 +48,41 @@ acquire_upload/process_data
 ```
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 2
 :hidden:
 :caption: Explore, QC & analyze
 
 explore_analyze/quality_control
 explore_analyze/find_data
 explore_analyze/analyze_data
-explore_analyze/workshops
+explore_analyze/outreach
+
 
 ```
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 2
 :hidden:
 :caption: Policies & practices
 
-policies_practices/data_organization.md
-policies_practices/data_governance.md
-
-policies_practices/software_practices.md
-policies_practices/pipeline_development.md
+policies_practices/data_organization
+policies_practices/data_governance
+policies_practices/publication_standards
+policies_practices/platform_support
+policies_practices/version_pipelines
+policies_practices/software_practices
 policies_practices/docs
-policies_practices/developer_templates
 
 ```
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 2
 :hidden:
 :caption: AIND Resources
 
 aind/core_services
 aind/project_proposals.md
 aind/teams.md
+policies_practices/rse_resources
 
 ```

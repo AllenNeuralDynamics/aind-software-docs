@@ -32,17 +32,28 @@ extensions = [
     "sphinx.ext.doctest",
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
+    "sphinx_tippy",
+    "sphinx_copybutton",
     "myst_parser",
 ]
 templates_path = ["_templates"]
 exclude_patterns = []
 jupyter_execute_notebooks = "off"
 
+# tippy
+tippy_enable_wikitips = False
+# Skip all except those starting with "#id" (footnote) or "../glossary"
+tippy_skip_urls = [
+    "^(?!#id|../glossary|glossary).*$",
+]
+
 # -- MyST configuration ------------------------------------------------------
 myst_enable_extensions = [
     "colon_fence",
     "deflist",
     "fieldlist",
+    "tasklist",
+    "attrs_block",
 ]
 myst_heading_anchors = 3
 
@@ -55,6 +66,11 @@ html_favicon = "_static/favicon.ico"
 html_theme_options = {
     "light_logo": "light-logo.svg",
     "dark_logo": "dark-logo.svg",
+    "top_of_page_buttons": ["view", "edit"],
+    "source_edit_link": "https://github.com/AllenNeuralDynamics/aind-software-docs/edit/main/docs/source/{filename}",
+    "source_repository": "https://github.com/AllenNeuralDynamics/aind-software-docs",
+    "source_branch": "main",
+    "source_directory": "docs/source/",
 }
 
 html_title = "Data and Software"
@@ -64,3 +80,6 @@ html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = False
+
+# make the raw markdown file available in the output directory so it can be linked to
+html_extra_path = ["policies_practices/standards_checklist.md"]

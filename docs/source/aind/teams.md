@@ -32,7 +32,7 @@ Index jobs for AIND metadata in AWS DocumentDB and S3
 
 ## Data & Outreach
 
-The Data & Outreach team maintains the data schema and associated downstream tools and is responsible for coordinating workshops and other outreach events.
+The Data & Outreach team is responsible for our open science. It maintains the data schema, the metadata chatbot, and associated downstream tools and organizes and hosts workshops and other outreach events.
 
 **aind-data-schema**
 
@@ -46,6 +46,12 @@ Repository to help gather and map metadata from different sources
 
 [readthedoc](https://aind-metadata-mapper.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-metadata-mapper)
 
+**aind-metadata_mcp**
+
+MCP for querying the metadata DocDB
+
+[repo](https://github.com/AllenNeuralDynamics/aind-metadata-mcp)
+
 ### Outreach
 
 **SWDB Data Book**
@@ -54,10 +60,47 @@ Data book for the SWDB course
 
 [SWDB data book](https://allenswdb.github.io/intro.html)
 
+**Public Collections**
+
+Workshop materials
+
+[Public collections](https://codeocean.allenneuraldynamics.org/collections/e409fea2-95bf-49c6-9725-0624aeb9e2a0?page=1&filter=all)
+
 ## Physiology & Behavior
 
 The Physiology & Behavior team maintains the pipelines that process each modality of data asset that we acquire in AIND. Details can be found in [Process data](../acquire_upload/process_data.md).
 
-## Computer Vision
+## Image Processing
 
-[todo]
+The Image Processing team develops and maintains pipelines for processing lightsheet microscopy data across multiple imaging platforms and video pose tracking. For internal users see also this [overview doc](https://alleninstitute.sharepoint.com/:w:/s/NeuralDynamics/IQA4mzEcBLN3RLCbNiQuaXHfAdvWB-mPvTZGhF1yKQ4sm5I?e=zBTLXh).
+
+**Behavior-Videos**
+
+[behavior-video-inference-pipeline](https://github.com/AllenNeuralDynamics/behavior-video-inference-pipeline)
+
+**Smartspim**
+
+[aind-smartspim-pipeline](https://github.com/AllenNeuralDynamics/aind-smartspim-pipeline)
+
+**Exaspim**
+
+[exaspim-flatfield-correction](https://github.com/AllenNeuralDynamics/exaspim-flatfield-correction) | [aind-exaspim-neuron-segmentation](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation) | [aind-exaspim-soma-detection](https://github.com/AllenNeuralDynamics/aind-exaspim-soma-detection) | [aind-exaspim-ccf-registration](https://github.com/AllenNeuralDynamics/aind-exaspim-ccf-registration) | [exaSPIM_register_swc_to_ccf](https://github.com/AllenNeuralDynamics/exaSPIM_register_swc_to_ccf)
+
+**Z1 (HCR and Proteomics)**
+
+[aind-z1-radial-correction](https://github.com/AllenNeuralDynamics/aind-z1-radial-correction) | [aind-z1-camera-alignment](https://github.com/AllenNeuralDynamics/aind-z1-camera-alignment) | [aind-z1-spot-detection](https://github.com/AllenNeuralDynamics/aind-z1-spot-detection) | [aind-hcr-r2r-registration](https://github.com/AllenNeuralDynamics/aind-hcr-r2r-registration) | [hcr-czitile-utils](https://github.com/AllenNeuralDynamics/hcr-czitile-utils) | [aind-hcr-data-transformation](https://github.com/AllenNeuralDynamics/aind-hcr-data-transformation) | [aind-proteomics-stitch](https://github.com/AllenNeuralDynamics/aind-proteomics-stitch)
+
+**Proteomics**
+
+[aind-proteomics-image-translator](https://github.com/AllenNeuralDynamics/aind-proteomics-image-translator)
+
+**General Lightsheet**
+
+[aind-lightsheet-mae](https://github.com/AllenNeuralDynamics/aind-lightsheet-mae)
+
+## Resources for SWEs
+
+For research software engineers, [Good Research Code](https://goodresearch.dev/) is a good primer.
+
+[Data structure fundamentals](https://www.crackingthecodinginterview.com/)
+

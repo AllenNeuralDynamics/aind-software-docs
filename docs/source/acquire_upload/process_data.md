@@ -2,7 +2,8 @@
 
 Scientific computing is currently re-organizing pipelines to be per-modality, rather than per-project.
 
-Pipeline development requirements are documented in [Pipeline development](../policies_practices/pipeline_development.md).
+Pipeline development requirements are documented in [Pipeline development](../policies_practices/platform_support.md#pipeline-development)
+and the pipeline versioning policy is documented in [Versioning pipelines](../policies_practices/version_pipelines.md).
 
 ## Per-modality physiology pipelines
 
@@ -38,4 +39,4 @@ Pipeline development requirements are documented in [Pipeline development](../po
 
 | Project name | Modalities | Pipeline repository |
 |---|---|---|
-| Dynamic foraging | `behavior`, `behavior-videos`, `fib` | [aind-dynamic-foraging-pipeline](https://github.com/AllenNeuralDynamics/aind-dynamic-foraging-pipeline) |
+| Dynamic foraging | `behavior`, `behavior-videos`, `fib` | [github](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-pipeline), [code ocean](https://codeocean.allenneuraldynamics.org/capsule/5712553/tree) |

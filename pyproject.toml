@@ -21,14 +21,11 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    'black',
-    'coverage',
-    'flake8',
-    'interrogate',
-    'isort',
     'Sphinx',
     'furo',
     'myst-parser',
+    'sphinx-tippy',
+    'sphinx-copybutton',
 ]
 
 [tool.setuptools.packages.find]
@@ -37,44 +34,3 @@ where = ["src"]
 [tool.setuptools.dynamic]
 version = {attr = "aind_software_docs.__version__"}
 
-[tool.black]
-line-length = 79
-target_version = ['py310']
-exclude = '''
-
-(
-  /(
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
-    | \.hg
-    | \.mypy_cache
-    | \.tox
-    | \.venv
-    | _build
-    | build
-    | dist
-  )/
-  | .gitignore
-)
-'''
-
-[tool.coverage.run]
-omit = ["*__init__*"]
-source = ["aind_software_docs", "tests"]
-
-[tool.coverage.report]
-exclude_lines = [
-    "if __name__ == .__main__.:",
-    "from",
-    "import",
-    "pragma: no cover"
-]
-fail_under = 100
-
-[tool.isort]
-line_length = 79
-profile = "black"
-
-[tool.interrogate]
-exclude = ["setup.py", "docs", "build"]
-fail-under = 100
