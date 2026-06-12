@@ -307,9 +307,9 @@ Examples of physical instruments that should have corresponding instrument.json 
 * Behavior recording devices that can be combined transiently with physiology rigs
 * Physiology rigs (e.g. ephys, fiber photometry, two-photon imaging, etc)
 
-In cases where a devices are combined in a persistent manner (e.g. behavior equipment that is built into a physiology rig), that combination of devices should generally be tracked as a single instrument with a single corresponding instrument.json file.
+In cases where devices are combined in a persistent manner (e.g. behavior equipment that is built into a physiology rig), that combination of devices should generally be tracked as a single instrument with a single corresponding instrument.json file.
 
-When collections of devices are combined transiently (e.g. a physiology system that is combined with a physiology system in a swappable manner), those collections of devices can be described by separate instrument.json files that are combined into a single instrument at the time of upload. See the "Multiple Instruments" section below for details.
+When collections of devices are combined transiently (e.g. a behavior recording device that is combined with a physiology rig in a swappable manner), those collections of devices can be described by separate instrument.json files that are combined into a single instrument at the time of upload. See the "Multiple Instruments" section below for details.
 
 
 ### ID
