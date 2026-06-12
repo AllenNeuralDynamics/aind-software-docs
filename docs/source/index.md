@@ -55,6 +55,7 @@ acquire_upload/process_data
 explore_analyze/quality_control
 explore_analyze/find_data
 explore_analyze/analyze_data
+explore_analyze/create_processing_metadata
 explore_analyze/outreach
 
 
