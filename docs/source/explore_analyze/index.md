@@ -33,6 +33,8 @@ There are also Platform dashboards for each of the major platforms in Neural Dyn
 - [Automate my analysis](analyze_data.md#analysis-framework) using the Analysis Framework.
 - [Explore custom tools and apps](analyze_data.md#custom-tools) for annotation and data exploration.
 
+[Add metadata to scientist-derived data](create_processing_metadata.md) so analysis outputs and imported data can become data assets.
+
 [Find outreach events](outreach.md).
 
 ```{toctree}
@@ -42,5 +44,6 @@ quality_control
 find_data
 analyze_data
 co_best_practices
+create_processing_metadata
 outreach
 ```
