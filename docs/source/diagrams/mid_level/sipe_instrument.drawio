@@ -13,7 +13,7 @@
         <mxCell id="8TB3nWM06cBOp9EEiJ7z-4" value="&lt;div&gt;Translate Instructions from LIMS&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;rotation=0;" parent="8TB3nWM06cBOp9EEiJ7z-1" vertex="1">
           <mxGeometry x="530" y="-635" width="90" height="58" as="geometry" />
         </mxCell>
-        <mxCell id="8TB3nWM06cBOp9EEiJ7z-5" value="LIMS&lt;div&gt;&lt;br&gt;&lt;div&gt;Lab Data/&lt;span style=&quot;background-color: initial;&quot;&gt;Workflow Management&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;" parent="8TB3nWM06cBOp9EEiJ7z-1" vertex="1">
+        <mxCell id="8TB3nWM06cBOp9EEiJ7z-5" value="LIMS&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Subject Data&lt;/div&gt;&lt;div&gt;Session Instructions&lt;/div&gt;&lt;div&gt;Lab Information&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;" parent="8TB3nWM06cBOp9EEiJ7z-1" vertex="1">
           <mxGeometry x="290" y="-640" width="185" height="136" as="geometry" />
         </mxCell>
         <mxCell id="8TB3nWM06cBOp9EEiJ7z-6" value="Config API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="8TB3nWM06cBOp9EEiJ7z-1" vertex="1">
@@ -25,7 +25,7 @@
         <mxCell id="8TB3nWM06cBOp9EEiJ7z-8" value="Observability tools" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="8TB3nWM06cBOp9EEiJ7z-1" vertex="1">
           <mxGeometry x="833" y="-210.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="8TB3nWM06cBOp9EEiJ7z-9" value="Config Storage" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="8TB3nWM06cBOp9EEiJ7z-1" vertex="1">
+        <mxCell id="8TB3nWM06cBOp9EEiJ7z-9" value="Instrument Configuration Storage" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="8TB3nWM06cBOp9EEiJ7z-1" vertex="1">
           <mxGeometry x="833" y="-970" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8TB3nWM06cBOp9EEiJ7z-10" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="8TB3nWM06cBOp9EEiJ7z-1" source="8TB3nWM06cBOp9EEiJ7z-6" target="8TB3nWM06cBOp9EEiJ7z-9" edge="1">
@@ -177,7 +177,7 @@
         <mxCell id="8TB3nWM06cBOp9EEiJ7z-53" value="Storage" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8TB3nWM06cBOp9EEiJ7z-51" vertex="1">
           <mxGeometry x="30" y="87" width="100" height="46" as="geometry" />
         </mxCell>
-        <mxCell id="8TB3nWM06cBOp9EEiJ7z-54" value="Analysis Workflow" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8TB3nWM06cBOp9EEiJ7z-51" vertex="1">
+        <mxCell id="8TB3nWM06cBOp9EEiJ7z-54" value="Processing and Analysis" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8TB3nWM06cBOp9EEiJ7z-51" vertex="1">
           <mxGeometry x="30" y="27" width="100" height="48" as="geometry" />
         </mxCell>
         <mxCell id="8TB3nWM06cBOp9EEiJ7z-55" value="..." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=29;" parent="8TB3nWM06cBOp9EEiJ7z-51" vertex="1">
