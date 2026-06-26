@@ -1,6 +1,6 @@
 # Core Services
 
-The interactions between many of these services are illustrated in the [AIND software diagrams](./diagrams.md).
+The interactions between many of these services are illustrated in the [AIND software diagrams](../diagrams/index.md).
 
 **aind-data-transfer-service**
 

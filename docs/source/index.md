@@ -32,10 +32,10 @@ Follow these links to request access to:
 
 ## I want to learn about...
 
-[Data organization](policies_practices/data_organization.md), [data governance](policies_practices/data_governance.md), [software practices](policies_practices/software_practices.md), or [visualize how our software and systems interact](aind/diagrams.md).
+[Data organization](policies_practices/data_organization.md), [data governance](policies_practices/data_governance.md), [software practices](policies_practices/software_practices.md), or [visualize how our software and systems interact](diagrams/index.md).
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :hidden:
 :caption: Acquire, upload & process
 
@@ -48,21 +48,20 @@ acquire_upload/process_data
 ```
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :hidden:
 :caption: Explore, QC & analyze
 
 explore_analyze/quality_control
 explore_analyze/find_data
 explore_analyze/analyze_data
-explore_analyze/create_processing_metadata
 explore_analyze/outreach
 
 
 ```
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :hidden:
 :caption: Policies & practices
 
@@ -77,7 +76,16 @@ policies_practices/docs
 ```
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
+:hidden:
+:caption: Diagrams
+
+diagrams/index
+
+```
+
+```{toctree}
+:maxdepth: 1
 :hidden:
 :caption: AIND Resources
 
