@@ -1,11 +1,11 @@
 # Dynamic foraging diagrams
 
-Diagrams specific to the dynamic foraging platform.
+These diagrams outline the architecture of the Dynamic Foraging behavior platform
 
-## Architecture
+## Data Acquisition
 
-![Dynamic foraging architecture](dynamic_foraging/dynamic_foraging_architecture.svg)
+![Mid-level](dynamic_foraging/dynamic_foraging_architecture.svg)
 
-## Low-level processing
+## Data Storage and Processing
 
-![Dynamic foraging low-level processing](dynamic_foraging/low_level/dynamic-foraging-low-level-processing.svg)
+![Low-level Processing Pipeline](dynamic_foraging/low_level/dynamic-foraging-low-level-processing.svg)
