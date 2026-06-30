@@ -2,53 +2,34 @@
 
 ## Code Ocean pipeline
 
+Raw data lands in S3 as a single data asset that carries its `aind-data-schema`
+metadata, with all of a session's modalities associated with one object.
+Processing pipelines are modality-specific — each pipeline processes a single
+modality. A pipeline outputs an NWB file along with `aind-data-schema` metadata,
+including processing metrics and quality control artifacts and metrics. Once the
+outputs have been QC'd, they can be combined into a final NWB file with its
+associated metadata.
+
+Each pipeline wraps modality- and platform-specific libraries that handle the
+underlying data processing, quality control, and NWB packaging.
+
 ![Code Ocean pipeline diagram](mid_level/codeocean_pipeline_diagram.svg)
 
-### Pipeline overview
 
-![Pipeline overview](mid_level/pipeline_overview.svg)
-
-### Pipeline close-up
-
-![Pipeline close-up](mid_level/pipeline_close_up.svg)
 
 ## Quality control
 
+Each pipeline produces quality control artifacts and metrics alongside its
+processed outputs, captured in the asset's `aind-data-schema` metadata. These are
+surfaced through the [QC portal](https://github.com/AllenNeuralDynamics/aind-qc-portal),
+a web application for viewing and annotating quality control metadata for AIND
+data assets. The portal pulls QC metadata from the document database and displays
+the corresponding reference figures from the Code Ocean data assets.
+
+Reviewers use the portal to evaluate metrics marked `PENDING`, supporting AIND's
+two-step quality control process: first assessing whether an asset's data is
+suitable for analysis, then evaluating individual components (such as neurons)
+within the asset for usability.
+
 ![QC diagram](mid_level/QC.drawio.svg)
 
-## Service internals
-
-Lower-level diagrams of the backend services that store, index, and serve data
-and metadata.
-
-### Asset registration API
-
-![Asset registration API](low_level/asset_registration_api.svg)
-
-### Data asset indexer
-
-![Data asset indexer](low_level/data_asset_indexer.svg)
-
-### Data schema to DocDB
-
-![Data schema to DocDB](low_level/data_schema_to_docdb.svg)
-
-### DocDB API
-
-![DocDB API](low_level/docdb_api.svg)
-
-### Redshift client
-
-![Redshift client](low_level/redshift_client.svg)
-
-### Metadata service
-
-![Metadata service overview](low_level/aind-metadata-service/metadata_service_overview_diagram.drawio.svg)
-
-#### Kubernetes deployment
-
-![Metadata service Kubernetes deployment](low_level/aind-metadata-service/aind-metadata-service-k8s.drawio.svg)
-
-#### Procedures extractor
-
-![Metadata service procedures extractor](low_level/aind-metadata-service/metadata_service_procedures_extractor_diagram.drawio.svg)
