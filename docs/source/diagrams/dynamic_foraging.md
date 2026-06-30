@@ -12,6 +12,8 @@ These diagrams outline the architecture of the Dynamic Foraging behavior platfor
 
 ## Data Storage and Processing
 
-![Mid-level Processing Pipeline Library](dynamic_foraging/mid_level/codeocean_pipeline_diagram_DF.svg)
+### Mid-level Processing Pipeline
+![Mid-level Processing Pipeline](dynamic_foraging/mid_level/codeocean_pipeline_diagram_DF.svg)
 
+### Low-level Processing Pipeline Library
 ![Low-level Processing Pipeline Library](dynamic_foraging/low_level/dynamic-foraging-low-level-processing.svg)
