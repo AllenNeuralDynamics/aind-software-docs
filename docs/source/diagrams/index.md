@@ -18,8 +18,6 @@ components encompass how data are generated and move through the system:
 
 - [Dynamic foraging](dynamic_foraging.md)
 
-[![Software Overview](../_static/aind-software-overview.png)](../_static/aind-software-overview.pdf)
-
 ```{toctree}
 :maxdepth: 1
 :hidden:
