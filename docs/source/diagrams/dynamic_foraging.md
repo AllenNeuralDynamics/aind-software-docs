@@ -1,6 +1,10 @@
 # Dynamic foraging diagrams
 
-These diagrams outline the architecture of the Dynamic Foraging behavior platform
+These diagrams outline the architecture of the Dynamic Foraging behavior platform. 
+
+## Lab Management System
+
+![Mid-level Processing Pipeline Library](dynamic_foraging/mid_level/lab_management_df.svg)
 
 ## Data Acquisition
 
@@ -8,4 +12,6 @@ These diagrams outline the architecture of the Dynamic Foraging behavior platfor
 
 ## Data Storage and Processing
 
-![Low-level Processing Pipeline](dynamic_foraging/low_level/dynamic-foraging-low-level-processing.svg)
+![Mid-level Processing Pipeline Library](dynamic_foraging/mid_level/codeocean_pipeline_diagram_DF.svg)
+
+![Low-level Processing Pipeline Library](dynamic_foraging/low_level/dynamic-foraging-low-level-processing.svg)
