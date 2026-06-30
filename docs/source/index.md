@@ -78,18 +78,10 @@ policies_practices/docs
 ```{toctree}
 :maxdepth: 1
 :hidden:
-:caption: Diagrams
-
-diagrams/index
-
-```
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-:caption: AIND Resources
+:caption: Resources
 
 aind/core_services
+diagrams/index
 aind/project_proposals.md
 aind/teams.md
 policies_practices/rse_resources
