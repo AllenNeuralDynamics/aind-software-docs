@@ -1,0 +1,183 @@
+{
+  "id": "low_level/data_schema_to_docdb",
+  "level": "low",
+  "nodes": [
+    {
+      "id": "AI9BqFBPfIM6JEbhvuEO-6",
+      "type": "group",
+      "position": {
+        "x": 312.1,
+        "y": 319
+      },
+      "width": 192.9,
+      "height": 330,
+      "data": {
+        "label": "Private subnet"
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-59",
+      "type": "entity",
+      "position": {
+        "x": 31,
+        "y": 134.00470588235294
+      },
+      "width": 165.53952941176473,
+      "height": 106.04779411764706,
+      "data": {
+        "label": "aind-data-schema"
+      }
+    },
+    {
+      "id": "AI9BqFBPfIM6JEbhvuEO-2",
+      "type": "entity",
+      "position": {
+        "x": 51.900000000000006,
+        "y": 40
+      },
+      "width": 61.73,
+      "height": 57.95,
+      "parentId": "jZVaUwOg5UY3L9NAnvdq-59",
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "-QjtrjUzRDEMRZ5MF8oH-47",
+      "type": "entity",
+      "position": {
+        "x": 36.5,
+        "y": 26.5
+      },
+      "width": 328,
+      "height": 42,
+      "data": {
+        "label": "Data Schema to Docdb"
+      }
+    },
+    {
+      "id": "SCVMTBWpLvtzJIhz15lM-1",
+      "type": "entity",
+      "position": {
+        "x": 30,
+        "y": 66.5
+      },
+      "width": 510,
+      "height": 6.47,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-71",
+      "type": "entity",
+      "position": {
+        "x": 251,
+        "y": 120
+      },
+      "width": 415,
+      "height": 622,
+      "data": {
+        "label": "AWS Cloud"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-9",
+      "type": "entity",
+      "position": {
+        "x": 291,
+        "y": 270
+      },
+      "width": 335,
+      "height": 400,
+      "data": {
+        "label": "VPC"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-79",
+      "type": "entity",
+      "position": {
+        "x": 531,
+        "y": 274
+      },
+      "width": 90,
+      "height": 42.46,
+      "data": {
+        "label": "Trigger/Invoke Lambda"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-87",
+      "type": "entity",
+      "position": {
+        "x": 387.5,
+        "y": 380.65999999999997
+      },
+      "width": 54.6,
+      "height": 54.6,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-75",
+      "type": "entity",
+      "position": {
+        "x": 370.58,
+        "y": 565.32
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "DocDb"
+      }
+    },
+    {
+      "id": "bu7F9IZY8u5hIV_HVFf7-12",
+      "type": "entity",
+      "position": {
+        "x": 296,
+        "y": 224.97
+      },
+      "width": 118,
+      "height": 49.03,
+      "data": {
+        "label": "aind-data-schema bucket"
+      }
+    },
+    {
+      "id": "AI9BqFBPfIM6JEbhvuEO-3",
+      "type": "entity",
+      "position": {
+        "x": 314.97,
+        "y": 169
+      },
+      "width": 58,
+      "height": 58,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "AI9BqFBPfIM6JEbhvuEO-5",
+      "type": "entity",
+      "position": {
+        "x": 387.5,
+        "y": 511
+      },
+      "width": 57,
+      "height": 57,
+      "data": {
+        "label": ""
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "Z38JkR6jx7Evk_DdvElz-11",
+      "source": "AI9BqFBPfIM6JEbhvuEO-3",
+      "target": "e7zlrnakgjKgbCO0pSqw-87"
+    }
+  ]
+}

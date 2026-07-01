@@ -1,0 +1,559 @@
+{
+  "id": "low_level/aind-metadata-service/metadata_service_procedures_extractor_diagram",
+  "level": "low",
+  "nodes": [
+    {
+      "id": "open_ephys",
+      "type": "entity",
+      "position": {
+        "x": 161.25,
+        "y": 122
+      },
+      "width": 150,
+      "height": 20,
+      "data": {
+        "label": "OpenEphys"
+      }
+    },
+    {
+      "id": "scanimage",
+      "type": "entity",
+      "position": {
+        "x": 161.25,
+        "y": 152
+      },
+      "width": 150,
+      "height": 20,
+      "data": {
+        "label": "ScanImage TIFF"
+      }
+    },
+    {
+      "id": "bruker",
+      "type": "entity",
+      "position": {
+        "x": 161.25,
+        "y": 182
+      },
+      "width": 150,
+      "height": 20,
+      "data": {
+        "label": "Bruker"
+      }
+    },
+    {
+      "id": "smartspim",
+      "type": "entity",
+      "position": {
+        "x": 161.25,
+        "y": 212
+      },
+      "width": 150,
+      "height": 20,
+      "data": {
+        "label": "SmartSPIM"
+      }
+    },
+    {
+      "id": "camstim",
+      "type": "entity",
+      "position": {
+        "x": 161.25,
+        "y": 242
+      },
+      "width": 150,
+      "height": 20,
+      "data": {
+        "label": "CamStim"
+      }
+    },
+    {
+      "id": "labtracks",
+      "type": "entity",
+      "position": {
+        "x": 161.25,
+        "y": 272
+      },
+      "width": 150,
+      "height": 20,
+      "data": {
+        "label": "LabTracks"
+      }
+    },
+    {
+      "id": "nsb",
+      "type": "entity",
+      "position": {
+        "x": 161.25,
+        "y": 302
+      },
+      "width": 151.25,
+      "height": 20,
+      "data": {
+        "label": "NSB 20XX"
+      }
+    },
+    {
+      "id": "las",
+      "type": "entity",
+      "position": {
+        "x": 161.25,
+        "y": 332
+      },
+      "width": 151.25,
+      "height": 20,
+      "data": {
+        "label": "LAS 20XX"
+      }
+    },
+    {
+      "id": "slims",
+      "type": "entity",
+      "position": {
+        "x": 160.63,
+        "y": 362
+      },
+      "width": 151.25,
+      "height": 20,
+      "data": {
+        "label": "SLIMS"
+      }
+    },
+    {
+      "id": "funding",
+      "type": "entity",
+      "position": {
+        "x": 160.63,
+        "y": 392
+      },
+      "width": 150,
+      "height": 20,
+      "data": {
+        "label": "Project Funding"
+      }
+    },
+    {
+      "id": "tars",
+      "type": "entity",
+      "position": {
+        "x": 160,
+        "y": 422
+      },
+      "width": 150.63,
+      "height": 20,
+      "data": {
+        "label": "Virus / Prep Lot"
+      }
+    },
+    {
+      "id": "airflow",
+      "type": "entity",
+      "position": {
+        "x": 162.5,
+        "y": 452
+      },
+      "width": 150,
+      "height": 20,
+      "data": {
+        "label": "Upload Pipeline"
+      }
+    },
+    {
+      "id": "data_desc",
+      "type": "entity",
+      "position": {
+        "x": 680,
+        "y": 140.73
+      },
+      "width": 140,
+      "height": 29,
+      "data": {
+        "label": "Data Description"
+      }
+    },
+    {
+      "id": "subject",
+      "type": "entity",
+      "position": {
+        "x": 680,
+        "y": 188.73
+      },
+      "width": 140,
+      "height": 33,
+      "data": {
+        "label": "Subject"
+      }
+    },
+    {
+      "id": "procedures",
+      "type": "entity",
+      "position": {
+        "x": 680,
+        "y": 239.73
+      },
+      "width": 140,
+      "height": 30,
+      "data": {
+        "label": "Procedures"
+      }
+    },
+    {
+      "id": "instrument",
+      "type": "entity",
+      "position": {
+        "x": 680,
+        "y": 287.73
+      },
+      "width": 140,
+      "height": 33,
+      "data": {
+        "label": "Instrument"
+      }
+    },
+    {
+      "id": "acquisition",
+      "type": "entity",
+      "position": {
+        "x": 680,
+        "y": 337.73
+      },
+      "width": 140,
+      "height": 36,
+      "data": {
+        "label": "Acquisition"
+      }
+    },
+    {
+      "id": "processing",
+      "type": "entity",
+      "position": {
+        "x": 680,
+        "y": 387.73
+      },
+      "width": 140,
+      "height": 36,
+      "data": {
+        "label": "Processing"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-18",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 121
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "file"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-19",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 151
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "file"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-20",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 181
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "file"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-22",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 211
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "file"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-24",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 241
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "file"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-26",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 271
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "SQL"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-31",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 364
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "SLIMS"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-32",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 392
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "Smartsheet"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-33",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 422
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "TARS"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-34",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 452
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "Transfer Service"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-35",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 332
+      },
+      "width": 90,
+      "height": 22,
+      "data": {
+        "label": "Sharepoint"
+      }
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-36",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 301
+      },
+      "width": 90,
+      "height": 19,
+      "data": {
+        "label": "Sharepoint"
+      }
+    },
+    {
+      "id": "nMbev_CpwGNzTY9VMfWT-3",
+      "type": "entity",
+      "position": {
+        "x": 60,
+        "y": 100
+      },
+      "width": 90,
+      "height": 11.73,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "nMbev_CpwGNzTY9VMfWT-4",
+      "type": "entity",
+      "position": {
+        "x": 200,
+        "y": 97.48
+      },
+      "width": 75.31,
+      "height": 13.41,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "nMbev_CpwGNzTY9VMfWT-7",
+      "type": "label",
+      "position": {
+        "x": 720,
+        "y": 111.73
+      },
+      "width": 60,
+      "height": 30,
+      "data": {
+        "label": "Schemas"
+      }
+    },
+    {
+      "id": "extractors-title",
+      "type": "entity",
+      "position": {
+        "x": 385,
+        "y": 221.73
+      },
+      "width": 80,
+      "height": 27.48,
+      "data": {
+        "label": "\"Extractors\""
+      }
+    },
+    {
+      "id": "extractor-labtracks",
+      "type": "entity",
+      "position": {
+        "x": 330,
+        "y": 273
+      },
+      "width": 180,
+      "height": 18,
+      "data": {
+        "label": "api/labtracks/tasks/[subject]"
+      }
+    },
+    {
+      "id": "extractor-sp-nsb",
+      "type": "entity",
+      "position": {
+        "x": 330,
+        "y": 302
+      },
+      "width": 180,
+      "height": 20,
+      "data": {
+        "label": "api/sharepoint/nsb20XX/[subject]"
+      }
+    },
+    {
+      "id": "extractor-sp-las",
+      "type": "entity",
+      "position": {
+        "x": 330,
+        "y": 332
+      },
+      "width": 180,
+      "height": 20,
+      "data": {
+        "label": "api/sharepoint/las20XX/[subject]"
+      }
+    },
+    {
+      "id": "extractor-slims",
+      "type": "entity",
+      "position": {
+        "x": 330,
+        "y": 362
+      },
+      "width": 180,
+      "height": 20,
+      "data": {
+        "label": "api/slims/[workflow]/[subject]"
+      }
+    },
+    {
+      "id": "extractor-tars",
+      "type": "entity",
+      "position": {
+        "x": 330,
+        "y": 422
+      },
+      "width": 180,
+      "height": 20,
+      "data": {
+        "label": "api/tars/viral_prep_lots/[lot_id]"
+      }
+    },
+    {
+      "id": "NVGNK_o9UOep7Pm1r0Ju-26",
+      "type": "entity",
+      "position": {
+        "x": 570,
+        "y": 221.73000000000002
+      },
+      "width": 60,
+      "height": 27.48,
+      "data": {
+        "label": "\"Mappers\""
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "extractor-tars",
+      "target": "procedures"
+    },
+    {
+      "id": "e2",
+      "source": "extractor-sp-nsb",
+      "target": "procedures"
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-12",
+      "source": "extractor-sp-las",
+      "target": "procedures"
+    },
+    {
+      "id": "3MqtYanxmXvf6TAC0EGt-13",
+      "source": "extractor-slims",
+      "target": "procedures"
+    },
+    {
+      "id": "NVGNK_o9UOep7Pm1r0Ju-6",
+      "source": "extractor-labtracks",
+      "target": "procedures"
+    },
+    {
+      "id": "NVGNK_o9UOep7Pm1r0Ju-17",
+      "source": "labtracks",
+      "target": "extractor-labtracks",
+      "noArrow": true
+    }
+  ]
+}

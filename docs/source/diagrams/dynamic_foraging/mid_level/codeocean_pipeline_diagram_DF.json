@@ -1,0 +1,975 @@
+{
+  "id": "dynamic_foraging/mid_level/codeocean_pipeline_diagram_DF",
+  "level": "mid",
+  "nodes": [
+    {
+      "id": "HKU1GZcIvm-vpNidNv4n-1",
+      "type": "entity",
+      "position": {
+        "x": 210,
+        "y": 940
+      },
+      "width": 1546.86,
+      "height": 1190,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-1",
+      "type": "entity",
+      "position": {
+        "x": 700,
+        "y": -193
+      },
+      "width": 480,
+      "height": 160,
+      "data": {
+        "label": "Fiber Pipeline"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-2",
+      "type": "entity",
+      "position": {
+        "x": -320,
+        "y": 33
+      },
+      "width": 170,
+      "height": 170,
+      "data": {
+        "label": "DocDB"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-3",
+      "type": "entity",
+      "position": {
+        "x": -320,
+        "y": -77
+      },
+      "width": 170,
+      "height": 174,
+      "data": {
+        "label": "S3: aind-open-data"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-5",
+      "type": "entity",
+      "position": {
+        "x": 700,
+        "y": 174.25
+      },
+      "width": 480,
+      "height": 160,
+      "data": {
+        "label": "DF Behavior Pipeline"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-6",
+      "type": "entity",
+      "position": {
+        "x": 1296.62,
+        "y": -240
+      },
+      "width": 70,
+      "height": 60,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-8",
+      "type": "entity",
+      "position": {
+        "x": 1308.54,
+        "y": -56
+      },
+      "width": 51.16,
+      "height": 70,
+      "data": {
+        "label": "aind-data-schema metadata"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-9",
+      "type": "label",
+      "position": {
+        "x": -380,
+        "y": -520
+      },
+      "width": 440,
+      "height": 280,
+      "data": {
+        "label": "aind-data-schema metadata:procedures.jsonsubject.jsondata_description.jsonprocessing.jsondata_description.jsonacquisition.jsoninstrument.json"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-15",
+      "type": "entity",
+      "position": {
+        "x": -30,
+        "y": -200
+      },
+      "width": 480,
+      "height": 514.25,
+      "data": {
+        "label": "Raw Data"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-21",
+      "type": "entity",
+      "position": {
+        "x": -320,
+        "y": 1397
+      },
+      "width": 170,
+      "height": 170,
+      "data": {
+        "label": "DocDB"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-22",
+      "type": "entity",
+      "position": {
+        "x": -320,
+        "y": 1287
+      },
+      "width": 170,
+      "height": 174,
+      "data": {
+        "label": "S3: aind-open-data"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-36",
+      "type": "entity",
+      "position": {
+        "x": 1329.0700000000002,
+        "y": 1699
+      },
+      "width": 84.77,
+      "height": 116,
+      "data": {
+        "label": "quality_control.json"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-37",
+      "type": "entity",
+      "position": {
+        "x": 1344.0699999999997,
+        "y": 1268
+      },
+      "width": 120,
+      "height": 106,
+      "data": {
+        "label": "Artifacts"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-46",
+      "type": "entity",
+      "position": {
+        "x": 1529.07,
+        "y": 1089.5
+      },
+      "width": 79.66,
+      "height": 109,
+      "data": {
+        "label": "data_description.json"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-53",
+      "type": "entity",
+      "position": {
+        "x": 1301.62,
+        "y": -150
+      },
+      "width": 65,
+      "height": 60,
+      "data": {
+        "label": "Plots and metrics"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-54",
+      "type": "entity",
+      "position": {
+        "x": 1970,
+        "y": 1376
+      },
+      "width": 200,
+      "height": 140,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-55",
+      "type": "entity",
+      "position": {
+        "x": 2018.85,
+        "y": 1571
+      },
+      "width": 98.66,
+      "height": 135,
+      "data": {
+        "label": "aind-data-schema metadata"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-56",
+      "type": "entity",
+      "position": {
+        "x": 1970,
+        "y": 1216
+      },
+      "width": 200,
+      "height": 130,
+      "data": {
+        "label": "Plots and metrics"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-72",
+      "type": "entity",
+      "position": {
+        "x": 2293.14,
+        "y": 1445
+      },
+      "width": 170,
+      "height": 170,
+      "data": {
+        "label": "DocDB"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-73",
+      "type": "entity",
+      "position": {
+        "x": 2293.14,
+        "y": 1335
+      },
+      "width": 170,
+      "height": 174,
+      "data": {
+        "label": "S3: aind-open-data"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-76",
+      "type": "entity",
+      "position": {
+        "x": 1690,
+        "y": -200
+      },
+      "width": 200,
+      "height": 140,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-77",
+      "type": "entity",
+      "position": {
+        "x": 1743,
+        "y": 140
+      },
+      "width": 102.31,
+      "height": 140,
+      "data": {
+        "label": "aind-data-schema metadata"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-78",
+      "type": "entity",
+      "position": {
+        "x": 1690,
+        "y": -30
+      },
+      "width": 200,
+      "height": 130,
+      "data": {
+        "label": "Plots and metrics"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-82",
+      "type": "entity",
+      "position": {
+        "x": 1302.81,
+        "y": 140
+      },
+      "width": 70,
+      "height": 60,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-83",
+      "type": "entity",
+      "position": {
+        "x": 1314.15,
+        "y": 340
+      },
+      "width": 51.16,
+      "height": 70,
+      "data": {
+        "label": "aind-data-schema metadata"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-84",
+      "type": "entity",
+      "position": {
+        "x": 1307.81,
+        "y": 230
+      },
+      "width": 65,
+      "height": 60,
+      "data": {
+        "label": "Plots and metrics"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-11",
+      "type": "entity",
+      "position": {
+        "x": 278,
+        "y": -2
+      },
+      "width": 102.31,
+      "height": 140,
+      "data": {
+        "label": "aind-data-schema metadata"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-114",
+      "type": "entity",
+      "position": {
+        "x": -84.06999999999994,
+        "y": 1305
+      },
+      "width": 270,
+      "height": 240,
+      "data": {
+        "label": "Raw Data"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-115",
+      "type": "entity",
+      "position": {
+        "x": -56.569999999999936,
+        "y": 1349
+      },
+      "width": 42.5,
+      "height": 30,
+      "data": {
+        "label": "Fib"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-116",
+      "type": "entity",
+      "position": {
+        "x": -57.819999999999936,
+        "y": 1413.5
+      },
+      "width": 45,
+      "height": 30,
+      "data": {
+        "label": "Behavior"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-117",
+      "type": "entity",
+      "position": {
+        "x": -57.819999999999936,
+        "y": 1475.81
+      },
+      "width": 42.5,
+      "height": 29.19,
+      "data": {
+        "label": "Behavior-videos"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-121",
+      "type": "entity",
+      "position": {
+        "x": 85,
+        "y": 1411.5
+      },
+      "width": 34.35,
+      "height": 47,
+      "data": {
+        "label": "aind-data-schema metadata"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-102",
+      "type": "entity",
+      "position": {
+        "x": 35.93,
+        "y": -77
+      },
+      "width": 80,
+      "height": 60,
+      "data": {
+        "label": "Fib"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-103",
+      "type": "entity",
+      "position": {
+        "x": 35.93,
+        "y": 47
+      },
+      "width": 80,
+      "height": 53,
+      "data": {
+        "label": "Behavior"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-104",
+      "type": "entity",
+      "position": {
+        "x": 35.93,
+        "y": 182.38
+      },
+      "width": 80,
+      "height": 55.25,
+      "data": {
+        "label": "Behavior-videos"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-34",
+      "type": "entity",
+      "position": {
+        "x": 739.84,
+        "y": 1165
+      },
+      "width": 150,
+      "height": 120,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "IqP3mytsdpiyg8Wad38a-42",
+      "type": "entity",
+      "position": {
+        "x": 1539.07,
+        "y": 1258
+      },
+      "width": 84.77,
+      "height": 116,
+      "data": {
+        "label": "processing.json"
+      }
+    },
+    {
+      "id": "lo4x6qH8e3ez32Qovihq-10",
+      "type": "process",
+      "position": {
+        "x": 370,
+        "y": 1070
+      },
+      "width": 310,
+      "height": 310,
+      "data": {
+        "label": "Transform Raw Fib Streams into NWB File"
+      }
+    },
+    {
+      "id": "lo4x6qH8e3ez32Qovihq-14",
+      "type": "process",
+      "position": {
+        "x": 370,
+        "y": 1584
+      },
+      "width": 310,
+      "height": 310,
+      "data": {
+        "label": "QC Raw Data"
+      }
+    },
+    {
+      "id": "lo4x6qH8e3ez32Qovihq-16",
+      "type": "process",
+      "position": {
+        "x": 960,
+        "y": 1605
+      },
+      "width": 310,
+      "height": 310,
+      "data": {
+        "label": "Aggregate Quality Control Data"
+      }
+    },
+    {
+      "id": "HKU1GZcIvm-vpNidNv4n-2",
+      "type": "entity",
+      "position": {
+        "x": 909.9999999999999,
+        "y": 710
+      },
+      "width": 150,
+      "height": 150,
+      "data": {
+        "label": "Fiber Pipeline"
+      }
+    },
+    {
+      "id": "_n_SwNqn2Azr6kR_U7-S-6",
+      "type": "entity",
+      "position": {
+        "x": 2007.29,
+        "y": 60
+      },
+      "width": 170,
+      "height": 170,
+      "data": {
+        "label": "DocDB"
+      }
+    },
+    {
+      "id": "_n_SwNqn2Azr6kR_U7-S-7",
+      "type": "entity",
+      "position": {
+        "x": 2007.29,
+        "y": -50
+      },
+      "width": 170,
+      "height": 174,
+      "data": {
+        "label": "S3: aind-open-data"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-6",
+      "type": "entity",
+      "position": {
+        "x": 940.0000000000001,
+        "y": 2420
+      },
+      "width": 150,
+      "height": 150,
+      "data": {
+        "label": "DF Behavior Pipeline"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-8",
+      "type": "entity",
+      "position": {
+        "x": 210,
+        "y": 2790
+      },
+      "width": 1546.86,
+      "height": 802,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-9",
+      "type": "entity",
+      "position": {
+        "x": -320,
+        "y": 3117
+      },
+      "width": 170,
+      "height": 170,
+      "data": {
+        "label": "DocDB"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-10",
+      "type": "entity",
+      "position": {
+        "x": -320,
+        "y": 3007
+      },
+      "width": 170,
+      "height": 174,
+      "data": {
+        "label": "S3: aind-open-data"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-11",
+      "type": "entity",
+      "position": {
+        "x": 1560.6999999999998,
+        "y": 2899
+      },
+      "width": 84.77,
+      "height": 116,
+      "data": {
+        "label": "quality_control.json"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-12",
+      "type": "entity",
+      "position": {
+        "x": 1410.6999999999998,
+        "y": 2899
+      },
+      "width": 120,
+      "height": 106,
+      "data": {
+        "label": "Artifacts"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-13",
+      "type": "entity",
+      "position": {
+        "x": 1610,
+        "y": 3326
+      },
+      "width": 79.66,
+      "height": 109,
+      "data": {
+        "label": "data_description.json"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-14",
+      "type": "entity",
+      "position": {
+        "x": 1400.6999999999998,
+        "y": 3315
+      },
+      "width": 150,
+      "height": 120,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-15",
+      "type": "entity",
+      "position": {
+        "x": 1806.8600000000001,
+        "y": 3092
+      },
+      "width": 200,
+      "height": 140,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-16",
+      "type": "entity",
+      "position": {
+        "x": 1855.71,
+        "y": 3287
+      },
+      "width": 98.66,
+      "height": 135,
+      "data": {
+        "label": "aind-data-schema metadata"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-17",
+      "type": "entity",
+      "position": {
+        "x": 1806.8600000000001,
+        "y": 2932
+      },
+      "width": 200,
+      "height": 130,
+      "data": {
+        "label": "Plots and metrics"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-18",
+      "type": "entity",
+      "position": {
+        "x": 2130,
+        "y": 3161
+      },
+      "width": 170,
+      "height": 170,
+      "data": {
+        "label": "DocDB"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-19",
+      "type": "entity",
+      "position": {
+        "x": 2130,
+        "y": 3051
+      },
+      "width": 170,
+      "height": 174,
+      "data": {
+        "label": "S3: aind-open-data"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-21",
+      "type": "entity",
+      "position": {
+        "x": -84.06999999999971,
+        "y": 3025
+      },
+      "width": 270,
+      "height": 240,
+      "data": {
+        "label": "Raw Data"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-22",
+      "type": "entity",
+      "position": {
+        "x": -56.56999999999971,
+        "y": 3069
+      },
+      "width": 42.5,
+      "height": 30,
+      "data": {
+        "label": "modality 1"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-23",
+      "type": "entity",
+      "position": {
+        "x": -57.81999999999971,
+        "y": 3133.5
+      },
+      "width": 45,
+      "height": 30,
+      "data": {
+        "label": "modality 2"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-24",
+      "type": "entity",
+      "position": {
+        "x": -56.56999999999971,
+        "y": 3200
+      },
+      "width": 42.5,
+      "height": 29.19,
+      "data": {
+        "label": "modality 3"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-25",
+      "type": "entity",
+      "position": {
+        "x": 85,
+        "y": 3131.5
+      },
+      "width": 34.35,
+      "height": 47,
+      "data": {
+        "label": "aind-data-schema metadata"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-26",
+      "type": "entity",
+      "position": {
+        "x": 690,
+        "y": 3096
+      },
+      "width": 150,
+      "height": 120,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-27",
+      "type": "entity",
+      "position": {
+        "x": 863.8400000000001,
+        "y": 3106
+      },
+      "width": 84.77,
+      "height": 116,
+      "data": {
+        "label": "processing.json"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-32",
+      "type": "process",
+      "position": {
+        "x": 300,
+        "y": 3007
+      },
+      "width": 310,
+      "height": 310,
+      "data": {
+        "label": "Tranform and Process"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-34",
+      "type": "process",
+      "position": {
+        "x": 1000,
+        "y": 2804
+      },
+      "width": 310,
+      "height": 310,
+      "data": {
+        "label": "QC NWB File"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-36",
+      "type": "process",
+      "position": {
+        "x": 990,
+        "y": 3222
+      },
+      "width": 310,
+      "height": 310,
+      "data": {
+        "label": "Metadata Manager"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-40",
+      "type": "label",
+      "position": {
+        "x": 1550.6999999999998,
+        "y": 3362
+      },
+      "width": 60,
+      "height": 30,
+      "data": {
+        "label": "+"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-41",
+      "type": "label",
+      "position": {
+        "x": 823.8400000000001,
+        "y": 3146
+      },
+      "width": 60,
+      "height": 30,
+      "data": {
+        "label": "+"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-42",
+      "type": "label",
+      "position": {
+        "x": 1510.6999999999998,
+        "y": 2950
+      },
+      "width": 60,
+      "height": 30,
+      "data": {
+        "label": "+"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-43",
+      "type": "process",
+      "position": {
+        "x": 960,
+        "y": 1076
+      },
+      "width": 310,
+      "height": 310,
+      "data": {
+        "label": "Compute DF / F and Package into NWB File"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-49",
+      "type": "entity",
+      "position": {
+        "x": 760.0000000000001,
+        "y": 1678
+      },
+      "width": 84.77,
+      "height": 116,
+      "data": {
+        "label": "quality_control.json"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-50",
+      "type": "entity",
+      "position": {
+        "x": 464.9999999999998,
+        "y": 1944
+      },
+      "width": 120,
+      "height": 106,
+      "data": {
+        "label": "Artifacts"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-53",
+      "type": "entity",
+      "position": {
+        "x": 1329.07,
+        "y": 1084
+      },
+      "width": 150,
+      "height": 120,
+      "data": {
+        "label": "NWB File"
+      }
+    },
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-58",
+      "type": "entity",
+      "position": {
+        "x": 1080,
+        "y": 1418
+      },
+      "width": 84.77,
+      "height": 116,
+      "data": {
+        "label": "quality_control.json"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "prdw_vHzDd4RNJnwjF-K-35",
+      "source": "prdw_vHzDd4RNJnwjF-K-26",
+      "target": "prdw_vHzDd4RNJnwjF-K-34"
+    }
+  ]
+}

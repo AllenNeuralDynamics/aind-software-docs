@@ -11,6 +11,13 @@ build:
   os: ubuntu-24.04
   tools:
     python: "3.13"
+    nodejs: "20"
+  jobs:
+    # Build the interactive React Flow diagram bundle into docs/source/_static/
+    # before Sphinx runs (the bundle is git-ignored and regenerated here).
+    pre_build:
+      - npm --prefix diagram-app ci
+      - npm --prefix diagram-app run build
 
 python:
   install:
