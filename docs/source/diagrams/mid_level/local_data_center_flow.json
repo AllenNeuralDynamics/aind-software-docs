@@ -1,0 +1,168 @@
+{
+  "id": "mid_level/local_data_center_flow",
+  "level": "mid",
+  "nodes": [
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-18",
+      "type": "entity",
+      "position": {
+        "x": 360,
+        "y": 120
+      },
+      "width": 960,
+      "height": 480,
+      "data": {
+        "label": "Local Data Center"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-1",
+      "type": "process",
+      "position": {
+        "x": 400,
+        "y": 160
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "aind-data-transfer-service\n\n\nValidates job requests and sends to workflow manager"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-2",
+      "type": "process",
+      "position": {
+        "x": 640,
+        "y": 160
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "aind-airflow-service\n\n\nWorkflow manager to submit and monitor upload jobs"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-3",
+      "type": "process",
+      "position": {
+        "x": 880,
+        "y": 160
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "Slurm\n\n\nComputing Cluster for processing/upload tasks"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-4",
+      "type": "process",
+      "position": {
+        "x": 640,
+        "y": 400
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "aind-metadata-service\n\n\nFetch and map metadata from data providers to aind-data-schema"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-5",
+      "type": "datastore",
+      "position": {
+        "x": 1120,
+        "y": 400
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "Container registry\n\n\nDocker images that are used to run processing jobs"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-6",
+      "type": "entity",
+      "position": {
+        "x": 1360,
+        "y": 160
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "Cloud Data Center"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-7",
+      "type": "entity",
+      "position": {
+        "x": 160,
+        "y": 160
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "Labs"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-8",
+      "type": "datastore",
+      "position": {
+        "x": 880,
+        "y": 400
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "VAST\n\n\nLocal Shared Storage\n/aind/scratch\n/aind/stage"
+      }
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-9",
+      "type": "entity",
+      "position": {
+        "x": 160,
+        "y": 400
+      },
+      "width": 160,
+      "height": 160,
+      "data": {
+        "label": "Metadata Providers"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-10",
+      "source": "JfxTccP3boTx5m5QVqD8-9",
+      "target": "JfxTccP3boTx5m5QVqD8-4"
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-11",
+      "source": "JfxTccP3boTx5m5QVqD8-7",
+      "target": "JfxTccP3boTx5m5QVqD8-1"
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-12",
+      "source": "JfxTccP3boTx5m5QVqD8-1",
+      "target": "JfxTccP3boTx5m5QVqD8-2"
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-13",
+      "source": "JfxTccP3boTx5m5QVqD8-2",
+      "target": "JfxTccP3boTx5m5QVqD8-3"
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-14",
+      "source": "JfxTccP3boTx5m5QVqD8-3",
+      "target": "JfxTccP3boTx5m5QVqD8-6"
+    },
+    {
+      "id": "JfxTccP3boTx5m5QVqD8-15",
+      "source": "JfxTccP3boTx5m5QVqD8-8",
+      "target": "JfxTccP3boTx5m5QVqD8-3"
+    }
+  ]
+}

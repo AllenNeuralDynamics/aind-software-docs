@@ -83,3 +83,27 @@ html_show_copyright = False
 
 # make the raw markdown file available in the output directory so it can be linked to
 html_extra_path = ["policies_practices/standards_checklist.md"]
+
+
+# -- Interactive diagrams ----------------------------------------------------
+# Copy the canonical diagram JSON (source of truth in docs/source/diagrams/)
+# into the built site's _static/diagrams/ so the React Flow viewer bundle
+# (_static/diagrams-app/diagrams.js) can fetch them at runtime.
+def _copy_diagram_json(app, exception):
+    if exception is not None:
+        return
+    import shutil
+    from pathlib import Path
+
+    src = Path(app.srcdir) / "diagrams"
+    dst = Path(app.outdir) / "_static" / "diagrams"
+    if not src.is_dir():
+        return
+    for json_file in src.rglob("*.json"):
+        target = dst / json_file.relative_to(src)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(json_file, target)
+
+
+def setup(app):
+    app.connect("build-finished", _copy_diagram_json)

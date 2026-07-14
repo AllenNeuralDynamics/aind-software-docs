@@ -1,0 +1,207 @@
+{
+  "id": "mid_level/QC",
+  "level": "mid",
+  "nodes": [
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-1",
+      "type": "datastore",
+      "position": {
+        "x": 70,
+        "y": 140
+      },
+      "width": 95,
+      "height": 80,
+      "data": {
+        "label": "Metadata\n(DocDB)"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-2",
+      "type": "datastore",
+      "position": {
+        "x": 70,
+        "y": 90
+      },
+      "width": 95,
+      "height": 80,
+      "data": {
+        "label": "Data Assets\n(S3)"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-3",
+      "type": "label",
+      "position": {
+        "x": 570,
+        "y": 20
+      },
+      "width": 180,
+      "height": 30,
+      "data": {
+        "label": "Static Data Stores"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-6",
+      "type": "entity",
+      "position": {
+        "x": 260,
+        "y": 50
+      },
+      "width": 250,
+      "height": 40,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-7",
+      "type": "label",
+      "position": {
+        "x": 275,
+        "y": 50
+      },
+      "width": 220,
+      "height": 40,
+      "data": {
+        "label": "Static QC Portal\n(data.allenneuraldynamics.org/qc)"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-12",
+      "type": "datastore",
+      "position": {
+        "x": 585,
+        "y": 120
+      },
+      "width": 95,
+      "height": 80,
+      "data": {
+        "label": "Microsoft Entra"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-13",
+      "type": "entity",
+      "position": {
+        "x": 260,
+        "y": 240
+      },
+      "width": 250,
+      "height": 40,
+      "data": {
+        "label": "Editable QC Portal\n(qc.allenneuraldynamics.org/view)"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-15",
+      "type": "entity",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "data": {
+        "label": "QC metadata"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-24",
+      "type": "entity",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "data": {
+        "label": "Reference media"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-29",
+      "type": "entity",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "data": {
+        "label": "OAuth"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-31",
+      "type": "label",
+      "position": {
+        "x": 570,
+        "y": 40
+      },
+      "width": 180,
+      "height": 30,
+      "data": {
+        "label": "Data Consumers"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-34",
+      "type": "entity",
+      "position": {
+        "x": 330,
+        "y": 320
+      },
+      "width": 110,
+      "height": 50,
+      "data": {
+        "label": "User QCMetric\nupdates"
+      }
+    },
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-35",
+      "type": "label",
+      "position": {
+        "x": 570,
+        "y": 60
+      },
+      "width": 180,
+      "height": 30,
+      "data": {
+        "label": "Processes that transform data"
+      }
+    },
+    {
+      "id": "WL57VDtVEysFGkdwRju_-1",
+      "type": "entity",
+      "position": {
+        "x": 130,
+        "y": 320
+      },
+      "width": 110,
+      "height": 50,
+      "data": {
+        "label": "User review\nsubmission"
+      }
+    },
+    {
+      "id": "WL57VDtVEysFGkdwRju_-4",
+      "type": "entity",
+      "position": {
+        "x": 425,
+        "y": 340
+      },
+      "width": 50,
+      "height": 50,
+      "data": {
+        "label": ""
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "PFVXrp3kDmRYW_gk1Ul8-36",
+      "source": "PFVXrp3kDmRYW_gk1Ul8-13",
+      "target": "PFVXrp3kDmRYW_gk1Ul8-34"
+    },
+    {
+      "id": "WL57VDtVEysFGkdwRju_-2",
+      "source": "WL57VDtVEysFGkdwRju_-1",
+      "target": "PFVXrp3kDmRYW_gk1Ul8-1"
+    }
+  ]
+}

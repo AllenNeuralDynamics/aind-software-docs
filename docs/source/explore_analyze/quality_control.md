@@ -8,7 +8,11 @@ Please see the documentation on [QualityControl](https://aind-data-schema.readth
 
 ## QC Portal
 
-![QC diagram](../diagrams/mid_level/QC.drawio.svg)
+```{raw} html
+<link rel="stylesheet" href="../_static/diagrams-app/diagrams.css">
+<div class="rf-diagram" data-diagram="mid_level/QC" style="height: 480px; border: 1px solid var(--color-background-border, #ccc); border-radius: 6px;"></div>
+<script type="module" src="../_static/diagrams-app/diagrams.js"></script>
+```
 
 The QC Portal is a web app that allows users to explore the quality control metadata for data assets and, in edit mode, modify the value and state of metrics to annotate assets as passing or failing QC.
 

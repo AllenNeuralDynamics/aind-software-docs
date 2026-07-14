@@ -1,0 +1,393 @@
+{
+  "id": "low_level/asset_registration_api",
+  "level": "low",
+  "nodes": [
+    {
+      "id": "18",
+      "type": "entity",
+      "position": {
+        "x": -0.0259,
+        "y": -1
+      },
+      "data": {
+        "label": "registerasset"
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-59",
+      "type": "entity",
+      "position": {
+        "x": -2,
+        "y": 174
+      },
+      "width": 154,
+      "height": 106.05,
+      "data": {
+        "label": "Lab Workstation"
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-60",
+      "type": "entity",
+      "position": {
+        "x": 22.89941176470588,
+        "y": 40.41845588235297
+      },
+      "width": 39.78860294117647,
+      "height": 39.78860294117647,
+      "parentId": "jZVaUwOg5UY3L9NAnvdq-59",
+      "data": {
+        "label": "User"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-5",
+      "type": "entity",
+      "position": {
+        "x": 89.99529411764706,
+        "y": 45.46845588235297
+      },
+      "width": 43.43161764705883,
+      "height": 34.74264705882352,
+      "parentId": "jZVaUwOg5UY3L9NAnvdq-59",
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "-QjtrjUzRDEMRZ5MF8oH-47",
+      "type": "entity",
+      "position": {
+        "x": 36.5,
+        "y": 26.5
+      },
+      "width": 316,
+      "height": 42,
+      "data": {
+        "label": "Asset Registration API"
+      }
+    },
+    {
+      "id": "SCVMTBWpLvtzJIhz15lM-1",
+      "type": "entity",
+      "position": {
+        "x": 30,
+        "y": 66.5
+      },
+      "width": 510,
+      "height": 6.47,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-71",
+      "type": "entity",
+      "position": {
+        "x": 245,
+        "y": 120
+      },
+      "width": 644,
+      "height": 622,
+      "data": {
+        "label": "AWS Cloud"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-9",
+      "type": "entity",
+      "position": {
+        "x": 289,
+        "y": 404
+      },
+      "width": 553,
+      "height": 321,
+      "data": {
+        "label": "VPC"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-13",
+      "type": "entity",
+      "position": {
+        "x": 631,
+        "y": 432
+      },
+      "width": 160,
+      "height": 274,
+      "data": {
+        "label": "Private subnet"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-59",
+      "type": "entity",
+      "position": {
+        "x": 385.5,
+        "y": 482.34
+      },
+      "width": 54.6,
+      "height": 54.6,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-15",
+      "type": "entity",
+      "position": {
+        "x": 387.24,
+        "y": 618.32
+      },
+      "width": 56.68,
+      "height": 56.68,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-86",
+      "type": "entity",
+      "position": {
+        "x": 339,
+        "y": 429
+      },
+      "width": 159.49,
+      "height": 276,
+      "data": {
+        "label": "Private subnet"
+      }
+    },
+    {
+      "id": "20",
+      "type": "entity",
+      "position": {
+        "x": 0.1488,
+        "y": 0
+      },
+      "data": {
+        "label": "Fetchmetadata"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-87",
+      "type": "entity",
+      "position": {
+        "x": 385.5,
+        "y": 465.65999999999997
+      },
+      "width": 54.6,
+      "height": 54.6,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-75",
+      "type": "entity",
+      "position": {
+        "x": 370.58,
+        "y": 668.32
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "DocumentDB"
+      }
+    },
+    {
+      "id": "Z38JkR6jx7Evk_DdvElz-5",
+      "type": "entity",
+      "position": {
+        "x": 387.24,
+        "y": 611.6400000000001
+      },
+      "width": 56.68,
+      "height": 56.68,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-88",
+      "type": "entity",
+      "position": {
+        "x": 681,
+        "y": 612.6400000000001
+      },
+      "width": 56.68,
+      "height": 56.68,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "Z38JkR6jx7Evk_DdvElz-6",
+      "type": "entity",
+      "position": {
+        "x": 681.84,
+        "y": 670.24
+      },
+      "width": 22.16,
+      "height": 20,
+      "data": {
+        "label": "Replica"
+      }
+    },
+    {
+      "id": "bu7F9IZY8u5hIV_HVFf7-12",
+      "type": "entity",
+      "position": {
+        "x": 431,
+        "y": 139
+      },
+      "width": 78,
+      "height": 20,
+      "data": {
+        "label": "S3 Bucket"
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-2",
+      "type": "entity",
+      "position": {
+        "x": 438,
+        "y": 163
+      },
+      "width": 55,
+      "height": 55,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "13",
+      "type": "entity",
+      "position": {
+        "x": -0.4434,
+        "y": -1
+      },
+      "data": {
+        "label": "Trigger/InvokeLambda"
+      }
+    },
+    {
+      "id": "8",
+      "type": "entity",
+      "position": {
+        "x": 408,
+        "y": 274.04
+      },
+      "width": 58,
+      "height": 58,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "9",
+      "type": "entity",
+      "position": {
+        "x": 309.49,
+        "y": 274.03999999999996
+      },
+      "width": 53.93,
+      "height": 53.93,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "10",
+      "type": "entity",
+      "position": {
+        "x": 420.49,
+        "y": 330
+      },
+      "width": 78,
+      "height": 20,
+      "data": {
+        "label": "API Gateway"
+      }
+    },
+    {
+      "id": "14",
+      "type": "entity",
+      "position": {
+        "x": 309.24,
+        "y": 330
+      },
+      "width": 78,
+      "height": 20,
+      "data": {
+        "label": "Route53"
+      }
+    },
+    {
+      "id": "17",
+      "type": "entity",
+      "position": {
+        "x": 0.2904,
+        "y": 0
+      },
+      "data": {
+        "label": "Upload data + metadata"
+      }
+    },
+    {
+      "id": "21",
+      "type": "entity",
+      "position": {
+        "x": 30.000000000000014,
+        "y": 454.46
+      },
+      "width": 126.29,
+      "height": 77,
+      "data": {
+        "label": ""
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "15",
+      "source": "jZVaUwOg5UY3L9NAnvdq-59",
+      "target": "9"
+    },
+    {
+      "id": "19",
+      "source": "e7zlrnakgjKgbCO0pSqw-87",
+      "target": "jY0KH_aAAWNwRBJ5CcZ7-2"
+    },
+    {
+      "id": "22",
+      "source": "e7zlrnakgjKgbCO0pSqw-87",
+      "target": "21"
+    },
+    {
+      "id": "Z38JkR6jx7Evk_DdvElz-20",
+      "source": "Z38JkR6jx7Evk_DdvElz-5",
+      "target": "e7zlrnakgjKgbCO0pSqw-88"
+    },
+    {
+      "id": "6v9LvJiv-Mir1TlVFRcX-4",
+      "source": "e7zlrnakgjKgbCO0pSqw-87",
+      "target": "Z38JkR6jx7Evk_DdvElz-5"
+    },
+    {
+      "id": "12",
+      "source": "8",
+      "target": "e7zlrnakgjKgbCO0pSqw-87"
+    },
+    {
+      "id": "11",
+      "source": "9",
+      "target": "8"
+    },
+    {
+      "id": "16",
+      "source": "jZVaUwOg5UY3L9NAnvdq-59",
+      "target": "jY0KH_aAAWNwRBJ5CcZ7-2"
+    }
+  ]
+}

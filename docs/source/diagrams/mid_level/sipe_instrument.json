@@ -1,0 +1,430 @@
+{
+  "id": "mid_level/sipe_instrument",
+  "level": "mid",
+  "nodes": [
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-3",
+      "type": "entity",
+      "position": {
+        "x": 510,
+        "y": -820
+      },
+      "width": 800,
+      "height": 506,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-4",
+      "type": "entity",
+      "position": {
+        "x": 530,
+        "y": -647.5
+      },
+      "width": 90,
+      "height": 137.5,
+      "data": {
+        "label": "Get instructions&\nReport session info"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-6",
+      "type": "entity",
+      "position": {
+        "x": 860,
+        "y": -357.87
+      },
+      "width": 120,
+      "height": 32,
+      "data": {
+        "label": "Fetch/Post Configs"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-8",
+      "type": "entity",
+      "position": {
+        "x": 1080,
+        "y": -240
+      },
+      "width": 160,
+      "height": 80,
+      "data": {
+        "label": "Observability Infrastructure"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-9",
+      "type": "entity",
+      "position": {
+        "x": 840,
+        "y": -240
+      },
+      "width": 160,
+      "height": 80,
+      "data": {
+        "label": "Instrument Configuration Infrastructure"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-11",
+      "type": "entity",
+      "position": {
+        "x": 649,
+        "y": -743.5
+      },
+      "width": 490,
+      "height": 339.5,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-16",
+      "type": "entity",
+      "position": {
+        "x": 821.5,
+        "y": -607.5
+      },
+      "width": 145,
+      "height": 67,
+      "data": {
+        "label": "Execute business logic"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-17",
+      "type": "entity",
+      "position": {
+        "x": 834,
+        "y": -478.25
+      },
+      "width": 120,
+      "height": 60,
+      "data": {
+        "label": "Hardware drivers"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-18",
+      "type": "entity",
+      "position": {
+        "x": 1051,
+        "y": -729.5
+      },
+      "width": 78,
+      "height": 68.5,
+      "data": {
+        "label": "InteractionUI or API"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-21",
+      "type": "entity",
+      "position": {
+        "x": 1049,
+        "y": -613.5
+      },
+      "width": 80,
+      "height": 80,
+      "data": {
+        "label": "Export data & metadata"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-24",
+      "type": "entity",
+      "position": {
+        "x": 1170,
+        "y": -392.5
+      },
+      "width": 120,
+      "height": 60,
+      "data": {
+        "label": "Gather Observability\nLogs/Metrics"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-32",
+      "type": "label",
+      "position": {
+        "x": 671,
+        "y": -729.5
+      },
+      "width": 130,
+      "height": 40,
+      "data": {
+        "label": "Instrument Control Software Suite"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-33",
+      "type": "entity",
+      "position": {
+        "x": 1190,
+        "y": -435.5
+      },
+      "width": 80,
+      "height": 43,
+      "data": {
+        "label": "System Monitoring"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-34",
+      "type": "label",
+      "position": {
+        "x": 796,
+        "y": -815
+      },
+      "width": 190,
+      "height": 50,
+      "data": {
+        "label": "Experimental Setup Computer(s) plus hardware"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-35",
+      "type": "entity",
+      "position": {
+        "x": 1180,
+        "y": -639
+      },
+      "width": 122.63,
+      "height": 140,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-36",
+      "type": "entity",
+      "position": {
+        "x": 0,
+        "y": -10
+      },
+      "width": 110,
+      "height": 150,
+      "parentId": "pqJhOleaYUCWP5GwiW2L-35",
+      "data": {
+        "label": "Transfer Data/Metadata Off Instrument"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-37",
+      "type": "entity",
+      "position": {
+        "x": 20,
+        "y": 50.5
+      },
+      "width": 70,
+      "height": 51,
+      "parentId": "pqJhOleaYUCWP5GwiW2L-35",
+      "data": {
+        "label": "Data Transfer Utility"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-40",
+      "type": "entity",
+      "position": {
+        "x": 659,
+        "y": -631
+      },
+      "width": 94.5,
+      "height": 50,
+      "data": {
+        "label": "Ingest Instructions"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-42",
+      "type": "entity",
+      "position": {
+        "x": 659,
+        "y": -563.5
+      },
+      "width": 94.5,
+      "height": 50,
+      "data": {
+        "label": "Collect and Report Session Information"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-53",
+      "type": "entity",
+      "position": {
+        "x": 600,
+        "y": -240
+      },
+      "width": 160,
+      "height": 80,
+      "data": {
+        "label": "Rig management tools(setup, deployment, updating)"
+      }
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-59",
+      "type": "process",
+      "position": {
+        "x": 991,
+        "y": -484
+      },
+      "width": 120,
+      "height": 80,
+      "data": {
+        "label": "Instrument SDK- API\n- Schemas\n- Data Contract"
+      }
+    },
+    {
+      "id": "0NpDMJkeAjajGGtuN1AH-0",
+      "type": "label",
+      "position": {
+        "x": 1360,
+        "y": -587
+      },
+      "width": 230,
+      "height": 30,
+      "data": {
+        "label": "To Data Staging and Analysis"
+      }
+    },
+    {
+      "id": "0NpDMJkeAjajGGtuN1AH-1",
+      "type": "label",
+      "position": {
+        "x": 500,
+        "y": -890
+      },
+      "width": 230,
+      "height": 30,
+      "data": {
+        "label": "To Lab Management System"
+      }
+    },
+    {
+      "id": "0NpDMJkeAjajGGtuN1AH-3",
+      "type": "entity",
+      "position": {
+        "x": 900,
+        "y": -388
+      },
+      "width": 40,
+      "height": 30,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "5UQ18pSLH_lC7NxkDnai-2",
+      "type": "entity",
+      "position": {
+        "x": 1400,
+        "y": -440
+      },
+      "width": 130,
+      "height": 220,
+      "data": {
+        "label": "Legend"
+      }
+    },
+    {
+      "id": "5UQ18pSLH_lC7NxkDnai-3",
+      "type": "entity",
+      "position": {
+        "x": 1420,
+        "y": -340
+      },
+      "width": 90,
+      "height": 40,
+      "data": {
+        "label": "Infrastructure Adapter"
+      }
+    },
+    {
+      "id": "5UQ18pSLH_lC7NxkDnai-4",
+      "type": "entity",
+      "position": {
+        "x": 1420,
+        "y": -400
+      },
+      "width": 90,
+      "height": 40,
+      "data": {
+        "label": "Standalone Instrument"
+      }
+    },
+    {
+      "id": "5UQ18pSLH_lC7NxkDnai-5",
+      "type": "entity",
+      "position": {
+        "x": 1420,
+        "y": -280
+      },
+      "width": 90,
+      "height": 40,
+      "data": {
+        "label": "Instrumentation Infrastructure"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-13",
+      "source": "pqJhOleaYUCWP5GwiW2L-16",
+      "target": "pqJhOleaYUCWP5GwiW2L-17"
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-14",
+      "source": "pqJhOleaYUCWP5GwiW2L-16",
+      "target": "pqJhOleaYUCWP5GwiW2L-21"
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-15",
+      "source": "pqJhOleaYUCWP5GwiW2L-16",
+      "target": "pqJhOleaYUCWP5GwiW2L-42"
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-19",
+      "source": "pqJhOleaYUCWP5GwiW2L-16",
+      "target": "pqJhOleaYUCWP5GwiW2L-18"
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-20",
+      "source": "pqJhOleaYUCWP5GwiW2L-21",
+      "target": "pqJhOleaYUCWP5GwiW2L-36"
+    },
+    {
+      "id": "5UQ18pSLH_lC7NxkDnai-0",
+      "source": "pqJhOleaYUCWP5GwiW2L-24",
+      "target": "pqJhOleaYUCWP5GwiW2L-8"
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-44",
+      "source": "pqJhOleaYUCWP5GwiW2L-6",
+      "target": "pqJhOleaYUCWP5GwiW2L-9"
+    },
+    {
+      "id": "pqJhOleaYUCWP5GwiW2L-45",
+      "source": "pqJhOleaYUCWP5GwiW2L-4",
+      "target": "pqJhOleaYUCWP5GwiW2L-40"
+    },
+    {
+      "id": "0NpDMJkeAjajGGtuN1AH-2",
+      "source": "0NpDMJkeAjajGGtuN1AH-1",
+      "target": "pqJhOleaYUCWP5GwiW2L-4"
+    },
+    {
+      "id": "88CFIabIduovbiYMoy3r-0",
+      "source": "pqJhOleaYUCWP5GwiW2L-24",
+      "target": "pqJhOleaYUCWP5GwiW2L-11",
+      "noArrow": true
+    },
+    {
+      "id": "5UQ18pSLH_lC7NxkDnai-1",
+      "source": "pqJhOleaYUCWP5GwiW2L-53",
+      "target": "pqJhOleaYUCWP5GwiW2L-3"
+    }
+  ]
+}

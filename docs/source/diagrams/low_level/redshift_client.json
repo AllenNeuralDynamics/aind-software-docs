@@ -1,0 +1,169 @@
+{
+  "id": "low_level/redshift_client",
+  "level": "low",
+  "nodes": [
+    {
+      "id": "IEaJK7qwMEk5RHCCMCeP-1",
+      "type": "group",
+      "position": {
+        "x": 334.62,
+        "y": 302
+      },
+      "width": 142.38,
+      "height": 139,
+      "data": {
+        "label": "Public subnet"
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-59",
+      "type": "entity",
+      "position": {
+        "x": 1,
+        "y": 145.95470588235293
+      },
+      "width": 165.53952941176473,
+      "height": 106.04779411764706,
+      "data": {
+        "label": "AIND Users"
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-60",
+      "type": "entity",
+      "position": {
+        "x": 22.89941176470588,
+        "y": 40.41845588235297
+      },
+      "width": 39.78860294117647,
+      "height": 39.78860294117647,
+      "parentId": "jZVaUwOg5UY3L9NAnvdq-59",
+      "data": {
+        "label": "User"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-5",
+      "type": "entity",
+      "position": {
+        "x": 89.99529411764706,
+        "y": 45.46845588235297
+      },
+      "width": 43.43161764705883,
+      "height": 34.74264705882352,
+      "parentId": "jZVaUwOg5UY3L9NAnvdq-59",
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "-QjtrjUzRDEMRZ5MF8oH-47",
+      "type": "entity",
+      "position": {
+        "x": 36.5,
+        "y": 26.5
+      },
+      "width": 213,
+      "height": 42,
+      "data": {
+        "label": "Redshift Client"
+      }
+    },
+    {
+      "id": "SCVMTBWpLvtzJIhz15lM-1",
+      "type": "entity",
+      "position": {
+        "x": 30,
+        "y": 66.5
+      },
+      "width": 510,
+      "height": 6.47,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-71",
+      "type": "entity",
+      "position": {
+        "x": 232,
+        "y": 120
+      },
+      "width": 434,
+      "height": 356,
+      "data": {
+        "label": "AWS Cloud"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-9",
+      "type": "entity",
+      "position": {
+        "x": 291,
+        "y": 270
+      },
+      "width": 342,
+      "height": 183,
+      "data": {
+        "label": "VPC"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-75",
+      "type": "entity",
+      "position": {
+        "x": 367.58,
+        "y": 410.00000000000006
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "Redshift"
+      }
+    },
+    {
+      "id": "IEaJK7qwMEk5RHCCMCeP-3",
+      "type": "entity",
+      "position": {
+        "x": 379.58,
+        "y": 344
+      },
+      "width": 66,
+      "height": 66,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "2",
+      "type": "entity",
+      "position": {
+        "x": 346,
+        "y": 142
+      },
+      "width": 80,
+      "height": 110,
+      "data": {
+        "label": "AWS Secrets Manager"
+      }
+    },
+    {
+      "id": "5",
+      "type": "entity",
+      "position": {
+        "x": -0.7012,
+        "y": 2
+      },
+      "data": {
+        "label": "aind-data-access-api"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "3",
+      "source": "jZVaUwOg5UY3L9NAnvdq-59",
+      "target": "2"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "id": "low_level/data_asset_indexer",
+  "level": "low",
+  "nodes": [
+    {
+      "id": "-QjtrjUzRDEMRZ5MF8oH-47",
+      "type": "entity",
+      "position": {
+        "x": -107.5,
+        "y": 26.5
+      },
+      "width": 273,
+      "height": 42,
+      "data": {
+        "label": "Data Asset Indexer"
+      }
+    },
+    {
+      "id": "SCVMTBWpLvtzJIhz15lM-1",
+      "type": "entity",
+      "position": {
+        "x": -115,
+        "y": 66.5
+      },
+      "width": 510,
+      "height": 6.47,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "jZVaUwOg5UY3L9NAnvdq-71",
+      "type": "entity",
+      "position": {
+        "x": 42,
+        "y": 120
+      },
+      "width": 635,
+      "height": 622,
+      "data": {
+        "label": "AWS Cloud"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-9",
+      "type": "entity",
+      "position": {
+        "x": 82,
+        "y": 308
+      },
+      "width": 553,
+      "height": 362,
+      "data": {
+        "label": "VPC"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-13",
+      "type": "entity",
+      "position": {
+        "x": 424,
+        "y": 347
+      },
+      "width": 160,
+      "height": 274,
+      "data": {
+        "label": "Private subnet"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-15",
+      "type": "entity",
+      "position": {
+        "x": 250.24,
+        "y": 533.32
+      },
+      "width": 56.68,
+      "height": 56.68,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-86",
+      "type": "entity",
+      "position": {
+        "x": 202,
+        "y": 344
+      },
+      "width": 159.49,
+      "height": 276,
+      "data": {
+        "label": "Private subnet"
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-75",
+      "type": "entity",
+      "position": {
+        "x": 233.57999999999998,
+        "y": 583.32
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "DocumentDB"
+      }
+    },
+    {
+      "id": "Z38JkR6jx7Evk_DdvElz-5",
+      "type": "entity",
+      "position": {
+        "x": 250.24,
+        "y": 526.6400000000001
+      },
+      "width": 56.68,
+      "height": 56.68,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "e7zlrnakgjKgbCO0pSqw-88",
+      "type": "entity",
+      "position": {
+        "x": 474,
+        "y": 527.6400000000001
+      },
+      "width": 56.68,
+      "height": 56.68,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "Z38JkR6jx7Evk_DdvElz-6",
+      "type": "entity",
+      "position": {
+        "x": 474.84000000000003,
+        "y": 585.24
+      },
+      "width": 22.16,
+      "height": 20,
+      "data": {
+        "label": "Replica"
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-6",
+      "type": "entity",
+      "position": {
+        "x": 247.3,
+        "y": 386
+      },
+      "width": 57,
+      "height": 57,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-9",
+      "type": "entity",
+      "position": {
+        "x": 166.99999999999997,
+        "y": 187
+      },
+      "width": 57,
+      "height": 57,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-10",
+      "type": "entity",
+      "position": {
+        "x": 230.79999999999998,
+        "y": 367.00000000000006
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "ECS"
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-12",
+      "type": "entity",
+      "position": {
+        "x": 150.49999999999997,
+        "y": 244.00000000000006
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "S3"
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-13",
+      "type": "entity",
+      "position": {
+        "x": -109.00999999999999,
+        "y": 164
+      },
+      "width": 126.29,
+      "height": 77,
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-15",
+      "type": "entity",
+      "position": {
+        "x": -114,
+        "y": 456
+      },
+      "width": 139.54,
+      "height": 101,
+      "data": {
+        "label": "data-asset-indexer docker image"
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-16",
+      "type": "entity",
+      "position": {
+        "x": 51.900000000000006,
+        "y": 40
+      },
+      "width": 61.73,
+      "height": 57.95,
+      "parentId": "jY0KH_aAAWNwRBJ5CcZ7-15",
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-18",
+      "type": "entity",
+      "position": {
+        "x": 84.99999999999997,
+        "y": 531
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "Pull docker image"
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-19",
+      "type": "entity",
+      "position": {
+        "x": 277,
+        "y": 459
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "Read/write"
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-20",
+      "type": "entity",
+      "position": {
+        "x": 326,
+        "y": 261
+      },
+      "width": 90,
+      "height": 20,
+      "data": {
+        "label": "Sync with DocDB"
+      }
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-21",
+      "type": "entity",
+      "position": {
+        "x": 94,
+        "y": 377
+      },
+      "width": 90,
+      "height": 19,
+      "data": {
+        "label": "Sync with DocDB"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "Z38JkR6jx7Evk_DdvElz-20",
+      "source": "Z38JkR6jx7Evk_DdvElz-5",
+      "target": "e7zlrnakgjKgbCO0pSqw-88"
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-14",
+      "source": "jY0KH_aAAWNwRBJ5CcZ7-6",
+      "target": "jY0KH_aAAWNwRBJ5CcZ7-13"
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-17",
+      "source": "jY0KH_aAAWNwRBJ5CcZ7-6",
+      "target": "jY0KH_aAAWNwRBJ5CcZ7-15"
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-8",
+      "source": "jY0KH_aAAWNwRBJ5CcZ7-6",
+      "target": "Z38JkR6jx7Evk_DdvElz-5"
+    },
+    {
+      "id": "jY0KH_aAAWNwRBJ5CcZ7-11",
+      "source": "jY0KH_aAAWNwRBJ5CcZ7-6",
+      "target": "jY0KH_aAAWNwRBJ5CcZ7-9"
+    }
+  ]
+}
