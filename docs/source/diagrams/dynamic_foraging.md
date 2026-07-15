@@ -31,10 +31,3 @@ NWB file when it completes successfully.
 #### Behavior Pipeline
 
 ![Dynamic Foraging behavior pipeline](dynamic_foraging/mid_level/codeocean_pipeline_diagram_DF_behavior.svg)
-
-### Low-level Processing Pipeline Library
-
-This pipeline processes raw Harp hardware signals into the trials table, packages
-the data into NWB, and runs QC on both the raw and processed data.
-
-![Dynamic Foraging low-level processing](dynamic_foraging/low_level/dynamic-foraging-low-level-processing.svg)
