@@ -13,6 +13,13 @@ associated metadata.
 Each pipeline wraps modality- and platform-specific libraries that handle the
 underlying data processing, quality control, and NWB packaging.
 
+### Common libraries
+
+[aind-nwb-utils](https://github.com/AllenNeuralDynamics/aind-nwb-utils) : NWB File packaging manager.
+[aind-metadata-manger](https://github.com/AllenNeuralDynamics/aind-metadata-manager) : Manages metadata generated in in each step of the pipeline and will output a complete, valid `aind-data-schema` metadata files at the end of the pipeline.
+
+There are other tools but are common to modality / platform and not mentioned here.
+
 ![Code Ocean pipeline diagram](mid_level/codeocean_pipeline_diagram.svg)
 
 
@@ -21,8 +28,7 @@ underlying data processing, quality control, and NWB packaging.
 
 Each pipeline produces quality control artifacts and metrics alongside its
 processed outputs, captured in the asset's `aind-data-schema` metadata. These are
-surfaced through the [QC portal](https://github.com/AllenNeuralDynamics/aind-qc-portal),
-a web application for viewing and annotating quality control metadata for AIND
+surfaced through the QC poratal where viewers can view and annotate their data assets.
 data assets. The portal pulls QC metadata from the document database and displays
 the corresponding reference figures from the Code Ocean data assets.
 
@@ -30,6 +36,10 @@ Reviewers use the portal to evaluate metrics marked `PENDING`, supporting AIND's
 two-step quality control process: first assessing whether an asset's data is
 suitable for analysis, then evaluating individual components (such as neurons)
 within the asset for usability.
+
+### Common libraries
+
+[QC portal](https://github.com/AllenNeuralDynamics/aind-qc-portal) : A web application for viewing and annotating quality control metadata for AIND data assets.
 
 ![QC diagram](mid_level/QC.drawio.svg)
 
