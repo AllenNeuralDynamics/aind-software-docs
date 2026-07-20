@@ -16,6 +16,7 @@ underlying data processing, quality control, and NWB packaging.
 ### Common libraries
 
 [aind-nwb-utils](https://github.com/AllenNeuralDynamics/aind-nwb-utils) : NWB File packaging manager.
+
 [aind-metadata-manger](https://github.com/AllenNeuralDynamics/aind-metadata-manager) : Manages metadata generated in in each step of the pipeline and will output a complete, valid `aind-data-schema` metadata files at the end of the pipeline.
 
 There are other tools but are common to modality / platform and not mentioned here.
