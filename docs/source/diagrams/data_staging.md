@@ -3,19 +3,19 @@
 The local data center hosts a variety of services that stage and process data on
 its way to the cloud:
 
-`aind-data-transfer-service`
+[aind-data-transfer-service](https://github.com/AllenNeuralDynamics/aind-data-transfer-service)
 : FastAPI service that accepts and validates data upload requests, retrieves the
 associated metadata, and dispatches compression and transfer jobs to the workflow
 manager for execution on the HPC cluster.
 
-`aind-airflow-service`
+[aind-airflow-service](https://airflow.apache.org/docs)
 : Apache Airflow–based workflow manager that schedules, submits, and monitors the
 data processing and upload jobs.
 
-`slurm`
+[slurm](https://slurm.schedmd.com/rest_api.html)
 : HPC cluster for processing and upload tasks.
 
-`aind-metadata-service`
+[aind-metadata-service](https://github.com/AllenNeuralDynamics/aind-metadata-service)
 : REST API that compiles and returns `aind-data-schema` metadata, aggregating and
 mapping records from multiple upstream data providers.
 
