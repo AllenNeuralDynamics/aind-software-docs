@@ -26,9 +26,9 @@ Follow these links to request access to:
 
 - [Code Ocean](https://app.smartsheet.com/b/form/547ea100949646979f978fab97075523)
 - [Hortacloud](https://app.smartsheet.com/b/form/590de81306714959be7a7499b361fc04)
-- [AllenNeuralDynamics GitHub](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items) - via ServiceNow, ask for access to the AllenNeuralDynamics GitHub organization
-- [GitHub Copilot](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items) - via ServiceNow
-- [VAST /allen/aind/scratch and /allen/aind/stage](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items) - via ServiceNow
+- [AllenNeuralDynamics GitHub](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=e6bba8944727ae109f43f5d4116d4397) - via ServiceNow, ask for access to the AllenNeuralDynamics GitHub organization
+- [GitHub Copilot](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=e6bba8944727ae109f43f5d4116d4397) - via ServiceNow
+- [VAST /allen/aind/scratch and /allen/aind/stage](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=02db7bd447576e109f43f5d4116d4389&sysparm_category=c33a04f293dfa610f59f712efaba1057&catalog_id=-1) - via ServiceNow
 
 ## I want to learn about...
 
