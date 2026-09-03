@@ -1,6 +1,6 @@
 # Data and Software at AIND
 
-[![Software Overview](diagrams/high_level/general_data_flow.drawio.svg)](diagrams/high_level/general_data_flow.drawio.svg)
+![Software Overview](diagrams/high_level/general_data_flow.drawio.svg)
 
 ## Overview
 
@@ -12,8 +12,6 @@ Data and Software at AIND encompasses all systems from data generation in the la
 4. [Data Storage and Processing](data_storage_processing.md)
 
 The docs listed below direct to more detailed information based on what you want to accomplish with AIND data. 
-
-Not sure where to start? Visit our [FAQ Page](faq.md)
 
 ## I want to...
 
@@ -98,7 +96,5 @@ diagrams/index
 aind/project_proposals.md
 aind/teams.md
 policies_practices/rse_resources
-faq.md
-glossary.md
 
 ```
