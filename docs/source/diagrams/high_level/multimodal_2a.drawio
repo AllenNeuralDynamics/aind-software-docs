@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="ib2t5PgtYzD489RWa7J3" name="multimodal_2a">
+    <mxGraphModel dx="2054" dy="1103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="583" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5qhwAwHpugAahQHm3jsO-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="59" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="69" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" value="Modalities" vertex="1">
+          <mxGeometry height="60" width="120" x="79" y="272" as="geometry" />
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="219" y="301.65999999999997" as="sourcePoint" />
+            <mxPoint x="299" y="301.65999999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-5" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;labelBackgroundColor=none;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="" vertex="1">
+          <mxGeometry height="70" width="50" x="334" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-6" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="output.json" vertex="1">
+          <mxGeometry height="30" width="60" x="329" y="312" as="geometry" />
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-7" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="409" y="301.65999999999997" as="sourcePoint" />
+            <mxPoint x="489" y="301.65999999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="599" y="301.65999999999997" as="sourcePoint" />
+            <mxPoint x="679" y="301.65999999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-9" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;labelBackgroundColor=none;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="" vertex="1">
+          <mxGeometry height="70" width="50" x="714" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-10" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="acquisition.json" vertex="1">
+          <mxGeometry height="30" width="60" x="709" y="312" as="geometry" />
+        </mxCell>
+        <mxCell id="5qhwAwHpugAahQHm3jsO-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Mapper" vertex="1">
+          <mxGeometry height="80" width="80" x="499" y="252" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
