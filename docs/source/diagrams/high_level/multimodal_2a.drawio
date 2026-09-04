@@ -1,9 +1,12 @@
 <mxfile host="app.diagrams.net">
   <diagram id="ib2t5PgtYzD489RWa7J3" name="multimodal_2a">
-    <mxGraphModel dx="2054" dy="1103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="583" math="0" shadow="0">
+    <mxGraphModel dx="934" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="583" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ryBR5RcT9I9m-Xfhr7p7-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="110" width="740" x="50" y="232" as="geometry" />
+        </mxCell>
         <mxCell id="5qhwAwHpugAahQHm3jsO-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
           <mxGeometry height="60" width="120" x="59" y="252" as="geometry" />
         </mxCell>
