@@ -34,6 +34,7 @@ and the pipeline versioning policy is documented in [Versioning pipelines](../po
 |---|---|---|
 | Patch foraging behavior | `behavior`, `behavior-videos` | [aind-vr-foraging-pipeline](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline) |
 | Camstim/Sync Behavior | `behavior`, `behavior-videos` | [aind-behavior-camstim-pipeline](https://github.com/AllenNeuralDynamics/aind-behavior-camstim-pipeline) |
+| Dynamic Foraging Behavior V2 | `behavior`, `behavior-videos` | [dynamic-foraging-processing-pipeline](https://github.com/AllenNeuralDynamics/dynamic-foraging-processing-pipeline) |
 
 ## Per-project pipelines
 
