@@ -8,13 +8,13 @@ A single data acquisition session can use multiple modalities (e.g. behavior, fi
 
 The most straightforward scenario requires all modalities to write to the same JSON metadata file. The output should be formatted according to `aind-data-schema`.
 
-![Multimodal acquisition 1a](high_level/multimodal_1a.drawio.svg)
+![Multimodal acquisition 1a](high_level/multimodal_1a.drawio.png)
 
 ### b. Per-modality output files
 
 Alternatively, each modality can create its own JSON file that aligns with `aind-data-schema`. The most important consideration when combining metadata from multiple modalities is ensuring that unique fields match across files. For example, the `start_time` of the session should match across all modalities used in that session. More details on the merging process can be found on the [Upload Data page](../acquire_upload/upload_data.md#merge-rules).
 
-![Multimodal acquisition 1b](high_level/multimodal_1b.drawio.svg)
+![Multimodal acquisition 1b](high_level/multimodal_1b.drawio.png)
 
 ## 2. Custom Schemas
 
@@ -24,10 +24,10 @@ The data transfer service also supports the ability to use a custom schema outpu
 
 Similar to 1a, this scenario has all modalities writing to the same file, except this file outputs in a custom schema format. The result is passed to the mapper where a predefined data contract is used to convert the information to `aind-data-schema`. 
 
-![Multimodal acquisition 2a](high_level/multimodal_2a.drawio.svg)
+![Multimodal acquisition 2a](high_level/multimodal_2a.drawio.png)
 
 ### b. Per-modality custom and standard output files
 
 The `extractor/mapper` pattern can also be implemented on the per-modality level. For example, we currently maintain a custom mapping for `fip`, defined in [aind_metadata_extractor.models](https://github.com/AllenNeuralDynamics/aind-metadata-extractor/blob/main/src/aind_metadata_extractor/models/fip.json). As described in 1b, each modality writes to its own JSON file. The modalities that have a data model will be passed through a mapper before all files are merged together.
 
-![Multimodal acquisition 2b](high_level/multimodal_2b.drawio.svg)
+![Multimodal acquisition 2b](high_level/multimodal_2b.drawio.png)
