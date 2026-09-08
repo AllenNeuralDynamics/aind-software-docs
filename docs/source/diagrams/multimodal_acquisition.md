@@ -18,7 +18,7 @@ Alternatively, each modality can create its own JSON file that aligns with `aind
 
 ## 2. Custom Schemas
 
-The data transfer service also supports the ability to use a custom schema output for each modality. This follows an `extractor/mapper pattern`, where the `extractor` is the code on the rig outputting files and the `mapper` is a data contract between the output files and `aind-data-schema`. If you are interested in implementing this pattern for your modality, see the instructions on the [Acquire Data page](../acquire_upload/acquire_data.md#acquisition).
+The data transfer service also supports the ability to use a custom schema output for each modality. This follows an `extractor/mapper` pattern where users can write code and define the model/contract that will extract data using the [aind-metadata-extractor](https://github.com/AllenNeuralDynamics/aind-metadata-extractor). The contract is then used by [aind-metadata-mapper](https://github.com/AllenNeuralDynamics/aind-metadata-mapper) where the extracted metadata are mapped into `aind-data-schema` compliant metadata. If you are interested in implementing this pattern for your modality, see the instructions on the [Acquire Data page](../acquire_upload/acquire_data.md#acquisition).
 
 ### a. Single custom output file
 
