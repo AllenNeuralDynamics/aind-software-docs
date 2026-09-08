@@ -1,6 +1,17 @@
 # Data and Software at AIND
 
-[![Software Overview](_static/aind-software-overview.png)](_static/aind-software-overview.pdf)
+![Software Overview](diagrams/high_level/general_data_flow.drawio.svg)
+
+## Overview
+
+Data and Software at AIND encompasses all systems from data generation in the lab to storage and analysis. The system is organized into four main components:
+
+1. [Lab Management System](lab_management.md)
+2. [Data Acquisition](data_acquisition.md)
+3. [Data Staging](data_staging.md)
+4. [Data Storage and Processing](data_storage_processing.md)
+
+The docs listed below direct to more detailed information based on what you want to accomplish with AIND data. 
 
 ## I want to...
 
