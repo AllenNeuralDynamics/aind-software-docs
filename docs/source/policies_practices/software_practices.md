@@ -127,6 +127,7 @@ The sections below describe practices that supplement the above guide:
 - PRs should always be linked with an issue that is part of a Milestone.
 - Every change to the codebase needs to be code reviewed, regardless of seniority.
 - At least one other (human) software developer needs to approve a PR in order for it to be merged.
+- For agent-developed changes, approval from anyone who prompted or launched the agent to develop those changes does not count toward the required merge approval.
 - Be courteous and respectful when providing and receiving feedback. Code review is a process to foster collaboration and improve code quality, and feedback is not personal.
 
 See also [other Code Review resources](rse_resources.md#other-code-review-resources)
