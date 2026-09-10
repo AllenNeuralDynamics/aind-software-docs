@@ -12,7 +12,7 @@ These standards are maintained through the use of template repositories. Use the
 
 | Template | URL |
 | --- | --- |
-| Python package | [aind-library-template](https://github.com/AllenNeuralDynamics/aind-library-template) |
+| Python package | [python-templates](https://github.com/AllenNeuralDynamics/python-templates) |
 | Code Ocean capsule | [aind-capsule-template](https://github.com/AllenNeuralDynamics/aind-capsule-template) |
 | Code Ocean pipeline | [aind-pipeline-template](https://github.com/AllenNeuralDynamics/aind-pipeline-template) |
 
