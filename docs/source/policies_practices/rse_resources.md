@@ -8,7 +8,7 @@ In developing software at the [Allen Institute](https://alleninstitute.org), we 
 
 - Software development should be collaborative, and code should be maintainable by more than one person
 - End users should be able to run our code and understand how to run it through documentation and tutorials
-- If a user discovers a bug or want a new feature added to a package, they should know how to request support, or feel welcome to contribute to a repository
+- If a user discovers a bug or wants a new feature added to a package, they should know how to request support, or feel welcome to contribute to a repository
 
 ## Software Design Patterns
 
