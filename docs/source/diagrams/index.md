@@ -24,6 +24,7 @@ components encompass how data are generated and move through the system:
 
 lab_management
 data_acquisition
+multimodal_acquisition
 data_staging
 data_storage_processing
 dynamic_foraging

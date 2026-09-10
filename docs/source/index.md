@@ -1,6 +1,17 @@
 # Data and Software at AIND
 
-[![Software Overview](_static/aind-software-overview.png)](_static/aind-software-overview.pdf)
+![Software Overview](diagrams/high_level/general_data_flow.drawio.svg)
+
+## Overview
+
+Data and Software at AIND encompasses all systems from data generation in the lab to storage and analysis. The system is organized into four main components:
+
+1. [Lab Management System](lab_management.md)
+2. [Data Acquisition](data_acquisition.md)
+3. [Data Staging](data_staging.md)
+4. [Data Storage and Processing](data_storage_processing.md)
+
+The docs listed below direct to more detailed information based on what you want to accomplish with AIND data. 
 
 ## I want to...
 
@@ -26,9 +37,9 @@ Follow these links to request access to:
 
 - [Code Ocean](https://app.smartsheet.com/b/form/547ea100949646979f978fab97075523)
 - [Hortacloud](https://app.smartsheet.com/b/form/590de81306714959be7a7499b361fc04)
-- [AllenNeuralDynamics GitHub](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items) - via ServiceNow, ask for access to the AllenNeuralDynamics GitHub organization
-- [GitHub Copilot](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items) - via ServiceNow
-- [VAST /allen/aind/scratch and /allen/aind/stage](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=83bc1726477aa91032b789b5536d430e&referrer=popular_items) - via ServiceNow
+- [AllenNeuralDynamics GitHub](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=e6bba8944727ae109f43f5d4116d4397) - via ServiceNow, ask for access to the AllenNeuralDynamics GitHub organization
+- [GitHub Copilot](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=e6bba8944727ae109f43f5d4116d4397) - via ServiceNow
+- [VAST /allen/aind/scratch and /allen/aind/stage](https://alleninstitute.service-now.com/sp?id=sc_cat_item&sys_id=02db7bd447576e109f43f5d4116d4389&sysparm_category=c33a04f293dfa610f59f712efaba1057&catalog_id=-1) - via ServiceNow
 
 ## I want to learn about...
 
