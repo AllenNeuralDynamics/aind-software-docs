@@ -36,13 +36,12 @@ These standards are maintained through the use of template repositories. Use the
 
 - Functions should not exceed a complexity of 10 paths.
 - Functions should [return early](https://medium.com/swlh/return-early-pattern-3d18a41bba8) / [fail fast](https://en.wikipedia.org/wiki/Fail-fast_system).
-- Code should be capable of being analyzed by static analysis tools.
-- Modules (<1000 lines), classes, and functions (<100 lines) should be manageable size.
+- Modules, classes, and functions should be manageable size. (Modules and classes < 1000 lines, functions < 100 lines)
 - Internal packages should use the naming pattern `<modality>-<process>` wherever possible.
 - Packages should not be prefixed with our namespace (i.e. do not put `aind-` as a prefix).
 - Internal dependencies should be pinned `==1.0.0` or use *both* a version floor and ceiling `>=1.0.0,<2`. 
 - Unit tests should clean up test files or write to temporary folders. Do not store large auto-generated files for unit tests in the repositories.
-- TBD: Services should use structured logging using AIND standard format.
+- Services should use structured logging using AIND standard format.
 - TBD: pyproject.toml to be updated with individual authors?
 - Software packages should be agnostic of the runtime infrastructure where possible. When not possible, use thin wrappers to the Python package, e.g. Code Ocean capsules should be thin wrappers to Python packages.
 - Containerized environments should log their dependencies, e.g. Code Ocean capsules can use `pip list > /results/pip_list.txt`
