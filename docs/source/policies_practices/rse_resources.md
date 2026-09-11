@@ -2,6 +2,14 @@
 
 For research software engineers, [Good Research Code](https://goodresearch.dev/) is a good primer.
 
+## Guiding Principles
+
+In developing software at the [Allen Institute](https://alleninstitute.org), we have a set of guiding principles that promote Team Science and Open Science, which helps us define our best practices.
+
+- Software development should be collaborative, and code should be maintainable by more than one person
+- End users should be able to run our code and understand how to run it through documentation and tutorials
+- If a user discovers a bug or wants a new feature added to a package, they should know how to request support, or feel welcome to contribute to a repository
+
 ## Software Design Patterns
 
 In writing software, many recurring problems exist that cannot be solved through library encapsulation because of the problem's nuances.
