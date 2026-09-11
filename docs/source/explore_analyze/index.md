@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Explore, QC & analyze
 
 Raw assets uploaded from platforms at AIND are run through automated pipelines that produce derived assets. You can explore these assets through the [Data Portal](https://data.allenneuraldynamics.org/assets).

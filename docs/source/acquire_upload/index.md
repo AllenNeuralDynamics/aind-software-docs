@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Acquire, upload & process
 
 ## I want to...

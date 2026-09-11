@@ -48,25 +48,10 @@ Follow these links to request access to:
 ```{toctree}
 :maxdepth: 1
 :hidden:
-:caption: Acquire, upload & process
+:caption: How-to
 
-acquire_upload/prepare_before_acquisition
-acquire_upload/acquire_data
-acquire_upload/calibration
-acquire_upload/upload_data
-acquire_upload/process_data
-
-```
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-:caption: Explore, QC & analyze
-
-explore_analyze/quality_control
-explore_analyze/find_data
-explore_analyze/analyze_data
-explore_analyze/outreach
+acquire_upload/index
+explore_analyze/index
 
 
 ```
