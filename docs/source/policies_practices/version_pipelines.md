@@ -15,7 +15,7 @@ Code relying on the outputs may require minor refactoring, and previously proces
 - Patch version changes indicate non-breaking bug fixes or other code changes.
 Data should not require reprocessing and downstream code should not need to be updated.
 
-The pipeline's name, semantic version, and url MUST be stored in aind-data-schema [Processing](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/dev/src/aind_data_schema/core/processing.py#L970) metadata at the top level of the results - specifically the fields `Processing.pipelines.name`, `Processing.pipelines.code.version`, and `Processing.pipelines.code.url`.
+The pipeline's name, semantic version, and url MUST be stored in aind-data-schema [Processing](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/v2.9.0/src/aind_data_schema/core/processing.py) metadata at the top level of the results. In schema 2.9.0, `Processing.pipelines` is a list of `Code` objects: each entry contains `name`, `version`, and `url` directly (serialized as `pipelines[].name`, `pipelines[].version`, and `pipelines[].url`). There is no additional `code` object inside a pipeline entry.
 
 The pipeline's name and semantic version MUST also be stored in the pipeline repository and easily accessible to pipeline code. 
 We recommend environment variables `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL`, 
@@ -37,10 +37,37 @@ Developers can create a pipeline from this template: [`aind-pipeline-template`](
 Once created, the pipeline uses a [workflow](https://github.com/AllenNeuralDynamics/.github/blob/main/.github/docs/Release%20Tag%20and%20Publish%20Pipeline.md) that will, on every pull request into main, bump the version using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) with the modifications below and generate a `CHANGELOG` based on the commit history.
 Environment variables for `PIPELINE_VERSION`, `PIPELINE_NAME` and `PIPELINE_URL` are added to the `nextflow.config` file and available to each component capsule.
 
-Methods from the [`aind-metadata-manager`](https://github.com/AllenNeuralDynamics/aind-metadata-manager) package can be used to enforce that all three pipeline fields are provided and create the appropriate entries in the `Processing` object. 
-If a value is missing, the pipeline will fail with a clear error message rather than falling back to a placeholder default.
+Methods from the [`aind-metadata-manager`](https://github.com/AllenNeuralDynamics/aind-metadata-manager) package can create the appropriate entries in the `Processing` object.
+Enforce all three pipeline identity values at the pipeline boundary, with a clear error
+instead of placeholder defaults. Check the behavior of the pinned metadata-manager
+version: not every historical version requires all three values. Schema acceptance
+of an optional field is not sufficient to meet the production pipeline policy.
 
 The developer is still responsible for ensuring that the `PIPELINE_VERSION`, `PIPELINE_NAME`, and `PIPELINE_URL` values, as well as the `CHANGELOG` are correct and up-to-date in the repository.
+
+### Pipeline, step, and environment identity
+
+Pipeline identity describes the workflow. Each `DataProcess.code` describes the code
+that performed that processing step. When a capsule is a thin library wrapper, its
+wrapper version should not be substituted for the installed processing-library version.
+Record the appropriate repository URL and identify the actual library artifact.
+
+For schema 2.9.0, a `DataProcess.pipeline_name` must match the name of an entry in
+the enclosing `Processing.pipelines`. Populate both together. A standalone step can
+omit pipeline linkage, but this is different from disabling its processing metadata.
+Production pipelines must still satisfy the pipeline identity policy above.
+
+The schema's `Code` model permits both `version` and `commit_hash`; it warns when
+neither is provided. A released version and an exact source commit serve different
+purposes, especially when multiple development commits share a package version.
+Use the schema version consumed by the pipeline when selecting fields and validators.
+
+Container tags, container digests, processing-library revisions, and Code Ocean
+release numbers are also distinct identities. An image tag can be moved without a
+software version change. Record exact runtime artifacts when evaluating and promoting
+a candidate; do not use a Code Ocean release number as the library's semantic version.
+See [Deploying pipelines across backends](../process_data/multi_backend_pipelines.md)
+for the proposed development and image-promotion workflow.
 
 
 ## Commit types and version increments

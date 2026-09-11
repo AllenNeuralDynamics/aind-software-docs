@@ -176,6 +176,15 @@ git clone <url-of-config-files>
     
 ## Tips for Pipelines
 
+### Portable deployment
+
+For pipelines that also need local Docker or SLURM execution, see
+[Deploying pipelines across backends](../process_data/multi_backend_pipelines.md).
+It covers per-step images, code and dependency layers, exact-artifact publication,
+metadata identity, and backend-specific mounts and resources. The
+[pophys implementation record](../process_data/pophys_portability.md) distinguishes
+the current implementation from development features and data runs still pending.
+
 ### Resource labels
 
 Any pipeline with active usage beyond initial testing needs a unique label 

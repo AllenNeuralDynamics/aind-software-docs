@@ -55,6 +55,8 @@ acquire_upload/acquire_data
 acquire_upload/calibration
 acquire_upload/upload_data
 acquire_upload/process_data
+process_data/multi_backend_pipelines
+process_data/pophys_portability
 
 ```
 

@@ -5,6 +5,11 @@ Scientific computing is currently re-organizing pipelines to be per-modality, ra
 Pipeline development requirements are documented in [Pipeline development](../policies_practices/platform_support.md#pipeline-development)
 and the pipeline versioning policy is documented in [Versioning pipelines](../policies_practices/version_pipelines.md).
 
+For deployment across Code Ocean, local Docker, and SLURM, see
+[Deploying pipelines across backends](../process_data/multi_backend_pipelines.md).
+The [pophys implementation record](../process_data/pophys_portability.md) describes
+the current candidate-image work and the remaining deployment requirements.
+
 ## Per-modality physiology pipelines
 
 | Modality | Modalities | Pipeline repository |
