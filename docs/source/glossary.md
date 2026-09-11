@@ -6,7 +6,7 @@ core metadata file
 
 {.glossary}
 data asset
-: a single acquisition of data and its associated metadata.
+: a single acquisition of data (and its metadata) or a single run of processing code.
 
 {.glossary}
 data level
