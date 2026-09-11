@@ -97,10 +97,3 @@ records = client.retrieve_docdb_records(
 ```
 
 More details about DocDB queries can be found in the [aind-data-access-api#querying-metadata documentation](https://aind-data-access-api.readthedocs.io/en/latest/ExamplesDocDBRestApi.html#querying-metadata)
-
-## Dashboards
-
-We are expanding the number of platform and project dashboards based on V2 metadata over time. We currently host:
-
-- [data portal](https://data.allenneuraldynamics.org/assets) is a tool for finding and exploring data assets. Currently, you can search all assets that have V2 metadata and easily click links to go to the Code Ocean data asset, metadata, and QC report.
-- [smartspim dashboard](https://data.allenneuraldynamics-test.org/smartspim)
