@@ -12,9 +12,12 @@ There are also Platform dashboards for each of the major platforms in Neural Dyn
 
 | Platform | Dashboard | Internal Site |
 | -- | -- | -- |
-| SmartSPIM | [Dashboard](https://data.allenneuraldynamics.org/smartspim) | [Internal Site](https://alleninstitute.sharepoint.com/sites/NeuralDynamics/SitePages/SmartSPIM-Platform.aspx) |
-| Fiber Photometry | [Dashboard](https://data.allenneuraldynamics.org/fiber_photometry) | [Internal site](https://alleninstitute.sharepoint.com/sites/NeuralDynamics/SitePages/Fiber-Photometry-Platform.aspx) |
+| ExaSPIM | [Dashboard](https://data.allenneuraldynamics.org/exaspim) | |
 | Dynamic Foraging | [Dashboard](https://data.allenneuraldynamics.org/dynamic_foraging)| |
+| Dynamic Routing | [Dashboard](https://data.allenneuraldynamics.org/dynamic_routing)| |
+| Fiber Photometry | [Dashboard](https://data.allenneuraldynamics.org/fiber_photometry) | [Internal site](https://alleninstitute.sharepoint.com/sites/NeuralDynamics/SitePages/Fiber-Photometry-Platform.aspx) |
+| SLAP2 | [Dashboard](https://data.allenneuraldynamics.org/slap2) | |
+| SmartSPIM | [Dashboard](https://data.allenneuraldynamics.org/smartspim) | [Internal Site](https://alleninstitute.sharepoint.com/sites/NeuralDynamics/SitePages/SmartSPIM-Platform.aspx) |
 | VR Foraging | [Dashboard](https://data.allenneuraldynamics.org/vr_foraging) | |
 
 ## I want to...
