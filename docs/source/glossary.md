@@ -1,22 +1,42 @@
 # Glossary
 
 {.glossary}
+core metadata file
+: an individual JSON metadata file that describes a specific aspect of a data asset.
+
+{.glossary}
+data asset
+: a single acquisition of data (and its metadata) or a single run of processing code.
+
+{.glossary}
+data level
+: whether a data asset is the original raw data or a derived asset.
+
+{.glossary}
+aind-data-schema
+: [GitHub repository](https://github.com/AllenNeuralDynamics/aind-data-schema)
+
+{.glossary}
+metadata service
+: the AIND service used to retrieve project, subject, instrument, and other metadata before or during acquisition.
+
+{.glossary}
 scientist-derived data
-: derived data created by a scientist directly, 
+: derived data created by a scientist directly,
 rather than as output of an established processing pipeline.
 A typical example is an intermediate analysis result saved as input for downstream analysis.
 
 {.glossary}
 primary data
-: the least processed permanent data asset from a given data acquisition - 
-in most cases this is the raw data asset, but in some cases the raw data is deleted
-and a minimally-processed (compression or format conversion only) derived data is preserved as primary data.
-(In many cases "raw data" is used as a synonym for "primary data", 
+: the least processed permanent {term}`data asset` from a given data acquisition -
+in most cases this is the {term}`data asset` containing the raw data, but in some cases the raw data is deleted
+and a minimally-processed (compression or format conversion only) derived data asset is preserved as primary data.
+(In many cases "raw data" is used as a synonym for "primary data",
 even when the data is not strictly raw.)
 
 {.glossary}
 derived data
-: data that is a result of processing or analysis applied to one or many data inputs
+: a {term}`data asset` that is the result of processing or analysis applied to one or many data inputs
 
 {.glossary}
 non-registry data
