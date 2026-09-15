@@ -41,7 +41,7 @@ These standards are maintained through the use of template repositories. Use the
 - Packages should not be prefixed with our namespace (i.e. do not put `aind-` as a prefix).
 - Internal dependencies should be pinned `==1.0.0` or use *both* a version floor and ceiling `>=1.0.0,<2`. 
 - Unit tests should clean up test files or write to temporary folders. Do not store large auto-generated files for unit tests in the repositories.
-- Services should use structured logging using AIND standard format.
+- Services should use structured logging using AIND standard format: [log-schema](https://github.com/AllenNeuralDynamics/log-schema).
 - TBD: pyproject.toml to be updated with individual authors?
 - Software packages should be agnostic of the runtime infrastructure where possible. When not possible, use thin wrappers to the Python package, e.g. Code Ocean capsules should be thin wrappers to Python packages.
 - Containerized environments should log their dependencies, e.g. Code Ocean capsules can use `pip list > /results/pip_list.txt`
