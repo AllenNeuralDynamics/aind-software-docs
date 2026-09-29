@@ -1,13 +1,13 @@
 # Outreach Events & Resources
 
-The Data and Outreach group organizes many outreach events to make Allen Institute / Neural Dynamics datasets, tools, and scientific workflows accessible to the broader community. This page highlights useful resources that were created and shared for each event, including code tutorials, documentation pages, and public repositories, organized by their associated project or platform.
+The Data and Outreach group organizes many outreach events to make data, tools, and scientific workflows from the Allen Institute / Neural Dynamics accelerator accessible to the broader community. This page highlights useful resources (documentation pages, code tutorials, Github repositories, etc)
+ that were created and shared for each event, organized by the associated project or platform. 
 
 ---
-## General Resources 
 
 To view a list of previous and upcoming outreach events, check out the [Neural Dynamics events page](https://www.allenneuraldynamics.org/events).
 
-Browse the full library of [publicly available Code Ocean capsules](https://codeocean.allenneuraldynamics.org/collections/4a2d5da6-b053-43fe-9180-1912d787c59e?page=1&filter=all&refine=public), which contains organized and shareable data and code tutorials. 
+Browse the full library of [publicly available Code Ocean capsules](https://codeocean.allenneuraldynamics.org/collections/4a2d5da6-b053-43fe-9180-1912d787c59e?page=1&filter=all&refine=public). 
 
 ---
 ## Outreach Resources Organized by Project and Platform 
@@ -21,7 +21,7 @@ This project studies task-switching behaviors in mice to determine how neuronal 
 
 - [Project Page](https://www.allenneuraldynamics.org/projects/dynamic-routing)
 
-- [Dynamic Routing tutorial capsule](https://codeocean.allenneuraldynamics.org/capsule/0831127/tree/v3) — Code Ocean public collection with code tutorials on how to access the electrophysiology and behavior datasets.
+- [Dynamic Routing code tutorial](https://codeocean.allenneuraldynamics.org/capsule/0831127/tree/v3) — Code Ocean public collection with code tutorials on how to access the electrophysiology and behavior datasets.
 
 **Events featuring this project**
 
@@ -33,7 +33,7 @@ This project studies task-switching behaviors in mice to determine how neuronal 
 > **Summer Workshop on the Dynamic Brain 2026**
 > *Aug 23 – Sept 6, 2026 · Graduate students, postdocs · Friday Harbor, WA*
 >
-> A project-based, residential summer course where students learn computational methods for analyzing large-scale neuroscience data. Hands-on tutorials incorporated Dynamic Routing data to teach how to analyze complex behavior states using HMM and how to build linear decoders.
+> A project-based, residential summer course where students learn computational methods for analyzing large-scale neuroscience data. 
 > Resource: [Behavior States and Neuronal Decoding Tutorial](https://codeocean.allenneuraldynamics.org/capsule/2687719/tree/v2)
 
 > **Undergraduate Course at University of Puget Sound**
@@ -53,7 +53,7 @@ This project uses a brain-computer interface (BCI) learning task coupled with an
 
 - [Project Page](https://www.allenneuraldynamics.org/projects/credit-assignment-during-learning)
 
-- [Credit Assignment During Learning tutorial capsule](https://codeocean.allenneuraldynamics.org/capsule/0692322/tree/v3) — Code Ocean public collection with code tutorials on how to access the BCI neurophysiology and behavior dataset.
+- [Credit Assignment During Learning code tutorial](https://codeocean.allenneuraldynamics.org/capsule/0692322/tree/v3) — Code Ocean public collection with code tutorials on how to access the neurophysiology and behavior datasets.
 
 **Events featuring this project**
 
@@ -70,7 +70,7 @@ This project uses a brain-computer interface (BCI) learning task coupled with an
 > **Undergraduate Course at University of Puget Sound**
 > *Sept 24, 2025 · Undergraduate students · UPS, Tacoma, WA*
 >
-> Lecture and code tutorial for a class where students developed semester-long research projects using Allen Institute datasets.
+> Lecture for a class where students developed semester-long research projects using Allen Institute datasets.
 > Resource: [Course Materials](https://github.com/AllenNeuralDynamics/ups_nrsc490_tutorial/tree/main)
 
 > **Workshop at Western Washington University**
@@ -89,7 +89,7 @@ This project investigates how neural signals are transmitted from subcortical br
 
 - [Project Page](https://www.allenneuraldynamics.org/projects/neural-dynamics-in-multi-regional-circuits-with-thalamus-in-the-middle)
 
-- [Mesoscale Connectivity tutorial capsule](https://codeocean.allenneuraldynamics.org/capsule/6784496/tree/v1)
+- [Mesoscale Connectivity tutorial capsule](https://codeocean.allenneuraldynamics.org/capsule/6784496/tree/v1) - Code Ocean public collection with code tutorials on how to access the anatomy data. 
 
 **Events featuring this project**
 
@@ -115,7 +115,7 @@ Combines innovative histology, ExA-SPIM microscopy, image processing, and machin
 
 - [Platform Page](https://www.allenneuraldynamics.org/platforms/brain-wide-anatomy-at-cellular-resolution)
 
-- [Exa-SPIM tutorial capsule](https://codeocean.allenneuraldynamics.org/capsule/5871121/tree/v1)
+- [Exa-SPIM tutorial capsule](https://codeocean.allenneuraldynamics.org/capsule/5871121/tree/v1) - Code Ocean public collection with code tutorials on how to access the morphology dataset. 
 
 **Events featuring this platform**
 
