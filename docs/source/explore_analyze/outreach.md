@@ -66,7 +66,7 @@ This project uses a brain-computer interface (BCI) learning task coupled with an
 
 - [Project Page](https://www.allenneuraldynamics.org/projects/credit-assignment-during-learning)
 
-- [Credit Assignment During Learning code tutorial](https://codeocean.allenneuraldynamics.org/capsule/0692322/tree/v3) — Code Ocean public collection with code tutorials on how to access the neurophysiology and behavior datasets.
+- [Credit Assignment During Learning code tutorial](https://codeocean.allenneuraldynamics.org/capsule/4369277/tree/v4) — Code Ocean public collection with code tutorials on how to access the neurophysiology and behavior datasets.
 
 **Events featuring this project**
 
@@ -95,6 +95,16 @@ This project uses a brain-computer interface (BCI) learning task coupled with an
 > Lecture for a class where students developed semester-long research projects using Allen Institute datasets.
 >
 > Resource: [Course Materials](https://github.com/AllenNeuralDynamics/ups_nrsc490_tutorial/tree/main)
+
+> **Workshop at Western Washington University**
+>
+> - **Date:** Oct 30, 2025
+> - **Audience:** Undergraduate students, graduate students
+> - **Location:** WWU, Bellingham, WA
+>
+> A workshop introducing the Allen Institute / Neural Dynamics accelerator to the research community at WWU, featuring talks from WWU alumni now at the Allen Institute, an overview of the group's projects, platforms, and approach to science, and hands-on code tutorials using Exa-SPIM and BCI data.
+>
+> Resource: [Code Tutorial](https://codeocean.allenneuraldynamics.org/capsule/0692322/tree/v3)
 
 ---
 
@@ -144,6 +154,25 @@ Combines innovative histology, ExA-SPIM microscopy, image processing, and machin
 
 **Events featuring this platform**
 
+> **UW CNC–AIND Hackacollabathon: ExaSPIM**
+>
+> - **Date:** Dec 6, 2023
+> - **Audience:** Undergraduate students, graduate students, postdocs, researchers
+> - **Location:** UW, Seattle, WA
+>
+> A collaborative hackathon to share new data from this project with researchers at UW and the Allen Institute.
+
+> **Workshop at Western Washington University**
+>
+> - **Date:** Oct 30, 2025
+> - **Audience:** Undergraduate students, graduate students
+> - **Location:** WWU, Bellingham, WA
+>
+> A workshop introducing the Allen Institute / Neural Dynamics accelerator to the research community at WWU, featuring talks from WWU alumni now at the Allen Institute, an overview of the group's projects, platforms, and approach to science, and hands-on code tutorials using Exa-SPIM and BCI data.
+>
+> Resource: [Code Tutorial](https://codeocean.allenneuraldynamics.org/capsule/0685965/tree/v1)
+
+
 > **Talk at Cosyne Tutorial Session**
 >
 > - **Date:** Mar 12, 2026
@@ -162,8 +191,17 @@ Implements pioneering technology to support highly reproducible, targeted, brain
 **Resources**
 
 - [Platform Page](https://www.allenneuraldynamics.org/platforms/neuropixels-electrophysiology)
+- [Ephys NWB Tutorial Capsule](https://codeocean.allenneuraldynamics.org/capsule/0691868/tree/v1) — Code Ocean public collection with code tutorials on how to access the electrophysiology dataset. 
 
 **Events featuring this platform**
+
+> **UW CNC–AIND Hackacollabathon: Ephys**
+>
+> - **Date:** Jan 18, 2023
+> - **Audience:** Undergraduate students, graduate students, postdocs, researchers
+> - **Location:** UW, Seattle, WA
+>
+> A collaborative hackathon to share new data from this project with researchers at UW and the Allen Institute.
 
 > **Talk at Cosyne Tutorial Session**
 >
