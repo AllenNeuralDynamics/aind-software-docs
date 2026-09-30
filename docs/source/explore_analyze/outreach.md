@@ -28,20 +28,31 @@ This project studies task-switching behaviors in mice to determine how neuronal 
 **Events featuring this project**
 
 > **UW CNC–AIND Hackacollabathon: Dynamic Routing**
-> *May 20, 2026 · Graduate students, postdocs, researchers · UW, Seattle, WA*
+>
+> - **Date:** May 20, 2026
+> - **Audience:** Graduate students, postdocs, researchers
+> - **Location:** UW, Seattle, WA
 >
 > A collaborative hackathon to share new data from the project with researchers at UW and the Allen Institute.
 
 > **Summer Workshop on the Dynamic Brain 2026**
-> *Aug 23 – Sept 6, 2026 · Graduate students, postdocs · Friday Harbor, WA*
+>
+> - **Date:** Aug 23 – Sept 6, 2026
+> - **Audience:** Graduate students, postdocs
+> - **Location:** Friday Harbor, WA
 >
 > A project-based, residential summer course where students learn computational methods for analyzing large-scale neuroscience data.
+>
 > Resource: [Behavior States and Neuronal Decoding Tutorial](https://codeocean.allenneuraldynamics.org/capsule/2687719/tree/v2)
 
 > **Undergraduate Course at University of Puget Sound**
-> *Sept 23, 2026 · Undergraduate students · UPS, Tacoma, WA*
+>
+> - **Date:** Sept 23, 2026
+> - **Audience:** Undergraduate students
+> - **Location:** UPS, Tacoma, WA
 >
 > Lecture for a class where students developed semester-long research projects using Allen Institute datasets.
+>
 > Resource: [Course Materials](https://github.com/leesuyee/dynamic-routing-tutorials)
 
 ---
@@ -60,19 +71,29 @@ This project uses a brain-computer interface (BCI) learning task coupled with an
 **Events featuring this project**
 
 > **UW CNC–AIND Hackacollabathon: Credit Assignment During Learning**
-> *May 14, 2025 · Graduate students, postdocs, researchers · UW, Seattle, WA*
+>
+> - **Date:** May 14, 2025
+> - **Audience:** Graduate students, postdocs, researchers
+> - **Location:** UW, Seattle, WA
 >
 > A collaborative hackathon to share new data from the project with researchers at UW and the Allen Institute.
 
 > **University of Washington Neurohackathon (2025, 2026)**
-> *May 16–18, 2025 and Mar 6–8, 2026 · Undergraduate students, graduate students, researchers · UW, Seattle, WA*
+>
+> - **Dates:** May 16–18, 2025 and Mar 6–8, 2026
+> - **Audience:** Undergraduate students, graduate students, researchers
+> - **Location:** UW, Seattle, WA
 >
 > A long-standing hackathon hosted by the CoNECT and Synaptech student clubs where participants used neurotechnology devices and/or Allen Institute neural datasets to build a project.
 
 > **Undergraduate Course at University of Puget Sound**
-> *Sept 24, 2025 · Undergraduate students · UPS, Tacoma, WA*
+>
+> - **Date:** Sept 24, 2025
+> - **Audience:** Undergraduate students
+> - **Location:** UPS, Tacoma, WA
 >
 > Lecture for a class where students developed semester-long research projects using Allen Institute datasets.
+>
 > Resource: [Course Materials](https://github.com/AllenNeuralDynamics/ups_nrsc490_tutorial/tree/main)
 
 ---
@@ -91,14 +112,21 @@ This project investigates how neural signals are transmitted from subcortical br
 **Events featuring this project**
 
 > **UW CNC–AIND Hackacollabathon: Mesoscale Connectivity**
-> *Dec 4, 2024 · Undergraduate students, graduate students, postdocs, researchers · UW, Seattle, WA*
+>
+> - **Date:** Dec 4, 2024
+> - **Audience:** Undergraduate students, graduate students, postdocs, researchers
+> - **Location:** UW, Seattle, WA
 >
 > A collaborative hackathon to share new data from this project with researchers at UW and the Allen Institute.
 
 > **Code Tutorial for High School Field Trip**
-> *Feb 13, 2026 · High school students · Allen Institute, Seattle, WA*
+>
+> - **Date:** Feb 13, 2026
+> - **Audience:** High school students
+> - **Location:** Allen Institute, Seattle, WA
 >
 > Introduced neural anatomy data and how to map connections between brain areas for high school students visiting the Institute.
+>
 > Resource: [Code Tutorial Repository](https://github.com/leesuyee/mesoscale-connectivity-tutorial)
 
 ---
@@ -117,7 +145,10 @@ Combines innovative histology, ExA-SPIM microscopy, image processing, and machin
 **Events featuring this platform**
 
 > **Talk at Cosyne Tutorial Session**
-> *Mar 12, 2026 · Researchers · Cosyne, Lisbon, PT*
+>
+> - **Date:** Mar 12, 2026
+> - **Audience:** Researchers
+> - **Location:** Cosyne, Lisbon, PT
 >
 > Talk highlighting datasets, tools, and resources from Neural Dynamics, sharing recent developments across projects and platforms.
 
@@ -135,12 +166,15 @@ Implements pioneering technology to support highly reproducible, targeted, brain
 **Events featuring this platform**
 
 > **Talk at Cosyne Tutorial Session**
-> *Mar 12, 2026 · Researchers · Cosyne, Lisbon, PT*
+>
+> - **Date:** Mar 12, 2026
+> - **Audience:** Researchers
+> - **Location:** Cosyne, Lisbon, PT
 >
 > Talk highlighting datasets, tools, and resources from the Institute, sharing recent developments across projects and platforms.
 
 ---
 
-### Have questions? 
+## Have questions? 
 
 Contact the Data & Outreach team.
