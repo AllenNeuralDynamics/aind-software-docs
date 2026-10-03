@@ -130,15 +130,25 @@ Anything computed in a single run should be logically grouped in a folder. The f
 
 `<primary-asset-name>_<process-label>_<process-date>_<process-time>`
 
-Examples: 
+The `<process-label>` should be a short, human-readable description of the processing step. It does not come from a controlled vocabulary and is not intended to be parsed as metadata by downstream processes. The authoritative record of what an asset contains is its `data_description.json`, and the authoritative record of which processes were run is its `processing.json`. The label exists to help people browse and identify assets in file listings and storage systems.
 
-- ANM457202_2022-07-11_22-11-32_processed_2022-08-11_22-11-32 
-- 595262_2022-02-21_15-18-07_processed_2022-08-11_22-11-32 
+Choose a label that is descriptive rather than generic. The label `processed` has been widely used historically but is too vague to be useful. Prefer labels that describe the specific processing step or modality, such as `sorted` (ecephys spike sorting), `stitched` (light-sheet image stitching), or `facemap` (behavioral video tracking). For multi-modal sessions where each modality is processed independently, include the modality name in the label (e.g., `behavior`, `ecephys`, `fib`) so that derived assets from the same raw session can be easily distinguished.
 
-Processed outputs are usually the result of a multi-stage pipeline handling a single data modality. Utilize a modality-specific `<process-label>`. Other common process labels include: 
+Other common process labels include:
 
-- “curation” - tags assigned to input data (e.g. merge/split/noise calls for ephys units) 
-- ... 
+- `curation`: quality-based labels assigned to processed units (e.g., merge/split/noise calls for ephys units)
+
+### Multimodal naming example
+
+When a raw asset contains multiple modalities, each is processed independently and produces its own derived asset. For a session acquired with both `behavior` and `ecephys` modalities, the naming could follow this pattern:
+
+```
+<subject-id>_<acquisition-datetime>                                          # raw asset
+<subject-id>_<acquisition-datetime>_behavior_<process-datetime>              # behavior-derived
+<subject-id>_<acquisition-datetime>_sorted_<process-datetime>                # ecephys-derived
+```
+
+Both derived assets share the same `<subject-id>_<acquisition-datetime>` prefix, making it easy to identify which raw session each came from.
 
 Overlong names are difficult to read, so do not daisy-chain. The goal is to keep names as simple as possible while being readable, not to encode all metadata or the entire provenance chain. If various stages of processing are being performed manually over extended periods of time, anchor each derived asset on the primary data asset. 
 
