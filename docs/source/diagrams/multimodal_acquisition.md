@@ -31,3 +31,5 @@ Similar to 1a, this scenario has all modalities writing to the same file, except
 The `extractor/mapper` pattern can also be implemented on the per-modality level. For example, we currently maintain a custom mapping for `fip`, defined in [aind_metadata_extractor.models](https://github.com/AllenNeuralDynamics/aind-metadata-extractor/blob/main/src/aind_metadata_extractor/models/fip.json). As described in 1b, each modality writes to its own JSON file. The modalities that have a data model will be passed through a mapper before all files are merged together.
 
 ![Multimodal acquisition 2b](high_level/multimodal_2b.drawio.png)
+
+For information on how modality-specific NWB files are processed and eventually combined after acquisition, see the [Data Storage and Processing](data_storage_processing.md) page.
