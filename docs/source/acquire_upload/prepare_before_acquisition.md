@@ -300,7 +300,7 @@ Subject metadata is populated by lab animal services (LAS) without your involvem
 
 ## Instrument
 
-[Instrument](https://aind-data-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance of data acquisition.
+[Instrument](https://biodata-schema.readthedocs.io/en/latest/instrument.html) metadata should be prepared in advance of data acquisition.
 
 ### ID
 
@@ -391,13 +391,13 @@ If you need access to an older version of an instrument metadata file from the d
 
 ## Procedures
 
-[Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) metadata should be prepared in advance. Our goal with procedures metadata is to capture the date, time, and critical parameters of a published [Protocol](https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics/publications) on our protocols.io page.
+[Procedures](https://biodata-schema.readthedocs.io/en/latest/procedures.html) metadata should be prepared in advance. Our goal with procedures metadata is to capture the date, time, and critical parameters of a published [Protocol](https://www.protocols.io/workspaces/allen-institute-for-neural-dynamics/publications) on our protocols.io page.
 
 Currently, only NSB procedures are automatically attached to data assets during upload while custom procedures require a `procedures.json` file to be uploaded with each data asset. With the roll out of Power Platform / Dataverse, all procedures will need to be uploaded to the metadata-service as they are performed.
 
 ### Custom procedures
 
-Custom [Procedures](https://aind-data-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Please only provide metadata for procedures that are not stored by NSB.
+Custom [Procedures](https://biodata-schema.readthedocs.io/en/latest/procedures.html) require you to generate a `procedures.json` file manually. Please only provide metadata for procedures that are not stored by NSB.
 
 ### NSB procedures
 

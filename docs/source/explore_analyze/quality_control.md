@@ -4,7 +4,7 @@ All data assets generated at AIND should undergo automated (and sometimes manual
 
 ## Preparing QC metadata
 
-Please see the documentation on [QualityControl](https://aind-data-schema.readthedocs.io/en/latest/quality_control.html) for a comprehensive overview of QC.
+Please see the documentation on [QualityControl](https://biodata-schema.readthedocs.io/en/latest/quality_control.html) for a comprehensive overview of QC.
 
 ## QC Portal
 
