@@ -8,6 +8,8 @@ policies_practices/pipeline_and_process_testing.md
 policies_practices/pipeline_parameters.md
 ```
 
+# Processing pipeline standards
+
 ## Process standards (processes are wrappers around processing libraries)
 ...
 
