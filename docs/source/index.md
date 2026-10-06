@@ -57,6 +57,7 @@ policies_practices/platform_support
 policies_practices/version_pipelines
 policies_practices/software_practices
 policies_practices/docs
+policies_practices/processing_pipeline_standards
 
 ```
 
