@@ -1,11 +1,11 @@
 ```{toctree}
-:hidden:
 
-policies_practices/pipeline_package_management.md
-policies_practices/version_pipeline.md
-policies_practices/aind_processing_pipelines.md
-policies_practices/pipeline_and_process_testing.md
-policies_practices/pipeline_parameters.md
+pipeline_package_management.md
+version_pipelines.md
+aind_processing_pipelines.md
+pipeline_and_process_testing.md
+pipeline_parameters.md
+pipeline_branch_management.md
 ```
 
 # Processing pipeline standards
