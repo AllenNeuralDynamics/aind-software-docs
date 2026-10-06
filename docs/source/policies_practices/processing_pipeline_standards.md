@@ -1,3 +1,5 @@
+# Processing pipeline standards
+
 ```{toctree}
 
 pipeline_package_management.md
@@ -7,8 +9,6 @@ pipeline_and_process_testing.md
 pipeline_parameters.md
 pipeline_branch_management.md
 ```
-
-# Processing pipeline standards
 
 ## Process standards (processes are wrappers around processing libraries)
 ...
