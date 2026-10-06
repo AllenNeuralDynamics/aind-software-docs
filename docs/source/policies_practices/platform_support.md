@@ -1,4 +1,4 @@
-# Platforms and pipelines
+# Platforms
 
 A ‘platform’ is an integrated ecosystem of standardized material preparation, data acquisition methods and robust data pipelines. Platforms are characterized by efficient, hardened hardware and software, standardized operational processes, mature data models, and quality control, including real-time dashboards. Platforms receive specific support from the data and software teams at AIND and are subject to specific requirements.
 
@@ -18,15 +18,26 @@ All platforms and pipelines must follow the [Data organization conventions](data
 - Platform data assets should include valid aind-data-schema core files (minimum: data_description, subject, procedures, instrument, and acquisition).
 - The `data_description.tags` field must include a unique string that *will not ever change* for each platform. We recommend using `platform:<platform-name>` to make it easy to find this string.
 
+## Data flow pipeline
+
+Platforms utilize the dataflow pipeline which is outlined in [this](diagrams/high_level/general_data_flow.drawio.svg) high-level diagram. This infrastructure prescribes tools and processes for users at each stage of the pipeline. For example, there are standard logging tools used throughout the whole pipeline to provide trivial queries that help understand how data are moving. There are services to facilitate data staging and upload at the end of every acquisition so that data are saved in the correct format with correct metadata, relieving the burden of users having to do this step manually. 
+
+The majority of the shared infrastructure is hosted by SIPE and Scientific Computing; these teams can help platforms integrate into our shared infrastructure. If science projects are beginning to acquire data at a regular, scaled cadence, and/or projects are planning on developing more rigs for higher throughput data acquisition, we advise consulting these documents and teams to help users migrate into this infrastructure. Using these tools and services provides mechanisms for monitoring the success of data acquired, staged, uploaded, and processed throughout the dataflow pipeline.
+
 ### Logging
 
-Platforms should log all events to the [Loki server](https://github.com/AllenNeuralDynamics/aind-log-utils) maintained by SIPE. Events should be discrete information, warnings, and errors that need to be made visible to users in a dashboard. Logging of continuous metrics should be done in a log service that is specific to each tool and made visible in a dashboard attached to the tool.
+All stages of the dataflow pipeline need to utilize [`log-schema`](https://github.com/AllenNeuralDynamics/log-schema) to incorporate standard logging into applications. The logging schema provides `JSON` logs which can be queried to build telemetry portals in web servers such as Grafana.
+
+Platforms instrument acquisition applications should log all events to the Loki Server maintained by SIPE. This is the same server [`aind-watchdog-service`](https://github.com/AllenNeuralDynamics/aind-watchdog-service) logs its logs to using the `log-schema` format.
+
+All other services and processing libraries should be configured to log to `cloudwatch`. 
 
 ### Quality control
 
 Platforms are required to generate and annotate (i.e. mark as passing or failing) quality control metrics that can be used to filter data assets. Only assets that pass the quality control metrics relevant to an analysis should be used. See the [quality control page](../explore_analyze/quality_control.md) for more details on metrics and the QC Portal.
 
-## Pipeline development
+
+## Processing pipeline development
 
 Pipelines are a standardized series of processing steps that take raw data from a single modality and typically produce an NWB file as output. Pipelines are organized in a Nextflow pipeline with individual Code Ocean capsules performing internal steps. Platforms should use established pipelines for processing.
 
@@ -34,7 +45,7 @@ Pipelines are a standardized series of processing steps that take raw data from 
 - Produce an NWB file as output
 - Assess data quality and produce QC metrics and references
 
-### Pipeline metadata
+### Processing pipeline metadata
 
 Please see the [aind-metadata-manager](https://github.com/AllenNeuralDynamics/aind-metadata-manager/), many of the requirements described here are possible through the manager using simple functions.
 

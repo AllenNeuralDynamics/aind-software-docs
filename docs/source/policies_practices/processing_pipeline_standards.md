@@ -1,29 +1,22 @@
-# Package management
+```{toctree}
+:hidden:
+
+policies_practices/pipeline_package_management.md
+policies_practices/version_pipeline.md
+policies_practices/aind_processing_pipelines.md
+policies_practices/pipeline_and_process_testing.md
+policies_practices/pipeline_parameters.md
+```
+
+## Process standards (processes are wrappers around processing libraries)
 ...
 
-# Pipeline and process releases
+## Branch management
+
+
+## Nextflow version (UI will no longer be compatible)
 ...
 
-# Process standards (processes are wrappers around processing libraries)
-...
+## Standard logging with log-schema
 
-# Document current list of pipelines
-...
-
-# Branch management
-...
-
-# Nextflow version (UI will no longer be compatible)
-...
-
-# Standard logging with log-schema
-...
-
-# Pipeline and process testing
-...
-
-# Parameter logging and App Panel build
-...
-
-# Parameter testing (webapp)
-...
+Link to standard logging as defined in platform support
