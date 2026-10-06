@@ -13,9 +13,6 @@ pipeline_branch_management.md
 ## Process standards (processes are wrappers around processing libraries)
 ...
 
-## Branch management
-
-
 ## Nextflow version (UI will no longer be compatible)
 ...
 
