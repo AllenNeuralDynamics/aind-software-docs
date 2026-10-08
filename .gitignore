@@ -137,3 +137,4 @@ dmypy.json
 
 # MacOs
 **/.DS_Store
+uv.lock
