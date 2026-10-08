@@ -15,6 +15,79 @@ Projects that are not listed in the metadata-service must provide their own `dat
 
 If you need a new project name, please request that it be added with the [project name and funding intake form](https://app.smartsheet.com/b/form/9f366857582b4db98d1fe41ef724a613).
 
+### Check that your ORCiD is valid
+
+Names in the V2 funding and investigator metadata should resolve to one ORCID record. Enter your name as it appears in the Allen Institute databases to check the metadata-service lookup. A successful result provides the ORCID iD and a link to the profile.
+
+```{raw} html
+<form id="orcidLookupForm" style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+  <label for="orcidNameInput" style="font-weight: bold; display: block; margin-bottom: 10px;">Enter your name:</label>
+  <input type="text" id="orcidNameInput" autocomplete="name" placeholder="e.g., Daniel Birman" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+  <button type="submit" style="padding: 8px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Check ORCID</button>
+  <div id="orcidLookupResult" role="status" aria-live="polite" style="margin-top: 15px; padding: 10px; border-radius: 4px; display: none;"></div>
+</form>
+
+<script type="text/javascript">
+(function() {
+  const form = document.getElementById('orcidLookupForm');
+  const nameInput = document.getElementById('orcidNameInput');
+  const resultDiv = document.getElementById('orcidLookupResult');
+
+  function showResult(message, backgroundColor, borderColor) {
+    resultDiv.style.display = 'block';
+    resultDiv.style.backgroundColor = backgroundColor;
+    resultDiv.style.border = '1px solid ' + borderColor;
+    resultDiv.textContent = message;
+  }
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = nameInput.value.trim();
+
+    if (!name) {
+      showResult('Please enter your name.', '#fff3cd', '#ffc107');
+      return;
+    }
+
+    showResult('Checking the metadata-service...', '#e7f3ff', '#0066cc');
+
+    fetch('https://aind-metadata-service/api/v2/orcid/' + encodeURIComponent(name))
+      .then(response => {
+        if (response.status === 404) {
+          return { found: false };
+        }
+        if (!response.ok) {
+          throw new Error('The metadata-service returned HTTP ' + response.status + '.');
+        }
+        return response.json().then(data => ({ found: true, orcid: data.orcid }));
+      })
+      .then(result => {
+        if (!result.found || !result.orcid) {
+          showResult('No ORCID match was found. Check the spelling, full name, initials, and diacritics against your public ORCID profile. If the name is correct, ask the project owner to request a correction through the project name and funding intake form, or contact Scientific Computing.', '#fff3cd', '#ffc107');
+          return;
+        }
+
+        resultDiv.style.display = 'block';
+        resultDiv.style.backgroundColor = '#d4edda';
+        resultDiv.style.border = '1px solid #28a745';
+        resultDiv.textContent = 'Found an ORCID record: ';
+        const link = document.createElement('a');
+        link.href = 'https://orcid.org/' + encodeURIComponent(result.orcid);
+        link.textContent = result.orcid;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        resultDiv.appendChild(link);
+        resultDiv.appendChild(document.createTextNode('. Open the profile to confirm the displayed name is yours.'));
+      })
+      .catch(error => {
+        showResult('Unable to check the name right now. Confirm that you are on the Allen Institute network and try again. ' + error.message, '#f8d7da', '#dc3545');
+        console.error('Error fetching ORCID information:', error);
+      });
+  });
+})();
+</script>
+```
+
 ### Funding
 
 The funding endpoint will be used during data upload to populate your data description with funding information. You can check that your `project_name` is linked to the correct funding through this tool. Note that changes must be made through the intake form, you cannot modify these fields manually.
