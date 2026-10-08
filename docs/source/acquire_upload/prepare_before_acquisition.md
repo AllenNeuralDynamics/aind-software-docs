@@ -63,14 +63,14 @@ Names in the V2 funding and investigator metadata should resolve to one ORCID re
       })
       .then(result => {
         if (!result.found || !result.orcid) {
-          showResult('No ORCID match was found. Check the spelling, full name, initials, and diacritics against your public ORCID profile. If the name is correct, ask the project owner to request a correction through the project name and funding intake form, or contact Scientific Computing.', '#fff3cd', '#ffc107');
+          showResult('No ORCiD match was found. Please ensure your Allen Institute name as it appears on your profile matches your public ORCiD profile. If your name alone does not match a single ORCiD record you must add your Allen Institute email address and/or affiliation to your ORCiD record.', '#fff3cd', '#ffc107');
           return;
         }
 
         resultDiv.style.display = 'block';
         resultDiv.style.backgroundColor = '#d4edda';
         resultDiv.style.border = '1px solid #28a745';
-        resultDiv.textContent = 'Found an ORCID record: ';
+        resultDiv.textContent = 'Found an ORCiD record: ';
         const link = document.createElement('a');
         link.href = 'https://orcid.org/' + encodeURIComponent(result.orcid);
         link.textContent = result.orcid;
