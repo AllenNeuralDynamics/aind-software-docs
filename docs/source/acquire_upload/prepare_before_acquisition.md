@@ -63,7 +63,7 @@ Names in the V2 funding and investigator metadata should resolve to one ORCID re
       })
       .then(result => {
         if (!result.found || !result.orcid) {
-          showResult('No ORCiD match was found. Please ensure your Allen Institute name as it appears on your profile matches your public ORCiD profile. If your name alone does not match a single ORCiD record you must add your Allen Institute email address and/or affiliation to your ORCiD record.', '#fff3cd', '#ffc107');
+          showResult('No ORCiD match was found. A match requires your name plus either your Allen Institute email address or affiliation on your public ORCiD profile. Please ensure your Allen Institute name as it appears on your profile matches your public ORCiD profile, and add your Allen Institute email address and/or affiliation to your ORCiD record.', '#fff3cd', '#ffc107');
           return;
         }
 
