@@ -80,8 +80,22 @@ Names in the V2 funding and investigator metadata should resolve to one ORCID re
         resultDiv.appendChild(document.createTextNode('. Open the profile to confirm the displayed name is yours.'));
       })
       .catch(error => {
-        showResult('Unable to check the name right now. Confirm that you are on the Allen Institute network and try again. ' + error.message, '#f8d7da', '#dc3545');
         console.error('Error fetching ORCID information:', error);
+        if (!(error instanceof TypeError)) {
+          showResult('Unable to check the name right now. ' + error.message, '#f8d7da', '#dc3545');
+          return;
+        }
+        // The browser hides the cause of a failed fetch, so check whether the metadata-service is reachable at all.
+        fetch('https://aind-metadata-service/api/v2/healthcheck')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('unhealthy');
+            }
+            showResult('The ORCiD lookup failed on the server side, even though you are connected to the Allen Institute network. Please try again in a minute. If it keeps failing, let Scientific Computing know.', '#f8d7da', '#dc3545');
+          })
+          .catch(() => {
+            showResult('Unable to reach the metadata-service. Confirm that you are on the Allen Institute network (or VPN) and try again. If you are on the network, your browser may have blocked access when it asked for permission. Allow it in the site settings (or try an incognito window), then reload the page.', '#f8d7da', '#dc3545');
+          });
       });
   });
 })();
