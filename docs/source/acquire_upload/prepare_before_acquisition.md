@@ -56,14 +56,21 @@ Names in the V2 funding and investigator metadata should resolve to one ORCID re
         if (response.status === 404) {
           return { found: false };
         }
+        if (response.status === 503) {
+          return { unavailable: true };
+        }
         if (!response.ok) {
           throw new Error('The metadata-service returned HTTP ' + response.status + '.');
         }
         return response.json().then(data => ({ found: true, orcid: data.orcid }));
       })
       .then(result => {
+        if (result.unavailable) {
+          showResult('The metadata-service is temporarily unavailable. Please try again in a few minutes.', '#f8d7da', '#dc3545');
+          return;
+        }
         if (!result.found || !result.orcid) {
-          showResult('No ORCiD match was found. Please ensure your Allen Institute name as it appears on your profile matches your public ORCiD profile. If your name alone does not match a single ORCiD record you must add your Allen Institute email address and/or affiliation to your ORCiD record.', '#fff3cd', '#ffc107');
+          showResult('No ORCiD match was found. A match requires your name plus either your Allen Institute email address or affiliation on your public ORCiD profile. Please ensure your Allen Institute name as it appears on your profile matches your public ORCiD profile, and add your Allen Institute email address and/or affiliation to your ORCiD record.', '#fff3cd', '#ffc107');
           return;
         }
 
@@ -80,8 +87,8 @@ Names in the V2 funding and investigator metadata should resolve to one ORCID re
         resultDiv.appendChild(document.createTextNode('. Open the profile to confirm the displayed name is yours.'));
       })
       .catch(error => {
-        showResult('Unable to check the name right now. Confirm that you are on the Allen Institute network and try again. ' + error.message, '#f8d7da', '#dc3545');
         console.error('Error fetching ORCID information:', error);
+        showResult('Unable to check the name right now. Please try again in a minute. If it keeps failing, confirm that you are on the Allen Institute network (or VPN) and that your browser allowed access when it asked for permission (check the site settings, or try an incognito window).', '#f8d7da', '#dc3545');
       });
   });
 })();
