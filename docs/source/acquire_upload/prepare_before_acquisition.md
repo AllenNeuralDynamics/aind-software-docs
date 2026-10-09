@@ -56,12 +56,19 @@ Names in the V2 funding and investigator metadata should resolve to one ORCID re
         if (response.status === 404) {
           return { found: false };
         }
+        if (response.status === 503) {
+          return { unavailable: true };
+        }
         if (!response.ok) {
           throw new Error('The metadata-service returned HTTP ' + response.status + '.');
         }
         return response.json().then(data => ({ found: true, orcid: data.orcid }));
       })
       .then(result => {
+        if (result.unavailable) {
+          showResult('The metadata-service is temporarily unavailable. Please try again in a few minutes.', '#f8d7da', '#dc3545');
+          return;
+        }
         if (!result.found || !result.orcid) {
           showResult('No ORCiD match was found. A match requires your name plus either your Allen Institute email address or affiliation on your public ORCiD profile. Please ensure your Allen Institute name as it appears on your profile matches your public ORCiD profile, and add your Allen Institute email address and/or affiliation to your ORCiD record.', '#fff3cd', '#ffc107');
           return;
@@ -81,21 +88,7 @@ Names in the V2 funding and investigator metadata should resolve to one ORCID re
       })
       .catch(error => {
         console.error('Error fetching ORCID information:', error);
-        if (!(error instanceof TypeError)) {
-          showResult('Unable to check the name right now. ' + error.message, '#f8d7da', '#dc3545');
-          return;
-        }
-        // The browser hides the cause of a failed fetch, so check whether the metadata-service is reachable at all.
-        fetch('https://aind-metadata-service/api/v2/healthcheck')
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('unhealthy');
-            }
-            showResult('The ORCiD lookup failed on the server side, even though you are connected to the Allen Institute network. Please try again in a minute. If it keeps failing, let Scientific Computing know.', '#f8d7da', '#dc3545');
-          })
-          .catch(() => {
-            showResult('Unable to reach the metadata-service. Confirm that you are on the Allen Institute network (or VPN) and try again. If you are on the network, your browser may have blocked access when it asked for permission. Allow it in the site settings (or try an incognito window), then reload the page.', '#f8d7da', '#dc3545');
-          });
+        showResult('Unable to check the name right now. Please try again in a minute. If it keeps failing, confirm that you are on the Allen Institute network (or VPN) and that your browser allowed access when it asked for permission (check the site settings, or try an incognito window).', '#f8d7da', '#dc3545');
       });
   });
 })();
