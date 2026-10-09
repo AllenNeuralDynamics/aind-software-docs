@@ -2,11 +2,11 @@
 
 ## Device calibration
 
-The metadata provides a generic class for storing [Calibration](https://aind-data-schema.readthedocs.io/en/latest/components/measurements.html#calibration) metadata. In a generic calibration there is some set of known inputs and a paired set of measured output values.
+The metadata provides a generic class for storing [Calibration](https://biodata-schema.readthedocs.io/en/latest/components/measurements.html#calibration) metadata. In a generic calibration there is some set of known inputs and a paired set of measured output values.
 
-Common calibrations include measuring power output (e.g. for lasers) with [PowerCalibration](https://aind-data-schema.readthedocs.io/en/latest/components/measurements.html#powercalibration) and measuring volume outputs (e.g. for lick spouts controlled by a solenoid) with [VolumeCalibration](https://aind-data-schema.readthedocs.io/en/latest/components/measurements.html#volumecalibration), but you can define any generic calibration using the base class.
+Common calibrations include measuring power output (e.g. for lasers) with [PowerCalibration](https://biodata-schema.readthedocs.io/en/latest/components/measurements.html#powercalibration) and measuring volume outputs (e.g. for lick spouts controlled by a solenoid) with [VolumeCalibration](https://biodata-schema.readthedocs.io/en/latest/components/measurements.html#volumecalibration), but you can define any generic calibration using the base class.
 
-Calibrations have an option to include fit parameters, if your calibration fit is not available in the [FitType](https://aind-data-schema.readthedocs.io/en/latest/components/measurements.html#fittype) options please request that we add it by opening an [issue](https://github.com/AllenNeuralDynamics/aind-data-schema/issues).
+Calibrations have an option to include fit parameters, if your calibration fit is not available in the [FitType](https://biodata-schema.readthedocs.io/en/latest/components/measurements.html#fittype) options please request that we add it by opening an [issue](https://github.com/AllenNeuralDynamics/aind-data-schema/issues).
 
 ## Testing
 
@@ -45,7 +45,7 @@ procedures.write_standard_file()
 
 If the processing pipeline that will run on your data asset **does not read the subject and/or procedures metadata** you can follow the instructions below to create empty subject and procedures files.
 
-Note that this automation is only available if your job_type runs `aind-metadata-mapper>=1.3.0`. Please include as much detail as possible about your [CalibrationObject](https://aind-data-schema.readthedocs.io/en/latest/components/subjects.html#calibrationobject) in the upload settings.
+Note that this automation is only available if your job_type runs `aind-metadata-mapper>=1.3.0`. Please include as much detail as possible about your [CalibrationObject](https://biodata-schema.readthedocs.io/en/latest/components/subjects.html#calibrationobject) in the upload settings.
 
 ```{code-block} python
 from aind_data_schema.components.subjects import CalibrationObject

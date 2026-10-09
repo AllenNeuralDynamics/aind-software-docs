@@ -40,7 +40,7 @@ Please see the [aind-metadata-manager](https://github.com/AllenNeuralDynamics/ai
 
 #### data_description.json
 
-All processing pipelines that create derived assets should upgrade the [data_description](https://aind-data-schema.readthedocs.io/en/latest/data_description.html) to a derived data description (changing the name and data_level).
+All processing pipelines that create derived assets should upgrade the [data_description](https://biodata-schema.readthedocs.io/en/latest/data_description.html) to a derived data description (changing the name and data_level).
 
 Use the [`DataDescription.from_data_description()`](https://github.com/AllenNeuralDynamics/aind-data-schema/blob/e172cb06a63b722eaeaaf8933d0a17cbedf3feea/src/aind_data_schema/core/data_description.py#L334) function to create derived data_description objects. Pass the process name as a parameter, often just `process_name="processed"`. If more source data assets were used than just the one being passed into the function then pass the optional `source_data` parameter as well with the names of those data assets.
 
@@ -65,9 +65,9 @@ derived_data_description.write_standard_file(output_directory="/results")
 
 #### processing.json
 
-Processing pipelines need to track each [DataProcess](https://aind-data-schema.readthedocs.io/en/latest/processing.html#dataprocess) that was run to create the derived data asset.
+Processing pipelines need to track each [DataProcess](https://biodata-schema.readthedocs.io/en/latest/processing.html#dataprocess) that was run to create the derived data asset.
 
-If processing was performed as part of a nextflow pipeline, that should be tracked in the `Processing.pipelines` field using a [Code](https://aind-data-schema.readthedocs.io/en/latest/components/identifiers.html#code) object pointing to the github repository with the nextflow configuration. Use the `DataProcess.pipeline_name` field to indicate that processes were run as part of a pipeline.
+If processing was performed as part of a nextflow pipeline, that should be tracked in the `Processing.pipelines` field using a [Code](https://biodata-schema.readthedocs.io/en/latest/components/identifiers.html#code) object pointing to the github repository with the nextflow configuration. Use the `DataProcess.pipeline_name` field to indicate that processes were run as part of a pipeline.
 
 #### Other metadata
 

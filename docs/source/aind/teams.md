@@ -38,7 +38,7 @@ The Data & Outreach team is responsible for our open science. It maintains the d
 
 Metadata schema for neuroscience
 
-[readthedoc](https://aind-data-schema.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-data-schema) | [registries repo](https://github.com/AllenNeuralDynamics/aind-data-schema-models/)
+[readthedoc](https://biodata-schema.readthedocs.io/en/latest/) | [repo](https://github.com/AllenNeuralDynamics/aind-data-schema) | [registries repo](https://github.com/AllenNeuralDynamics/aind-data-schema-models/)
 
 **aind-metadata-mapper**
 

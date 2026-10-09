@@ -34,7 +34,7 @@ The [GatherMetadataJob](https://github.com/AllenNeuralDynamics/aind-metadata-map
 The main settings you should be concerned with are:
 
 - `instrument_settings.instrument_id`: this field triggers the job to pull an `instrument.json` file from the metadata-service (where you previously uploaded it).
-- `data_description_settings.tags/group/restrictions/data_summary`: each of these fields is meta-metadata about your project and should be accurately filled out, if possible. Please see the [DataDescription](https://aind-data-schema.readthedocs.io/en/latest/data_description.html#datadescription) documentation for details about each field.
+- `data_description_settings.tags/group/restrictions/data_summary`: each of these fields is meta-metadata about your project and should be accurately filled out, if possible. Please see the [DataDescription](https://biodata-schema.readthedocs.io/en/latest/data_description.html#datadescription) documentation for details about each field.
 
 The settings for the GatherMetadataJob are typically set [inside of your upload script](https://github.com/AllenNeuralDynamics/aind-data-transfer-service/blob/d1f84020862c3de340020b6cb45bef0fd5105515/docs/examples/aind_data_schema_v2.py#L45-L50) or as part of the `job_type`.
 
@@ -56,7 +56,7 @@ Each file must follow the naming pattern `<metadata_type>*.json` where `*` is an
 
 2. **No shared devices, with the exception of a single shared clock**: In general, two instruments can be merged **if and only if there are no shared devices** between them. Devices are identified by their `name` field. If the same device name appears in both instrument files, they should really be defined as a single instrument, not two separate ones.
 
-   **Exception for clock synchronization**: When synchronizing data acquisition across multiple instruments (e.g., recording behavior and physiology simultaneously), a shared clock device is permitted. For AIND instruments this must be a [HarpDevice](https://aind-data-schema.readthedocs.io/en/latest/components/devices.html#harpdevice) configured as a clock generator (`HarpDevice.is_clock_generator=True`).
+    **Exception for clock synchronization**: When synchronizing data acquisition across multiple instruments (e.g., recording behavior and physiology simultaneously), a shared clock device is permitted. For AIND instruments this must be a [HarpDevice](https://biodata-schema.readthedocs.io/en/latest/components/devices.html#harpdevice) configured as a clock generator (`HarpDevice.is_clock_generator=True`).
 
 3. **Enable validation**: It is **strongly recommended** to turn on the `raise_if_invalid` setting in the `GatherMetadataJob` job settings. This validates that the merge will succeed *before* upload, making it much easier to identify and fix problems compared to dealing with a raw data asset with broken metadata.
 

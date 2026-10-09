@@ -19,9 +19,9 @@ See [aind-file-standards](https://github.com/allenneuralDynamics/aind-file-stand
 
 ### Acquisition
 
-Rigs are responsible for generating the [acquisition.json](https://aind-data-schema.readthedocs.io/en/latest/acquisition.html) as well as any optional files (e.g., quality_control.json), if your situation requires it. You can either generate these metadata files directly or use the extractor/mapper pattern to extract necessary metadata on the rig and then map it in the cloud to aind-data-schema.
+Rigs are responsible for generating the [acquisition.json](https://biodata-schema.readthedocs.io/en/latest/acquisition.html) as well as any optional files (e.g., quality_control.json), if your situation requires it. You can either generate these metadata files directly or use the extractor/mapper pattern to extract necessary metadata on the rig and then map it in the cloud to aind-data-schema.
 
-References to the instrument in the `acquisition.json` must be consistent with the corresponding information in the [`instrument.json`](https://aind-data-schema.readthedocs.io/en/latest/instrument.html). See the [Instrument and Acquisition section in the AIND Data Schema docs](https://aind-data-schema.readthedocs.io/en/latest/validation.html) for details. Scientists collecting data should work closely with engineers maintaining their systems to ensure that this metadata remains consistent and will validate.
+References to the instrument in the `acquisition.json` must be consistent with the corresponding information in the [`instrument.json`](https://biodata-schema.readthedocs.io/en/latest/instrument.html). See the [Instrument and Acquisition section in the AIND Data Schema docs](https://biodata-schema.readthedocs.io/en/latest/validation.html) for details. Scientists collecting data should work closely with engineers maintaining their systems to ensure that this metadata remains consistent and will validate.
 
 #### Extractor / Mapper Pattern
 

@@ -16,7 +16,7 @@ For packages that are fully released you should also add:
 3. **Technical reference**, generally auto-generated library or API docs.
 4. **Explanation** of technical or philosophical decisions made during development. Links to a preprint or paper can often take the place of an explanation section.
 
-As an example, on the [aind-data-schema documentation](https://aind-data-schema.readthedocs.io/en/latest/example_workflow/example_workflow.html) the [Generating metadata](https://aind-data-schema.readthedocs.io/en/latest/example_workflow/example_workflow.html) section is a tutorial, the [Core and Component Schemas](https://aind-data-schema.readthedocs.io/en/latest/data_description.html) pages are reference, and the [Philosophy](https://aind-data-schema.readthedocs.io/en/latest/general.html) sections provide some explanation of *why* certain decisions were made.
+As an example, on the [aind-data-schema documentation](https://biodata-schema.readthedocs.io/en/latest/example_workflow/example_workflow.html) the [Generating metadata](https://biodata-schema.readthedocs.io/en/latest/example_workflow/example_workflow.html) section is a tutorial, the [Core and Component Schemas](https://biodata-schema.readthedocs.io/en/latest/data_description.html) pages are reference, and the [Philosophy](https://biodata-schema.readthedocs.io/en/latest/general.html) sections provide some explanation of *why* certain decisions were made.
 
 ## How
 
