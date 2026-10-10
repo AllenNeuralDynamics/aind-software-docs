@@ -62,6 +62,7 @@ myst_heading_anchors = 3
 
 html_theme = "furo"
 html_static_path = ["_static"]
+html_js_files = ["metadata-widgets.js"]
 html_favicon = "_static/favicon.ico"
 html_theme_options = {
     "light_logo": "light-logo.svg",
