@@ -176,7 +176,15 @@ When naming files, we should:
 
 NWB files are saved out as `Zarr` files according to the standard defined in [aind-file-standards](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/docs/file_formats/nwb.md). NWB files are saved as a processed output for each modality acquired during the acquisition session. Within the derived asset, NWB files should be named `<modality>.nwb.zarr` at the root level of the derived asset along with the core aind-data-schema metadata files.
 
-When NWB files are combined together, post QC validation, they will be saved as a new derived data asset with merged, core aind-data-schema metadata files. The NWB file will will be saved at the root directory of the derived asset along with the metadata and will be named `<primary-session-name>.nwb.zarr`.
+When single-modality NWB files are combined (see [Combining single-modality assets](#combining-single-modality-assets)), the combined file is saved as a new derived data asset with merged core aind-data-schema metadata files. The NWB file is saved at the root directory of the derived asset along with the metadata and is named `<primary-session-name>.nwb.zarr`.
+
+## Combining single-modality assets
+
+Processing pipelines are modality-specific, so each modality in an acquisition session is processed into its own derived data asset with its own NWB file. Once QC is complete for every modality in the session, these single-modality assets will be combined into a single multimodal asset containing a single combined NWB file and saved as a new derived data asset (see [NWB file naming conventions](#nwb-file-naming-conventions)).
+
+The trigger for combining assets is that QC of the raw and uni-modal assets is completed. See the [quality control page](../explore_analyze/quality_control.md) for more on QC metrics and the QC Portal.
+
+Once the combined asset exists, the single-modality derived assets may be archived. Whether or not they are archived, durable analyses should be built on the combined asset rather than on the single-modality assets. Metadata is preserved for every asset, including archived ones.
 
 ## AIND Implementation
 
