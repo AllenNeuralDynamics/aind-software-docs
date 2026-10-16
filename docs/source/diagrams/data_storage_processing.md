@@ -5,10 +5,16 @@
 Raw data lands in S3 as a single data asset that carries its `aind-data-schema`
 metadata, with all of a session's modalities associated with one object.
 Processing pipelines are modality-specific — each pipeline processes a single
-modality. A pipeline outputs an NWB file along with `aind-data-schema` metadata,
-including processing metrics and quality control artifacts and metrics. Once the
-outputs have been QC'd, they can be combined into a final NWB file with its
-associated metadata.
+modality and the `modalities` list in the associated data_description metadata 
+should have length = 1 and contain a string representing only that single modality.
+A pipeline outputs an NWB file along with `aind-data-schema` metadata,
+including processing metrics and quality control artifacts and metrics.
+All other metadata files should be identical to the raw asset metadata (e.g. the
+acquisition metadata will contain data streams for all modalities that were collected
+simultaneously, which will be a superset of the data streams that exist in the associated
+single modality NWB file). 
+
+Once QC is complete for all modalities, the single-modality outputs are combined into a single multimodal NWB file with merged metadata and saved as a new derived data asset. See [Combining single-modality assets](../policies_practices/data_organization.md#combining-single-modality-assets) for what triggers combining and what happens to the single-modality assets afterward.
 
 Each pipeline wraps modality- and platform-specific libraries that handle the
 underlying data processing, quality control, and NWB packaging.
