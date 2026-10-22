@@ -1,1 +1,0 @@
-# Package management for pipelines
