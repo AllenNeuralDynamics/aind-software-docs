@@ -20,7 +20,7 @@ All platforms and pipelines must follow the [Data organization conventions](data
 
 ## Data flow pipeline
 
-Platforms utilize the dataflow pipeline which is outlined in [this](diagrams/high_level/general_data_flow.drawio.svg) high-level diagram. This infrastructure prescribes tools and processes for users at each stage of the pipeline. For example, there are standard logging tools used throughout the whole pipeline to provide trivial queries that help understand how data are moving. There are services to facilitate data staging and upload at the end of every acquisition so that data are saved in the correct format with correct metadata, relieving the burden of users having to do this step manually. 
+Platforms utilize the dataflow pipeline which is outlined in [this](../diagrams/high_level/general_data_flow.drawio.svg) high-level diagram. This infrastructure prescribes tools and processes for users at each stage of the pipeline. For example, there are standard logging tools used throughout the whole pipeline to provide trivial queries that help understand how data are moving. There are services to facilitate data staging and upload at the end of every acquisition so that data are saved in the correct format with correct metadata, relieving the burden of users having to do this step manually. 
 
 The majority of the shared infrastructure is hosted by SIPE and Scientific Computing; these teams can help platforms integrate into our shared infrastructure. If science projects are beginning to acquire data at a regular, scaled cadence, and/or projects are planning on developing more rigs for higher throughput data acquisition, we advise consulting these documents and teams to help users migrate into this infrastructure. Using these tools and services provides mechanisms for monitoring the success of data acquired, staged, uploaded, and processed throughout the dataflow pipeline.
 
@@ -39,7 +39,7 @@ Platforms are required to generate and annotate (i.e. mark as passing or failing
 
 ## Processing pipeline development
 
-Pipelines are a standardized series of processing steps that take raw data from a single modality and typically produce an NWB file as output. Pipelines are organized in a Nextflow pipeline with individual processes implemented as separate GitHub repositories. Platforms should use established pipelines for processing.
+Pipelines are a standardized series of processing steps that take raw data from a single modality and typically produce an NWB file as output. Pipelines are organized in a Nextflow pipeline with individual processes implemented as separate GitHub repositories performing internal steps. Platforms should use established pipelines for processing.
 
 - Accept raw data from a single modality, organized according to [aind-file-standards](https://github.com/AllenNeuralDynamics/aind-file-standards) when applicable.
 - Produce an NWB file as output

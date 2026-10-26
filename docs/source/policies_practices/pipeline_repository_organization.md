@@ -60,5 +60,5 @@ Commit SHAs (or tags) MUST be used in `process_versions.env`, so a pipeline vers
 - `tests/`: scripts that generate small synthetic datasets and check pipeline outputs. See [Pipeline and process testing](pipeline_and_process_testing.md).
 - `docs/`: user documentation (Sphinx, published on Read the Docs), including the release notes of each version in `docs/source/releases/<version>.rst`.
 - `scripts/`: user helpers, e.g. `pull_pipeline_images.sh` to pull and cache all images before running on an HPC cluster.
-- `.github/workflows/`, `.github/scripts/`: CI. See [Packaging and versioning](packaging_and_versioning.md).
+- `.github/workflows/`, `.github/scripts/`: CI. See [Packaging and versioning](pipeline_packaging_and_versioning.md).
 - Optional: `params_app/`, a static web page generated from the parameter schema to edit and validate parameter files. **TODO:** the params_app should be shared across pipelines (with dropdown to individual ones!)

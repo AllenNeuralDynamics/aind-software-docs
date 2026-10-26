@@ -18,7 +18,7 @@ All parameters of a pipeline MUST be in one JSON file, described by a JSON Schem
 
 Users pass their own file with `--params_file my_params.json`; if they don't, the defaults are used.
 `main.nf` passes each step its own section as a JSON string (`./run --params '<json>'`),
-together with the shared `logging` section (see [Logging](logging.md)).
+together with the shared `logging` section (see [Logging](pipeline_logging.md)).
 In aind-ephys-pipeline, the older `--<step>_args "--flag value"` command-line arguments are still accepted and merged into the step's section.
 
 ## Schema

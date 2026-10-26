@@ -24,20 +24,20 @@ The pipeline does not install anything from the step repositories. For each proc
 3. runs `./run --params '<json>'` inside the step's container;
 4. collects the outputs from `capsule/results`.
 
-Pinning commits in `process_versions.env` (see [Repository organization](repository_organization.md)) means that
+Pinning commits in `process_versions.env` (see [Repository organization](pipeline_repository_organization.md)) means that
 a pipeline version always runs the same code. To update a step, its new commit is pinned in a PR to the pipeline's `dev` branch.
 
 Containers are built from the pipeline repository's `environment/` folder by CI and pushed to the GitHub Container Registry
 (`ghcr.io/allenneuraldynamics/<image>:<version>`), so all deployments pull the same images.
 Several steps can share an image; steps with special dependencies (e.g. a GPU spike sorter) get their own.
-See [Packaging and versioning](packaging_and_versioning.md).
+See [Packaging and versioning](pipeline_packaging_and_versioning.md).
 
 ## Step interface
 
 Every step repository MUST accept a `--params` argument containing either a JSON string or the path to a JSON file.
 When `--params` is given, it overrides all other command-line arguments.
 The pipeline passes each step its own section of the pipeline parameters (see [Pipeline parameterization](pipeline_parameters.md)),
-plus the shared `logging` section (see [Logging](logging.md)).
+plus the shared `logging` section (see [Logging](pipeline_logging.md)).
 Step repositories SHOULD keep a `code/params.json` with defaults, so the step can also run on its own.
 
 ```python

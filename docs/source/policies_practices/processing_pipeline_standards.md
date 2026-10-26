@@ -28,7 +28,7 @@ The same pipeline repository MUST be deployable in these environments:
 - **External users, on workstations**: the pipeline runs with the Nextflow `local` executor and Docker.
 - **External users, on HPC clusters**: the pipeline runs with the Nextflow `slurm` executor (or another HPC executor) and Apptainer/Singularity.
 
-Each deployment has its own Nextflow configuration file (see [Repository organization](repository_organization.md)),
+Each deployment has its own Nextflow configuration file (see [Repository organization](pipeline_repository_organization.md)),
 while the workflow definition (`main.nf`), parameters and containers are shared.
 
 ```{toctree}
@@ -55,10 +55,32 @@ Newer nf-schema releases (2.8.0 and later) require Nextflow 26.04, so they can't
 CI tests run with the latest stable Nextflow release, with `NXF_SYNTAX_PARSER=v1`,
 until pipelines are migrated to the new strict syntax parser.
 
+## Shared design choices
+
+Beyond the Nextflow version, pipelines MUST share the following conventions, so that users move between
+pipelines without relearning the interface and so that common processes can be reused:
+
+- **DSL2 workflows.** `main.nf` defines a named `workflow`, with each step a DSL2 `process`.
+  Steps communicate through channels rather than through files on a shared path.
+- **`--params_file`.** Every pipeline MUST accept a single `--params_file <path>` argument pointing at the
+  JSON parameter file, validated against the pipeline's schema before any process is created
+  (see [Pipeline parameterization](pipeline_parameters.md)). Pipeline-level switches that are not part of the
+  parameter file (e.g. `--container_tag`) stay as plain command-line parameters.
+- **Common processes.** Steps that are not modality-specific SHOULD be implemented once and reused across pipelines:
+
+  | Process | Role |
+  |---|---|
+  | `validate_parameters` | Validate the parameter file against the schema and fail before any container runs. |
+  | `save_provenance` | Write the pipeline version, the pinned process commits and the resolved parameters into the results. |
+  | `job_dispatch` | Split the input into the independent units the rest of the pipeline runs on in parallel. |
+  | `collect_results` / `nwb_packaging` | Gather per-unit outputs and write the final asset. |
+
+**TODO:** the shared processes above are currently reimplemented per pipeline. They should be centralized
+(a common repository of nf-core-style modules, or a shared sub-workflow) and pinned like any other process.
+
 ## Available ND platform pipelines
 
 | Pipeline | Modality | Documentation | Reference |
 |---|---|---|---|
 | [aind-ephys-pipeline](https://github.com/AllenNeuralDynamics/aind-ephys-pipeline) | Extracellular electrophysiology (spike sorting) | [aind-ephys-pipeline.readthedocs.io](https://aind-ephys-pipeline.readthedocs.io) | [Buccino et al., eLife](https://elifesciences.org/articles/110170v1) |
-| [aind-smartspim-pipeline](https://github.com/AllenNeuralDynamics/aind-smartspim-pipeline) | SmartSPIM light-sheet microscopy | WIP | WIP 
-| 
+| [aind-smartspim-pipeline](https://github.com/AllenNeuralDynamics/aind-smartspim-pipeline) | SmartSPIM light-sheet microscopy | WIP | WIP |
