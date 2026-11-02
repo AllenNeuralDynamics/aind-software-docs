@@ -12,7 +12,9 @@ Logging is configured once, in the top-level `logging` section of the pipeline p
 "logging": {
     "package": "log-schema",
     "pipeline_name": "AIND Ephys Pipeline",
-    "logging_cfg": {}
+    "logging_cfg": {},
+    "acquisition_name": "",
+    "pipeline_name": ""
 }
 ```
 
@@ -22,38 +24,58 @@ Logging is configured once, in the top-level `logging` section of the pipeline p
 | `logging_cfg` | With `logging`: arguments for `logging.basicConfig` (e.g. `level`, `format`). With `log-schema`: its configuration (empty for the defaults). |
 | `pipeline_name`, `acquisition_name` | Optional, for `log-schema`. If `acquisition_name` is missing, steps read it from `data_description.json`. |
 
-`main.nf` adds this section to the `--params` of every step, unless the step's own section already has a `logging` entry
-(see `buildStepArgs` in [`main.nf`](https://github.com/AllenNeuralDynamics/aind-ephys-pipeline/blob/main/pipeline/main.nf)).
+`main.nf` adds the `pipeline_name` and `acquisition_name` to the `logging` section of the params
+using something like:
+
+```groovy
+full_params.logging = full_params.logging ?: [:]
+if (!full_params.logging.acquisition_name) {
+    def acquisition_name = null
+    try {
+        def data_description = file("${params.ecephys_path}/data_description.json")
+        if (data_description.exists()) {
+            acquisition_name = new groovy.json.JsonSlurper().parseText(data_description.text).name
+        }
+    } catch (Exception e) {
+        println "WARN: could not read data_description.json: ${e.message}"
+    }
+    if (!acquisition_name) {
+        println "WARN: no name found in ${params.ecephys_path}/data_description.json, using 'undefined'"
+        acquisition_name = 'undefined'
+    }
+    full_params.logging.acquisition_name = acquisition_name
+}
+if (!full_params.logging.pipeline_name) {
+    full_params.logging.pipeline_name = 'AIND Ephys Pipeline'
+}
+```
+
+
 Changing the logging of the whole pipeline only takes changing the parameter file.
 `log-schema` is pinned in `environment/package-versions.txt`, so it is installed in all images.
 
 ## In each step
 
-**TODO**: can this be done by `log-schema` directly and return a `logger`?
-
 Steps MUST set up logging from `params["logging"]` before anything else logs.
 From [aind-ephys-preprocessing](https://github.com/AllenNeuralDynamics/aind-ephys-preprocessing):
 
 ```python
-LOGGING = params.get("logging", None)
+logging_params = params.get("logging", None)
 
-if LOGGING is None:
+if logging_params is None:
     logging.basicConfig(level="INFO", stream=sys.stdout, format="%(message)s")
-elif LOGGING["package"] == "logging":
-    logging.basicConfig(stream=sys.stdout, **LOGGING.get("logging_cfg", {}))
-elif LOGGING["package"] == "log-schema":
+elif logging_params["package"] == "logging":
+    logging.basicConfig(stream=sys.stdout, **logging_params.get("logging_cfg", {}))
+elif logging_params["package"] == "log-schema":
     import log_schema
 
-    acquisition_name = LOGGING.get("acquisition_name")
-    if acquisition_name is None:
-        data_description_json = next(data_folder.glob("**/data_description.json"), None)
-        if data_description_json is not None:
-            acquisition_name = json.loads(data_description_json.read_text())["name"]
+    acquisition_name = logging_params.get("acquisition_name", "unknown")
+    pipeline_name = logging_params.get("pipeline_name", "AIND Ephys Pipeline")
 
     log_schema.setup_logging(
-        config=LOGGING.get("logging_cfg") or None,
+        config=logging_params.get("logging_cfg") or None,
         model={
-            "pipeline_name": LOGGING.get("pipeline_name", "AIND Ephys Pipeline"),
+            "pipeline_name": pipeline_name,
             "acquisition_name": acquisition_name,
             "process_name": "Preprocessing",
         },

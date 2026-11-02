@@ -55,6 +55,10 @@ Commit SHAs (or tags) MUST be used in `process_versions.env`, so a pipeline vers
 }
 ```
 
+> [!TIP]
+> Whenever possible, it is recommended to use [`uv`](https://docs.astral.sh/uv/) to build Python environments within containers.
+
+
 ## Other folders
 
 - `tests/`: scripts that generate small synthetic datasets and check pipeline outputs. See [Pipeline and process testing](pipeline_and_process_testing.md).
