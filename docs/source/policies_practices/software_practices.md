@@ -39,7 +39,7 @@ These standards are maintained through the use of template repositories. Use the
 - Modules, classes, and functions should be manageable size. (Modules and classes < 1000 lines, functions < 100 lines)
 - Internal packages should use the naming pattern `<modality>-<process>` wherever possible.
 - Packages should not be prefixed with our namespace (i.e. do not put `aind-` as a prefix).
-- Internal dependencies should be pinned `==1.0.0` or use *both* a version floor and ceiling `>=1.0.0,<2`. 
+- On stable releases (Major version >= 1), dependencies should specify a supported minimum version (e.g. `>=1.0.0`) by default. Avoid precautionary upper bounds (e.g. `<2`) and exact pins (`==1.0.0`) in libraries, since they cause dependency conflicts and block otherwise compatible updates downstream. Reserve upper bounds for known incompatibilities, and document the reason next to the constraint. At the very least, do not pin within a minor version (e.g. `~=1.2.0` or `==1.2.*`). See [Should You Use Upper Bound Version Constraints?](https://iscinumpy.dev/post/bound-version-constraints/).
 - Unit tests should clean up test files or write to temporary folders. Do not store large auto-generated files for unit tests in the repositories.
 - Services should use structured logging using AIND standard format: [log-schema](https://github.com/AllenNeuralDynamics/log-schema).
 - TBD: pyproject.toml to be updated with individual authors?
