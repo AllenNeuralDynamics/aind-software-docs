@@ -37,6 +37,7 @@ Many setups now have multiple independent rigs running. You can generate separat
 2. Each file needs a suffix, for example instrument_behavior.json and instrument_ecephys.json. The suffix can be anything it just needs to match the pattern “<core-file>*.json”.
 3. The files need to be compatible according to the merge rules. You need to look at the __add__ functions for each core file to see the exact rules. The most important thing is that unique fields in each file, like acquisition.subject_id or instrument.instrument_id need to match in the two files. We don't know how to merge conflicts so your job will be rejected.
 4. In general two instruments (and their paired acquisitions) can be merged if and only if there are no shared devices between the two instruments. If there are shared devices, they should really be a single instrument.
+5. Two instruments can sometimes be merged even if the exact schema versions don't match. There is a process that attempts to update the lower version to the newer one.
 
 ## AIND Behavior Service
 
