@@ -52,7 +52,7 @@ Some tasks are being run on a standardized platform using Bonsai and Harp for da
 
 ## Registering a Data Asset
 
-Once a data asset is uploaded to S3, we can add it to data registry hosted on DocDB using [aind-data-access-api](https://github.com/AllenNeuralDynamics/aind-data-access-api). Data Admin level permissions are required to register an asset and to remove it from the registry.
+Once a data asset is uploaded to S3, it can be added to the data registry hosted on DocDB using [aind-data-access-api](https://github.com/AllenNeuralDynamics/aind-data-access-api). Data Admin level permissions are required to register an asset and to remove it from the registry.
 
 
 Here is an example script that registers an asset to DocDB and Code Ocean. It won't duplicate entries if the asset already exists.
