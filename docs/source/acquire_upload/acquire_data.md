@@ -49,33 +49,3 @@ Some tasks are being run on a standardized platform using Bonsai and Harp for da
 |------|-----------|
 | VrForaging | https://github.com/AllenNeuralDynamics/Aind.Behavior.VrForaging |
 | IsoForce | https://github.com/AllenNeuralDynamics/Aind.Behavior.IsoForce |
-
-## Registering a Data Asset
-
-Once a data asset is uploaded to S3, it can be added to the data registry hosted on DocDB using [aind-data-access-api](https://github.com/AllenNeuralDynamics/aind-data-access-api). Data Admin level permissions are required to register an asset and to remove it from the registry.
-
-
-Here is an example script that registers an asset to DocDB and Code Ocean. It won't duplicate entries if the asset already exists.
-
-```python
-import json
-
-from aind_data_access_api.document_db import MetadataDbClient
-
-API_GATEWAY_HOST = "api.allenneuraldynamics.org"
-
-docdb_api_client = MetadataDbClient(
-    host=API_GATEWAY_HOST,
-)
-s3_location = "s3://aind-open-data/TestMouse_2026-11-23_10-11-12"
-response = docdb_api_client.register_asset(
-    s3_location=s3_location
-)
-```
-
-To remove an asset from the registry and Code Ocean:
-```python
-response = docdb_api_client.deregister_asset(
-    s3_location=s3_location
-)
-```
